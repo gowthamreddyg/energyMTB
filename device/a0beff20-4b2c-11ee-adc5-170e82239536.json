@@ -34,11 +34,6 @@
     "softwareId" : null,
     "type" : "Energy sensor"
   },
-  "credentials" : {
-    "credentialsId" : "tOsyKBStQLofXTdk4pIf",
-    "credentialsType" : "ACCESS_TOKEN",
-    "credentialsValue" : null
-  },
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
