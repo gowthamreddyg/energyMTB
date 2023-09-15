@@ -25,18 +25,6 @@
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
-      "entityType" : "USER",
-      "id" : "b00d87a0-3ce8-11ee-b778-63da9de16ed3"
-    },
-    "to" : {
-      "entityType" : "ASSET",
-      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
       "entityType" : "ASSET",
       "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
     },
