@@ -24,7 +24,7 @@
       "entityType" : "ENTITY_GROUP",
       "id" : "195fae00-47ce-11ee-88ef-8344ff70f275"
     },
-    "name" : "Guide",
+    "name" : "Energy Meter Dashboard",
     "ownerId" : {
       "entityType" : "TENANT",
       "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"

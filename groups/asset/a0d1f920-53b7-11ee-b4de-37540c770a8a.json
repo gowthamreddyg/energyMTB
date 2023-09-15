@@ -1,7 +1,9 @@
 {
   "entityType" : "ENTITY_GROUP",
   "entity" : {
-    "additionalInfo" : null,
+    "additionalInfo" : {
+      "description" : ""
+    },
     "configuration" : {
       "columns" : [ {
         "type" : "ENTITY_FIELD",
@@ -9,7 +11,11 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "title",
+        "key" : "name",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "asset_profile",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
@@ -17,17 +23,17 @@
     },
     "edgeGroupAll" : false,
     "externalId" : null,
-    "groupAll" : true,
+    "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "aef0f410-3ce8-11ee-b778-63da9de16ed3"
+      "id" : "a0d1f920-53b7-11ee-b4de-37540c770a8a"
     },
-    "name" : "All",
+    "name" : "Sites",
     "ownerId" : {
       "entityType" : "TENANT",
       "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
     },
-    "type" : "DASHBOARD"
+    "type" : "ASSET"
   },
   "relations" : [ ],
   "attributes" : {
