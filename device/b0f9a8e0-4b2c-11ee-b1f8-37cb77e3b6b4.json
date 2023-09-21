@@ -34,6 +34,11 @@
     "softwareId" : null,
     "type" : "Energy sensor"
   },
+  "credentials" : {
+    "credentialsId" : "ABmWJVFRhtqnSshDnJVo",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
@@ -57,6 +62,14 @@
       "longValue" : null,
       "strValue" : null
     }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "alarm",
+      "lastUpdateTs" : 1695300463022,
+      "longValue" : null,
+      "strValue" : null
+    }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
@@ -74,18 +87,18 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.23,
+      "doubleValue" : 0.2,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1695296381646,
+      "lastUpdateTs" : 1695301321255,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.75,
+      "doubleValue" : 0.8,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1695296390009,
+      "lastUpdateTs" : 1695301310379,
       "longValue" : null,
       "strValue" : null
     } ],
