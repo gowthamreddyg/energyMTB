@@ -29,6 +29,18 @@
       "toIndex" : 2,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 8,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
       "fromIndex" : 1,
       "toIndex" : 3,
       "type" : "Success"
@@ -38,23 +50,67 @@
       "type" : "Success"
     }, {
       "fromIndex" : 4,
-      "toIndex" : 5,
+      "toIndex" : 10,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 10,
       "type" : "Success"
     }, {
       "fromIndex" : 5,
-      "toIndex" : 6,
+      "toIndex" : 16,
       "type" : "Success"
     }, {
-      "fromIndex" : 6,
-      "toIndex" : 7,
+      "fromIndex" : 7,
+      "toIndex" : 6,
+      "type" : "True"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 12,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 19,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 20,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 245,
-        "layoutY" : 148
+        "layoutX" : 276,
+        "layoutY" : 151
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -87,8 +143,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 467,
-        "layoutY" : 258
+        "layoutX" : 603,
+        "layoutY" : 85
       },
       "configuration" : {
         "direction" : "FROM",
@@ -118,8 +174,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 516,
-        "layoutY" : 106
+        "layoutX" : 596,
+        "layoutY" : 9
       },
       "configuration" : {
         "direction" : "FROM",
@@ -130,7 +186,7 @@
           "source" : "energyConsumption",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
-          "target" : "monthlyConsumption"
+          "target" : "powerMonthlyConsumption"
         } ],
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
@@ -149,8 +205,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 637,
-        "layoutY" : 318
+        "layoutX" : 858,
+        "layoutY" : 111
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -171,8 +227,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 707,
-        "layoutY" : 175
+        "layoutX" : 849,
+        "layoutY" : 22
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -193,8 +249,208 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 271,
-        "layoutY" : 378
+        "layoutX" : 870,
+        "layoutY" : 187
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "139be140-56bb-11ee-ab62-bf6c2845e826"
+      },
+      "name" : "powerConsumptionCurrentMonthpersite",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 897,
+        "layoutY" : 341
+      },
+      "configuration" : {
+        "alarmType" : "General Alarm",
+        "scriptLang" : "TBEL",
+        "alarmDetailsBuildJs" : "var details = {};\nif (metadata.prevAlarmDetails) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    delete metadata.prevAlarmDetails;\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
+        "severity" : "CRITICAL",
+        "propagate" : false,
+        "propagateToOwner" : false,
+        "propagateToOwnerHierarchy" : false,
+        "propagateToTenant" : false,
+        "useMessageAlarmData" : false,
+        "overwriteAlarmDetails" : false,
+        "dynamicSeverity" : false,
+        "relationTypes" : [ ]
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fd800510-56bc-11ee-b22d-170e82239536"
+      },
+      "name" : "Asset alaram",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.action.TbCreateAlarmNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 604,
+        "layoutY" : 322
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.energyConsumption > 90;"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fd811680-56bc-11ee-b22d-170e82239536"
+      },
+      "name" : "Script asset alaram",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 606,
+        "layoutY" : 155
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Contains",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "cost",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "costLatestSum"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8dd5dcc0-5799-11ee-ab62-bf6c2845e826"
+      },
+      "name" : "aggreagate latest cost total",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 605,
+        "layoutY" : 218
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Contains",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "cost",
+          "defaultValue" : 0,
+          "aggFunction" : "AVG",
+          "target" : "latestAvgcost"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0d87bc40-579f-11ee-b1f8-37cb77e3b6b4"
+      },
+      "name" : "Aggregate lastest cost average",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1106,
+        "layoutY" : 77
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Manages",
+            "entityTypes" : [ "USER" ]
+          } ]
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "06340440-5834-11ee-af41-63da9de16ed3"
+      },
+      "name" : "G Gowtham Reddy Reddy",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1334,
+        "layoutY" : 198
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Manages",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "powerMonthlyConsumption",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "latestMonthlyPowerConsumption"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e12a37b0-5837-11ee-ab62-bf6c2845e826"
+      },
+      "name" : "G Gowtham Reddy Reddy aggregater",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1829,
+        "layoutY" : 207
       },
       "configuration" : {
         "originatorSource" : "TENANT",
@@ -215,48 +471,17 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0ea50cc0-52b5-11ee-b4de-37540c770a8a"
+        "id" : "6b6511b0-5839-11ee-b22d-170e82239536"
       },
-      "name" : "Change Originator",
+      "name" : "G Gowtham Reddy Reddy",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 296,
-        "layoutY" : 452
-      },
-      "configuration" : {
-        "direction" : "FROM",
-        "relationType" : "Manages",
-        "deduplicationInSec" : 10,
-        "aggMappings" : [ {
-          "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "monthlyConsumption",
-          "defaultValue" : 0,
-          "aggFunction" : "SUM",
-          "target" : "latestConsumptionasset"
-        } ],
-        "outMsgType" : "POST_TELEMETRY_REQUEST",
-        "queueName" : null
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "0ea61e30-52b5-11ee-b4de-37540c770a8a"
-      },
-      "name" : "Aggregate latest sum of asset",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 595,
-        "layoutY" : 391
+        "layoutX" : 2136,
+        "layoutY" : 200
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -268,9 +493,190 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0ea70890-52b5-11ee-b4de-37540c770a8a"
+        "id" : "6b65fc10-5839-11ee-b22d-170e82239536"
       },
-      "name" : "save serires asset",
+      "name" : "name time series name",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1619,
+        "layoutY" : 205
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f08ff350-5839-11ee-b4de-37540c770a8a"
+      },
+      "name" : "user tenant time series",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 870,
+        "layoutY" : 255
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f70e3e0-583c-11ee-af41-63da9de16ed3"
+      },
+      "name" : "Save Avg aggregate cost",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1168,
+        "layoutY" : 289
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Manages",
+            "entityTypes" : [ "USER" ]
+          } ]
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f71ce40-583c-11ee-af41-63da9de16ed3"
+      },
+      "name" : "G Gowtham Reddy Reddy",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1408,
+        "layoutY" : 285
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Manages",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "costLatestSum",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "costLatestSumAggregate"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f729190-583c-11ee-af41-63da9de16ed3"
+      },
+      "name" : "G Gowtham Reddy Reddy aggregater",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1668,
+        "layoutY" : 291
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f732dd0-583c-11ee-af41-63da9de16ed3"
+      },
+      "name" : "Save cost aggregate sum at user level",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1910,
+        "layoutY" : 282
+      },
+      "configuration" : {
+        "originatorSource" : "TENANT",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f73a300-583c-11ee-af41-63da9de16ed3"
+      },
+      "name" : "G Gowtham Reddy Reddy",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2152,
+        "layoutY" : 279
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "5f743f40-583c-11ee-af41-63da9de16ed3"
+      },
+      "name" : "save times series tenant level",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"

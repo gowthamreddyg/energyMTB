@@ -42,14 +42,14 @@
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 256,
-        "layoutY" : 105
+        "layoutX" : 241,
+        "layoutY" : 94
       },
       "configuration" : {
         "msgCount" : 1,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 19};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 30};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "a0beff20-4b2c-11ee-adc5-170e82239536",
@@ -96,7 +96,7 @@
         "msgCount" : 1,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 70 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 60 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b0f9a8e0-4b2c-11ee-b1f8-37cb77e3b6b4",
@@ -151,7 +151,7 @@
         "periodInSeconds" : 60,
         "scriptLang" : "TBEL",
         "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var msg = { energyConsumption: 60 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "tbelScript" : "var msg = { energyConsumption: 20 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b9face10-4b2c-11ee-b4de-37540c770a8a",
         "originatorType" : "DEVICE"
@@ -178,7 +178,7 @@
         "periodInSeconds" : 60,
         "scriptLang" : "TBEL",
         "jsScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
-        "tbelScript" : "var msg = { energyConsumption: 30 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "tbelScript" : "var msg = { energyConsumption: 10 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b68eb280-4bab-11ee-ab62-bf6c2845e826",
         "originatorType" : "DEVICE"

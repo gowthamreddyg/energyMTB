@@ -25,6 +25,18 @@
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
+      "entityType" : "USER",
+      "id" : "b00d87a0-3ce8-11ee-b778-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
       "entityType" : "ASSET",
       "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
     },
@@ -62,6 +74,14 @@
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1695201644430,
+      "longValue" : null,
+      "strValue" : "24, Vittal Mallya Rd, KG Halli, Shanthala Nagar, Sampangi Rama Nagar, Bengaluru, Karnataka 560001"
+    }, {
+      "booleanValue" : null,
       "doubleValue" : 93.0,
       "jsonValue" : null,
       "key" : "energyConsumptionSum",
@@ -86,18 +106,18 @@
       "strValue" : "https://l.icdbcdn.com/oh/eefe66c6-ee24-4f28-9599-705fd2bce633.png?w=960&mode=max&f=32"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 40.766847,
+      "doubleValue" : 12.97675,
       "jsonValue" : null,
       "key" : "latitude",
-      "lastUpdateTs" : 1694087956186,
+      "lastUpdateTs" : 1695201458214,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : -73.968733,
+      "doubleValue" : 77.57528,
       "jsonValue" : null,
       "key" : "longitude",
-      "lastUpdateTs" : 1694087988289,
+      "lastUpdateTs" : 1695201474339,
       "longValue" : null,
       "strValue" : null
     } ]

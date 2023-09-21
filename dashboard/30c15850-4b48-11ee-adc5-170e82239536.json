@@ -45,7 +45,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
             "settings" : {
-              "entitiesTitle" : "Last Consumption Summary",
+              "entitiesTitle" : "Last Consumption Matrics",
               "enableSearch" : false,
               "enableSelectColumnDisplay" : false,
               "enableStickyHeader" : true,
@@ -59,13 +59,14 @@
               "defaultSortOrder" : "entityName",
               "useRowStyleFunction" : false
             },
-            "title" : "Last Consumption Summary",
+            "title" : "Latest Energy Consumption Reading",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
+              "fontWeight" : "bold",
+              "padding" : "5px 10px 5px 10px",
+              "color" : "rgb(255, 157, 12)"
             },
             "useDashboardTimewindow" : false,
             "showLegend" : false,
@@ -75,12 +76,12 @@
               "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "energyConsumptionAvg",
+                "name" : "powerMonthlyConsumption",
                 "type" : "timeseries",
-                "label" : "Average Mtr Reading",
-                "color" : "#4caf50",
+                "label" : "Energy Consumption",
+                "color" : "#2196f3",
                 "settings" : { },
-                "_hash" : 0.5877037253572674,
+                "_hash" : 0.8486504143372902,
                 "aggregationType" : "NONE",
                 "units" : null,
                 "decimals" : null,
@@ -88,18 +89,44 @@
                 "usePostProcessing" : true,
                 "postFuncBody" : "return value + ' kwh';"
               }, {
-                "name" : "monthlyConsumption",
+                "name" : "costLatestSum",
                 "type" : "timeseries",
-                "label" : "Energy Consumption",
+                "label" : "Cost",
                 "color" : "#4caf50",
                 "settings" : { },
-                "_hash" : 0.148686234482573,
+                "_hash" : 0.3966556845921414,
                 "aggregationType" : "NONE",
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value? value + ' kwh': '';"
+                "postFuncBody" : "return value+ ' Rs';"
+              }, {
+                "name" : "energyConsumptionAvg",
+                "type" : "timeseries",
+                "label" : "Average Consumption",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.03402026952208992,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value+ ' kwh';"
+              }, {
+                "name" : "latestAvgcost",
+                "type" : "timeseries",
+                "label" : "Avg Cost",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.4215929539987391,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value+ ' Rs';"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -174,7 +201,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
             "settings" : {
-              "entitiesTitle" : "Energy Meters Summary",
+              "entitiesTitle" : "Energy Meters Matrics",
               "enableSearch" : false,
               "enableSelectColumnDisplay" : false,
               "enableStickyHeader" : true,
@@ -187,13 +214,14 @@
               "defaultSortOrder" : "entityName",
               "useRowStyleFunction" : false
             },
-            "title" : "Energy Meters Summary",
+            "title" : "Energy Meter's Summary",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
+              "fontWeight" : "bold",
+              "padding" : "5px 10px 5px 10px",
+              "color" : "rgb(255, 157, 12)"
             },
             "useDashboardTimewindow" : false,
             "showLegend" : false,
@@ -215,6 +243,13 @@
                 "funcBody" : null,
                 "usePostProcessing" : null,
                 "postFuncBody" : null
+              }, {
+                "name" : "cost",
+                "type" : "timeseries",
+                "label" : "cost",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.37471596598197343
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -299,7 +334,7 @@
                   "startTimeMs" : 1694318178330,
                   "endTimeMs" : 1694404578330
                 },
-                "quickInterval" : "CURRENT_YEAR_SO_FAR"
+                "quickInterval" : "CURRENT_WEEK_ISO"
               },
               "aggregation" : {
                 "type" : "AVG",
@@ -355,12 +390,13 @@
               "customLegendEnabled" : false,
               "dataKeysListForLabels" : [ ]
             },
-            "title" : "Time Series Reading",
+            "title" : "Time Series Reading Current year so far",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
-              "fontWeight" : 400
+              "fontWeight" : "bold",
+              "color" : "rgb(255, 157, 12)"
             },
             "useDashboardTimewindow" : false,
             "showTitleIcon" : false,
@@ -370,7 +406,7 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "showLegend" : true,
+            "showLegend" : false,
             "legendConfig" : {
               "direction" : "column",
               "position" : "bottom",
@@ -381,7 +417,7 @@
               "showTotal" : false,
               "showLatest" : true
             },
-            "displayTimewindow" : true
+            "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
@@ -451,9 +487,9 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <div class='value'>\r\n                ${count}\r\n            </div>    \r\n            <div class='description'>\r\n                Sites\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='image-shade'>\r\n                <h1> Sites</h1>\r\n                <div class='value'>${count}</div> \r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n    color: #0009;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n    color: black;\r\n}\r\n"
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n    background-image: url('https://tse4.mm.bing.net/th/id/OIP.KuvDQS69sN_iLaUHVsvPPgHaEo?w=253&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n      background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 100%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    background-color: rgba(255, 157, 12, .5);\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n    color:#fff;\r\n}\r\n\r\n.value{\r\n    font-size: 40px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    color:#fff;\r\n    padding-left: 16px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 36px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 20px;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}"
             },
             "title" : "New Markdown/HTML Card",
             "showTitleIcon" : false,
@@ -462,7 +498,9 @@
             "titleTooltip" : "",
             "dropShadow" : true,
             "enableFullscreen" : false,
-            "widgetStyle" : { },
+            "widgetStyle" : {
+              "border-radius" : "20px"
+            },
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -512,6 +550,50 @@
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               }
+            }, {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : "c792293c-ad3a-f6b2-5728-116514f85986",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "inactive",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6317506525843877,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : "df13dc1a-8627-018d-5ddc-5f4ee1766abd",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "activeDevices",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.7259906936637528,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
             } ],
             "timewindow" : {
               "displayValue" : "",
@@ -543,9 +625,9 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <div class='value'>\r\n                ${count}\r\n            </div>    \r\n            <div class='description'>\r\n                Energy Meters\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='image-shade'>\r\n                <h1> Energy Meters</h1>\r\n                <div class='value'>${count}</div> \r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n            <div class='left'>\r\n                <h5>Active Devices</h5>\r\n                <div class='value'>${activeDevices}</div> \r\n            </div>\r\n            <div class='right'>\r\n                <h5>Inactive Devices</h5>\r\n                <div class='value'>${inactive}</div> \r\n            </div>\r\n        </div>\r\n        <!--<div class='progress-bar'>-->\r\n        <!--    <div class=\"w3-hover-light-gray\">-->\r\n        <!--      <div class=\"w3-hover-blue\" style=\"width:calc(100)%\"></div>-->\r\n        <!--    </div>-->\r\n        <!--</div>-->\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n    color: #0009;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n    color: black;\r\n}\r\n"
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n    background-image: url('https://tse4.mm.bing.net/th/id/OIP.gNm7TdN-6oVlhLwriiNmJgHaE7?pid=ImgDet&rs=1');\r\n      background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n   box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n   \r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    color: #fff;\r\n    background-color: rgba(255, 157, 12, .5);\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 0.8rem;\r\n    font-weight: bold;\r\n    line-height: 20px;\r\n    color:#fff;\r\n}\r\n\r\nh5{\r\n    margin: 0;\r\n    font-size: 0.8rem;\r\n    font-weight: bold;\r\n    line-height: 20px;\r\n    color:#fff;\r\n}\r\n.value{\r\n    font-size: 30px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    color:#fff;\r\n    padding-left: 16px;\r\n}\r\n\r\n.lower-bar{\r\n    height: 30%;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    padding-left:16px;\r\n    background-color: rgba(255, 157, 12, .5);\r\n}\r\n\r\n.lower-bar .value{\r\n    font-size: 20px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    color:#fff;\r\n    padding-left: 16px;\r\n}\r\n\r\n.left , .right{\r\n    flex: 1;\r\n}\r\n\r\n.icon-container {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 36px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 20px;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}\r\n.progress-bar{\r\n    height: 25%;\r\n    padding-left: 16px;\r\n    background-color: rgba(255, 157, 12, .5); \r\n    display: flex;\r\n    align-items: center;\r\n}\r\n\r\n.w3-hover-light-gray {\r\n    width:30%;\r\n    height: 20%;\r\n    color: #000;\r\n    background-color: #f1f1f1;\r\n    border-radius: 20px;\r\n    overflow: hidden;\r\n}\r\n\r\n.w3-hover-blue {\r\n    color: #fff;\r\n    background-color: #2196F3;\r\n    height: 100%;\r\n}\r\n"
             },
             "title" : "New Markdown/HTML Card",
             "showTitleIcon" : false,
@@ -554,7 +636,9 @@
             "titleTooltip" : "",
             "dropShadow" : true,
             "enableFullscreen" : false,
-            "widgetStyle" : { },
+            "widgetStyle" : {
+              "border-radius" : "20px"
+            },
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -679,19 +763,21 @@
               "entityAliasId" : "410f6ea1-60e7-d392-bf10-9ce93afe4221",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "consumption",
+                "name" : "latestMonthlyPowerConsumption",
                 "type" : "timeseries",
-                "label" : "sumConsumption",
+                "label" : "latestMonthlyPowerConsumption",
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.44278049262010755,
-                "aggregationType" : "SUM",
+                "aggregationType" : "NONE",
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value?value: 0;",
-                "comparisonEnabled" : null
+                "postFuncBody" : "return value?value + ' kwh': 0 + ' kwh';",
+                "comparisonEnabled" : false,
+                "timeForComparison" : "previousInterval",
+                "comparisonResultType" : "DELTA_ABSOLUTE"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -733,9 +819,9 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : " <div class='card'>\n    <div class='content'>\n        <div class='column'>\n            <div class='value'>\n                ${sumConsumption}\n            </div>    \n            <div class='description'>\n                Current month Consumption\n            </div>\n        </div>\n    </div>\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Sites</h1>\r\n                <div class='value'>  ${latestMonthlyPowerConsumption}</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">flash_on</div>\r\n           </div>\r\n           <div class=\"description\">Energy Consumption</div>\r\n       </div>\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n    color: #0009;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n    color: black;\r\n}\r\n"
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #eee;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 400;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n    height: 30%;\r\n    padding-left: 10px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 28px;\r\n    width: 28px;\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 23px;\r\n    color: black;\r\n}\r\n\r\n .description {\r\n    margin-left: 8px;\r\n    font-size: 1rem;\r\n    font-weight: 500;\r\n    color: black;\r\n}"
             },
             "title" : "New Markdown/HTML Card",
             "showTitleIcon" : false,
@@ -744,7 +830,9 @@
             "titleTooltip" : "",
             "dropShadow" : false,
             "enableFullscreen" : false,
-            "widgetStyle" : { },
+            "widgetStyle" : {
+              "border-radius" : "20px 20px"
+            },
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
@@ -783,7 +871,7 @@
               "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "monthlyConsumption",
+                "name" : "powerMonthlyConsumption",
                 "type" : "timeseries",
                 "label" : "${entityName}",
                 "color" : "#2196f3",
@@ -820,7 +908,7 @@
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
               },
-              "latestDataKeys" : [ ]
+              "latestDataKeys" : null
             } ],
             "timewindow" : {
               "hideInterval" : false,
@@ -890,12 +978,13 @@
               },
               "customLegendEnabled" : false
             },
-            "title" : "Energy Consumption Flow",
+            "title" : "Energy Consumption Flow of current year",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
               "fontSize" : "16px",
-              "fontWeight" : 400
+              "fontWeight" : "bold",
+              "color" : "rgb(255, 157, 12)"
             },
             "useDashboardTimewindow" : false,
             "showTitleIcon" : false,
@@ -916,7 +1005,7 @@
               "showTotal" : false,
               "showLatest" : true
             },
-            "displayTimewindow" : true
+            "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
@@ -952,6 +1041,13 @@
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.1375317511371077
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "address",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.35910370533656844
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1024,7 +1120,7 @@
               "showTooltipAction" : "click",
               "autocloseTooltip" : true,
               "useTooltipFunction" : false,
-              "tooltipPattern" : "<b>${entityName}</b><br/>\n<b>Latitude:</b> ${latitude:7}<b>Longitude:</b> ${longitude:7} \n<br/>\n<link-act name='tooltip-click'>view </link-act>",
+              "tooltipPattern" : "<b>${entityName}</b><br/>\n<b>Address:</b> ${address}<br />\n<link-act name='tooltip-click'>view </link-act>",
               "tooltipOffsetX" : 0,
               "tooltipOffsetY" : -1,
               "color" : "#fe7569",
@@ -1032,8 +1128,8 @@
               "colorFunction" : "var type = dsData[dsIndex]['Type'];\nif (type == 'colorpin') {\n\tvar temperature = dsData[dsIndex]['temperature'];\n\tif (typeof temperature !== undefined) {\n\t    var percent = (temperature + 60)/120 * 100;\n\t    return tinycolor.mix('blue', 'red', percent).toHexString();\n\t}\n\treturn 'blue';\n}\n",
               "useMarkerImageFunction" : true,
               "markerImageSize" : 34,
-              "markerImageFunction" : "var type = dsData[dsIndex]['Type'];\nif (type == 'thermometer') {\n\tvar res = {\n\t    url: images[0],\n\t    size: 40\n\t}\n\tvar temperature = dsData[dsIndex]['temperature'];\n\tif (typeof temperature !== undefined) {\n\t    var percent = (temperature + 60)/120;\n\t    var index = Math.min(3, Math.floor(4 * percent));\n\t    res.url = images[index];\n\t}\n\treturn res;\n}",
-              "markerImages" : [ "data:image/png;base64,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", "data:image/png;base64,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", "data:image/png;base64,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", "data:image/png;base64,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" ],
+              "markerImageFunction" : "var res = {\n\t    url: images[0],\n\t    size: 40\n\t}\n\treturn res;",
+              "markerImages" : [ "data:image/svg+xml;base64,PHN2ZyBpZD0ic3ZnNDQwOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTUwIDE1MCI+CiAgPHN0eWxlPgogICAgLnN0MHtvcGFjaXR5OjAuODkyO2VuYWJsZS1iYWNrZ3JvdW5kOm5ldyA7fSAuc3Qxe2ZpbGw6dXJsKCNTVkdJRF8xXyk7fSAuc3Qye2ZpbGw6I0ZGM0UwMTt9IC5zdDN7ZmlsbDojRkZGRkZGO30KICA8L3N0eWxlPgogIDxnIGlkPSJsYXllcjEiPgogICAgPGcgaWQ9InBhdGg2ODgxLTMtNS01LTEtOC00LTQtNy04IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTQ2LjQzOCAtMjc2LjAyOCkiIGNsYXNzPSJzdDAiPgogICAgICA8cmFkaWFsR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBjeD0iMTI5Ni41MTMiIGN5PSIxNzQ0LjQwNiIgcj0iNDkuOTAxIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC42NzkzIC4wMDc2IC0uNTA5IC41NjEyIDI1Mi41MDMgLTU5My4zNCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjE4OCIvPgogICAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgICA8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjg1LjYgMzg4LjVjMTAuMy0xMi40IDQuNC0yMi40LTE0LjQtMjIuNC0xOC45IDAtNDIuNCAxMC01My45IDIyLjQtMTYuOCAxOCAuNCAyMy41LS4yIDM1LS4xIDEuOCAzLjkgMS44IDcgMCAxOS44LTExLjUgNDYuNS0xNyA2MS41LTM1Ii8+CiAgICA8L2c+CiAgICA8cGF0aCBpZD0icGF0aDY4ODEtMy01LTUtMS04LTQtNCIgY2xhc3M9InN0MiIgZD0iTTEyNC43IDY5LjFjLS45LTI3LjUtMjIuMy00OS44LTQ5LjgtNDkuOHMtNDkgMjIuMy00OS44IDQ5LjhjLTEuMyA0MC4xIDMwLjcgNTIuMiA0NC43IDc4IDIuMiA0IDggNCAxMC4xIDAgMTQuMS0yNS44IDQ2LjEtMzcuOSA0NC44LTc4Ii8+CiAgPC9nPgogIDxnIGlkPSJnNDkyOCI+CiAgICA8Y2lyY2xlIGlkPSJwYXRoNDk3OCIgY2xhc3M9InN0MiIgY3g9Ijc0LjkiIGN5PSI2OS4xIiByPSI0OS45Ii8+CiAgICA8ZyBpZD0iZzQ5MTUiPgogICAgICA8cGF0aCBpZD0icGF0aDY4ODMtMi0zLTUtMi00LTktNC05IiBjbGFzcz0ic3QzIiBkPSJNNzQuOCAxMDYuNGMtMjAuNiAwLTM3LjQtMTYuNy0zNy40LTM3LjQgMC0yMC42IDE2LjctMzcuNCAzNy40LTM3LjQgMjAuNiAwIDM3LjQgMTYuNyAzNy40IDM3LjRzLTE2LjcgMzcuNC0zNy40IDM3LjQiLz4KICAgIDwvZz4KICA8L2c+CiAgPHBhdGggY2xhc3M9InN0MiIgZD0iTTk3LjQgODguOGMxLjEtLjIgMS45LTEuNSAxLjktMi45di0xLjhjMC0xLjYtMS0yLjktMi40LTIuOS0xLjMgMC0yLjQgMS4zLTIuNCAyLjl2MS44YzAgMS40LjggMi42IDEuOSAyLjl2My43aC0zLjNWNzIuNmwtNS0xLjl2MjEuN2gtLjZWNjIuMWwtNS0xLjl2MzIuM2gtLjZWNDguMWgtMS41di0xLjdoLTEuOHYtMS42aC0yLjN2LS41YzAtLjMtLjItLjYtLjUtLjZoLS4ybC0uMy03LjFjMC0uMS0uMS0uMi0uMi0uMnMtLjIuMS0uMi4ybC0uMyA3LjFoLS4yYy0uMiAwLS41LjItLjUuNnYuNWgtMi4zdjEuNmgtMS44djEuN2gtMS41djQ0LjNoLS42VjUzLjJsLTEwLjYgMS45djM3LjJoLTMuNHYtMy43YzEuMS0uMiAxLjktMS41IDEuOS0yLjl2LTEuOGMwLTEuNi0xLTIuOS0yLjQtMi45cy0yLjQgMS4zLTIuNCAyLjl2MS44YzAgMS40LjggMi42IDEuOSAyLjl2My43aC0xLjl2MS41aDQ4Ljh2LTEuNWgtMS45di0zLjdoLS4zem0tNy43LTE0LjFoMS44djIuNmgtMS44di0yLjZ6bTAgNC40aDEuOHYyLjZoLTEuOHYtMi42em0wIDQuNGgxLjhWODZoLTEuOHYtMi41em0wIDQuM2gxLjh2Mi42aC0xLjh2LTIuNnptLTUuNi0yMy42aDEuOHY1aC0xLjh2LTV6bTAgN2gxLjh2NWgtMS44di01em0wIDcuMWgxLjh2NWgtMS44di01em0wIDdoMS44djVoLTEuOHYtNXpNNjMuMiA1Ny40SDY1VjYwaC0xLjh2LTIuNnptMCA0LjNINjV2Mi42aC0xLjh2LTIuNnptMCA0LjRINjV2Mi42aC0xLjh2LTIuNnptMCA0LjNINjVWNzNoLTEuOHYtMi42em0wIDQuM0g2NXYyLjZoLTEuOHYtMi42em0wIDQuNEg2NXYyLjZoLTEuOHYtMi42em0wIDQuNEg2NVY4NmgtMS44di0yLjV6bTAgNC4zSDY1djIuNmgtMS44di0yLjZ6bS00LTMwLjRINjFWNjBoLTEuOHYtMi42em0wIDQuM0g2MXYyLjZoLTEuOHYtMi42em0wIDQuNEg2MXYyLjZoLTEuOHYtMi42em0wIDQuM0g2MVY3M2gtMS44di0yLjZ6bTAgNC4zSDYxdjIuNmgtMS44di0yLjZ6bTAgNC40SDYxdjIuNmgtMS44di0yLjZ6bTAgNC40SDYxVjg2aC0xLjh2LTIuNXptMCA0LjNINjF2Mi42aC0xLjh2LTIuNnptMTguNy0zNy41aDEuOHYyLjZoLTEuOHYtMi42em0wIDQuM2gxLjh2Mi42aC0xLjh2LTIuNnptMCA0LjRoMS44djIuNmgtMS44VjU5em0wIDQuM2gxLjh2Mi42aC0xLjh2LTIuNnptMCA0LjRoMS44djIuNmgtMS44di0yLjZ6bTAgNC4zaDEuOHYyLjZoLTEuOFY3MnptMCA0LjNoMS44djIuNmgtMS44di0yLjZ6bTAgNC40aDEuOHYyLjZoLTEuOHYtMi42em0uOCA0LjV2Ny4zaC0zLjR2LTcuM2gzLjR6TTc0IDUwLjNoMS44djIuNkg3NHYtMi42em0wIDQuM2gxLjh2Mi42SDc0di0yLjZ6bTAgNC40aDEuOHYyLjZINzRWNTl6bTAgNC4zaDEuOHYyLjZINzR2LTIuNnptMCA0LjRoMS44djIuNkg3NHYtMi42em0wIDQuM2gxLjh2Mi42SDc0Vjcyem0wIDQuM2gxLjh2Mi42SDc0di0yLjZ6bTAgNC40aDEuOHYyLjZINzR2LTIuNnptLTQtMzAuNGgxLjh2Mi42SDcwdi0yLjZ6bTAgNC4zaDEuOHYyLjZINzB2LTIuNnptMCA0LjRoMS44djIuNkg3MFY1OXptMCA0LjNoMS44djIuNkg3MHYtMi42em0wIDQuNGgxLjh2Mi42SDcwdi0yLjZ6bTAgNC4zaDEuOHYyLjZINzBWNzJ6bTAgNC4zaDEuOHYyLjZINzB2LTIuNnptMCA0LjRoMS44djIuNkg3MHYtMi42em0xLjIgNC41aDMuNHY3LjNoLTMuNHYtNy4zeiIvPgo8L3N2Zz4K" ],
               "showPolygon" : false,
               "polygonKeyName" : "perimeter",
               "editablePolygon" : false,
@@ -1117,188 +1213,6 @@
           "col" : 0,
           "id" : "0d3261e0-3cc7-41ec-90ba-76f3fd7190d8"
         },
-        "14b791e4-80ba-41c5-7704-a2a8798a1867" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
-          "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
-          "sizeX" : 5,
-          "sizeY" : 3.5,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entityCount",
-              "name" : null,
-              "entityAliasId" : "531f2476-f7b3-1e79-5cde-7daa5ad06f5e",
-              "filterId" : null,
-              "dataKeys" : [ {
-                "name" : "count",
-                "type" : "count",
-                "label" : "count",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.42112883460839323,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : true,
-                "postFuncBody" : "return value.toFixed();"
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1694003737839,
-                  "endTimeMs" : 1694090137839
-                },
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <div class='value'>\r\n                ${count}\r\n            </div>    \r\n            <div class='description'>\r\n                Devices\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
-              "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n}\r\n"
-            },
-            "title" : "Devices",
-            "showTitleIcon" : false,
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "titleTooltip" : "",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "showLegend" : false,
-            "useDashboardTimewindow" : true,
-            "enableDataExport" : false,
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "14b791e4-80ba-41c5-7704-a2a8798a1867"
-        },
-        "0d222008-a20f-27aa-c877-8c921aafbb43" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
-          "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
-          "sizeX" : 5,
-          "sizeY" : 3.5,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entityCount",
-              "name" : null,
-              "entityAliasId" : "531f2476-f7b3-1e79-5cde-7daa5ad06f5e",
-              "filterId" : "df13dc1a-8627-018d-5ddc-5f4ee1766abd",
-              "dataKeys" : [ {
-                "name" : "count",
-                "type" : "count",
-                "label" : "count",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.49941444619338604,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : true,
-                "postFuncBody" : "return value.toFixed();"
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1694003877295,
-                  "endTimeMs" : 1694090277295
-                },
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <div class='value'>\r\n                ${count}\r\n            </div>    \r\n            <div class='description'>\r\n                Active Devices\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
-              "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n}\r\n"
-            },
-            "title" : "New Markdown/HTML Card",
-            "showTitleIcon" : false,
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "titleTooltip" : "",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "showLegend" : false,
-            "useDashboardTimewindow" : true,
-            "enableDataExport" : false,
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "0d222008-a20f-27aa-c877-8c921aafbb43"
-        },
         "2943d3a1-ef9d-699e-6be4-bc991aa4ac97" : {
           "isSystemType" : true,
           "bundleAlias" : "cards",
@@ -1316,9 +1230,9 @@
               "entityAliasId" : "19f36201-edf4-69f3-53e8-1f9818ab7e78",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "monthlyConsumption",
+                "name" : "powerMonthlyConsumption",
                 "type" : "timeseries",
-                "label" : "energyConsumptionSum",
+                "label" : "powerMonthlyConsumption",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.8795743954517654,
@@ -1327,7 +1241,8 @@
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value.toFixed() + ' kwh';"
+                "postFuncBody" : "return value? value.toFixed() + ' kwh': '0 kwh';",
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1335,20 +1250,26 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
+                "quickInterval" : "CURRENT_MONTH_SO_FAR"
               },
               "history" : {
                 "historyType" : 0,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1694004014622,
-                  "endTimeMs" : 1694090414622
+                  "startTimeMs" : 1695038108898,
+                  "endTimeMs" : 1695124508898
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -1363,9 +1284,9 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\n    <div class='content'>\n        <div class='column'>\n            <div class='value'>\n                ${energyConsumptionSum}\n            </div>    \n            <div class='description'>\n                latest Energy Consumption\n            </div>\n        </div>\n    </div>\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Energy Meters</h1>\r\n                <div class='value'>  ${powerMonthlyConsumption}</div> \r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">flash_on</div>\r\n           </div>\r\n           <div class=\"description\">Energy Consumption</div>\r\n       </div>\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n}\r\n"
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n       background-image: url('https://tse1.mm.bing.net/th/id/OIP.VIrzcJbI1DjaCOezqqsBkgHaE5?w=274&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    background-color: rgba(255, 157, 12, .5);\r\n    padding: 10px;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n        color: #fff;\r\n}\r\n\r\n.value{\r\n    font-size: 40px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    padding: 10px;\r\n        color: #fff;\r\n}\r\n\r\n.card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 40px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 36px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 20px;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n.bck-image{\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 0;\r\n    width: 100%;\r\n    z-index: -1;\r\n    transform: translateY(-50%);\r\n\r\n}\r\n\r\n.image{\r\n   background-image: url('https://tse1.mm.bing.net/th/id/OIP.VIrzcJbI1DjaCOezqqsBkgHaE5?w=274&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}"
             },
             "title" : "New Markdown/HTML Card",
             "showTitleIcon" : false,
@@ -1374,17 +1295,20 @@
             "titleTooltip" : "",
             "dropShadow" : false,
             "enableFullscreen" : false,
-            "widgetStyle" : { },
+            "widgetStyle" : {
+              "border-radius" : "20px 20px 0px 0px "
+            },
             "titleStyle" : {
               "fontSize" : "16px",
               "fontWeight" : 400
             },
             "showLegend" : false,
-            "useDashboardTimewindow" : true,
+            "useDashboardTimewindow" : false,
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
@@ -1607,18 +1531,19 @@
               "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "monthlyConsumption",
+                "name" : "monthlyPowerConsumption",
                 "type" : "timeseries",
                 "label" : "${entityName}",
-                "color" : "#2196f3",
+                "color" : "var(--tb-accent-A200)",
                 "settings" : { },
                 "_hash" : 0.8518145208073473,
                 "aggregationType" : "NONE",
                 "units" : null,
                 "decimals" : null,
                 "funcBody" : null,
-                "usePostProcessing" : null,
-                "postFuncBody" : null
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value?value + 'kwh': 0;",
+                "comparisonEnabled" : null
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1626,20 +1551,26 @@
             } ],
             "timewindow" : {
               "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
                 "realtimeType" : 1,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
+                "quickInterval" : "CURRENT_MONTH_SO_FAR"
               },
               "history" : {
                 "historyType" : 0,
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1694085238255,
-                  "endTimeMs" : 1694171638255
+                  "startTimeMs" : 1695020110771,
+                  "endTimeMs" : 1695106510771
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -1653,15 +1584,16 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "8px",
             "settings" : { },
-            "title" : "Previous Month Energy Consumption",
-            "useDashboardTimewindow" : true,
+            "title" : "Lates Month Energy Consumption",
+            "useDashboardTimewindow" : false,
             "showTitleIcon" : false,
             "titleTooltip" : "",
             "dropShadow" : false,
             "enableFullscreen" : false,
             "enableDataExport" : false,
             "widgetStyle" : {
-              "margin" : "0px"
+              "margin" : "0px",
+              "border-radius" : "0px 0px 20px 20px"
             },
             "widgetCss" : "",
             "titleStyle" : {
@@ -1673,7 +1605,8 @@
             "showLegend" : false,
             "titleIcon" : "",
             "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px"
+            "iconSize" : "24px",
+            "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
@@ -1699,9 +1632,9 @@
               "hideTimezone" : false,
               "selectedTab" : 0,
               "realtime" : {
-                "realtimeType" : 0,
+                "realtimeType" : 1,
                 "timewindowMs" : 2592000000,
-                "quickInterval" : "CURRENT_DAY",
+                "quickInterval" : "CURRENT_YEAR_SO_FAR",
                 "interval" : 1000
               },
               "aggregation" : {
@@ -1710,10 +1643,11 @@
               }
             },
             "showTitle" : true,
-            "backgroundColor" : "rgb(255, 255, 255)",
+            "backgroundColor" : "rgba(255, 255, 255, 0.15)",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
             "settings" : {
+              "alarmsTitle" : "Sites Alarms Current year",
               "enableSelection" : true,
               "enableSearch" : false,
               "enableSelectColumnDisplay" : false,
@@ -1722,29 +1656,31 @@
               "enableStickyAction" : false,
               "reserveSpaceForHiddenAction" : "true",
               "displayDetails" : false,
-              "allowAcknowledgment" : true,
-              "allowClear" : true,
+              "allowAcknowledgment" : false,
+              "allowClear" : false,
               "allowAssign" : true,
               "displayActivity" : false,
               "displayPagination" : true,
-              "defaultPageSize" : 10,
+              "defaultPageSize" : 4,
               "defaultSortOrder" : "-createdTime",
               "useRowStyleFunction" : false
             },
-            "title" : "Alarms",
+            "title" : "Sites Alarms ",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
+              "fontSize" : "20px",
+              "fontWeight" : "bold",
+              "opacity" : "0.67",
+              "padding" : "5px 10px 5px 10px",
+              "color" : "rgb(255, 157, 12)"
             },
             "useDashboardTimewindow" : false,
             "showLegend" : false,
             "alarmSource" : {
               "type" : "entity",
               "name" : null,
-              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "createdTime",
@@ -1780,6 +1716,13 @@
                   "useCellContentFunction" : false
                 },
                 "_hash" : 0.09927019860088193
+              }, {
+                "name" : "status",
+                "type" : "alarm",
+                "label" : "Status",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.7235940492677706
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -1791,12 +1734,18 @@
             "iconColor" : "rgba(0, 0, 0, 0.87)",
             "iconSize" : "24px",
             "titleTooltip" : "",
-            "widgetStyle" : { },
-            "displayTimewindow" : true,
+            "widgetStyle" : {
+              "backgroundImage" : "url(https://thingsboard.io/images/dashboards/smart-building/alarms-bg.jpg)",
+              "backgroundSize" : "cover",
+              "backgroundPosition" : "center",
+              "borderBottom" : "solid 1px #aaa",
+              "borderRight" : "solid 1px #aaa"
+            },
+            "displayTimewindow" : false,
             "actions" : { },
             "datasources" : [ ],
             "alarmFilterConfig" : {
-              "statusList" : [ "ACTIVE", "ACK", "UNACK" ],
+              "statusList" : [ "ACTIVE", "CLEARED", "ACK", "UNACK" ],
               "severityList" : [ ],
               "typeList" : [ ],
               "searchPropagatedAlarms" : false
@@ -1845,10 +1794,11 @@
               }
             },
             "showTitle" : true,
-            "backgroundColor" : "rgb(255, 255, 255)",
+            "backgroundColor" : "rgba(255, 255, 255, 0.15)",
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "4px",
             "settings" : {
+              "alarmsTitle" : "Energy Meter's Alarm Current year so far",
               "enableSelection" : true,
               "enableSearch" : false,
               "enableSelectColumnDisplay" : false,
@@ -1870,9 +1820,11 @@
             "dropShadow" : true,
             "enableFullscreen" : false,
             "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
+              "fontSize" : "20px",
+              "fontWeight" : "bold",
+              "opacity" : "0.67",
+              "padding" : "5px 10px 5px 10px",
+              "color" : "rgb(255, 157, 12)"
             },
             "useDashboardTimewindow" : false,
             "showLegend" : false,
@@ -1926,8 +1878,14 @@
             "iconColor" : "rgba(0, 0, 0, 0.87)",
             "iconSize" : "24px",
             "titleTooltip" : "",
-            "widgetStyle" : { },
-            "displayTimewindow" : true,
+            "widgetStyle" : {
+              "backgroundImage" : "url(https://thingsboard.io/images/dashboards/smart-building/alarms-bg.jpg)",
+              "backgroundSize" : "cover",
+              "backgroundPosition" : "center",
+              "borderBottom" : "solid 1px #aaa",
+              "borderRight" : "solid 1px #aaa"
+            },
+            "displayTimewindow" : false,
             "actions" : { },
             "datasources" : [ ],
             "alarmFilterConfig" : {
@@ -1944,97 +1902,6 @@
           "row" : 0,
           "col" : 0,
           "id" : "329cda04-d4b0-31ee-7fad-d8aa1e2056d5"
-        },
-        "1672b442-1272-3555-88c0-ac7564e92fe0" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
-          "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
-          "sizeX" : 5,
-          "sizeY" : 3.5,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entityCount",
-              "name" : null,
-              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
-              "filterId" : "df13dc1a-8627-018d-5ddc-5f4ee1766abd",
-              "dataKeys" : [ {
-                "name" : "count",
-                "type" : "count",
-                "label" : "count",
-                "color" : "#2196f3",
-                "settings" : { },
-                "_hash" : 0.24475116726540036,
-                "aggregationType" : null,
-                "units" : null,
-                "decimals" : null,
-                "funcBody" : null,
-                "usePostProcessing" : true,
-                "postFuncBody" : "return value.toFixed();"
-              } ],
-              "alarmFilterConfig" : {
-                "statusList" : [ "ACTIVE" ]
-              }
-            } ],
-            "timewindow" : {
-              "displayValue" : "",
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 1,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 1000,
-                "timewindowMs" : 60000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1694407393161,
-                  "endTimeMs" : 1694493793161
-                },
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "aggregation" : {
-                "type" : "AVG",
-                "limit" : 25000
-              }
-            },
-            "showTitle" : false,
-            "backgroundColor" : "#fff",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "0px",
-            "settings" : {
-              "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <div class='value'>\r\n                ${count}\r\n            </div>    \r\n            <div class='description'>\r\n                Active Energy Meters\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
-              "applyDefaultMarkdownStyle" : true,
-              "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   display: flex;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: flex;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n   height: 100%;\r\n   align-items: center;\r\n}\r\n\r\n.card .value {\r\n    font-size: 1.4rem;\r\n    font-weight: bold;\r\n    align-items: center;\r\n    color: #0009;\r\n}\r\n\r\n.card .description {\r\n    font-size: 0.8rem;\r\n    text-align: center;\r\n    color: black;\r\n}\r\n"
-            },
-            "title" : "New Markdown/HTML Card",
-            "showTitleIcon" : false,
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "titleTooltip" : "",
-            "dropShadow" : true,
-            "enableFullscreen" : false,
-            "widgetStyle" : { },
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400
-            },
-            "showLegend" : false,
-            "useDashboardTimewindow" : true,
-            "enableDataExport" : false,
-            "widgetCss" : "",
-            "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
-          },
-          "row" : 0,
-          "col" : 0,
-          "id" : "1672b442-1272-3555-88c0-ac7564e92fe0"
         },
         "13223e34-8f16-2e25-5737-a689b3445e4e" : {
           "isSystemType" : true,
@@ -2106,7 +1973,9 @@
             "dropShadow" : false,
             "enableFullscreen" : false,
             "enableDataExport" : false,
-            "widgetStyle" : { },
+            "widgetStyle" : {
+              "border-radius" : "0px 0px 20px 20px"
+            },
             "widgetCss" : "",
             "titleStyle" : {
               "fontSize" : "16px",
@@ -2119,6 +1988,1328 @@
           "row" : 0,
           "col" : 0,
           "id" : "13223e34-8f16-2e25-5737-a689b3445e4e"
+        },
+        "7efd1e68-2c4c-973b-9eb4-1ef7e7726a2d" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_value_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "c647ded8-a970-6163-be0d-429079ae54e6",
+              "filterId" : null,
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695032977516,
+                  "endTimeMs" : 1695119377516
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(2, 3, 8, 0)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n    <div class='content'>\n        <div class='column'>\n            <h1>Smart Energy monitoring</h1>\n        </div>\n    </div>\n</div>",
+              "cardCss" : ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n   background-color: #E0E0E3;\n}\n\n.card .content {\n   padding: 20px 20px 20px 0px;\n   display: flex;\n   flex-direction: row;\n   align-items: flex-start;\n   justify-content: flex-start;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content .column {\n   display: flex;\n   flex-direction: column;    \n   justify-content: space-around;\n   height: 100%;\n}\n\n.card h1 {\n    text-transform: capitalize;\n    color: rgb(255, 157, 12);\n    font-size: 20px;\n    font-weight: bold;\n    margin: 0;\n    padding-bottom: 10px;\n    line-height: 32px;\n    white-space: nowrap;\n}"
+            },
+            "title" : "New HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "7efd1e68-2c4c-973b-9eb4-1ef7e7726a2d"
+        },
+        "3d3d4e67-83bf-b472-7d0d-67b143c915bc" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "html_value_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
+              "filterId" : null,
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695033283231,
+                  "endTimeMs" : 1695119683231
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#E0E0E3",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n    <div class='content'>\n        <div class='column'>\n            <h1 id=\"home-route\"> Home </h1>\n        </div>\n        <div class='column'>\n        <div class= \"icon-container\" ><div class=\"material-icons icon\">chevron_right</div></div></div>\n        <div class='column'>\n            <h1> ${entityName}</h1>\n        </div>\n    </div>\n</div>",
+              "cardCss" : ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n   background-color: #E0E0E3;\n}\n\n.card .content {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n   justify-content: flex-start;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content .column {\n   display: flex;\n   flex-direction: column;    \n   justify-content: space-between;\n   height: 100%;\n}\n\n.card h1 {\n    text-transform: capitalize;\n    color: rgb(255, 157, 12);\n    font-size: 20px;\n    font-weight: bold;\n    margin: 0;\n    padding-bottom: 10px;\n    line-height: 32px;\n}\n\nh1:hover{\n    cursor: pointer;\n}\n\n.icon-container {\n    height: 40px;\n    width: 40px;\n    border-radius: 50%;\n    text-align: center;\n}\n\n.icon {\n    line-height: 36px;\n    color: rgb(255, 157, 12);\n    font-size:30px;\n}\n"
+            },
+            "title" : "New HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border" : "unset"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "home-route",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "let stateIndex = widgetContext.stateController.getStateIndex();\r\nif (stateIndex > 0) {\r\n    stateIndex -= 1;\r\n    backToPrevState(stateIndex);\r\n}\r\n\r\nfunction backToPrevState(stateIndex) {\r\n    widgetContext.stateController.navigatePrevState(stateIndex);\r\n}\r\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "7e2f8739-eb11-c0b5-06b9-a661a4747aa3"
+              } ]
+            },
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "3d3d4e67-83bf-b472-7d0d-67b143c915bc"
+        },
+        "53954bfb-9803-27b7-81dc-b1ae8807c2a0" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "410f6ea1-60e7-d392-bf10-9ce93afe4221",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "latestMonthlyPowerConsumption",
+                "type" : "timeseries",
+                "label" : "sumLatestMonthlyPowerConsumption",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.3876845737649013,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value? value.toFixed(1) + ' kwh' : '0 kwh';",
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "410f6ea1-60e7-d392-bf10-9ce93afe4221",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "costLatestSumAggregate",
+                "type" : "timeseries",
+                "label" : "sumCostLatestSumAggregate",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.11332257491280129,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value? value.toFixed(1) + ' Rs': '0 Rs';",
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 2,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1693506600000,
+                  "endTimeMs" : 1695148200000
+                },
+                "quickInterval" : "CURRENT_YEAR_SO_FAR"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Sites</h1>\r\n                <div class='value'>  ${sumLatestMonthlyPowerConsumption}</div> \r\n                <div class='value'> ${sumCostLatestSumAggregate}</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">flash_on</div>\r\n           </div>\r\n           <div class=\"description\">Current year Energy Consumption</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n    overflow: hidden;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n       background-image: url('https://tse1.mm.bing.net/th/id/OIP.VIrzcJbI1DjaCOezqqsBkgHaE5?w=274&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    background-color: rgba(255, 157, 12, .5);\r\n    padding: 10px;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n        color: #fff;\r\n}\r\n\r\n.value{\r\n    font-size: 1.5rem;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    padding: 10px;\r\n        color: #fff;\r\n        line-height: 20px;\r\n}\r\n\r\n.card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 36px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 15px;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n.bck-image{\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 0;\r\n    width: 100%;\r\n    z-index: -1;\r\n    transform: translateY(-50%);\r\n\r\n}\r\n\r\n.image{\r\n   background-image: url('https://tse1.mm.bing.net/th/id/OIP.VIrzcJbI1DjaCOezqqsBkgHaE5?w=274&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "53954bfb-9803-27b7-81dc-b1ae8807c2a0"
+        },
+        "fa054b61-5976-0537-95bc-5cab17b5cc81" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "b73fbb0f-644a-df80-9af7-b2422aba9cb3",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "powerMonthlyConsumption",
+                "type" : "timeseries",
+                "label" : "sumPowerMonthlyConsumption",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8795743954517654,
+                "aggregationType" : "SUM",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed() + ' kwh';",
+                "comparisonEnabled" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_YEAR_SO_FAR"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695107266680,
+                  "endTimeMs" : 1695193666680
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Energy Meters</h1>\r\n                <div class='value'>  ${sumPowerMonthlyConsumption}</div> \r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">flash_on</div>\r\n           </div>\r\n           <div class=\"description\">Energy Consumption current year</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n       background-image: url('https://tse1.mm.bing.net/th/id/OIP.VIrzcJbI1DjaCOezqqsBkgHaE5?w=274&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    background-color: rgba(255, 157, 12, .5);\r\n    padding: 10px;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n        color: #fff;\r\n}\r\n\r\n.value{\r\n    font-size: 40px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    padding: 10px;\r\n        color: #fff;\r\n}\r\n\r\n.card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 40px;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 36px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 0.8rem;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n.bck-image{\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 0;\r\n    width: 100%;\r\n    z-index: -1;\r\n    transform: translateY(-50%);\r\n\r\n}\r\n\r\n.image{\r\n   background-image: url('https://tse1.mm.bing.net/th/id/OIP.VIrzcJbI1DjaCOezqqsBkgHaE5?w=274&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px 20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "fa054b61-5976-0537-95bc-5cab17b5cc81"
+        },
+        "c463714a-04ff-72aa-9533-a14d6ff6e4ec" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "count",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.478725643572796,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : "df13dc1a-8627-018d-5ddc-5f4ee1766abd",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "activeDevices",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.06434420302313915,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : "c792293c-ad3a-f6b2-5728-116514f85986",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "InactiveDevices",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.6766406481480476,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695109293860,
+                  "endTimeMs" : 1695195693860
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> Energy Meters</h1>\r\n                <div class='value'>  ${count}</div> \r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">radio_button_checked</div>\r\n           </div>\r\n           <div class=\"description\">${activeDevices} Active</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n       background-image: url('https://tse4.mm.bing.net/th/id/OIP.gNm7TdN-6oVlhLwriiNmJgHaE7?pid=ImgDet&rs=1');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    background-color: rgba(255, 157, 12, .5);\r\n    padding: 10px;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 20px;\r\n    color: #fff;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    padding: 10px;\r\n        color: #fff;\r\n}\r\n\r\n.card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 30px;\r\n    width: 30px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 25px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 20px;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n.bck-image{\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 0;\r\n    width: 100%;\r\n    z-index: -1;\r\n    transform: translateY(-50%);\r\n\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "widgetStyle" : {
+              "border-radius" : "20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "enableDataExport" : true,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c463714a-04ff-72aa-9533-a14d6ff6e4ec"
+        },
+        "84167c93-6159-ff34-ec9b-7c2862a82e3c" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "531f2476-f7b3-1e79-5cde-7daa5ad06f5e",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "count",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.478725643572796,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "531f2476-f7b3-1e79-5cde-7daa5ad06f5e",
+              "filterId" : "df13dc1a-8627-018d-5ddc-5f4ee1766abd",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "activeDevices",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.06434420302313915,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : "c792293c-ad3a-f6b2-5728-116514f85986",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "InactiveDevices",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.6766406481480476,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695109293860,
+                  "endTimeMs" : 1695195693860
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> Energy Meters</h1>\r\n                <div class='value'>  ${count}</div> \r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">radio_button_checked</div>\r\n           </div>\r\n           <div class=\"description\">${activeDevices} Active</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n       background-image: url('https://tse4.mm.bing.net/th/id/OIP.gNm7TdN-6oVlhLwriiNmJgHaE7?pid=ImgDet&rs=1');\r\n   background-repeat: no-repeat;\r\n   background-position: center;\r\n   background-size: cover;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    background-color: rgba(255, 157, 12, .5);\r\n    padding: 10px;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 20px;\r\n    color: #fff;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n    padding: 10px;\r\n        color: #fff;\r\n}\r\n\r\n.card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #fff;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 300;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 40px;\r\n    width: 40px;\r\n    border-radius: 50%;\r\n    border: 3px solid rgb(255, 157, 12);\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 36px;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n .description {\r\n    margin-left: 16px;\r\n    font-size: 20px;\r\n    font-weight: 500;\r\n    color: rgb(255, 157, 12);\r\n}\r\n\r\n.bck-image{\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 0;\r\n    width: 100%;\r\n    z-index: -1;\r\n    transform: translateY(-50%);\r\n\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "84167c93-6159-ff34-ec9b-7c2862a82e3c"
+        },
+        "d55d6776-fce3-76db-d8a4-3177223794ac" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "latestAvgcost",
+                "type" : "timeseries",
+                "label" : "${entityName}",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8533942647302302,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              },
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideLastInterval" : true,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_YEAR",
+                "interval" : 1000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "legend" : {
+                "show" : true,
+                "position" : "nw",
+                "backgroundColor" : "#f0f0f0",
+                "backgroundOpacity" : 0.85,
+                "labelBoxBorderColor" : "rgba(1, 1, 1, 0.45)"
+              },
+              "decimals" : 1,
+              "stack" : false,
+              "tooltipIndividual" : false
+            },
+            "title" : "Current year Cost",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false,
+              "showLatest" : false
+            },
+            "displayTimewindow" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d55d6776-fce3-76db-d8a4-3177223794ac"
+        },
+        "2efbb924-7b1a-c897-5c13-e65d466c3cc1" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "531f2476-f7b3-1e79-5cde-7daa5ad06f5e",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "cost",
+                "type" : "timeseries",
+                "label" : "${entityName}",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.33199887986277754,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              },
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideLastInterval" : true,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_YEAR",
+                "interval" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "legend" : {
+                "show" : true,
+                "position" : "nw",
+                "backgroundColor" : "#f0f0f0",
+                "backgroundOpacity" : 0.85,
+                "labelBoxBorderColor" : "rgba(1, 1, 1, 0.45)"
+              },
+              "decimals" : 1,
+              "stack" : false,
+              "tooltipIndividual" : false
+            },
+            "title" : "Cost of current year",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : false,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : true,
+              "showTotal" : false,
+              "showLatest" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2efbb924-7b1a-c897-5c13-e65d466c3cc1"
+        },
+        "2ec21a16-6127-94f5-a862-13539e6d1bca" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "c647ded8-a970-6163-be0d-429079ae54e6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "costLatestSumAggregate",
+                "type" : "timeseries",
+                "label" : "costLatestSumAggregate",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.44278049262010755,
+                "aggregationType" : "NONE",
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value?value + ' Rs': 0 + ' Rs';",
+                "comparisonEnabled" : false,
+                "timeForComparison" : "previousInterval",
+                "comparisonResultType" : "DELTA_ABSOLUTE"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 2,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694588044912,
+                  "endTimeMs" : 1694674444912
+                },
+                "quickInterval" : "CURRENT_MONTH_SO_FAR"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Sites</h1>\r\n                <div class='value'>  ${costLatestSumAggregate}</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">currency_rupees</div>\r\n           </div>\r\n           <div class=\"description\">Cost</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #eee;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 400;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 10px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 28px;\r\n    width: 28px;\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 23px;\r\n    color: black;\r\n}\r\n\r\n .description {\r\n    margin-left: 8px;\r\n    font-size: 1rem;\r\n    font-weight: 500;\r\n    color: black;\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px 20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "margin" : "0px",
+            "displayTimewindow" : false,
+            "actions" : {
+              "elementClick" : [ ],
+              "headerButton" : [ ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2ec21a16-6127-94f5-a862-13539e6d1bca"
+        },
+        "9142c122-ac72-0b93-38e9-9f071d6457fb" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "count",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.13094367456932532,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 2,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694588044912,
+                  "endTimeMs" : 1694674444912
+                },
+                "quickInterval" : "CURRENT_MONTH_SO_FAR"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All sites</h1>\r\n                <div class='value'>  ${count}</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n           <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">synagogue</div>\r\n           </div>\r\n           <div class=\"description\">Sites Count</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #eee;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 400;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 10px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n}\r\n\r\n.icon-container {\r\n    height: 28px;\r\n    width: 28px;\r\n    text-align: center;\r\n}\r\n\r\n.icon {\r\n    line-height: 23px;\r\n    color: black;\r\n}\r\n\r\n .description {\r\n    margin-left: 8px;\r\n    font-size: 1rem;\r\n    font-weight: 500;\r\n    color: black;\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px 20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "margin" : "0px",
+            "displayTimewindow" : false,
+            "actions" : {
+              "elementClick" : [ ],
+              "headerButton" : [ ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "9142c122-ac72-0b93-38e9-9f071d6457fb"
+        },
+        "90d5a3ca-0a81-e226-5749-e999d352e650" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "count",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.13094367456932532,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 2,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694588044912,
+                  "endTimeMs" : 1694674444912
+                },
+                "quickInterval" : "CURRENT_MONTH_SO_FAR"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Energy Meters</h1>\r\n                <div class='value'>  ${count}</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n             <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">flash_on</div>\r\n           </div>\r\n           <div class=\"description\">Count</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n    overflow: hidden;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #eee;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 400;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 10px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    position: relative;\r\n}\r\n\r\n.icon-container {\r\n    height: 28px;\r\n    width: 28px;\r\n    text-align: center;\r\n    position:relative;\r\n}\r\n\r\n.icon {\r\n    color: black;\r\n}\r\n\r\n .description {\r\n    margin-left: 8px;\r\n    font-size: 1rem;\r\n    font-weight: 500;\r\n    color: black;\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px 20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "margin" : "0px",
+            "displayTimewindow" : false,
+            "actions" : {
+              "elementClick" : [ ],
+              "headerButton" : [ ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "90d5a3ca-0a81-e226-5749-e999d352e650"
+        },
+        "bbd6fcc9-a1fb-78ff-5ec7-4c30c5bf9bdf" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "markdown_card",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entityCount",
+              "name" : null,
+              "entityAliasId" : "139a979a-9730-0b11-2b78-14f435af2eeb",
+              "filterId" : "df13dc1a-8627-018d-5ddc-5f4ee1766abd",
+              "dataKeys" : [ {
+                "name" : "count",
+                "type" : "count",
+                "label" : "count",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.13094367456932532,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : true,
+                "postFuncBody" : "return value.toFixed();"
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "hideInterval" : false,
+              "hideLastInterval" : false,
+              "hideQuickInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 2,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694588044912,
+                  "endTimeMs" : 1694674444912
+                },
+                "quickInterval" : "CURRENT_MONTH_SO_FAR"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='upper-bar'>\r\n            <div class='bck-image'>\r\n                <div class='image'></div>\r\n            </div>\r\n            <div class='image-shade'>\r\n                <h1> All Energy Meters</h1>\r\n                <div class='value'>  ${count}</div>\r\n            </div>\r\n        </div>\r\n        <div class=\"lower-bar\">\r\n             <div class=\"icon-container\">\r\n               <div class=\"material-icons icon\">flash_on</div>\r\n           </div>\r\n           <div class=\"description\">Active Count</div>\r\n       </div>\r\n    </div>\r\n</div>",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card{\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    box-sizing: border-box;\r\n    padding:0px;\r\n    border-radius: 10px;\r\n    overflow: hidden;\r\n}\r\n\r\n.content{\r\n    height: 100%;\r\n}\r\n.upper-bar{\r\n    position: relative;\r\n    z-index: 0;\r\n    overflow: hidden;\r\n    height: 70%;\r\n    box-shadow: 0 1px 3px 0 rgba(0,0,0,.26);\r\n    color: #eee;\r\n}\r\n\r\n.image-shade{\r\n    width: 100%;\r\n    height: 100%;\r\n    padding-left: 16px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\nh1{\r\n    margin: 0;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    line-height: 30px;\r\n}\r\n\r\n.value{\r\n    font-size: 1.2rem;\r\n    font-weight: 400;\r\n    letter-spacing: -2px;\r\n}\r\n\r\n.lower-bar{\r\n        height: 30%;\r\n    padding-left: 10px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    position: relative;\r\n}\r\n\r\n.icon-container {\r\n    height: 28px;\r\n    width: 28px;\r\n    text-align: center;\r\n    position:relative;\r\n}\r\n\r\n.icon {\r\n    color: black;\r\n}\r\n\r\n .description {\r\n    margin-left: 8px;\r\n    font-size: 1rem;\r\n    font-weight: 500;\r\n    color: black;\r\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border-radius" : "20px 20px"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "margin" : "0px",
+            "displayTimewindow" : false,
+            "actions" : {
+              "elementClick" : [ ],
+              "headerButton" : [ ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "bbd6fcc9-a1fb-78ff-5ec7-4c30c5bf9bdf"
         }
       },
       "states" : {
@@ -2129,69 +3320,111 @@
             "main" : {
               "widgets" : {
                 "a145fa4b-211f-3290-55ae-fc3187017c71" : {
-                  "sizeX" : 13,
-                  "sizeY" : 10,
-                  "row" : 17,
+                  "sizeX" : 35,
+                  "sizeY" : 8,
+                  "row" : 21,
                   "col" : 1
                 },
                 "a5361db5-d679-9d22-201e-65c06017d98b" : {
-                  "sizeX" : 6,
-                  "sizeY" : 3,
-                  "row" : 1,
-                  "col" : 11
+                  "sizeX" : -4,
+                  "sizeY" : 9,
+                  "row" : 2,
+                  "col" : 0
                 },
                 "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff" : {
-                  "sizeX" : 6,
-                  "sizeY" : 3,
-                  "row" : 1,
-                  "col" : 18
+                  "sizeX" : -17,
+                  "sizeY" : 9,
+                  "row" : 20,
+                  "col" : 0
                 },
                 "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a" : {
-                  "sizeX" : -2,
-                  "sizeY" : 3,
-                  "row" : 1,
+                  "sizeX" : -3,
+                  "sizeY" : 4,
+                  "row" : 11,
                   "col" : 0
                 },
                 "3ed71d70-037b-55c2-1f03-7283d8722fd8" : {
-                  "sizeX" : 9,
-                  "sizeY" : 3,
-                  "row" : 1,
+                  "sizeX" : 8,
+                  "sizeY" : 5,
+                  "row" : 2,
                   "col" : 1
                 },
                 "5de57e99-12e1-3d54-bd28-dbaba85f9d12" : {
-                  "sizeX" : 19,
-                  "sizeY" : 11,
-                  "row" : 5,
-                  "col" : 11
+                  "sizeX" : 18,
+                  "sizeY" : 13,
+                  "row" : 30,
+                  "col" : 1
                 },
                 "0d3261e0-3cc7-41ec-90ba-76f3fd7190d8" : {
-                  "sizeX" : 29,
-                  "sizeY" : 9,
-                  "row" : 28,
+                  "sizeX" : 35,
+                  "sizeY" : 12,
+                  "row" : 44,
                   "col" : 1
                 },
                 "5ab1149a-3398-8da4-70fc-11d4d69ad6fe" : {
-                  "sizeX" : 9,
-                  "sizeY" : 12,
-                  "row" : 4,
+                  "sizeX" : 11,
+                  "sizeY" : 9,
+                  "row" : 12,
                   "col" : 1
                 },
                 "404be36c-a4c4-01af-1776-83f355c5b977" : {
-                  "sizeX" : 15,
-                  "sizeY" : 10,
-                  "row" : 17,
-                  "col" : 15
+                  "sizeX" : 13,
+                  "sizeY" : 9,
+                  "row" : 11,
+                  "col" : 13
                 },
-                "1672b442-1272-3555-88c0-ac7564e92fe0" : {
-                  "sizeX" : 5,
-                  "sizeY" : 3,
-                  "row" : 1,
-                  "col" : 25
+                "7efd1e68-2c4c-973b-9eb4-1ef7e7726a2d" : {
+                  "sizeX" : 11,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 1
+                },
+                "53954bfb-9803-27b7-81dc-b1ae8807c2a0" : {
+                  "sizeX" : 11,
+                  "sizeY" : 4,
+                  "row" : 8,
+                  "col" : 1
+                },
+                "c463714a-04ff-72aa-9533-a14d6ff6e4ec" : {
+                  "sizeX" : 10,
+                  "sizeY" : 4,
+                  "row" : 11,
+                  "col" : 29
+                },
+                "d55d6776-fce3-76db-d8a4-3177223794ac" : {
+                  "sizeX" : 16,
+                  "sizeY" : 13,
+                  "row" : 30,
+                  "col" : 20
+                },
+                "2ec21a16-6127-94f5-a862-13539e6d1bca" : {
+                  "sizeX" : 6,
+                  "sizeY" : 5,
+                  "row" : 2,
+                  "col" : 10
+                },
+                "9142c122-ac72-0b93-38e9-9f071d6457fb" : {
+                  "sizeX" : 6,
+                  "sizeY" : 5,
+                  "row" : 2,
+                  "col" : 17
+                },
+                "90d5a3ca-0a81-e226-5749-e999d352e650" : {
+                  "sizeX" : 6,
+                  "sizeY" : 5,
+                  "row" : 2,
+                  "col" : 24
+                },
+                "bbd6fcc9-a1fb-78ff-5ec7-4c30c5bf9bdf" : {
+                  "sizeX" : 6,
+                  "sizeY" : 5,
+                  "row" : 2,
+                  "col" : 31
                 }
               },
               "gridSettings" : {
-                "backgroundColor" : "#eeeeee",
-                "columns" : 24,
+                "backgroundColor" : "#E0E0E3",
+                "columns" : 32,
                 "margin" : 0,
                 "outerMargin" : true,
                 "backgroundSizeMode" : "100%",
@@ -2210,28 +3443,16 @@
             "main" : {
               "widgets" : {
                 "d8fd9ba7-4d4d-6a91-7f4f-c833e09da505" : {
-                  "sizeX" : 8,
+                  "sizeX" : 25,
                   "sizeY" : 6,
-                  "row" : 14,
+                  "row" : 15,
                   "col" : 1
                 },
                 "d4d5a201-9327-024e-5bb4-07cc4649673e" : {
-                  "sizeX" : 16,
+                  "sizeX" : 12,
                   "sizeY" : 8,
-                  "row" : 5,
-                  "col" : 10
-                },
-                "14b791e4-80ba-41c5-7704-a2a8798a1867" : {
-                  "sizeX" : 4,
-                  "sizeY" : 3,
-                  "row" : 1,
-                  "col" : 10
-                },
-                "0d222008-a20f-27aa-c877-8c921aafbb43" : {
-                  "sizeX" : 4,
-                  "sizeY" : 3,
-                  "row" : 1,
-                  "col" : 15
+                  "row" : 22,
+                  "col" : 1
                 },
                 "2943d3a1-ef9d-699e-6be4-bc991aa4ac97" : {
                   "sizeX" : 8,
@@ -2240,26 +3461,50 @@
                   "col" : 1
                 },
                 "1f55998e-f131-c971-4706-ead3a49e17c2" : {
-                  "sizeX" : 26,
-                  "sizeY" : 8,
-                  "row" : 21,
-                  "col" : 0
+                  "sizeX" : 25,
+                  "sizeY" : 9,
+                  "row" : 31,
+                  "col" : 1
                 },
                 "329cda04-d4b0-31ee-7fad-d8aa1e2056d5" : {
                   "sizeX" : 16,
-                  "sizeY" : 6,
-                  "row" : 14,
+                  "sizeY" : 8,
+                  "row" : 6,
                   "col" : 10
                 },
                 "13223e34-8f16-2e25-5737-a689b3445e4e" : {
                   "sizeX" : 8,
-                  "sizeY" : 8,
+                  "sizeY" : 9,
                   "row" : 5,
                   "col" : 1
+                },
+                "3d3d4e67-83bf-b472-7d0d-67b143c915bc" : {
+                  "sizeX" : 7,
+                  "sizeY" : 1,
+                  "row" : 0,
+                  "col" : 1
+                },
+                "fa054b61-5976-0537-95bc-5cab17b5cc81" : {
+                  "sizeX" : 7,
+                  "sizeY" : 4,
+                  "row" : 1,
+                  "col" : 10
+                },
+                "84167c93-6159-ff34-ec9b-7c2862a82e3c" : {
+                  "sizeX" : 6,
+                  "sizeY" : 4,
+                  "row" : 1,
+                  "col" : 18
+                },
+                "2efbb924-7b1a-c897-5c13-e65d466c3cc1" : {
+                  "sizeX" : 12,
+                  "sizeY" : 8,
+                  "row" : 22,
+                  "col" : 14
                 }
               },
               "gridSettings" : {
-                "backgroundColor" : "#eeeeee",
+                "backgroundColor" : "#E0E0E3",
                 "columns" : 24,
                 "margin" : 0,
                 "outerMargin" : false,
@@ -2463,6 +3708,34 @@
             } ]
           } ],
           "editable" : true
+        },
+        "c792293c-ad3a-f6b2-5728-116514f85986" : {
+          "id" : "c792293c-ad3a-f6b2-5728-116514f85986",
+          "filter" : "Inactive devices",
+          "keyFilters" : [ {
+            "key" : {
+              "type" : "ATTRIBUTE",
+              "key" : "active"
+            },
+            "valueType" : "BOOLEAN",
+            "predicates" : [ {
+              "keyFilterPredicate" : {
+                "operation" : "EQUAL",
+                "value" : {
+                  "defaultValue" : false,
+                  "dynamicValue" : null
+                },
+                "type" : "BOOLEAN"
+              },
+              "userInfo" : {
+                "editable" : true,
+                "label" : "",
+                "autogeneratedLabel" : true,
+                "order" : 0
+              }
+            } ]
+          } ],
+          "editable" : true
         }
       },
       "timewindow" : {
@@ -2474,10 +3747,10 @@
         "hideTimezone" : false,
         "selectedTab" : 0,
         "realtime" : {
-          "realtimeType" : 0,
+          "realtimeType" : 1,
           "timewindowMs" : 60000,
           "quickInterval" : "CURRENT_MONTH_SO_FAR",
-          "interval" : 5000
+          "interval" : 7200000
         },
         "aggregation" : {
           "type" : "SUM",
@@ -2492,7 +3765,14 @@
         "showEntitiesSelect" : true,
         "showDashboardTimewindow" : true,
         "showDashboardExport" : true,
-        "toolbarAlwaysOpen" : true
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(12, 8, 8, 0.87)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
       }
     },
     "customerId" : null,
@@ -2504,9 +3784,9 @@
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
-    "name" : "Summary",
+    "name" : " Smart energy Monitoring",
     "ownerId" : null,
-    "title" : "Summary"
+    "title" : " Smart energy Monitoring"
   },
   "relations" : [ ],
   "attributes" : {

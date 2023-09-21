@@ -27,6 +27,10 @@
       "toIndex" : 12,
       "type" : "Success"
     }, {
+      "fromIndex" : 0,
+      "toIndex" : 24,
+      "type" : "Success"
+    }, {
       "fromIndex" : 2,
       "toIndex" : 1,
       "type" : "Post attributes"
@@ -52,11 +56,11 @@
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 16,
+      "toIndex" : 15,
       "type" : "Alarm Acknowledged"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 16,
+      "toIndex" : 15,
       "type" : "Alarm Cleared"
     }, {
       "fromIndex" : 6,
@@ -80,23 +84,27 @@
       "type" : "Success"
     }, {
       "fromIndex" : 11,
-      "toIndex" : 0,
-      "type" : "False"
-    }, {
-      "fromIndex" : 11,
-      "toIndex" : 0,
-      "type" : "True"
-    }, {
-      "fromIndex" : 11,
-      "toIndex" : 15,
+      "toIndex" : 14,
       "type" : "Failure"
     }, {
       "fromIndex" : 11,
-      "toIndex" : 15,
+      "toIndex" : 14,
       "type" : "False"
     }, {
+      "fromIndex" : 11,
+      "toIndex" : 22,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 22,
+      "type" : "False"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 22,
+      "type" : "True"
+    }, {
       "fromIndex" : 12,
-      "toIndex" : 20,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 12,
@@ -107,56 +115,72 @@
       "toIndex" : 23,
       "type" : "Success"
     }, {
-      "fromIndex" : 15,
-      "toIndex" : 17,
+      "fromIndex" : 14,
+      "toIndex" : 16,
       "type" : "Created"
     }, {
-      "fromIndex" : 16,
-      "toIndex" : 19,
+      "fromIndex" : 15,
+      "toIndex" : 18,
       "type" : "Cleared"
     }, {
-      "fromIndex" : 16,
-      "toIndex" : 19,
+      "fromIndex" : 15,
+      "toIndex" : 18,
       "type" : "Failure"
     }, {
-      "fromIndex" : 16,
-      "toIndex" : 19,
+      "fromIndex" : 15,
+      "toIndex" : 18,
       "type" : "False"
     }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
       "fromIndex" : 17,
-      "toIndex" : 18,
+      "toIndex" : 13,
       "type" : "Failure"
     }, {
       "fromIndex" : 17,
-      "toIndex" : 18,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 18,
-      "toIndex" : 14,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 18,
-      "toIndex" : 14,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 14,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 20,
       "toIndex" : 13,
       "type" : "Success"
     }, {
-      "fromIndex" : 21,
-      "toIndex" : 22,
+      "fromIndex" : 18,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 20,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 0,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 20,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 25,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 20,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 999,
-        "layoutY" : 271
+        "layoutX" : 1010,
+        "layoutY" : 270
       },
       "configuration" : {
         "defaultTTL" : 0
@@ -195,8 +219,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 513,
-        "layoutY" : 267
+        "layoutX" : 319,
+        "layoutY" : 15
       },
       "configuration" : {
         "version" : 0
@@ -316,8 +340,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 627,
-        "layoutY" : 108
+        "layoutX" : 664,
+        "layoutY" : 152
       },
       "configuration" : {
         "entityGroupIsMessageOriginator" : false,
@@ -384,8 +408,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 563,
-        "layoutY" : 412
+        "layoutX" : 289,
+        "layoutY" : 400
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -406,8 +430,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 56,
-        "layoutY" : 251
+        "layoutX" : 85,
+        "layoutY" : 41
       },
       "configuration" : {
         "originatorSource" : "TENANT",
@@ -437,28 +461,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 198,
-        "layoutY" : 565
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "01a599d0-4d70-11ee-b4de-37540c770a8a"
-      },
-      "name" : "Save Time Series sum",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 971,
         "layoutY" : 757
       },
@@ -481,8 +483,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 556,
-        "layoutY" : 660
+        "layoutX" : 541,
+        "layoutY" : 639
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -611,43 +613,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 119,
-        "layoutY" : 387
-      },
-      "configuration" : {
-        "direction" : "FROM",
-        "relationType" : "Contains",
-        "deduplicationInSec" : 10,
-        "aggMappings" : [ {
-          "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "energyConsumption",
-          "defaultValue" : 0,
-          "aggFunction" : "SUM",
-          "target" : "energyConsumptionCurrentMonth"
-        } ],
-        "outMsgType" : "POST_TELEMETRY_REQUEST",
-        "queueName" : null
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "244fb0d0-5214-11ee-88c0-170e82239536"
-      },
-      "name" : "Aggregate Latest",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 0,
-        "layoutY" : 464
+        "layoutX" : 48,
+        "layoutY" : 408
       },
       "configuration" : {
         "inputValueKey" : "energyConsumption",
-        "outputValueKey" : "consumption",
+        "outputValueKey" : "summaryEnergyConsumption",
         "mathFunction" : "SUM",
         "aggIntervalType" : "CUSTOM",
         "timeZoneId" : "Asia/Calcutta",
@@ -657,7 +628,7 @@
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "intervalCheckValue" : 1,
         "intervalCheckTimeUnit" : "MINUTES",
-        "statePersistencePolicy" : "ON_EACH_CHANGE",
+        "statePersistencePolicy" : "PERIODICALLY",
         "statePersistenceValue" : 1,
         "statePersistenceTimeUnit" : "MINUTES",
         "autoCreateIntervals" : false,
@@ -683,8 +654,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 9,
-        "layoutY" : 602
+        "layoutX" : 239,
+        "layoutY" : 612
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -705,8 +676,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 190,
-        "layoutY" : 665
+        "layoutX" : 304,
+        "layoutY" : 513
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -724,6 +695,131 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 748,
+        "layoutY" : 21
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "msg.cost = msg.energyConsumption*6.045;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "829e1df0-5798-11ee-b1f8-37cb77e3b6b4"
+      },
+      "name" : "Cost Calculation",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 28,
+        "layoutY" : 566
+      },
+      "configuration" : {
+        "inputValueKey" : "cost",
+        "outputValueKey" : "totalCostStream",
+        "mathFunction" : "SUM",
+        "aggIntervalType" : "CUSTOM",
+        "timeZoneId" : "Asia/Calcutta",
+        "aggIntervalValue" : 1,
+        "aggIntervalTimeUnit" : "MINUTES",
+        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "intervalCheckValue" : 1,
+        "intervalCheckTimeUnit" : "MINUTES",
+        "statePersistencePolicy" : "ON_EACH_CHANGE",
+        "statePersistenceValue" : 1,
+        "statePersistenceTimeUnit" : "MINUTES",
+        "autoCreateIntervals" : false,
+        "periodValue" : 5,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : null
+        },
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "bf998c90-579c-11ee-b4de-37540c770a8a"
+      },
+      "name" : "Cost estimation",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 27,
+        "layoutY" : 632
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Manages",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "energyConsumption",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "totalEnergyConsumptionAttenant"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a575190-57a5-11ee-ab62-bf6c2845e826"
+      },
+      "name" : "aggregate Latest tenant level energy Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 186,
+        "layoutY" : 707
+      },
+      "configuration" : {
+        "originatorSource" : "TENANT",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a5814e0-57a5-11ee-ab62-bf6c2845e826"
+      },
+      "name" : "Tenenat originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     } ],
     "ruleChainConnections" : null
   },
