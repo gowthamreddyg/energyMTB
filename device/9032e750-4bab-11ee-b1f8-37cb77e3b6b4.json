@@ -74,18 +74,18 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.65,
+      "doubleValue" : 0.58,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1694093482549,
+      "lastUpdateTs" : 1695294764681,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.89,
+      "doubleValue" : 0.67,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1694093498102,
+      "lastUpdateTs" : 1695294753367,
       "longValue" : null,
       "strValue" : null
     } ],

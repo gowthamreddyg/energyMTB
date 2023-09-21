@@ -101,9 +101,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "imageUrl",
-      "lastUpdateTs" : 1694093385508,
+      "lastUpdateTs" : 1695294288621,
       "longValue" : null,
-      "strValue" : "https://l.icdbcdn.com/oh/eefe66c6-ee24-4f28-9599-705fd2bce633.png?w=960&mode=max&f=32"
+      "strValue" : "https://s3-us-west-2.amazonaws.com/public.manufacturedhomes.com/manufacturer/3329/floorplan/224501/4876S0316-floor-plans.jpg"
     }, {
       "booleanValue" : null,
       "doubleValue" : 12.97675,
