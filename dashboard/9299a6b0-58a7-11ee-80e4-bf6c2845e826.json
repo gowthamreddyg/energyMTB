@@ -2360,7 +2360,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : null,
-              "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
+              "entityAliasId" : "19f36201-edf4-69f3-53e8-1f9818ab7e78",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "powerMonthlyConsumption",
@@ -2466,7 +2466,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : null,
-              "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
+              "entityAliasId" : "19f36201-edf4-69f3-53e8-1f9818ab7e78",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "costLatestSum",
@@ -3083,7 +3083,7 @@
               "entityAliasId" : "73f80c66-7c0d-f7c2-59cb-dacefb7d7759",
               "filterId" : null,
               "dataKeys" : [ {
-                "name" : "monthlyPowerConsumption",
+                "name" : "powerMonthlyConsumption",
                 "type" : "timeseries",
                 "label" : "Energy Consumption (KW)",
                 "color" : "#2196f3",
@@ -3666,7 +3666,7 @@
                 },
                 "1946171c-e0a2-7c75-b771-6b23afdb330f" : {
                   "sizeX" : 44,
-                  "sizeY" : 7,
+                  "sizeY" : 17,
                   "row" : 37,
                   "col" : 1
                 },
