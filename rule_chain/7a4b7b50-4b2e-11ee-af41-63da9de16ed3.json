@@ -37,6 +37,14 @@
       "fromIndex" : 5,
       "toIndex" : 1,
       "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 1,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -69,8 +77,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 601,
-        "layoutY" : 172
+        "layoutX" : 608,
+        "layoutY" : 240
       },
       "configuration" : {
         "ruleChainId" : "af48d810-3ce8-11ee-b778-63da9de16ed3"
@@ -143,8 +151,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 116,
-        "layoutY" : 418
+        "layoutX" : 233,
+        "layoutY" : 356
       },
       "configuration" : {
         "msgCount" : 1440,
@@ -170,8 +178,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 359,
-        "layoutY" : 400
+        "layoutX" : 228,
+        "layoutY" : 427
       },
       "configuration" : {
         "msgCount" : 1440,
@@ -191,6 +199,60 @@
         "id" : "79e62c90-4bac-11ee-ab62-bf6c2845e826"
       },
       "name" : "Energy Meter B 3",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 189,
+        "layoutY" : 509
+      },
+      "configuration" : {
+        "msgCount" : 1440,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var msg = { energyConsumption: 147 + Number((Math.random() * (140 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "tbelScript" : "var msg = { energyConsumption: 30 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "ff534b20-5c72-11ee-bc6f-eb0f2a9d5dee",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1db3a380-5c82-11ee-af73-37540c770a8a"
+      },
+      "name" : "Energy Meter B 3 Cust 1",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 197,
+        "layoutY" : 587
+      },
+      "configuration" : {
+        "msgCount" : 1440,
+        "periodInSeconds" : 60,
+        "scriptLang" : "JS",
+        "jsScript" : "var msg = { energyConsumption: 147 + Number((Math.random() * (140 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "tbelScript" : "var msg = { energyConsumption: 30 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "queueName" : null,
+        "originatorId" : "0badad70-5c73-11ee-aade-63da9de16ed3",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1db52a20-5c82-11ee-af73-37540c770a8a"
+      },
+      "name" : "Energy Meter B 3 Cust 2",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"

@@ -1,11 +1,7 @@
 {
   "entityType" : "ENTITY_GROUP",
   "entity" : {
-    "additionalInfo" : {
-      "description" : "",
-      "isPublic" : true,
-      "publicCustomerId" : "e76f6b10-5c72-11ee-94fd-170e82239536"
-    },
+    "additionalInfo" : null,
     "configuration" : {
       "columns" : [ {
         "type" : "ENTITY_FIELD",
@@ -13,15 +9,19 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "name",
+        "key" : "title",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "device_profile",
+        "key" : "email",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "label",
+        "key" : "country",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "city",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
@@ -29,17 +29,17 @@
     },
     "edgeGroupAll" : false,
     "externalId" : null,
-    "groupAll" : false,
+    "groupAll" : true,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "5593b8a0-4b2d-11ee-af41-63da9de16ed3"
+      "id" : "e7742600-5c72-11ee-94fd-170e82239536"
     },
-    "name" : "Energy Meters",
+    "name" : "All",
     "ownerId" : {
-      "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "entityType" : "CUSTOMER",
+      "id" : "e76f6b10-5c72-11ee-94fd-170e82239536"
     },
-    "type" : "DEVICE"
+    "type" : "CUSTOMER"
   },
   "relations" : [ ],
   "attributes" : {

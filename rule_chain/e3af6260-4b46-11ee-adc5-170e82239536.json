@@ -400,7 +400,7 @@
           "maxLevel" : 1,
           "filters" : [ {
             "relationType" : "Manages",
-            "entityTypes" : [ "USER" ]
+            "entityTypes" : [ "CUSTOMER" ]
           } ]
         }
       },
@@ -418,8 +418,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1334,
-        "layoutY" : 198
+        "layoutX" : 1341,
+        "layoutY" : 208
       },
       "configuration" : {
         "direction" : "FROM",
@@ -546,8 +546,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1168,
-        "layoutY" : 289
+        "layoutX" : 1095,
+        "layoutY" : 282
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -559,7 +559,7 @@
           "maxLevel" : 1,
           "filters" : [ {
             "relationType" : "Manages",
-            "entityTypes" : [ "USER" ]
+            "entityTypes" : [ "CUSTOMER" ]
           } ]
         }
       },
@@ -577,8 +577,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1408,
-        "layoutY" : 285
+        "layoutX" : 1342,
+        "layoutY" : 281
       },
       "configuration" : {
         "direction" : "FROM",

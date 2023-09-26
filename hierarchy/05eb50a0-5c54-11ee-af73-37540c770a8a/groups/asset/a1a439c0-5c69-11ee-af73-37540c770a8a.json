@@ -2,9 +2,7 @@
   "entityType" : "ENTITY_GROUP",
   "entity" : {
     "additionalInfo" : {
-      "description" : "",
-      "isPublic" : true,
-      "publicCustomerId" : "e76f6b10-5c72-11ee-94fd-170e82239536"
+      "description" : ""
     },
     "configuration" : {
       "columns" : [ {
@@ -17,11 +15,7 @@
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "device_profile",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "label",
+        "key" : "asset_profile",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
@@ -32,14 +26,14 @@
     "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "5593b8a0-4b2d-11ee-af41-63da9de16ed3"
+      "id" : "a1a439c0-5c69-11ee-af73-37540c770a8a"
     },
-    "name" : "Energy Meters",
+    "name" : "sites",
     "ownerId" : {
-      "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
     },
-    "type" : "DEVICE"
+    "type" : "ASSET"
   },
   "relations" : [ ],
   "attributes" : {

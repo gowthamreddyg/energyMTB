@@ -11,15 +11,11 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "first_name",
+        "key" : "name",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "last_name",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "email",
+        "key" : "asset_profile",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
@@ -30,19 +26,18 @@
     "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "8f1b1be0-5c58-11ee-af73-37540c770a8a"
+      "id" : "db7c1e10-5c69-11ee-aade-63da9de16ed3"
     },
-    "name" : "Customer User 1",
+    "name" : "Sites",
     "ownerId" : {
-      "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
     },
-    "type" : "USER"
+    "type" : "ASSET"
   },
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   },
-  "groupEntities" : true,
-  "permissions" : [ ]
+  "groupEntities" : true
 }

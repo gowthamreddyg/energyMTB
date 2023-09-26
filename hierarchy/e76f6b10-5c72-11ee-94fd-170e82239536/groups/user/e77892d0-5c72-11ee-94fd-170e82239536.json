@@ -9,7 +9,15 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "title",
+        "key" : "first_name",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "last_name",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "email",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
@@ -17,21 +25,22 @@
     },
     "edgeGroupAll" : false,
     "externalId" : null,
-    "groupAll" : false,
+    "groupAll" : true,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "3c51e8f0-56e3-11ee-b22d-170e82239536"
+      "id" : "e77892d0-5c72-11ee-94fd-170e82239536"
     },
-    "name" : "Smart office dashboards",
+    "name" : "All",
     "ownerId" : {
-      "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "entityType" : "CUSTOMER",
+      "id" : "e76f6b10-5c72-11ee-94fd-170e82239536"
     },
-    "type" : "DASHBOARD"
+    "type" : "USER"
   },
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   },
-  "groupEntities" : true
+  "groupEntities" : true,
+  "permissions" : [ ]
 }

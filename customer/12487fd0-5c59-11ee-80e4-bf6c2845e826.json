@@ -4,7 +4,7 @@
     "additionalInfo" : {
       "description" : "",
       "allowWhiteLabeling" : true,
-      "homeDashboardId" : null,
+      "homeDashboardId" : "201e2590-5c5b-11ee-bc6f-eb0f2a9d5dee",
       "homeDashboardHideToolbar" : true
     },
     "address" : null,
@@ -18,15 +18,51 @@
       "entityType" : "CUSTOMER",
       "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
     },
-    "name" : "Customer 2",
+    "name" : "Site Customer 2",
     "ownerId" : null,
     "parentCustomerId" : null,
     "phone" : null,
     "state" : null,
-    "title" : "Customer 2",
+    "title" : "Site Customer 2",
     "zip" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "TENANT",
+      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "dcd2ad60-5c69-11ee-80e4-bf6c2845e826"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
+    },
+    "to" : {
+      "entityType" : "USER",
+      "id" : "27e14850-5c62-11ee-94fd-170e82239536"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }
