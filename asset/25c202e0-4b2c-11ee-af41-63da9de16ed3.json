@@ -81,11 +81,11 @@
       "longValue" : null,
       "strValue" : "24, Vittal Mallya Rd, KG Halli, Shanthala Nagar, Sampangi Rama Nagar, Bengaluru, Karnataka 560001"
     }, {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "alarm",
-      "lastUpdateTs" : 1695319027013,
+      "lastUpdateTs" : 1695363308517,
       "longValue" : null,
       "strValue" : null
     }, {

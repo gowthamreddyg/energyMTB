@@ -69,11 +69,11 @@
       "longValue" : null,
       "strValue" : "RMZ Infinity: Old Madras Road, Bennigana Halli, Bengaluru. 560008"
     }, {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "alarm",
-      "lastUpdateTs" : 1695301637555,
+      "lastUpdateTs" : 1695363311947,
       "longValue" : null,
       "strValue" : null
     }, {

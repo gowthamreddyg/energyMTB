@@ -119,6 +119,26 @@
       "toIndex" : 16,
       "type" : "Created"
     }, {
+      "fromIndex" : 14,
+      "toIndex" : 16,
+      "type" : "Updated"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 26,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 26,
+      "type" : "Updated"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 28,
+      "type" : "Created"
+    }, {
+      "fromIndex" : 14,
+      "toIndex" : 28,
+      "type" : "Updated"
+    }, {
       "fromIndex" : 15,
       "toIndex" : 18,
       "type" : "Cleared"
@@ -133,18 +153,6 @@
     }, {
       "fromIndex" : 16,
       "toIndex" : 17,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 16,
-      "toIndex" : 17,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 13,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 13,
       "type" : "Success"
     }, {
       "fromIndex" : 18,
@@ -174,13 +182,21 @@
       "fromIndex" : 25,
       "toIndex" : 20,
       "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 13,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 1010,
-        "layoutY" : 270
+        "layoutX" : 1011,
+        "layoutY" : 265
       },
       "configuration" : {
         "defaultTTL" : 0
@@ -198,8 +214,8 @@
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
     }, {
       "additionalInfo" : {
-        "layoutX" : 1000,
-        "layoutY" : 167
+        "layoutX" : 1034,
+        "layoutY" : 165
       },
       "configuration" : {
         "scope" : "CLIENT_SCOPE",
@@ -220,7 +236,7 @@
       "additionalInfo" : {
         "description" : null,
         "layoutX" : 319,
-        "layoutY" : 15
+        "layoutY" : 8
       },
       "configuration" : {
         "version" : 0
@@ -300,8 +316,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 255,
-        "layoutY" : 301
+        "layoutX" : 299,
+        "layoutY" : 406
       },
       "configuration" : {
         "originatorTypes" : [ "ENTITY_GROUP", "DEVICE" ]
@@ -320,8 +336,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 319,
-        "layoutY" : 109
+        "layoutX" : 272,
+        "layoutY" : 181
       },
       "configuration" : {
         "messageTypes" : [ "POST_ATTRIBUTES_REQUEST", "RPC_CALL_FROM_SERVER_TO_DEVICE" ]
@@ -388,8 +404,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1075,
-        "layoutY" : 58
+        "layoutX" : 1269,
+        "layoutY" : 232
       },
       "configuration" : {
         "ruleChainId" : "e3af6260-4b46-11ee-adc5-170e82239536"
@@ -408,8 +424,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 289,
-        "layoutY" : 400
+        "layoutX" : 500,
+        "layoutY" : 376
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -461,8 +477,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 971,
-        "layoutY" : 757
+        "layoutX" : 970,
+        "layoutY" : 748
       },
       "configuration" : {
         "scope" : "SERVER_SCOPE",
@@ -483,8 +499,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 541,
-        "layoutY" : 639
+        "layoutX" : 404,
+        "layoutY" : 661
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -515,8 +531,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 581,
-        "layoutY" : 572
+        "layoutX" : 448,
+        "layoutY" : 576
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -538,13 +554,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 562,
-        "layoutY" : 724
+        "layoutX" : 642,
+        "layoutY" : 769
       },
       "configuration" : {
         "originatorSource" : "ENTITY",
         "entityType" : "DEVICE",
-        "entityNamePattern" : "Energy Meter A 1",
+        "entityNamePattern" : "Energy Meter A 2",
         "relationsQuery" : {
           "direction" : "FROM",
           "maxLevel" : 1,
@@ -562,15 +578,15 @@
         "entityType" : "RULE_NODE",
         "id" : "5ebda020-51ff-11ee-88c0-170e82239536"
       },
-      "name" : "change originator",
+      "name" : "Energy Meter A 2",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 783,
-        "layoutY" : 649
+        "layoutX" : 638,
+        "layoutY" : 663
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -591,8 +607,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 791,
-        "layoutY" : 588
+        "layoutX" : 743,
+        "layoutY" : 557
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -698,8 +714,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 748,
-        "layoutY" : 21
+        "layoutX" : 757,
+        "layoutY" : 40
       },
       "configuration" : {
         "scriptLang" : "TBEL",
@@ -820,6 +836,81 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 385,
+        "layoutY" : 769
+      },
+      "configuration" : {
+        "originatorSource" : "ENTITY",
+        "entityType" : "DEVICE",
+        "entityNamePattern" : "Energy Meter B 3",
+        "relationsQuery" : {
+          "direction" : "FROM",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ ]
+          } ],
+          "fetchLastLevelOnly" : false
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "be128b30-590c-11ee-aade-63da9de16ed3"
+      },
+      "name" : "Energy Meter B 3",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 644,
+        "layoutY" : 916
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "msg.alarm = true;\nreturn {msg: {alarm : true}, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "9a328380-590e-11ee-80e4-bf6c2845e826"
+      },
+      "name" : "Message type updation",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 391,
+        "layoutY" : 914
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "msg.alarm = true;\nreturn {msg: {alarm : true}, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e0955a90-590f-11ee-80e4-bf6c2845e826"
+      },
+      "name" : "Message type updation",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },

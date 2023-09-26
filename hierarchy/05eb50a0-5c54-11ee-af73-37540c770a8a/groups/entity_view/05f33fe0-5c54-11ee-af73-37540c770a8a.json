@@ -1,9 +1,7 @@
 {
   "entityType" : "ENTITY_GROUP",
   "entity" : {
-    "additionalInfo" : {
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "configuration" : {
       "columns" : [ {
         "type" : "ENTITY_FIELD",
@@ -11,19 +9,11 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "title",
+        "key" : "name",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "email",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "country",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "city",
+        "key" : "type",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
@@ -31,17 +21,17 @@
     },
     "edgeGroupAll" : false,
     "externalId" : null,
-    "groupAll" : false,
+    "groupAll" : true,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "730e6940-53be-11ee-b4de-37540c770a8a"
+      "id" : "05f33fe0-5c54-11ee-af73-37540c770a8a"
     },
-    "name" : "Customers",
+    "name" : "All",
     "ownerId" : {
-      "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
     },
-    "type" : "CUSTOMER"
+    "type" : "ENTITY_VIEW"
   },
   "relations" : [ ],
   "attributes" : {

@@ -57,11 +57,11 @@
       "longValue" : null,
       "strValue" : null
     }, {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "alarm",
-      "lastUpdateTs" : 1695319005745,
+      "lastUpdateTs" : 1695450045539,
       "longValue" : null,
       "strValue" : null
     }, {
