@@ -6,13 +6,7 @@
       "description" : "",
       "widgets" : {
         "ce6a644b-58d5-312b-87d8-244046bf121d" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "entities_hierarchy",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3.5,
           "config" : {
@@ -94,16 +88,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "ce6a644b-58d5-312b-87d8-244046bf121d"
+          "id" : "ce6a644b-58d5-312b-87d8-244046bf121d",
+          "typeFullFqn" : "system.cards.entities_hierarchy"
         },
         "0a8fd6d6-8615-0484-0c21-ab03ae6f092e" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "entities_hierarchy",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3.5,
           "config" : {
@@ -170,7 +159,8 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "0a8fd6d6-8615-0484-0c21-ab03ae6f092e"
+          "id" : "0a8fd6d6-8615-0484-0c21-ab03ae6f092e",
+          "typeFullFqn" : "system.cards.entities_hierarchy"
         }
       },
       "states" : {
@@ -181,8 +171,8 @@
             "main" : {
               "widgets" : {
                 "ce6a644b-58d5-312b-87d8-244046bf121d" : {
-                  "sizeX" : 7,
-                  "sizeY" : 4,
+                  "sizeX" : 14,
+                  "sizeY" : 10,
                   "row" : 0,
                   "col" : 0
                 }
@@ -230,7 +220,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+              "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
             }
           }
         },
@@ -307,7 +297,10 @@
       }
     },
     "customerId" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "201e2590-5c5b-11ee-bc6f-eb0f2a9d5dee"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "201e2590-5c5b-11ee-bc6f-eb0f2a9d5dee"

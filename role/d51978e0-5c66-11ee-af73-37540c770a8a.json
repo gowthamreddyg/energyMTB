@@ -5,7 +5,10 @@
       "entityType" : "CUSTOMER",
       "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "ROLE",
+      "id" : "d51978e0-5c66-11ee-af73-37540c770a8a"
+    },
     "name" : "Add permissions",
     "permissions" : {
       "ALL" : [ "ALL" ]

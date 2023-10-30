@@ -26,7 +26,10 @@
       "actions" : { }
     },
     "edgeGroupAll" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
+    },
     "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
@@ -53,16 +56,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
     },
-    "createdTime" : 1695735907487,
+    "createdTime" : 1697543276717,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "e77dc2f0-5c72-11ee-94fd-170e82239536"
+      "id" : "038025d0-6ce3-11ee-b4ac-570318c78832"
     },
     "name" : "GENERIC_[e7792f10-5c72-11ee-94fd-170e82239536]_[e77a6790-5c72-11ee-94fd-170e82239536]",
     "public" : false
@@ -78,16 +81,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
     },
-    "createdTime" : 1695735907522,
+    "createdTime" : 1697543279492,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "e7831a20-5c72-11ee-94fd-170e82239536"
+      "id" : "05279440-6ce3-11ee-b4ac-570318c78832"
     },
     "name" : "GROUP_[e7792f10-5c72-11ee-94fd-170e82239536]_[e781e1a0-5c72-11ee-94fd-170e82239536]_[5593b8a0-4b2d-11ee-af41-63da9de16ed3]_[DEVICE]",
     "public" : true
@@ -103,16 +106,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
     },
-    "createdTime" : 1695739775138,
+    "createdTime" : 1697543279496,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "e8ca7820-5c7b-11ee-94fd-170e82239536"
+      "id" : "05283080-6ce3-11ee-b4ac-570318c78832"
     },
     "name" : "GROUP_[e7792f10-5c72-11ee-94fd-170e82239536]_[e781e1a0-5c72-11ee-94fd-170e82239536]_[a0d1f920-53b7-11ee-b4de-37540c770a8a]_[ASSET]",
     "public" : true

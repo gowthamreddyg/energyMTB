@@ -1,0 +1,127 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "119b03c0-4b2c-11ee-b4de-37540c770a8a"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
+    },
+    "externalId" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "label" : null,
+    "name" : "Site 1",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
+    },
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "USER",
+      "id" : "8bad0c50-6d71-11ee-94f5-837300f44a25"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "a0beff20-4b2c-11ee-adc5-170e82239536"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b0f9a8e0-4b2c-11ee-b1f8-37cb77e3b6b4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1698242156029,
+      "longValue" : null,
+      "strValue" : "UB City, Canberra Block, 12th and 13th Floor, Vittal Mallya Road, Bangalore, Karnataka - 560001"
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "alarm",
+      "lastUpdateTs" : 1698297874921,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 45.0,
+      "jsonValue" : null,
+      "key" : "energyConsumptionSum",
+      "lastUpdateTs" : 1693992227865,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "eneryConsumptionTotal",
+      "lastUpdateTs" : 1694010184411,
+      "longValue" : 36,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "imageUrl",
+      "lastUpdateTs" : 1694093398671,
+      "longValue" : null,
+      "strValue" : "https://l.icdbcdn.com/oh/eefe66c6-ee24-4f28-9599-705fd2bce633.png?w=960&mode=max&f=32"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 40.767144,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1694087847826,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -73.980197,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1694087889752,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

@@ -4,8 +4,8 @@
     "additionalInfo" : {
       "description" : "",
       "allowWhiteLabeling" : true,
-      "homeDashboardId" : "201e2590-5c5b-11ee-bc6f-eb0f2a9d5dee",
-      "homeDashboardHideToolbar" : true
+      "homeDashboardHideToolbar" : true,
+      "homeDashboardId" : "f4e693d0-6ce0-11ee-b4ac-570318c78832"
     },
     "address" : null,
     "address2" : null,
@@ -13,7 +13,10 @@
     "country" : null,
     "customerId" : null,
     "email" : "customer1@in.ey.com",
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
+    },
     "id" : {
       "entityType" : "CUSTOMER",
       "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
@@ -30,25 +33,13 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "TENANT",
-      "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+      "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
     },
     "to" : {
       "entityType" : "CUSTOMER",
       "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
     },
-    "type" : "Manages",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "CUSTOMER",
-      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
-    },
-    "to" : {
-      "entityType" : "ASSET",
-      "id" : "a3671f70-5c69-11ee-af73-37540c770a8a"
-    },
-    "type" : "Manages",
+    "type" : "Contains",
     "typeGroup" : "COMMON"
   }, {
     "additionalInfo" : null,
@@ -58,9 +49,9 @@
     },
     "to" : {
       "entityType" : "USER",
-      "id" : "2d04d440-5c59-11ee-80e4-bf6c2845e826"
+      "id" : "8bad0c50-6d71-11ee-94f5-837300f44a25"
     },
-    "type" : "Manages",
+    "type" : "Contains",
     "typeGroup" : "COMMON"
   } ],
   "attributes" : {

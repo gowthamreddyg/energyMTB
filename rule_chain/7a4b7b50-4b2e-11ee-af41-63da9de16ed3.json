@@ -6,7 +6,10 @@
     },
     "configuration" : null,
     "debugMode" : true,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "7a4b7b50-4b2e-11ee-af41-63da9de16ed3"
+    },
     "firstRuleNodeId" : null,
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -37,14 +40,6 @@
       "fromIndex" : 5,
       "toIndex" : 1,
       "type" : "Success"
-    }, {
-      "fromIndex" : 6,
-      "toIndex" : 1,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 7,
-      "toIndex" : 1,
-      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -57,18 +52,19 @@
         "msgCount" : 1440,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 100 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 10 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "a0beff20-4b2c-11ee-adc5-170e82239536",
         "originatorType" : "DEVICE"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "cd417090-4b32-11ee-af41-63da9de16ed3"
+        "id" : "d6206190-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Energy Meter A 1",
       "ruleChainId" : null,
@@ -83,12 +79,13 @@
       "configuration" : {
         "ruleChainId" : "af48d810-3ce8-11ee-b778-63da9de16ed3"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "cd439370-4b32-11ee-af41-63da9de16ed3"
+        "id" : "d62088a0-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Root rule",
       "ruleChainId" : null,
@@ -104,18 +101,19 @@
         "msgCount" : 1440,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 40 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 89 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b0f9a8e0-4b2c-11ee-b1f8-37cb77e3b6b4",
         "originatorType" : "DEVICE"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "659fdf40-4ba4-11ee-adc5-170e82239536"
+        "id" : "d62088a1-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Enenrgy Meter A 2",
       "ruleChainId" : null,
@@ -131,18 +129,19 @@
         "msgCount" : 1440,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 39 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 89 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "9032e750-4bab-11ee-b1f8-37cb77e3b6b4",
         "originatorType" : "DEVICE"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "a808c500-4ba8-11ee-b4de-37540c770a8a"
+        "id" : "d620afb0-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Energy Meter B 1",
       "ruleChainId" : null,
@@ -158,18 +157,19 @@
         "msgCount" : 1440,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 114 + Number((Math.random() * (36 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 05 + Number((Math.random() * (36 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { energyConsumption: 100 + Number((Math.random() * (100 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b9face10-4b2c-11ee-b4de-37540c770a8a",
         "originatorType" : "DEVICE"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "79e56940-4bac-11ee-ab62-bf6c2845e826"
+        "id" : "d620afb1-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Energy Meter B 2",
       "ruleChainId" : null,
@@ -185,74 +185,21 @@
         "msgCount" : 1440,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 147 + Number((Math.random() * (140 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "var msg = { energyConsumption: 54 + Number((Math.random() * (140 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { energyConsumption: 30 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b68eb280-4bab-11ee-ab62-bf6c2845e826",
         "originatorType" : "DEVICE"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "79e62c90-4bac-11ee-ab62-bf6c2845e826"
+        "id" : "d620d6c0-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Energy Meter B 3",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 189,
-        "layoutY" : 509
-      },
-      "configuration" : {
-        "msgCount" : 1440,
-        "periodInSeconds" : 60,
-        "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 147 + Number((Math.random() * (140 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
-        "tbelScript" : "var msg = { energyConsumption: 30 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
-        "queueName" : null,
-        "originatorId" : "ff534b20-5c72-11ee-bc6f-eb0f2a9d5dee",
-        "originatorType" : "DEVICE"
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "1db3a380-5c82-11ee-af73-37540c770a8a"
-      },
-      "name" : "Energy Meter B 3 Cust 1",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 197,
-        "layoutY" : 587
-      },
-      "configuration" : {
-        "msgCount" : 1440,
-        "periodInSeconds" : 60,
-        "scriptLang" : "JS",
-        "jsScript" : "var msg = { energyConsumption: 147 + Number((Math.random() * (140 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
-        "tbelScript" : "var msg = { energyConsumption: 30 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
-        "queueName" : null,
-        "originatorId" : "0badad70-5c73-11ee-aade-63da9de16ed3",
-        "originatorType" : "DEVICE"
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "1db52a20-5c82-11ee-af73-37540c770a8a"
-      },
-      "name" : "Energy Meter B 3 Cust 2",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"

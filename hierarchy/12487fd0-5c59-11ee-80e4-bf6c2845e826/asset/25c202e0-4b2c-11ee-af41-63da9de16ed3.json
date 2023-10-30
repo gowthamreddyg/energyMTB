@@ -1,0 +1,139 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "119b03c0-4b2c-11ee-b4de-37540c770a8a"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
+    },
+    "externalId" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "label" : null,
+    "name" : "Site 2",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
+    },
+    "type" : "Site"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "USER",
+      "id" : "dd4c20f0-6d71-11ee-b2ca-ab7802d7aea5"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "9032e750-4bab-11ee-b1f8-37cb77e3b6b4"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b68eb280-4bab-11ee-ab62-bf6c2845e826"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "25c202e0-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b9face10-4b2c-11ee-b4de-37540c770a8a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1698242079588,
+      "longValue" : null,
+      "strValue" : "RMZ Infinity, Tower C, 3rd Floor, Bengaluru (Bangalore) Urban, Old Madras Road, Bengaluru, Karnataka 560016"
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "alarm",
+      "lastUpdateTs" : 1698297880254,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 93.0,
+      "jsonValue" : null,
+      "key" : "energyConsumptionSum",
+      "lastUpdateTs" : 1693990371203,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "eneryConsumptionTotal",
+      "lastUpdateTs" : 1694009538785,
+      "longValue" : 30,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "imageUrl",
+      "lastUpdateTs" : 1694093385508,
+      "longValue" : null,
+      "strValue" : "https://l.icdbcdn.com/oh/eefe66c6-ee24-4f28-9599-705fd2bce633.png?w=960&mode=max&f=32"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 40.766847,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1694087956186,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -73.968733,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1694087988289,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

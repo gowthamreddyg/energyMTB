@@ -4,10 +4,13 @@
     "additionalInfo" : null,
     "configuration" : null,
     "debugMode" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "af48d810-3ce8-11ee-b778-63da9de16ed3"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "af4fb5e0-3ce8-11ee-b778-63da9de16ed3"
+      "id" : "8c0f6ac0-73cb-11ee-82c9-653566b72b72"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -84,15 +87,7 @@
       "type" : "False"
     }, {
       "fromIndex" : 11,
-      "toIndex" : 16,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 11,
-      "toIndex" : 16,
-      "type" : "False"
-    }, {
-      "fromIndex" : 11,
-      "toIndex" : 16,
+      "toIndex" : 18,
       "type" : "True"
     }, {
       "fromIndex" : 13,
@@ -120,18 +115,38 @@
       "type" : "Success"
     }, {
       "fromIndex" : 16,
-      "toIndex" : 0,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 16,
-      "toIndex" : 0,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
       "fromIndex" : 17,
       "toIndex" : 12,
       "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 6,
+      "type" : "Alarm Created"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 6,
+      "type" : "Alarm Severity Updated"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 6,
+      "type" : "Alarm Updated"
+    }, {
+      "fromIndex" : 20,
+      "toIndex" : 6,
+      "type" : "Success"
     } ],
-    "firstNodeIndex" : 6,
+    "firstNodeIndex" : 20,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : null,
@@ -141,12 +156,13 @@
       "configuration" : {
         "defaultTTL" : 0
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4c0c60-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f7149760-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Save Timeseries",
       "ruleChainId" : null,
@@ -159,14 +175,16 @@
       },
       "configuration" : {
         "scope" : "CLIENT_SCOPE",
-        "notifyDevice" : "false"
+        "notifyDevice" : "false",
+        "updateAttributesOnlyOnValueChange" : false
       },
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4ccfb0-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f714be70-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Save Attributes",
       "ruleChainId" : null,
@@ -181,12 +199,13 @@
       "configuration" : {
         "version" : 0
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4d44e0-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f714e580-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Message Type Switch",
       "ruleChainId" : null,
@@ -202,12 +221,13 @@
         "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
         "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4de120-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f714e581-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Log RPC from Device",
       "ruleChainId" : null,
@@ -223,12 +243,13 @@
         "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);",
         "tbelScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4ea470-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f7150c90-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Log Other",
       "ruleChainId" : null,
@@ -242,12 +263,13 @@
       "configuration" : {
         "timeoutInSeconds" : 60
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4f19a0-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f7150c91-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "RPC Call Request",
       "ruleChainId" : null,
@@ -256,18 +278,19 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 278,
-        "layoutY" : 166
+        "layoutX" : 301,
+        "layoutY" : 227
       },
       "configuration" : {
         "originatorTypes" : [ "ENTITY_GROUP", "DEVICE" ]
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af4fb5e0-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f71533a0-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Is Entity Group",
       "ruleChainId" : null,
@@ -282,12 +305,13 @@
       "configuration" : {
         "messageTypes" : [ "POST_ATTRIBUTES_REQUEST", "RPC_CALL_FROM_SERVER_TO_DEVICE" ]
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af502b10-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f7155ab0-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Post attributes or RPC request",
       "ruleChainId" : null,
@@ -307,15 +331,16 @@
         },
         "groupOwnerId" : {
           "entityType" : "TENANT",
-          "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+          "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af50c750-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f71581c0-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Duplicate To Group Entities",
       "ruleChainId" : null,
@@ -330,12 +355,13 @@
       "configuration" : {
         "ruleChainId" : "af16cb90-3ce8-11ee-b778-63da9de16ed3"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "af5422b0-3ce8-11ee-b778-63da9de16ed3"
+        "id" : "f71581c1-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Generate Report",
       "ruleChainId" : null,
@@ -350,12 +376,13 @@
       "configuration" : {
         "ruleChainId" : "e3af6260-4b46-11ee-adc5-170e82239536"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "20d22bf0-4b47-11ee-b1f8-37cb77e3b6b4"
+        "id" : "f715a8d0-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Aggregate Eneryg",
       "ruleChainId" : null,
@@ -369,15 +396,16 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "return msg.energyConsumption < 90;",
+        "jsScript" : "return msg.energyConsumption < 900;",
         "tbelScript" : "return msg.energyConsumption > 50;"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "3508d780-4bc0-11ee-b1f8-37cb77e3b6b4"
+        "id" : "f715a8d1-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Energy Consumption validation",
       "ruleChainId" : null,
@@ -392,14 +420,16 @@
       "configuration" : {
         "scope" : "SERVER_SCOPE",
         "notifyDevice" : false,
-        "sendAttributesUpdatedNotification" : false
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : false
       },
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "66761090-516e-11ee-b1f8-37cb77e3b6b4"
+        "id" : "f715f6f0-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Save alarm attribute",
       "ruleChainId" : null,
@@ -408,8 +438,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1083,
-        "layoutY" : 547
+        "layoutX" : 1149,
+        "layoutY" : 511
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -426,12 +456,13 @@
         "propagateToTenant" : false,
         "dynamicSeverity" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ffbcfe60-517a-11ee-b4de-37540c770a8a"
+        "id" : "f7161e00-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Energy Limit",
       "ruleChainId" : null,
@@ -440,8 +471,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1086,
-        "layoutY" : 382
+        "layoutX" : 1024,
+        "layoutY" : 398
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -449,12 +480,13 @@
         "alarmDetailsBuildTbel" : "var details = {};\nif (metadata.prevAlarmDetails != null) {\n    details = JSON.parse(metadata.prevAlarmDetails);\n    //remove prevAlarmDetails from metadata\n    metadata.remove('prevAlarmDetails');\n    //now metadata is the same as it comes IN this rule node\n}\n\n\nreturn details;",
         "alarmType" : "General Alarm"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "cb04b350-51fe-11ee-88c0-170e82239536"
+        "id" : "f7161e01-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "Clear alaram",
       "ruleChainId" : null,
@@ -463,20 +495,21 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1400,
-        "layoutY" : 424
+        "layoutX" : 1398,
+        "layoutY" : 401
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: {alarm: false}, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ce391110-5203-11ee-88c0-170e82239536"
+        "id" : "f7166c20-6ce0-11ee-b4ac-570318c78832"
       },
       "name" : "clear alarm",
       "ruleChainId" : null,
@@ -485,20 +518,21 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1398,
-        "layoutY" : 34
+        "layoutX" : 1551,
+        "layoutY" : 36
       },
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "msg.cost = msg.energyConsumption*6.045;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "829e1df0-5798-11ee-b1f8-37cb77e3b6b4"
+        "id" : "4e1c4bb0-6ce2-11ee-9958-0b36635133ad"
       },
       "name" : "Cost Calculation",
       "ruleChainId" : null,
@@ -515,17 +549,94 @@
         "jsScript" : "msg.alarm = true;\nreturn {msg: {alarm : true}, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "e0955a90-590f-11ee-80e4-bf6c2845e826"
+        "id" : "4e1c72c0-6ce2-11ee-9958-0b36635133ad"
       },
       "name" : "Message type updation",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1294,
+        "layoutY" : 78
+      },
+      "configuration" : {
+        "inputValueKey" : "energyConsumption",
+        "outputValueKey" : "deltaEnergyConsumption",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a486fed0-6db6-11ee-b2ca-ab7802d7aea5"
+      },
+      "name" : "calculate delta",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1753,
+        "layoutY" : 78
+      },
+      "configuration" : {
+        "inputValueKey" : "cost",
+        "outputValueKey" : "deltaCost",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a4883750-6db6-11ee-b2ca-ab7802d7aea5"
+      },
+      "name" : "calculate delta Cost",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 122,
+        "layoutY" : 300
+      },
+      "configuration" : {
+        "persistAlarmRulesState" : true,
+        "fetchAlarmRulesStateOnStart" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "8c0f6ac0-73cb-11ee-82c9-653566b72b72"
+      },
+      "name" : "device profile",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
     } ],
     "ruleChainConnections" : null
   },

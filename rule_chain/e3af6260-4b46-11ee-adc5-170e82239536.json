@@ -6,10 +6,13 @@
     },
     "configuration" : null,
     "debugMode" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "e3af6260-4b46-11ee-adc5-170e82239536"
+    },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "f8a57be0-4b47-11ee-ab62-bf6c2845e826"
+      "id" : "d5d37a10-6d7d-11ee-b316-e98779654669"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -46,19 +49,15 @@
       "type" : "Success"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 4,
+      "toIndex" : 29,
       "type" : "Success"
     }, {
       "fromIndex" : 4,
-      "toIndex" : 10,
-      "type" : "Failure"
-    }, {
-      "fromIndex" : 4,
-      "toIndex" : 10,
+      "toIndex" : 21,
       "type" : "Success"
     }, {
       "fromIndex" : 5,
-      "toIndex" : 16,
+      "toIndex" : 25,
       "type" : "Success"
     }, {
       "fromIndex" : 7,
@@ -66,7 +65,7 @@
       "type" : "True"
     }, {
       "fromIndex" : 8,
-      "toIndex" : 5,
+      "toIndex" : 30,
       "type" : "Success"
     }, {
       "fromIndex" : 9,
@@ -78,11 +77,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 11,
-      "toIndex" : 14,
+      "toIndex" : 32,
       "type" : "Success"
     }, {
       "fromIndex" : 12,
-      "toIndex" : 13,
+      "toIndex" : 24,
       "type" : "Success"
     }, {
       "fromIndex" : 14,
@@ -94,7 +93,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 17,
-      "toIndex" : 18,
+      "toIndex" : 35,
       "type" : "Success"
     }, {
       "fromIndex" : 18,
@@ -102,6 +101,70 @@
       "type" : "Success"
     }, {
       "fromIndex" : 19,
+      "toIndex" : 28,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 21,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 22,
+      "toIndex" : 31,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 23,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 24,
+      "toIndex" : 33,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 26,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 26,
+      "toIndex" : 34,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 16,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 28,
+      "toIndex" : 36,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 29,
+      "toIndex" : 4,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 23,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 32,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 13,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 34,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 35,
+      "toIndex" : 18,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 36,
       "toIndex" : 20,
       "type" : "Success"
     } ],
@@ -129,12 +192,13 @@
           } ]
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "f8a57be0-4b47-11ee-ab62-bf6c2845e826"
+        "id" : "d5d37a10-6d7d-11ee-b316-e98779654669"
       },
       "name" : "To Building Asset",
       "ruleChainId" : null,
@@ -160,12 +224,13 @@
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ba0cae50-4bae-11ee-b1f8-37cb77e3b6b4"
+        "id" : "d5d3a120-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Energy Avgerage",
       "ruleChainId" : null,
@@ -191,12 +256,13 @@
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5a4fc230-4bbe-11ee-b4de-37540c770a8a"
+        "id" : "d5d3a121-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Aggregate Sum",
       "ruleChainId" : null,
@@ -205,20 +271,21 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 858,
-        "layoutY" : 111
+        "layoutX" : 826,
+        "layoutY" : 125
       },
       "configuration" : {
         "defaultTTL" : 0,
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "7cf42010-4c81-11ee-ab62-bf6c2845e826"
+        "id" : "d5d3c830-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -227,20 +294,21 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 849,
-        "layoutY" : 22
+        "layoutX" : 1062,
+        "layoutY" : 8
       },
       "configuration" : {
         "defaultTTL" : 0,
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "36ed9e30-4c9e-11ee-b1f8-37cb77e3b6b4"
+        "id" : "d5d3c831-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -249,7 +317,7 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 870,
+        "layoutX" : 1105,
         "layoutY" : 187
       },
       "configuration" : {
@@ -257,12 +325,13 @@
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "139be140-56bb-11ee-ab62-bf6c2845e826"
+        "id" : "d5d3c832-6d7d-11ee-b316-e98779654669"
       },
       "name" : "powerConsumptionCurrentMonthpersite",
       "ruleChainId" : null,
@@ -289,12 +358,13 @@
         "dynamicSeverity" : false,
         "relationTypes" : [ ]
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fd800510-56bc-11ee-b22d-170e82239536"
+        "id" : "d5d3ef40-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Asset alaram",
       "ruleChainId" : null,
@@ -309,14 +379,15 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "return msg.energyConsumption > 90;"
+        "tbelScript" : "return msg.energyConsumption > 900;"
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "fd811680-56bc-11ee-b22d-170e82239536"
+        "id" : "d5d3ef41-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Script asset alaram",
       "ruleChainId" : null,
@@ -342,12 +413,13 @@
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "8dd5dcc0-5799-11ee-ab62-bf6c2845e826"
+        "id" : "d5d41650-6d7d-11ee-b316-e98779654669"
       },
       "name" : "aggreagate latest cost total",
       "ruleChainId" : null,
@@ -373,12 +445,13 @@
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "0d87bc40-579f-11ee-b1f8-37cb77e3b6b4"
+        "id" : "d5d41651-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Aggregate lastest cost average",
       "ruleChainId" : null,
@@ -387,8 +460,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1106,
-        "layoutY" : 77
+        "layoutX" : 1593,
+        "layoutY" : 97
       },
       "configuration" : {
         "originatorSource" : "RELATED",
@@ -399,35 +472,36 @@
           "direction" : "TO",
           "maxLevel" : 1,
           "filters" : [ {
-            "relationType" : "Manages",
+            "relationType" : "Contains",
             "entityTypes" : [ "CUSTOMER" ]
           } ]
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "06340440-5834-11ee-af41-63da9de16ed3"
+        "id" : "d5d43d60-6d7d-11ee-b316-e98779654669"
       },
-      "name" : "G Gowtham Reddy Reddy",
+      "name" : "Transformation customer",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1341,
-        "layoutY" : 208
+        "layoutX" : 1305,
+        "layoutY" : 185
       },
       "configuration" : {
         "direction" : "FROM",
-        "relationType" : "Manages",
+        "relationType" : "Contains",
         "deduplicationInSec" : 10,
         "aggMappings" : [ {
           "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "powerMonthlyConsumption",
+          "source" : "userLatestMonthlyPowerConsumption",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
           "target" : "latestMonthlyPowerConsumption"
@@ -435,22 +509,23 @@
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "e12a37b0-5837-11ee-ab62-bf6c2845e826"
+        "id" : "d5d43d61-6d7d-11ee-b316-e98779654669"
       },
-      "name" : "G Gowtham Reddy Reddy aggregater",
+      "name" : "Aggregate customer consumption",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1829,
-        "layoutY" : 207
+        "layoutX" : 1911,
+        "layoutY" : 213
       },
       "configuration" : {
         "originatorSource" : "TENANT",
@@ -466,34 +541,36 @@
           "fetchLastLevelOnly" : false
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "6b6511b0-5839-11ee-b22d-170e82239536"
+        "id" : "d5d46470-6d7d-11ee-b316-e98779654669"
       },
-      "name" : "G Gowtham Reddy Reddy",
+      "name" : "Tenant consumption",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2136,
-        "layoutY" : 200
+        "layoutX" : 2174,
+        "layoutY" : 206
       },
       "configuration" : {
         "defaultTTL" : 0,
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "6b65fc10-5839-11ee-b22d-170e82239536"
+        "id" : "d5d46471-6d7d-11ee-b316-e98779654669"
       },
       "name" : "name time series name",
       "ruleChainId" : null,
@@ -502,20 +579,21 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1619,
-        "layoutY" : 205
+        "layoutX" : 1659,
+        "layoutY" : 184
       },
       "configuration" : {
         "defaultTTL" : 0,
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "f08ff350-5839-11ee-b4de-37540c770a8a"
+        "id" : "d5d48b80-6d7d-11ee-b316-e98779654669"
       },
       "name" : "user tenant time series",
       "ruleChainId" : null,
@@ -532,12 +610,13 @@
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f70e3e0-583c-11ee-af41-63da9de16ed3"
+        "id" : "d5d48b81-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Save Avg aggregate cost",
       "ruleChainId" : null,
@@ -546,11 +625,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1095,
-        "layoutY" : 282
+        "layoutX" : 1189,
+        "layoutY" : 365
       },
       "configuration" : {
-        "originatorSource" : "RELATED",
+        "originatorSource" : "CUSTOMER",
         "entityType" : null,
         "entityNamePattern" : null,
         "relationsQuery" : {
@@ -563,65 +642,68 @@
           } ]
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f71ce40-583c-11ee-af41-63da9de16ed3"
+        "id" : "d5d4b290-6d7d-11ee-b316-e98779654669"
       },
-      "name" : "G Gowtham Reddy Reddy",
+      "name" : "Transformation cost customer",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1342,
-        "layoutY" : 281
+        "layoutX" : 1421,
+        "layoutY" : 349
       },
       "configuration" : {
         "direction" : "FROM",
-        "relationType" : "Manages",
+        "relationType" : "Contains",
         "deduplicationInSec" : 10,
         "aggMappings" : [ {
           "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "costLatestSum",
+          "source" : "userCostLatestSum",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
-          "target" : "costLatestSumAggregate"
+          "target" : "customerCostLatestSum"
         } ],
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f729190-583c-11ee-af41-63da9de16ed3"
+        "id" : "d5d4b291-6d7d-11ee-b316-e98779654669"
       },
-      "name" : "G Gowtham Reddy Reddy aggregater",
+      "name" : "Aggregate customer cost consumption",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1668,
-        "layoutY" : 291
+        "layoutX" : 1759,
+        "layoutY" : 344
       },
       "configuration" : {
         "defaultTTL" : 0,
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f732dd0-583c-11ee-af41-63da9de16ed3"
+        "id" : "d5d4d9a0-6d7d-11ee-b316-e98779654669"
       },
       "name" : "Save cost aggregate sum at user level",
       "ruleChainId" : null,
@@ -647,14 +729,15 @@
           "fetchLastLevelOnly" : false
         }
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f73a300-583c-11ee-af41-63da9de16ed3"
+        "id" : "d5d4d9a1-6d7d-11ee-b316-e98779654669"
       },
-      "name" : "G Gowtham Reddy Reddy",
+      "name" : "Tenant cost consumption",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
@@ -669,17 +752,472 @@
         "skipLatestPersistence" : false,
         "useServerTs" : false
       },
+      "configurationVersion" : 0,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5f743f40-583c-11ee-af41-63da9de16ed3"
+        "id" : "d5d500b0-6d7d-11ee-b316-e98779654669"
       },
       "name" : "save times series tenant level",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1105,
+        "layoutY" : 107
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "USER" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96305820-6d86-11ee-94f5-837300f44a25"
+      },
+      "name" : "Transformation customer",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1277,
+        "layoutY" : 11
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Contains",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "powerMonthlyConsumption",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "userLatestMonthlyPowerConsumption"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "3f7f6470-6d87-11ee-a455-b9d40398652f"
+      },
+      "name" : "Aggregate user consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1340,
+        "layoutY" : 111
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4a978d50-6d88-11ee-94f5-837300f44a25"
+      },
+      "name" : "Save time series",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1896,
+        "layoutY" : 85
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Contains",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "latestMonthlyPowerConsumption",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "latestMonthlyPowerConsumptionTenant"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f4378e10-6daf-11ee-9958-0b36635133ad"
+      },
+      "name" : "Aggregate Tenant consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1083,
+        "layoutY" : 428
+      },
+      "configuration" : {
+        "originatorSource" : "RELATED",
+        "entityType" : null,
+        "entityNamePattern" : null,
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "USER" ]
+          } ]
+        }
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f4385160-6daf-11ee-9958-0b36635133ad"
+      },
+      "name" : "Transformation customer",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1283,
+        "layoutY" : 478
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Contains",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "costLatestSum",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "userCostLatestSum"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f438eda0-6daf-11ee-9958-0b36635133ad"
+      },
+      "name" : "Aggregate user consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1652,
+        "layoutY" : 467
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f43989e0-6daf-11ee-9958-0b36635133ad"
+      },
+      "name" : "Save time series",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1979,
+        "layoutY" : 393
+      },
+      "configuration" : {
+        "direction" : "FROM",
+        "relationType" : "Contains",
+        "deduplicationInSec" : 10,
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "customerCostLatestSum",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "tenantCostLatestSum"
+        } ],
+        "outMsgType" : "POST_TELEMETRY_REQUEST",
+        "queueName" : null
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f439ff10-6daf-11ee-9958-0b36635133ad"
+      },
+      "name" : "Aggregate Tenant consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNodeV2"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 825,
+        "layoutY" : 66
+      },
+      "configuration" : {
+        "inputValueKey" : "powerMonthlyConsumption",
+        "outputValueKey" : "deltaPowerMonthlyConsumption",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2a932670-6dbc-11ee-b2ca-ab7802d7aea5"
+      },
+      "name" : "Asset delta Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 845,
+        "layoutY" : 181
+      },
+      "configuration" : {
+        "inputValueKey" : "costLatestSum",
+        "outputValueKey" : "deltaCostLatestSum",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a2722460-6dbd-11ee-a455-b9d40398652f"
+      },
+      "name" : "Asset delta cost Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1568,
+        "layoutY" : 13
+      },
+      "configuration" : {
+        "inputValueKey" : "userLatestMonthlyPowerConsumption",
+        "outputValueKey" : "deltaUserLatestMonthlyPowerConsumption",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e5b4bdc0-6dc0-11ee-9958-0b36635133ad"
+      },
+      "name" : "Asset delta Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1495,
+        "layoutY" : 263
+      },
+      "configuration" : {
+        "inputValueKey" : "latestMonthlyPowerConsumption",
+        "outputValueKey" : "deltaLatestMonthlyPowerConsumption",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e5b61d50-6dc0-11ee-9958-0b36635133ad"
+      },
+      "name" : "Asset delta Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2113,
+        "layoutY" : 91
+      },
+      "configuration" : {
+        "inputValueKey" : "latestMonthlyPowerConsumptionTenant",
+        "outputValueKey" : "deltaLatestMonthlyPowerConsumptionTenant",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e5b69280-6dc0-11ee-9958-0b36635133ad"
+      },
+      "name" : "Asset delta Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1495,
+        "layoutY" : 540
+      },
+      "configuration" : {
+        "inputValueKey" : "userCostLatestSum",
+        "outputValueKey" : "deltaUserCostLatestSum",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e5b72ec0-6dc0-11ee-9958-0b36635133ad"
+      },
+      "name" : "Asset delta cost Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1619,
+        "layoutY" : 397
+      },
+      "configuration" : {
+        "inputValueKey" : "customerCostLatestSum",
+        "outputValueKey" : "deltaCustomerCostLatestSum",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e5b7f210-6dc0-11ee-9958-0b36635133ad"
+      },
+      "name" : "Asset delta cost Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2185,
+        "layoutY" : 456
+      },
+      "configuration" : {
+        "inputValueKey" : "tenantCostLatestSum",
+        "outputValueKey" : "deltaTenantCostLatestSum",
+        "useCache" : true,
+        "addPeriodBetweenMsgs" : false,
+        "periodValueKey" : "periodInMs",
+        "round" : null,
+        "tellFailureIfDeltaIsNegative" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e5b86740-6dc0-11ee-9958-0b36635133ad"
+      },
+      "name" : "Asset delta cost Consumption",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
     } ],
     "ruleChainConnections" : null
   },

@@ -6,13 +6,7 @@
       "description" : "",
       "widgets" : {
         "d8fd9ba7-4d4d-6a91-7f4f-c833e09da505" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "entities_table",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 6.5,
           "config" : {
@@ -112,16 +106,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "d8fd9ba7-4d4d-6a91-7f4f-c833e09da505"
+          "id" : "d8fd9ba7-4d4d-6a91-7f4f-c833e09da505",
+          "typeFullFqn" : "system.cards.entities_table"
         },
         "d4d5a201-9327-024e-5bb4-07cc4649673e" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -238,7 +227,18 @@
                 "showLabels" : false
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "Energy Consumption",
             "dropShadow" : true,
@@ -252,31 +252,15 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            },
             "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
-          "id" : "d4d5a201-9327-024e-5bb4-07cc4649673e"
+          "id" : "d4d5a201-9327-024e-5bb4-07cc4649673e",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "a5361db5-d679-9d22-201e-65c06017d98b" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -361,16 +345,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "a5361db5-d679-9d22-201e-65c06017d98b"
+          "id" : "a5361db5-d679-9d22-201e-65c06017d98b",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -499,16 +478,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff"
+          "id" : "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -590,16 +564,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a"
+          "id" : "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "5de57e99-12e1-3d54-bd28-dbaba85f9d12" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -717,7 +686,18 @@
                 "showLabels" : true
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "All Sites Energy Consumption",
             "dropShadow" : true,
@@ -731,31 +711,15 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            },
             "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
-          "id" : "5de57e99-12e1-3d54-bd28-dbaba85f9d12"
+          "id" : "5de57e99-12e1-3d54-bd28-dbaba85f9d12",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "0d3261e0-3cc7-41ec-90ba-76f3fd7190d8" : {
-          "isSystemType" : true,
-          "bundleAlias" : "maps_v2",
-          "typeAlias" : "openstreetmap",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8.5,
           "sizeY" : 6,
           "config" : {
@@ -857,7 +821,7 @@
               "showTooltipAction" : "click",
               "autocloseTooltip" : true,
               "useTooltipFunction" : false,
-              "tooltipPattern" : "<b>${entityName}</b><br/>\n<b>Address:</b> ${address}<br />\n<link-act name='tooltip-click'>view </link-act>",
+              "tooltipPattern" : "<b>${entityName}</b><br/>\n<b>Address:</b> ${address}<br />\n${latitude}\n${longitude}\n<link-act name='tooltip-click'>view </link-act>",
               "tooltipOffsetX" : 0,
               "tooltipOffsetY" : -1,
               "color" : "#69AEFE",
@@ -944,20 +908,16 @@
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
-          "id" : "0d3261e0-3cc7-41ec-90ba-76f3fd7190d8"
+          "id" : "0d3261e0-3cc7-41ec-90ba-76f3fd7190d8",
+          "typeFullFqn" : "system.maps_v2.openstreetmap"
         },
         "1f55998e-f131-c971-4706-ead3a49e17c2" : {
-          "isSystemType" : true,
-          "bundleAlias" : "maps_v2",
-          "typeAlias" : "image_map",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8.5,
           "sizeY" : 6.5,
           "config" : {
@@ -1147,16 +1107,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "1f55998e-f131-c971-4706-ead3a49e17c2"
+          "id" : "1f55998e-f131-c971-4706-ead3a49e17c2",
+          "typeFullFqn" : "system.maps_v2.image_map"
         },
         "3d3d4e67-83bf-b472-7d0d-67b143c915bc" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -1234,16 +1189,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "3d3d4e67-83bf-b472-7d0d-67b143c915bc"
+          "id" : "3d3d4e67-83bf-b472-7d0d-67b143c915bc",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "d55d6776-fce3-76db-d8a4-3177223794ac" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -1322,7 +1272,18 @@
               },
               "decimals" : 1,
               "stack" : false,
-              "tooltipIndividual" : false
+              "tooltipIndividual" : false,
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "All Sites Energy Consumption Cost",
             "dropShadow" : true,
@@ -1339,31 +1300,15 @@
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            },
             "displayTimewindow" : false
           },
           "row" : 0,
           "col" : 0,
-          "id" : "d55d6776-fce3-76db-d8a4-3177223794ac"
+          "id" : "d55d6776-fce3-76db-d8a4-3177223794ac",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "2efbb924-7b1a-c897-5c13-e65d466c3cc1" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -1477,7 +1422,18 @@
                 "showLabels" : true
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "Cost",
             "dropShadow" : true,
@@ -1494,31 +1450,15 @@
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            }
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "2efbb924-7b1a-c897-5c13-e65d466c3cc1"
+          "id" : "2efbb924-7b1a-c897-5c13-e65d466c3cc1",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "a4deef62-c970-ad27-5163-ce0f3a60afda" : {
-          "isSystemType" : true,
-          "bundleAlias" : "alarm_widgets",
-          "typeAlias" : "alarms_table",
           "type" : "alarm",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 10.5,
           "sizeY" : 6.5,
           "config" : {
@@ -1641,16 +1581,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "a4deef62-c970-ad27-5163-ce0f3a60afda"
+          "id" : "a4deef62-c970-ad27-5163-ce0f3a60afda",
+          "typeFullFqn" : "system.alarm_widgets.alarms_table"
         },
         "0b82f701-1d38-4f34-e242-76e387533b58" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -1746,16 +1681,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "0b82f701-1d38-4f34-e242-76e387533b58"
+          "id" : "0b82f701-1d38-4f34-e242-76e387533b58",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "884ba013-f949-670e-d0e6-5163c4a6dc62" : {
-          "isSystemType" : true,
-          "bundleAlias" : "alarm_widgets",
-          "typeAlias" : "alarms_table",
           "type" : "alarm",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 10.5,
           "sizeY" : 6.5,
           "config" : {
@@ -1890,16 +1820,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "884ba013-f949-670e-d0e6-5163c4a6dc62"
+          "id" : "884ba013-f949-670e-d0e6-5163c4a6dc62",
+          "typeFullFqn" : "system.alarm_widgets.alarms_table"
         },
         "7fbd2831-8d3e-08a0-cf64-0088fab33d34" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -1993,16 +1918,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "7fbd2831-8d3e-08a0-cf64-0088fab33d34"
+          "id" : "7fbd2831-8d3e-08a0-cf64-0088fab33d34",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "1946171c-e0a2-7c75-b771-6b23afdb330f" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "entities_table",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 6.5,
           "config" : {
@@ -2148,16 +2068,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "1946171c-e0a2-7c75-b771-6b23afdb330f"
+          "id" : "1946171c-e0a2-7c75-b771-6b23afdb330f",
+          "typeFullFqn" : "system.cards.entities_table"
         },
         "a7a4c479-6ef2-fb01-2f86-dd65d28c5ddf" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -2234,16 +2149,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "a7a4c479-6ef2-fb01-2f86-dd65d28c5ddf"
+          "id" : "a7a4c479-6ef2-fb01-2f86-dd65d28c5ddf",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "c6d5f5f2-880a-e4c7-e4df-5f2a674dfbd4" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -2320,16 +2230,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "c6d5f5f2-880a-e4c7-e4df-5f2a674dfbd4"
+          "id" : "c6d5f5f2-880a-e4c7-e4df-5f2a674dfbd4",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "bb6bdc57-c452-f63d-314f-98556a4ec08d" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -2408,16 +2313,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "bb6bdc57-c452-f63d-314f-98556a4ec08d"
+          "id" : "bb6bdc57-c452-f63d-314f-98556a4ec08d",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "7e8a53c8-b953-cbc4-a76e-cb43a11cf2bb" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -2494,16 +2394,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "7e8a53c8-b953-cbc4-a76e-cb43a11cf2bb"
+          "id" : "7e8a53c8-b953-cbc4-a76e-cb43a11cf2bb",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "7ebe51dc-9f61-8edd-0820-12f6a01ac356" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -2582,7 +2477,18 @@
                 "showLabels" : true
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "Energy Consumption Periodically",
             "dropShadow" : true,
@@ -2598,31 +2504,15 @@
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            }
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "7ebe51dc-9f61-8edd-0820-12f6a01ac356"
+          "id" : "7ebe51dc-9f61-8edd-0820-12f6a01ac356",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "a0349a42-e15a-91e6-c5d6-ee003c2e0fec" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "timeseries_table",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 6.5,
           "config" : {
@@ -2643,7 +2533,14 @@
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value? value: 0;"
+                "postFuncBody" : "return value && value>0 ? value.toFixed(1): 0;"
+              }, {
+                "name" : "energyConsumption",
+                "type" : "timeseries",
+                "label" : "energyConsumption",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.26206906052516876
               }, {
                 "name" : "deltaCost",
                 "type" : "timeseries",
@@ -2656,7 +2553,7 @@
                 "decimals" : null,
                 "funcBody" : null,
                 "usePostProcessing" : true,
-                "postFuncBody" : "return value? value :0;"
+                "postFuncBody" : "return value && value>0 ? value.toFixed(1): 0;"
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -2724,16 +2621,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "a0349a42-e15a-91e6-c5d6-ee003c2e0fec"
+          "id" : "a0349a42-e15a-91e6-c5d6-ee003c2e0fec",
+          "typeFullFqn" : "system.cards.timeseries_table"
         },
         "3b09b851-7e8f-f70a-bca2-3b2ebb8c752c" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -2812,7 +2704,18 @@
                 "showLabels" : true
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "Energy Consumption Periodically",
             "dropShadow" : true,
@@ -2828,31 +2731,15 @@
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            }
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "3b09b851-7e8f-f70a-bca2-3b2ebb8c752c"
+          "id" : "3b09b851-7e8f-f70a-bca2-3b2ebb8c752c",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "b05ea6c4-ccca-5c9d-9062-56168d7a3b9c" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "timeseries_table",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 6.5,
           "config" : {
@@ -2954,16 +2841,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "b05ea6c4-ccca-5c9d-9062-56168d7a3b9c"
+          "id" : "b05ea6c4-ccca-5c9d-9062-56168d7a3b9c",
+          "typeFullFqn" : "system.cards.timeseries_table"
         },
         "cbcdcf75-8443-445b-7612-3d7bc5111688" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -3042,7 +2924,18 @@
                 "showLabels" : true
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "Cost Range Periodically",
             "dropShadow" : true,
@@ -3059,31 +2952,15 @@
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            }
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "cbcdcf75-8443-445b-7612-3d7bc5111688"
+          "id" : "cbcdcf75-8443-445b-7612-3d7bc5111688",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "45c7eef0-6a43-8626-ae4d-1ea50b82e473" : {
-          "isSystemType" : true,
-          "bundleAlias" : "charts",
-          "typeAlias" : "basic_timeseries",
           "type" : "timeseries",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 8,
           "sizeY" : 5,
           "config" : {
@@ -3162,7 +3039,18 @@
                 "showLabels" : true
               },
               "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ]
+              "dataKeysListForLabels" : [ ],
+              "showLegend" : true,
+              "legendConfig" : {
+                "direction" : "row",
+                "position" : "top",
+                "sortDataKeys" : false,
+                "showMin" : false,
+                "showMax" : false,
+                "showAvg" : false,
+                "showTotal" : false,
+                "showLatest" : false
+              }
             },
             "title" : "Cost Range Periodically",
             "dropShadow" : true,
@@ -3178,31 +3066,15 @@
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : "",
-            "showLegend" : true,
-            "legendConfig" : {
-              "direction" : "row",
-              "position" : "top",
-              "sortDataKeys" : false,
-              "showMin" : false,
-              "showMax" : false,
-              "showAvg" : false,
-              "showTotal" : false,
-              "showLatest" : false
-            }
+            "noDataDisplayMessage" : ""
           },
           "row" : 0,
           "col" : 0,
-          "id" : "45c7eef0-6a43-8626-ae4d-1ea50b82e473"
+          "id" : "45c7eef0-6a43-8626-ae4d-1ea50b82e473",
+          "typeFullFqn" : "system.charts.basic_timeseries"
         },
         "f97b4ec4-0497-3ba4-fbce-99ecda798864" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -3234,9 +3106,9 @@
               "entityAliasId" : "ed6224e9-eb70-c80f-6615-c742e5e866f7",
               "filterId" : "33f0b747-4383-9b00-ed6b-f48dcfa9ea7b",
               "dataKeys" : [ {
-                "name" : "latestMonthlyPowerConsumptionCustomer",
+                "name" : "latestMonthlyPowerConsumption",
                 "type" : "timeseries",
-                "label" : "latestMonthlyPowerConsumptionCustomer",
+                "label" : "latestMonthlyPowerConsumption",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.1382726643817651,
@@ -3281,7 +3153,7 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>\r\n            Total Energy Consumped</h1>\r\n        </div>\r\n        <div class=\"clearfix\">\r\n            <div class=\"f_right\">\r\n                <div class='value'>\r\n                    ${latestMonthlyPowerConsumptionTenant} ${latestMonthlyPowerConsumptionCustomer}\r\n                </div>    \r\n                <!--<div class='description'>\r\n                    Value description text\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>\r\n            Total Energy Consumped</h1>\r\n        </div>\r\n        <div class=\"clearfix\">\r\n            <div class=\"f_right\">\r\n                <div class='value'>\r\n                    ${latestMonthlyPowerConsumptionTenant} ${latestMonthlyPowerConsumption}\r\n                </div>    \r\n                <!--<div class='description'>\r\n                    Value description text\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
               "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   border: none;\r\n   box-sizing: border-box;\r\n   padding: 0px;\r\n   overflow: hidden;\r\n   background-image: url(\"data:image/jpeg;base64,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\");\r\n   background-position:left center;\r\n   background-size: cover;\r\n   background-repeat: no-repeat;\r\n   background-color:#1F2E46;\r\n   border-radius: 3px;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: inherit;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n}\r\n.card .title_icon{\r\n    margin-right: 10px;\r\n    \r\n}\r\n.card svg{\r\n    vertical-align: middle;\r\n}\r\n.card h1 {\r\n    color: #FFF;\r\n    font-size: 14px;\r\n    font-weight: 500;\r\n    margin: 0;\r\n    padding-bottom: 10px;\r\n    line-height: 19px;\r\n    white-space: nowrap;\r\n}\r\n\r\n.card .value {\r\n    font-size: 40px;\r\n    font-weight: 200;\r\n    color:#FFFFFF;\r\n    white-space: nowrap;\r\n}\r\n\r\n.card .description {\r\n    font-size: 20px;\r\n    color: #999;\r\n}\r\n\r\n.clearfix{\r\n    clear:both;\r\n}\r\n.f_left{\r\n    float: left;\r\n}\r\n.f_right{\r\n    float: right;\r\n}\r\n"
             },
@@ -3302,20 +3174,16 @@
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
-          "id" : "f97b4ec4-0497-3ba4-fbce-99ecda798864"
+          "id" : "f97b4ec4-0497-3ba4-fbce-99ecda798864",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "f22f2f79-ac0a-8069-5c97-f0cd49219c4a" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -3325,9 +3193,9 @@
               "entityAliasId" : "c647ded8-a970-6163-be0d-429079ae54e6",
               "filterId" : "56ddf20f-1ac9-d331-68f9-a31407874b40",
               "dataKeys" : [ {
-                "name" : "costLatestSumAggregateTenant",
+                "name" : "tenantCostLatestSum",
                 "type" : "timeseries",
-                "label" : "costLatestSumAggregateTenant",
+                "label" : "tenantCostLatestSum",
                 "color" : "#2196f3",
                 "settings" : { },
                 "_hash" : 0.9045691751521518,
@@ -3347,9 +3215,9 @@
               "entityAliasId" : "ed6224e9-eb70-c80f-6615-c742e5e866f7",
               "filterId" : "33f0b747-4383-9b00-ed6b-f48dcfa9ea7b",
               "dataKeys" : [ {
-                "name" : "costLatestSumAggregateCustomer",
+                "name" : "customerCostLatestSum",
                 "type" : "timeseries",
-                "label" : "costLatestSumAggregateCustomer",
+                "label" : "customerCostLatestSum",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.031638850247709405,
@@ -3394,7 +3262,7 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>\r\n            Total Energy Cost</h1>\r\n        </div>\r\n        <div class=\"clearfix\">\r\n            <div class=\"f_right\">\r\n                <div class='value'>\r\n                    ${costLatestSumAggregateTenant} ${costLatestSumAggregateCustomer}\r\n                </div>    \r\n                <!--<div class='description'>\r\n                    Value description text\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>\r\n            Total Energy Cost</h1>\r\n        </div>\r\n        <div class=\"clearfix\">\r\n            <div class=\"f_right\">\r\n                <div class='value'>\r\n                    ${tenantCostLatestSum} ${customerCostLatestSum}\r\n                </div>    \r\n                <!--<div class='description'>\r\n                    Value description text\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
               "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   border: none;\r\n   box-sizing: border-box;\r\n   padding: 0px;\r\n   overflow: hidden;\r\n   background-image: url(\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVFRIYGBgVGBgZGBgRGBgSGBISGBgZGRgUGRgcIS4lHR4rHxgYJjgnKy8xOjU1GiU7QDszPy40NTEBDAwMEA8QHhISHzYrJSs0NDQ0NDE0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EAEQQAAIBAwMCAwUEBwQIBwAAAAECEQADIQQSMUFRBSJhEzJxgZEGQqHBFCNSgrHR8ENicqIVFjNTkrLh8TRkk6PC0uL/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAKREAAgICAgIABAcBAAAAAAAAAAECERIhAzFBUQQicYETMlJhkaGxFP/aAAwDAQACEQMRAD8A8XfaknNN6ikmrkiQdNXFDAq6GtEAZRREaKoBVooYBC1VJoRaqs9QxBS9CZ6Ez1QvVIpBy+KEXobPVA9MYcNRkalFajA0myRoCoZaojUQGpbAFVg1UuNVVak9gGDVeaVLVPtKTQD9o0Qmk7NymFzWb0Ae2aZR6FaSj20zUuQD+kJJFeh0ad6xNIIrd0r1y8sykzRRq64ahBUO1ZwlstMGHzWnpT3+lZi4+NOWHrrUqNU9G5aejo9ZNu9Tlu5W8eQlofL1VrlJveqpvVeaFQ57SupD21dSzQ6PhV+k3pu61KsKEc5UVKmoNQtaIoZVqkmlw9SblNkhSaXuGpL0J2qWgILVQtUMaimkNEs1D3VZhVIqhkq9Mo9Imj2jSaAfQ0cUtaaj7qyZIK4aqBVnqBSYFTUNUkVxFFgRbatLTtWdbGa0LNDVgPoae0y1XS6F2QuEYqOWAJA+J4FFsYMVzS/YGmh6ynatfRJ3pHTKIrR05iuHkbGh48UF27VZmxS+6lxui0WLUe09Iu9FsvXVlouzTR6ZtXqy1uRRVu4ppgmO3tRVRerOuXuKlLtPIdml7SupD29dRkLI+ROaG4q9yhO1dyMAbNVJqGaqzVooJuqpNDZqgPV0AQNVGNQzVSaKAsTUiqirgUUM6KjbVgKkrUsADrVkqzCoFKxDFtqPvpRDRpqZIkJNQTVQa4moaAtUTU1AFSwLJTNhpIA5mlNtej8IQaa1+luBvYldMh63B718j9lOndo7GnehxVnsP9YBpNN+hlA1xkbeZxbZ+UI+8wHOcHHSvKW70tNYg1JZixMkmSTkknqad0jkmlKLS2OTs9PpHxWlZasfRGtWwSa87kjslDTtilWu5ot9sVnkwZrOCKQd7nSi2H6VmvcjNF09+BW1aLs1GfNS1zFIJfq7PIqo6QJl716rWbs1n3SZpnTGh0Kx+uoO+uqMmFnzO9SztTV8Um9etEkGwqpqxNUJqgKPVQKuRXBapASFrtlSKmKYFdtEQV0V1AyQKlqgVJrOTBg2FRtqTRUWpQgairijBagJTAhUqWQ0VRVopNEgFoirVaa0Wna46oilmchVA5LEwBWbQ6H/AATwwXWLOdtq2N9x/wBlB90d2YwoHc0v434gb9zdG1FAREHFu2uFQfz6kk9a1PGdSltBpLTAqhm665F2/EEg9UXKr8z1rK02lLsFUSWMADqamL3ZT9IW02nZiAAST0GSTXsvAvsw7kF3FseoLN/wjj61t+CeCW7CbmG5yM+noOw/r4aJuEmPdHEDtXS4pK5fwJK9IN4f4FpEMNcd/idgn4KJ/Gty14FpWEpI+DT/AM01laa0Of5VpWscfyrFvjunFFYtCXiP2Wbm24P91vKfkeD+FeO8R0z22KOhVh0YRjuO49RX0NtQeh/OaHrUt37ZW4hIA5X3kPVl/ozUy+FhJXDT/oV12fKdTczFTbvU3434a1lyCdynKOMB07+h7isZXhqww8MbNlGxTe6s5H4phHrNoArrmmdOtDtiaZRYrnnIC22uok11Y5AfMLppZ1ozGqxX0CJFStVZKbCVxtzRYCRWuAps2qr7OjIBcrUUV1ihE1S2BINSKpuqwNU0MuKsTQ5rmas5IGT1phBSimnENCESakVMVu/Zbw3T3Gd9U7JYtr5nTn2jGEQYMk+Y8fdNS3QJWYYqWbFbDeFaZz+q16ei6hHtH6gMv41R/svqTm2qXR/5e4l0n91WLfhU5IeLMEnNem05/Q7Ac/8AiNQp2d7OnbBuejOJA7LJ6io8O+zb2QdTq7LpZt8K42NeuT5bQByATyewbrWL4hrnv3GuOZZzJjAHZQOgAgAdAKT+Z0OqLWRuNez+zWlCKbh5yF/M14zRDNfQNKoAReigfWP+9EVTv0CibLWX2gRiAWPEt/Rolm3nND02cVraa2I4HNZ8k7do6YQpF9MI6U4K6ylFde1YubSG4qxV+aEl8qSD0/EUW9SN+cGtePnoznx2hXxvSC4jJ+8h7NEgfA8V86dM19KvXQVIJzGP6+teF8SQB3jqZ+uac5KW0Y1WhawZo6uRS6Yq3tMVjRNmlp71PI9efs34NP2781zcsAs0/aV1Z/ta6sMAs8AzVINUNWQV9AAVasBVQKsTSYENVGqWaqlqkATCl3Wju1Ls1XECk1KmuIqBWgy81xNUmuNRJAWWjI1FveHXkVHe06K43IzqVDr3UnkUHaai0Kg9oszBVEliAAMkk8ACtr7R3RaVNGhEWiWvEcPqmEPnqEEIPgx61HgKDT231rjzIfZ6cH72oInf8EXzf4ilefZySSck96n80iukamg0unuQpvOjnpcCqhPZW4/4ttM6rwC6gLI28LysFHEZkL97GcH5VgnNafhvjD2oUksg+6TlMRKHp8OP40pJ3p/YzeS2iL/i+oe0LL3na2p3KrMSobv/AB+tLWLZYhVUszGAqgszE9ABkmtbxDRrd337RGwJ7RuAd4dVdSvQw27rwe9eh8GTT6HTrevn9beTcEX/AGhQwVRR90dyY55wKE/Q8rVnn/8AR16y6C7adN5G32ild0ETHwkfUV7NhBrxmv8AF31Nze+AuERfdtpMhR69z1PyA93Ysyivgq6hwfjR2mjaGmrHdCeK3tItYemSCK39CMiuHki0zs1iaVqwal7NOWAIqL4FbfgLDI5s3lRiXxSN4nIn1/r8a0dQOcVmOM5rnSdGz6MzWcGvK+IDz/IV67XpOI5xivHeKH9Y4Bwp2/TH5Vv1x79nLJ7KolQ9mjaQgimSlcznTM6MhrZq6OeK0BanpQ2tgVL5L0KhbdXVaK6mFHjoqy1fZXbK9exk7qE9yrsKVuGmFEtcqPaUEmoU0mBd2qIrR8H8KfUOQsKqjc7v5UtoOXdug/EnAk16LWeOaFbSaddELi2yZvlvY3bp6thTAmYDbsRU506Q0jxhFRXoTptBc9y9dsHteQXkB/xoQ3+Si6T7GXbzBdPe097d/u7qqQBmSjw4/wCGrXIvJVHmUQkwBXpbPh1rSKLmqXfdIBTSzETkPfIyq9dg8x67RyW89vw8lE23NUpIe5EppWGCtsH3nB++cDp+1Xmb1xnYszFmYySxkknkk96lty+gPR6TVfbTXtt3XWRVEKqottAvQbQII4Amhr9p3b/aafTXO5eyiMf3kCn8aS0Hjl1MMd6fsuSSB2D8gehkelMa/SW74W5pkhiwV7aiNpPutt+6MRjB+tZtb2vuZ5tPYT7U/aBdWbYSwthLSbQiGVLEyzxAiceuMk1gRWtZ0VlEV77sWdQyW7cBth4ZieJ+Xz4rPuMrNKpsH7O4v8yTz+FUq6C8gSiuNHVaqy0m9jGPD7hCuIBG0sQ3BgTBHUYEjrSV6+zsXdizMZLMZJNN6W4yK44Do0yB5l2twSMc8is8mqittkrtj2mevov2S1XtLJtE+a3JX1tscj5N/wA1fNdMa9L4Hq2tOjr905H7SnDKfiCRUSeMrNou1R9D0hED6H0I4NbOjuj6Vi6gr5XQylxQQfU5GP6g1bS3zu+IBqpxUo2jWEj19jUSQO9D1OqiszSaltywhMY7Tk9aHrrjA5UiT1yOOhrkllg/qWorIvqb3rSguKBubgdqWv3cgTzQWJuOiDgnPqBz+dTwwthySVFvEWRE9uAwOdisd2529z5YLH0ivDOJP862/tP4jvubEPktSojgv95vwAHovrWOEmlzcly10ujmekO6RBT6oIrOs4o/txXDJSb0SHYAA1nX3qt7WUo92a24+J9sLKtdNdQa6unFCMcCuNES0TwK1NF4ExX2l5xZtftuDueOVtpy5/AdSK7ZSSHVmZpdBcvtstW2dyCdqDcYHJrJ1KMpIYEEGCCIgjpXrn+0h0/l0S+yHBuOFe7c/wARIIUf3Vx3nmkf9Zrr41Fu3qQf98gL/K4kP/mpKT9DpHlt1a/gngzXyzswS0kG5df3bYPAH7TnooyfqRt+FaXwzUXIum7pIBJ84uoSBwCV3Kfju45rO8Y8U9oRatrssWyfZovHbe5+85jJPwEAAUOV9A0lsnxXxVWQafTqbdhDMH37zj+0uEct2HCzA6k46pnIJHUAwSPjBj6UdEouys86IcrGrHhli6It3WR+iXoMnsCoEj1E/AUhZS9bu7E3rdVtoFskMG9CPTr2zVXWP+nQ0+3iL+zDCA5ZlNyPOVKoDnvCKJ556mtIsSbQnr9E9s/rHTeeV373E9WjA+ZpKrMP67nvXAVqujT6kgU94SXF5Nk7iY8syRyePhPyoOm0xfsBIEmYk8D1J7Vo2dNaU41CM6n3VEho5gzJHyx2qWrTJcbTMx5YlmMk5M1yCm762dwW1d3liAoC4MyD5pjEde4+NCNuDmolcex1RC07ZubQSiIzjC72tPLR70FvKo479cUuiigWyQSAs84NtX/jRxNNscVY6dfq2A8q71JKHdbO2QQZlvMYJAx2yaJptJqbxIv7irdVe3tQlgSxAaTG2ODQrSkHNv8A9kfzrS0roeba/wDoj/7Vs5L0WomRf0bWn2MVJEGUZXBB4ypP0p/SvS+rILCFgARAkfeY8SY5o2mrm5SOme18F1Je0bZIlCGQkxCkjcJ6AGD8zVresh9p5BOCeM8fxrz+k1RSCOR+M4I+fFD0+qJubic9Z6k81Xw8m4NPwO9n1Dw7UsQjK5VCYJYbukR9cR6VXxh23blbdgZjBBInBHAk1j+A6shghUEFhM8CRMjrT3i/icD2axtZp43bYU8k+tauPyX9wz+YyvaHeSeFBqLGrNqy7kkO0pbB5XcSWf6D6ikNRqYV5xAGRz3msW94izp5mLEdWJJzjr6AVyLXHJoJStgGeWrQtEBZrEtuS1aBfFc0o9IUmFbUUP21Ku9WQE1ooJIizjk1cJRrNmmPY0OSWhifs66m9ldUZAJeGaxrF1byhSyGQGGDiMj50v4z4hc1FxrlxpZjxmFHRVHQDtV2pa4tdg7M24lDCkGQSCOCMEfA046UPYexxnHamtiD/p3tFNu8A2PJcjzo3ST1Xv8AnUOtu3KoodwSC7ztGcBE+EZPWaqllCRNxFkBhvLCQYxEc5GKvqnsKSTeBYkkqiEhDyUOZnMUOEukicXYsiUQiiXE2sVPQkY4MHkUN2gE4x34+dYpNsCv6Opks6qFid0ls8AL3PQEiek1dxZCbW1XlkMpCyrOZBAG7HAzSXtEddr+zMSQC90ZaJbkycd+lWtaa0cFbZA4l72BM9Pia7VCKNVEHsDAsm4oCBuZdhkiSIk8HFUCVvaS3bQEoliYIIZ9SwYHmVLgVn6i1DGABnhcgTmBk4+Zoa9A40AtXdpg7RgiS1xTDe9G0xMYmJqw01qTCpnBi5dEjB7cY/Gg3SA2SR/hJzRrV1J99x+9/wDmqTaQ0kaOj8PsgyET5X7ikfSjeJqGAOxFKwJRy+8RiZPSOg/KgabUAEfrHz2KmPrRL9zcWIYtJA8xBMmYiCazlclsqSVCaJSajzQGPwAUj+I/hT3WOvb1rOhdxk/LbE/5TS4402TEesqe5+SAz9DWppljPtGXBxsI/DeKwkCTj8Sc/RRWnZe2BAAn1diCexAirfZaKakAkQSZHJwSdzf3j6fy6k2nSh6gQVwox9wz95uZJ835RRLbxXNyLbMn2N27W4gEwCRJPQTzitj/AEMtsyTuPccEdCPjWNbcVrW/tHftqqK6bVMQ9tGhI5JKzz1Jq/hnTaZDTfR6jwtV8hJI3EYGFjGT8JpfxpV3khmhQ3JmeYxP9RWW/wBrrq+7c0xgYL2kMkxPukf0KJ/rY7jztpJI5Nng54m5/eNdjaSqhKLEm0txw22Mj73l4nP0rF1Wka2QhYFioY7c7ZmAfWIPzrcufaO5MJa0zA8lbYGI97DVmbJJZjJJkk8knk1xc7UI0vJSTvYvYsUS7gRTC0LUCuDK2OQqiE1o6azQbK0/aFEpsgJaSi3ExV7dc7Vz52ykJQaimYFRWmQHnPbIcBhMbolSSPSCR8uaVfWJHJ5OApJIH3o7GPjWM/hp4a6Axg7YIJOcbiY7jrn401obDD9XuMCSsgXNkiJxx36fjn2vw4l1+w61z+40Yk+UATPUtxjnj1oGpv7SuAAwn34npBjBEjgzU3dMqogDBHCiWd38wAJbcD5VG0CFHxz0WueG3GJYXASQNoIVAem0GYHHWB2mnGCTHiiXsIzbyZY5LC6ASeJmMHpTOj8PsyPIvzv7T+C0k+jupul0AWSSHVxA5I2gz1+hq1u/AB9uTIHlRYYE9xEDt/2q3YJI3NZfRUCbUAHDB3uuMj5kQexMAdsZ9zTsVYqyFVGZZUaYPl2MQZweBXX3ZlGcbcNJZlz1Kgqcg8zEH4VmeIadmhlMoFkKsjgwSqwB8x2mpxTE0iEuAHLNjs0fjmmrV9P23H7xMf5azTpXMFVKx0dtpiPekwT14oi6Nh79t2JP9jJIaJAJ2lfXr/OnFDyZuWNWu1l9o8xEAsZznFJ6jWIpht3IGAJnbn6HHypfTJsJYK4IE+YgsTAO1WUD1+g45pLW3t4DENGR70qGzAgjnue1JRQSdhb/AIkCZQMB6mDMCRg5zVrWtZjCISefeiB6k4HNZQyQB/OtWx4c2yYJg+YgEgTO3cpPmEifd6c1VJCTbNLR+IsxKozFgJ2j73opIH8PlRL2sLZ3XSysdyoA5Uj7sZBkCd1YlzShF3AqxmeNwHyEx860WvItvZuIdwTj7gM4JadsjoKl14KS9iur8RBEAlicg3Ap2CZEQTB+EfwpRNXk7vw3AfgRRD4WxnaRHTceR34Hr0pc6Xse8jkgrzxz8qpUS7HbXiIUdCfVnEevOafseIXTt2WyxboHcQeRPmEAjM1iXNIykbg+08ECCfWDjk961tNZKArca4isoABtxvJjapkwRJmZOBQ0gTZraMXpLPa95TuBZbkAeaYZiV5mYjNQWXd5SxmSUdJCYHBGejHJ7cVjP4q1sMiSU4822dy/eWFG3B9eaU0lwlgzPsmfM2cxiZnnifWocb7KtG5rNY1syqIYJJ3bsKo4IHAPMzP52t+PFlY/qlJgbWV3kYHk7Zn1rNOqDKyE7t5ACdV2t5VEGGGZwckLWcbiAgqDIgmejfEnMTTjFJ9CdHrLOtByX0v726PnNde8ZCRtfSHMeS2757YEV4+9dHbnvBz9Mdatb1zIDsO3pu2qHj/FyPgDW2RnSPYajx91ADtZkyD7JVWAy5DEqYMECJ6ntV9d4pb8oV7aQJcljumMIFG4AwOeJbtXhWdmInnHPpRC0gAqoI4IG0npBIxWUoKTuWy00uke0fxdCu62C+2Z8wBImBjJBHPX6cKv4mzfsIPeDtuAKhsrtljMfxrEGmdCFKqrASVhlYrgghjg7pxGOaC0h9xVtm6BPm2tz0546RWa4YekDr0epHig3QjW2UKZ2t5lYTk7ojoOCOfSSp4wwYBVZ1AywCszOZhQgMke7kDvXiTegwAuY4Eg4jk56mmv0m2Ds2wpIBZJVlzx13cDJofBB+EGj2P+nbodFNmFc8qTcleAwIUDHUz9Ioh+0JAANsE8YZQGYe8AJnH9ZrA0Z2+UC26qCNpZydpgSYkn0gcng8V2ndF27kRcEsUABIMFSJIAMmII7nrAyfw3F+kql6Nj/WFz/Yqf3iP/AI11ZieIDsxySPI3BMj+zPT1NdS/5uL9P+hSPMrqC3lZsFpkgEg9TPStRNcThVZmiGDwSqrkMD1I54rPZ7YDBSRIEkAyw7QePXNNW9ZaEBd4CnkxvPAGRxgcV1slMMbjLMFipGBaCna3O7aCCPh2602bl5wTsZ8QB7NRIny9SVz0nrisu1cUEshPALBAAwgkE7iMdOB1qH1DxAuHaTjz4IJ4JEflRQWG1kzuukDyhlRi3vQPKFnAkR8KgKxXcw2BgSoRoLLGYUkz0x37UsNNdSXZTCwPMTkHpjpRbOta5+rJVEJmVQDaQOe/TOaYBdE7BugVhDb1B4aZHbp+M0aDbYgsd24hUKqoG73SO3PECsq9LMApOcgICAO5Vahre1mDhgw4UiJYHIacjr86VBdGgLRcKNysZOGbbn9oiYDZgDExS2p1MKUBb3pJf3y3Uz0GAIpe0hIOGnnrk9B6dTNAuTJmZnM8z6zToVjej1rKwBYbcyHUXBnrtYHPrHOaYGmViSzCfMQFJyIB4AMdcGKy1kZ/jTKakqAFmOpxPr8KGgTGPa+zcG3K7Yk5Rp5iCZoT6+4CYuNBjBOGAbcsgYMHNCvhpzJAgeYyRiR/Gq7iIYic8NkH5dqKCw1zWsz7h5TwNv3R6E9/zqbbMVIIkN1Ikg+h/KaGt0bTjM4joOsj5UW1qmG0b4EEROBPekxoUuOTjcSBxPT5U7prO0bmCknozFGUYhscf9anT6IsS20Edu/rNHe0gMv5BPOSxHY5ob8DS8hktlmlb+yMyXLLPcdam8XFsBbjvA94sVCrOVUgyR8cVm3Vsz5S8H4cdiOauCrKFXBUHkkBpPY9fhRQrGbdtSyKCkAqAzEEbSfMxHXk9OlTqtOiu4UqxR2A2EBWUsQGB4+HypD9CYckY9RWnprSi5tNxFVoG7aXaPUChgijOqwSgKlpBOIIjcpDccifXiqahVbcyQAIAEyYPH86YtMxdlcbrYkMV5YEQDJz0FZq2AzsEJ2yY3cgdJoQOyot+YLgZzOI7kmi6rTBW2r54AO5dwViPeIkDFQuiZdrmNpMBpBmMe6M1oLdRTJ99crsXZtMzMkz8c0NgkIafSFiQAMkCWJwD1+EUy/hoUsbrqqhgCUlmcnMIpA6dTgUd9Rv5UKse7bnJiCwEGCeT+VWutb2GSm4ASXLHeOigdKTbGkmC8U8WcwqvKpCo6jYdq4AOJrM0+pb2isSTLS2feBOZoWo2lvKIEcAlvnmhpHU1SWiW9m/f0aMWKhWMzG4oVHbmCfiahLNtdzFQCBKx5iOZJ3MQOOk1n6cqWIVVMn3rkgAR1joaFqLh3RO4HnYTtY+mKVeBt+TtTdbcTOJmOxOfmKZ090shDDygn3YGT1ycR3zyfWray8L43bEtuNobZKqwVY3benAn1pS6iqoKtkckAgExTDo1Ld/A854+7bgfga6s0XH/ZP0P8qmpoLEa6urqskLZu7SCZgdoot/WO20GCASVBA6966upDKnWOTuLE+h4I7RTVnVMwIW2ggEkqqyR6zzXV1DBAm1dwEZjH3YHlPbsPSi6nxMFtwBbcBu9r5iWxJn5fjXV1FBY3cuEwNqIRkFRuYqf2iRk5pZdNaIJLEECZUHOOCDXV1Iotd0IgHdAjESfr68VmhQSR8Yrq6hdEvs5iSJJMz/AAxTVvRF1kMJGIM/xrq6m+gXYBLBzkCIEZzNFW2gEsSXz5YxHTNTXUDIXXtIgL2iK7UazcIgjvJnPpXV1FbCwD3pAECB6ChT1rq6mSSDPJqyEzIJHqDmurqAG/014KlvjIBn1miaPUpbMlNxBwQYxXV1Khlb99SMMQZkgDEHtQRdAjkzzJ5FdXUAGt6w2yGtsVOYK9AcEZqoYMpB94Hk8Gfzrq6gYo6xUrbJbaMzxNdXUxB2s7MtB6GP405pLyBFBWTn3RBGP2ifyrq6pfQ12GAQgCWkEgq0MCO0xXXfZWl27QwZskyxGJAAMR8Zrq6kuymHt3rUDytx3/6VNdXVIz//2Q==\");\r\n   background-position:left center;\r\n   background-size: cover;\r\n   background-repeat: no-repeat;\r\n   background-color:#1F2E46;\r\n   border-radius: 3px;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: inherit;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n}\r\n.card .title_icon{\r\n    margin-right: 10px;\r\n    \r\n}\r\n.card svg{\r\n    vertical-align: middle;\r\n}\r\n.card h1 {\r\n    color: #FFF;\r\n    font-size: 14px;\r\n    font-weight: 500;\r\n    margin: 0;\r\n    padding-bottom: 10px;\r\n    line-height: 19px;\r\n    white-space: nowrap;\r\n}\r\n\r\n.card .value {\r\n    font-size: 40px;\r\n    font-weight: 200;\r\n    color:#FFFFFF;\r\n    white-space: nowrap;\r\n}\r\n\r\n.card .description {\r\n    font-size: 20px;\r\n    color: #999;\r\n}\r\n\r\n.clearfix{\r\n    clear:both;\r\n}\r\n.f_left{\r\n    float: left;\r\n}\r\n.f_right{\r\n    float: right;\r\n}\r\n"
             },
@@ -3415,20 +3283,16 @@
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
-          "id" : "f22f2f79-ac0a-8069-5c97-f0cd49219c4a"
+          "id" : "f22f2f79-ac0a-8069-5c97-f0cd49219c4a",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "d9af1380-8c80-ca21-c253-e1ab002a0e00" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -3506,16 +3370,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "d9af1380-8c80-ca21-c253-e1ab002a0e00"
+          "id" : "d9af1380-8c80-ca21-c253-e1ab002a0e00",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "99f5a270-ff64-a650-dfce-ec6527e55e04" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -3619,16 +3478,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "99f5a270-ff64-a650-dfce-ec6527e55e04"
+          "id" : "99f5a270-ff64-a650-dfce-ec6527e55e04",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "f0d57a6b-7205-431c-3d63-870ca990bbf0" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -3651,9 +3505,9 @@
                 "usePostProcessing" : true,
                 "postFuncBody" : "return value? ( value < 0 ? 0: value.toFixed(1)) + ' KW': 0 + ' KW';"
               }, {
-                "name" : "deltaCostLatestSumAggregateTenant",
+                "name" : "deltaTenantCostLatestSum",
                 "type" : "timeseries",
-                "label" : "deltaCostLatestSumAggregateTenant",
+                "label" : "deltaTenantCostLatestSum",
                 "color" : "#f44336",
                 "settings" : { },
                 "_hash" : 0.8869906608667382,
@@ -3673,9 +3527,9 @@
               "entityAliasId" : "ed6224e9-eb70-c80f-6615-c742e5e866f7",
               "filterId" : "33f0b747-4383-9b00-ed6b-f48dcfa9ea7b",
               "dataKeys" : [ {
-                "name" : "deltaLatestMonthlyPowerConsumptionCustomer",
+                "name" : "deltaLatestMonthlyPowerConsumption",
                 "type" : "timeseries",
-                "label" : "deltaLatestMonthlyPowerConsumptionCustomer",
+                "label" : "deltaLatestMonthlyPowerConsumption",
                 "color" : "#4caf50",
                 "settings" : { },
                 "_hash" : 0.1382726643817651,
@@ -3686,9 +3540,9 @@
                 "usePostProcessing" : true,
                 "postFuncBody" : "return value ? ( value >0  ? value.toFixed(1): 0 ) + ' KW' :'';"
               }, {
-                "name" : "deltaCostLatestSumAggregateCustomer",
+                "name" : "deltaCustomerCostLatestSum",
                 "type" : "timeseries",
-                "label" : "deltaCostLatestSumAggregateCustomer",
+                "label" : "deltaCustomerCostLatestSum",
                 "color" : "#ffc107",
                 "settings" : { },
                 "_hash" : 0.5796579308992804,
@@ -3733,7 +3587,7 @@
             "padding" : "0px",
             "settings" : {
               "useMarkdownTextFunction" : false,
-              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>\r\n            Periodic Consumption</h1>\r\n        </div>\r\n        <div class=\"clearfix\">\r\n            <div class=\"f_right\">\r\n                <div class='value'>\r\n                   ${deltaLatestMonthlyPowerConsumptionTenant} ${deltaLatestMonthlyPowerConsumptionCustomer}\r\n                </div>\r\n                <div class='value'>\r\n                   ${deltaCostLatestSumAggregateTenant} ${deltaCostLatestSumAggregateCustomer}\r\n                </div>    \r\n                <!--<div class='description'>\r\n                    Value description text\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>\r\n            Periodic Consumption</h1>\r\n        </div>\r\n        <div class=\"clearfix\">\r\n            <div class=\"f_right\">\r\n                <div class='value'>\r\n                   ${deltaLatestMonthlyPowerConsumptionTenant} ${deltaLatestMonthlyPowerConsumption}\r\n                </div>\r\n                <div class='value'>\r\n                   ${deltaTenantCostLatestSum} ${deltaCustomerCostLatestSum}\r\n                </div>    \r\n                <!--<div class='description'>\r\n                    Value description text\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>",
               "applyDefaultMarkdownStyle" : true,
               "markdownCss" : ".card {\r\n   width: 100%;\r\n   height: 100%;\r\n   border: none;\r\n   box-sizing: border-box;\r\n   padding: 0px;\r\n   overflow: hidden;\r\n   background-image: url(\"data:image/jpeg;base64,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\");\r\n   background-position:left center;\r\n   background-size: cover;\r\n   background-repeat: no-repeat;\r\n   background-color:#1F2E46;\r\n   border-radius: 3px;\r\n}\r\n\r\n.card .content {\r\n   padding: 10px;\r\n   flex-direction: row;\r\n   align-items: center;\r\n   justify-content: space-around;\r\n   height: 100%;\r\n   box-sizing: border-box;\r\n}\r\n\r\n.card .content .column {\r\n   display: inherit;\r\n   flex-direction: column;    \r\n   justify-content: space-around;\r\n}\r\n.card .title_icon{\r\n    margin-right: 10px;\r\n    \r\n}\r\n.card svg{\r\n    vertical-align: middle;\r\n}\r\n.card h1 {\r\n    color: #FFF;\r\n    font-size: 14px;\r\n    font-weight: 500;\r\n    margin: 0;\r\n    padding-bottom: 10px;\r\n    line-height: 19px;\r\n    white-space: nowrap;\r\n}\r\n\r\n.card h3 {\r\n    color: #FFF;\r\n    font-size: 12px;\r\n    font-weight: 300;\r\n    margin: 0;\r\n    padding-bottom: 10px;\r\n    line-height: 19px;\r\n    white-space: nowrap;\r\n    display: inline-block;\r\n}\r\n\r\n.card .value {\r\n    font-size: 20px;\r\n    font-weight: 200;\r\n    color:#FFFFFF;\r\n    white-space: nowrap;\r\n}\r\n\r\n.card .description {\r\n    font-size: 20px;\r\n    color: #999;\r\n}\r\n\r\n.clearfix{\r\n    clear:both;\r\n}\r\n.f_left{\r\n    float: left;\r\n}\r\n.f_right{\r\n    float: right;\r\n}\r\n"
             },
@@ -3754,20 +3608,16 @@
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
-          "id" : "f0d57a6b-7205-431c-3d63-870ca990bbf0"
+          "id" : "f0d57a6b-7205-431c-3d63-870ca990bbf0",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "6c751d83-ec91-6003-2aed-e68da02d36bf" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -3844,16 +3694,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "6c751d83-ec91-6003-2aed-e68da02d36bf"
+          "id" : "6c751d83-ec91-6003-2aed-e68da02d36bf",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "f74881ad-36d5-e420-8b72-6cd4f6d83c50" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -3932,16 +3777,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "f74881ad-36d5-e420-8b72-6cd4f6d83c50"
+          "id" : "f74881ad-36d5-e420-8b72-6cd4f6d83c50",
+          "typeFullFqn" : "system.cards.html_value_card"
         },
         "bf21a46b-71c5-c584-4edc-2a8574a41819" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -4023,16 +3863,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "bf21a46b-71c5-c584-4edc-2a8574a41819"
+          "id" : "bf21a46b-71c5-c584-4edc-2a8574a41819",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "77d857ea-9930-da52-8ff0-47af9bf0348c" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -4114,16 +3949,11 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "77d857ea-9930-da52-8ff0-47af9bf0348c"
+          "id" : "77d857ea-9930-da52-8ff0-47af9bf0348c",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "9e28db93-d5ac-87e8-ecfc-5a0ca8eaaf0f" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "markdown_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 5,
           "sizeY" : 3.5,
           "config" : {
@@ -4214,20 +4044,16 @@
             "enableDataExport" : false,
             "widgetCss" : "",
             "pageSize" : 1024,
-            "noDataDisplayMessage" : ""
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
           },
           "row" : 0,
           "col" : 0,
-          "id" : "9e28db93-d5ac-87e8-ecfc-5a0ca8eaaf0f"
+          "id" : "9e28db93-d5ac-87e8-ecfc-5a0ca8eaaf0f",
+          "typeFullFqn" : "system.cards.markdown_card"
         },
         "ef995fd5-5251-a361-122f-0371aa72da57" : {
-          "isSystemType" : true,
-          "bundleAlias" : "cards",
-          "typeAlias" : "html_value_card",
           "type" : "latest",
-          "title" : "New widget",
-          "image" : null,
-          "description" : null,
           "sizeX" : 7.5,
           "sizeY" : 3,
           "config" : {
@@ -4306,7 +4132,8 @@
           },
           "row" : 0,
           "col" : 0,
-          "id" : "ef995fd5-5251-a361-122f-0371aa72da57"
+          "id" : "ef995fd5-5251-a361-122f-0371aa72da57",
+          "typeFullFqn" : "system.cards.html_value_card"
         }
       },
       "states" : {
@@ -4319,19 +4146,19 @@
                 "a5361db5-d679-9d22-201e-65c06017d98b" : {
                   "sizeX" : -7,
                   "sizeY" : 16,
-                  "row" : 32,
+                  "row" : 48,
                   "col" : 0
                 },
                 "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff" : {
                   "sizeX" : -28,
                   "sizeY" : 16,
-                  "row" : 2,
+                  "row" : 25,
                   "col" : 0
                 },
                 "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a" : {
                   "sizeX" : -4,
                   "sizeY" : 7,
-                  "row" : 48,
+                  "row" : 2,
                   "col" : 0
                 },
                 "5de57e99-12e1-3d54-bd28-dbaba85f9d12" : {
@@ -4421,7 +4248,7 @@
                 "99f5a270-ff64-a650-dfce-ec6527e55e04" : {
                   "sizeX" : 0,
                   "sizeY" : 7,
-                  "row" : 25,
+                  "row" : 41,
                   "col" : 0
                 },
                 "f0d57a6b-7205-431c-3d63-870ca990bbf0" : {
@@ -4635,7 +4462,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+              "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
             }
           }
         },
@@ -4677,7 +4504,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+              "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
             }
           }
         },
@@ -4703,7 +4530,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+              "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
             }
           }
         },
@@ -4718,7 +4545,7 @@
             "defaultStateGroupType" : null,
             "defaultStateEntityGroup" : null,
             "groupType" : "DEVICE",
-            "entityGroup" : "46c45b10-9b82-11ec-831d-7344db34d9f5"
+            "entityGroup" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
           }
         },
         "ed6224e9-eb70-c80f-6615-c742e5e866f7" : {
@@ -4738,7 +4565,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "aee8ddc0-3ce8-11ee-b778-63da9de16ed3"
+              "id" : "bb17ac50-66a2-11ee-8732-7718d57b5c97"
             }
           }
         },
@@ -5019,7 +4846,10 @@
       }
     },
     "customerId" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "30c15850-4b48-11ee-adc5-170e82239536"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "30c15850-4b48-11ee-adc5-170e82239536"

@@ -22,7 +22,10 @@
       "entityType" : "DEVICE_PROFILE",
       "id" : "aeec8740-3ce8-11ee-b778-63da9de16ed3"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE",
+      "id" : "dd003850-3cf4-11ee-9b11-37540c770a8a"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
@@ -33,6 +36,11 @@
     "ownerId" : null,
     "softwareId" : null,
     "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "fiDAPeEL566pLkv195Vr",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
   },
   "relations" : [ ],
   "attributes" : {
