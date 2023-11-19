@@ -257,6 +257,7 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 1632,
         "layoutY" : 346
       },
@@ -265,7 +266,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -391,12 +392,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1066,
-        "layoutY" : 37
+        "layoutX" : 1033,
+        "layoutY" : 26
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "return msg.energyConsumption < 900;",
+        "jsScript" : "return msg.energyConsumption < 200;",
         "tbelScript" : "return msg.energyConsumption > 50;"
       },
       "configurationVersion" : 0,

@@ -161,6 +161,79 @@
           "col" : 0,
           "id" : "0a8fd6d6-8615-0484-0c21-ab03ae6f092e",
           "typeFullFqn" : "system.cards.entities_hierarchy"
+        },
+        "e7d84a8f-bdda-d5af-fdc5-d8158f868639" : {
+          "typeFullFqn" : "system.gateway_widgets.gateway_general_configuration",
+          "type" : "latest",
+          "sizeX" : 11,
+          "sizeY" : 8,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "4a8cbd10-247f-d0e0-eea2-55ccd9d264fd",
+              "dataKeys" : [ {
+                "name" : "energyConsumption",
+                "type" : "timeseries",
+                "label" : "energyConsumption",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.20471650794057816
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1698642336286,
+                  "endTimeMs" : 1698728736286
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : { },
+            "title" : "Gateway configuration",
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 500
+            },
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "e7d84a8f-bdda-d5af-fdc5-d8158f868639"
         }
       },
       "states" : {
@@ -173,6 +246,12 @@
                 "ce6a644b-58d5-312b-87d8-244046bf121d" : {
                   "sizeX" : 14,
                   "sizeY" : 10,
+                  "row" : 19,
+                  "col" : 2
+                },
+                "e7d84a8f-bdda-d5af-fdc5-d8158f868639" : {
+                  "sizeX" : 23,
+                  "sizeY" : 15,
                   "row" : 0,
                   "col" : 0
                 }
@@ -252,6 +331,15 @@
             "maxLevel" : 1,
             "fetchLastLevelOnly" : false,
             "filters" : [ ]
+          }
+        },
+        "4a8cbd10-247f-d0e0-eea2-55ccd9d264fd" : {
+          "id" : "4a8cbd10-247f-d0e0-eea2-55ccd9d264fd",
+          "alias" : "Devices",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "DEVICE"
           }
         }
       },

@@ -379,7 +379,7 @@
       "configuration" : {
         "scriptLang" : "TBEL",
         "jsScript" : "return msg.temperature > 20;",
-        "tbelScript" : "return msg.energyConsumption > 900;"
+        "tbelScript" : "return msg.energyConsumption > 200;"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,

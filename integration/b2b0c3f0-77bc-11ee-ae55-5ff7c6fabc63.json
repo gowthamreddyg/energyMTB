@@ -1,0 +1,73 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "baseUrl" : "https://thingsboard.cloud",
+      "httpEndpoint" : "https://thingsboard.cloud/api/v1/integrations/http/62f7a9aa-736d-c2da-feee-e716985a301f",
+      "enableSecurity" : false,
+      "headersFilter" : { },
+      "replaceNoContentToOk" : false
+    },
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "b24f6a10-77bc-11ee-9448-cf67c2cf46e4"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "b2b0c3f0-77bc-11ee-ae55-5ff7c6fabc63"
+    },
+    "name" : "HTTP integration",
+    "remote" : false,
+    "routingKey" : "62f7a9aa-736d-c2da-feee-e716985a301f",
+    "secret" : "fsgdp1ixqo4ariwbkqef",
+    "type" : "HTTP"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "INTEGRATION",
+      "id" : "b2b0c3f0-77bc-11ee-ae55-5ff7c6fabc63"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "12f67f60-77be-11ee-ae55-5ff7c6fabc63"
+    },
+    "type" : "ManagedByIntegration",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-0",
+      "lastUpdateTs" : 1698736283109,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-1",
+      "lastUpdateTs" : 1698736283112,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-2",
+      "lastUpdateTs" : 1698736283105,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

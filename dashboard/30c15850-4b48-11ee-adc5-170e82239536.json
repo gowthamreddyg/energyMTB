@@ -905,7 +905,7 @@
             },
             "showTitleIcon" : false,
             "titleTooltip" : "",
-            "enableDataExport" : false,
+            "enableDataExport" : true,
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
@@ -3171,7 +3171,7 @@
             },
             "showLegend" : false,
             "useDashboardTimewindow" : true,
-            "enableDataExport" : false,
+            "enableDataExport" : true,
             "widgetCss" : "",
             "pageSize" : 1024,
             "noDataDisplayMessage" : "",
@@ -4146,7 +4146,7 @@
                 "a5361db5-d679-9d22-201e-65c06017d98b" : {
                   "sizeX" : -7,
                   "sizeY" : 16,
-                  "row" : 48,
+                  "row" : 2,
                   "col" : 0
                 },
                 "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff" : {
@@ -4158,7 +4158,7 @@
                 "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a" : {
                   "sizeX" : -4,
                   "sizeY" : 7,
-                  "row" : 2,
+                  "row" : 18,
                   "col" : 0
                 },
                 "5de57e99-12e1-3d54-bd28-dbaba85f9d12" : {
