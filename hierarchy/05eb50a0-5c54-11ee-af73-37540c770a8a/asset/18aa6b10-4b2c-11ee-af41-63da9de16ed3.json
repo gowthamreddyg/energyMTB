@@ -31,18 +31,6 @@
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
-      "entityType" : "USER",
-      "id" : "8bad0c50-6d71-11ee-94f5-837300f44a25"
-    },
-    "to" : {
-      "entityType" : "ASSET",
-      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
       "entityType" : "ASSET",
       "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
     },
@@ -64,6 +52,18 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "USER",
+      "id" : "36bbec00-86d7-11ee-ae8d-f5e128fb4fc7"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -79,7 +79,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "alarm",
-      "lastUpdateTs" : 1698297874921,
+      "lastUpdateTs" : 1700455498614,
       "longValue" : null,
       "strValue" : null
     }, {

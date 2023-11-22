@@ -37,11 +37,6 @@
     "softwareId" : null,
     "type" : "default"
   },
-  "credentials" : {
-    "credentialsId" : "fiDAPeEL566pLkv195Vr",
-    "credentialsType" : "ACCESS_TOKEN",
-    "credentialsValue" : null
-  },
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -49,7 +44,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1692600572448,
+      "lastUpdateTs" : 1700396429848,
       "longValue" : null,
       "strValue" : null
     }, {

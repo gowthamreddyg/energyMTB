@@ -18,7 +18,10 @@
       "entityType" : "DEVICE_PROFILE",
       "id" : "12f21290-77be-11ee-ae55-5ff7c6fabc63"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE",
+      "id" : "12f67f60-77be-11ee-ae55-5ff7c6fabc63"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
@@ -29,11 +32,6 @@
     "ownerId" : null,
     "softwareId" : null,
     "type" : "thermostat"
-  },
-  "credentials" : {
-    "credentialsId" : "wmpowQPQTTweujD0yFEb",
-    "credentialsType" : "ACCESS_TOKEN",
-    "credentialsValue" : null
   },
   "relations" : [ {
     "additionalInfo" : null,
@@ -54,7 +52,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1698742295684,
+      "lastUpdateTs" : 1700396429884,
       "longValue" : null,
       "strValue" : null
     }, {

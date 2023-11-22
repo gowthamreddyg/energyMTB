@@ -19,14 +19,17 @@
     "downlinkConverterId" : null,
     "edgeTemplate" : false,
     "enabled" : true,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "INTEGRATION",
+      "id" : "b2b0c3f0-77bc-11ee-ae55-5ff7c6fabc63"
+    },
     "id" : {
       "entityType" : "INTEGRATION",
       "id" : "b2b0c3f0-77bc-11ee-ae55-5ff7c6fabc63"
     },
     "name" : "HTTP integration",
     "remote" : false,
-    "routingKey" : "62f7a9aa-736d-c2da-feee-e716985a301f",
+    "routingKey" : "fca89d3f-9b96-4daf-9995-760ae4019685",
     "secret" : "fsgdp1ixqo4ariwbkqef",
     "type" : "HTTP"
   },
@@ -49,7 +52,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_tb-ie-main-0",
-      "lastUpdateTs" : 1698736283109,
+      "lastUpdateTs" : 1700551317308,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -57,7 +60,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_tb-ie-main-1",
-      "lastUpdateTs" : 1698736283112,
+      "lastUpdateTs" : 1700551364342,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -65,7 +68,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_tb-ie-main-2",
-      "lastUpdateTs" : 1698736283105,
+      "lastUpdateTs" : 1700551313347,
       "longValue" : null,
       "strValue" : null
     } ]

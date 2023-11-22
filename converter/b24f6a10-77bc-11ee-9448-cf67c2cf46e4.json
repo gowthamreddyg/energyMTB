@@ -14,7 +14,10 @@
     },
     "debugMode" : true,
     "edgeTemplate" : false,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "CONVERTER",
+      "id" : "b24f6a10-77bc-11ee-9448-cf67c2cf46e4"
+    },
     "id" : {
       "entityType" : "CONVERTER",
       "id" : "b24f6a10-77bc-11ee-9448-cf67c2cf46e4"

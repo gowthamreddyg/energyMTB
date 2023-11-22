@@ -5,7 +5,10 @@
       "entityType" : "CUSTOMER",
       "id" : "13814000-1dd2-11b2-8080-808080808080"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "ROLE",
+      "id" : "d86ace20-6d7a-11ee-b2ca-ab7802d7aea5"
+    },
     "name" : "Entity Group Write User",
     "permissions" : [ "ALL" ],
     "type" : "GROUP",
