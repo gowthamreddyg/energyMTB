@@ -32,13 +32,18 @@
       "id" : "b9face10-4b2c-11ee-b4de-37540c770a8a"
     },
     "label" : "",
-    "name" : "Energy Meter B 2",
+    "name" : "Smart Meter D",
     "ownerId" : {
       "entityType" : "CUSTOMER",
       "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
     },
     "softwareId" : null,
     "type" : "Energy sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "8E63eVD4RSxmb0qanCdt",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
   },
   "relations" : [ {
     "additionalInfo" : null,
@@ -60,6 +65,54 @@
       "jsonValue" : null,
       "key" : "active",
       "lastUpdateTs" : 1700455326997,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "alarm",
+      "lastUpdateTs" : 1699420493909,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "color",
+      "lastUpdateTs" : 1701239400639,
+      "longValue" : null,
+      "strValue" : "red"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 205.40909999999997,
+      "jsonValue" : null,
+      "key" : "cost",
+      "lastUpdateTs" : 1703131703503,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -41.891850000000005,
+      "jsonValue" : null,
+      "key" : "deltaCost",
+      "lastUpdateTs" : 1703131703503,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -6.93,
+      "jsonValue" : null,
+      "key" : "deltaEnergyConsumption",
+      "lastUpdateTs" : 1703131703503,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 33.98,
+      "jsonValue" : null,
+      "key" : "energyConsumption",
+      "lastUpdateTs" : 1703131703503,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -85,6 +138,38 @@
       "key" : "lastActivityTime",
       "lastUpdateTs" : 1699420493851,
       "longValue" : 1699420493815,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 453.64,
+      "jsonValue" : null,
+      "key" : "maxConsumption",
+      "lastUpdateTs" : 1700823169764,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 33.98,
+      "jsonValue" : null,
+      "key" : "peakConsumption",
+      "lastUpdateTs" : 1703131703503,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ts",
+      "lastUpdateTs" : 1703131703503,
+      "longValue" : 1703131703425,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 257.69,
+      "jsonValue" : null,
+      "key" : "voltage",
+      "lastUpdateTs" : 1702297886500,
+      "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,

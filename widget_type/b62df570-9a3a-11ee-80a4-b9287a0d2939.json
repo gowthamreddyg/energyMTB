@@ -1,0 +1,36 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "pie_d3_js",
+    "name" : "PIE D3 js",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 5.5,
+      "resources" : [ {
+        "url" : "https://d3js.org/d3.v4.min.js"
+      }, {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"
+      } ],
+      "templateHtml" : "<svg id = 'svg-pie' width=\"300\" height=\"300\"> </svg>\n<div id=\"legend\"></div>",
+      "templateCss" : "#container {\n    overflow: auto;\n}\n\n.tbDatasource-container {\n    margin: 5px;\n    padding: 8px;\n}\n\n.tbDatasource-title {\n    font-size: 1.200rem;\n    font-weight: 500;\n    padding-bottom: 10px;\n}\n\n.tbDatasource-table {\n    width: 100%;\n    box-shadow: 0 0 10px #ccc;\n    border-collapse: collapse;\n    white-space: nowrap;\n    font-size: 1.000rem;\n    color: #757575;\n}\n\n.tbDatasource-table td {\n    position: relative;\n    border-top: 1px solid rgba(0, 0, 0, 0.12);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n    padding: 0px 18px;\n    box-sizing: border-box;\n}\n\n        .arc text {\n            font: 10px sans-serif;\n            text-anchor: middle;\n        }\n\n        .arc path {\n            stroke: #fff;\n        }\n\n        .title {\n            fill: teal;\n            font-weight: bold;\n        }\n        \n        #legend svg {\n\t\t\theight: 300px; \n\t\t}",
+      "controllerScript" : "let colors = ['#7870BE', '#7CD9FE', '#A760BD', '#F871AA', '#A9A4D5'];\n\nfunction createChart(dataSet){\n    \n\n\n  \n    var svg = d3.select(document.getElementById('svg-pie')),\n            width = svg.attr(\"width\"),\n            height = svg.attr(\"height\"),\n            radius = Math.min(width, height) / 2;\n        \n        var g = svg.append(\"g\")\n                   .attr(\"transform\", \"translate(\" + width / 2 + \",\" + height / 2 + \")\");\n\n        var color = d3.scaleOrdinal(colors);\n\n        var pie = d3.pie().value(function(d) { \n                return d.value; \n            });\n\n        var path = d3.arc()\n                     .outerRadius(radius - 10)\n                     .innerRadius(0);\n\n        var label = d3.arc()\n                      .outerRadius(radius)\n                      .innerRadius(radius - 80);\n\n            var arc = g.selectAll(\".arc\")\n                       .data(pie(dataSet))\n                       .enter().append(\"g\")\n                       .attr(\"class\", \"arc\");\n                       \n\n            arc.append(\"path\")\n               .attr(\"d\", path)\n               .attr(\"fill\", function(d, i) { return color(i); });\n        \n            // arc.append(\"text\")\n            //   .attr(\"transform\", function(d) {\n            //             return \"translate(\" + label.centroid(d) + \")\"; \n            //     })\n            //   .text(function(d) { return d.data.label; });\n              \n\t\t//Initialize legend\n\t\tvar legendItemSize = 12;\n        var legendSpacing = 4;\n\t\tvar xOffset = 150;\n\t\tvar yOffset = 100;\n        var legend = d3\n\t\t\t.select('#legend')\n\t\t\t.append('svg')\n            .selectAll('.legendItem')\n            .data(dataSet);\n\t\t\t\n\t\t//Create legend items\n\t\tlegend\n\t\t\t.enter()\n\t\t\t.append('rect')\n\t\t\t.attr('class', 'legendItem')\n\t\t\t.attr('width', legendItemSize)\n\t\t\t.attr('height', legendItemSize)\n\t\t\t.style('fill', (d,i) => colors[i])\n\t\t\t.attr('transform',\n                (d, i) => {\n                    var x = xOffset;\n                    var y = yOffset + (legendItemSize + legendSpacing) * i;\n                    return `translate(${x}, ${y})`;\n                });\n\t\t\n\t\t//Create legend labels\n\t\tlegend\n\t\t\t.enter()\n\t\t\t.append('text')\n\t\t\t.attr('x', xOffset + legendItemSize + 5)\n\t\t\t.attr('y', (d, i) => yOffset + (legendItemSize + legendSpacing) * i + 12)\n\t\t\t.text(d => d.label);\t\t\n\t\t\n    \n};\n\nself.onInit = function() {\n    var dataSet = [];\n     for (var i = 0; i < self.ctx.datasources.length; i++) {\n        var datasource = self.ctx.datasources[i];\n        for (var d = 0; d < datasource.dataKeys.length; d++) {\n            var dataKey = datasource.dataKeys[d];\n            var units = dataKey.units && dataKey.units.length ? dataKey.units : self.ctx.units;\n            units = units ? (' (' + units + ')') : '';\n            dataSet.push({ label: dataKey.label + units, value:0});\n        }\n    };\n    createChart(dataSet);\n}\n\nself.onDataUpdated = function() {\n    var dataSet = [];\n        for (var i = 0; i < self.ctx.data.length; i++) {\n        var cellData = self.ctx.data[i];\n        if (cellData.data.length > 0) {\n            var decimals;\n            if (typeof cellData.dataKey.decimals !== 'undefined' \n                && cellData.dataKey.decimals !== null ) {\n                decimals = cellData.dataKey.decimals; \n            } else {\n                decimals = self.ctx.decimals;\n            }\n            var tvPair = cellData.data[cellData.data.length - 1];\n            var value = self.ctx.utils.formatValue(tvPair[1], decimals);\n            dataSet.push({ label: cellData.dataKey.label, value: Number(value) });\n        }\n    }\n    createChart(dataSet);\n}\n\nself.onResize = function() {\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -0) {\\n\\tvalue = 100;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\",\"aggregationType\":null,\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\",\"useDashboardTimewindow\":true,\"displayTimewindow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "b62df570-9a3a-11ee-80a4-b9287a0d2939"
+    },
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

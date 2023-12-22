@@ -186,12 +186,14 @@
             "padding" : "8px",
             "settings" : {
               "stack" : false,
+              "enableSelection" : true,
               "fontSize" : 10,
               "fontColor" : "#656568",
               "showTooltip" : true,
               "tooltipIndividual" : false,
               "tooltipCumulative" : false,
               "hideZeros" : false,
+              "tooltipValueFormatter" : "",
               "grid" : {
                 "verticalLines" : true,
                 "horizontalLines" : true,
@@ -218,16 +220,13 @@
               "shadowSize" : 4,
               "smoothLines" : false,
               "thresholdsLineWidth" : 0,
-              "comparisonEnabled" : false,
+              "comparisonEnabled" : true,
               "timeForComparison" : "previousInterval",
-              "comparisonCustomIntervalValue" : 7200000,
               "xaxisSecond" : {
                 "axisPosition" : "top",
                 "title" : "Comparision",
                 "showLabels" : false
               },
-              "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ],
               "showLegend" : true,
               "legendConfig" : {
                 "direction" : "row",
@@ -238,7 +237,8 @@
                 "showAvg" : false,
                 "showTotal" : false,
                 "showLatest" : false
-              }
+              },
+              "customLegendEnabled" : false
             },
             "title" : "Energy Consumption",
             "dropShadow" : true,
@@ -247,7 +247,7 @@
             "useDashboardTimewindow" : false,
             "showTitleIcon" : false,
             "titleTooltip" : "",
-            "enableDataExport" : false,
+            "enableDataExport" : true,
             "widgetStyle" : { },
             "widgetCss" : "",
             "pageSize" : 1024,
@@ -581,7 +581,7 @@
                 "name" : "powerMonthlyConsumption",
                 "type" : "timeseries",
                 "label" : "${entityName}",
-                "color" : "#2196f3",
+                "color" : "var(--tb-accent-700)",
                 "settings" : {
                   "hideDataByDefault" : false,
                   "disableDataHiding" : false,
@@ -646,12 +646,14 @@
             "padding" : "8px",
             "settings" : {
               "stack" : false,
+              "enableSelection" : true,
               "fontSize" : 10,
               "fontColor" : "#545454",
               "showTooltip" : true,
               "tooltipIndividual" : true,
               "tooltipCumulative" : true,
               "hideZeros" : false,
+              "tooltipValueFormatter" : "",
               "grid" : {
                 "verticalLines" : true,
                 "horizontalLines" : true,
@@ -669,24 +671,12 @@
                 "min" : null,
                 "max" : null,
                 "title" : "KW",
-                "showLabels" : true,
-                "color" : "#545454",
-                "tickSize" : null,
-                "tickDecimals" : 0,
-                "ticksFormatter" : ""
+                "showLabels" : false
               },
               "shadowSize" : 4,
-              "smoothLines" : false,
+              "smoothLines" : true,
+              "thresholdsLineWidth" : null,
               "comparisonEnabled" : false,
-              "timeForComparison" : "previousInterval",
-              "comparisonCustomIntervalValue" : 7200000,
-              "xaxisSecond" : {
-                "axisPosition" : "bottom",
-                "title" : "Comparison",
-                "showLabels" : true
-              },
-              "customLegendEnabled" : false,
-              "dataKeysListForLabels" : [ ],
               "showLegend" : true,
               "legendConfig" : {
                 "direction" : "row",
@@ -697,7 +687,8 @@
                 "showAvg" : false,
                 "showTotal" : false,
                 "showLatest" : false
-              }
+              },
+              "customLegendEnabled" : false
             },
             "title" : "All Sites Energy Consumption",
             "dropShadow" : true,
@@ -1254,34 +1245,42 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "8px",
             "settings" : {
-              "shadowSize" : 4,
-              "fontColor" : "#545454",
+              "stack" : false,
+              "enableSelection" : true,
               "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : false,
+              "tooltipCumulative" : false,
+              "hideZeros" : false,
+              "tooltipValueFormatter" : "",
+              "grid" : {
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#545454",
+                "backgroundColor" : null,
+                "tickColor" : "#DDDDDD"
+              },
               "xaxis" : {
+                "title" : null,
                 "showLabels" : true,
                 "color" : "#545454"
               },
               "yaxis" : {
+                "min" : null,
+                "max" : null,
+                "title" : null,
                 "showLabels" : true,
-                "color" : "#545454"
-              },
-              "grid" : {
                 "color" : "#545454",
-                "tickColor" : "#DDDDDD",
-                "verticalLines" : true,
-                "horizontalLines" : true,
-                "outlineWidth" : 1
+                "tickSize" : null,
+                "tickDecimals" : 0,
+                "ticksFormatter" : ""
               },
-              "legend" : {
-                "show" : true,
-                "position" : "nw",
-                "backgroundColor" : "#f0f0f0",
-                "backgroundOpacity" : 0.85,
-                "labelBoxBorderColor" : "rgba(1, 1, 1, 0.45)"
-              },
-              "decimals" : 1,
-              "stack" : false,
-              "tooltipIndividual" : false,
+              "shadowSize" : 4,
+              "smoothLines" : true,
+              "thresholdsLineWidth" : null,
+              "comparisonEnabled" : false,
               "showLegend" : true,
               "legendConfig" : {
                 "direction" : "row",
@@ -1292,7 +1291,8 @@
                 "showAvg" : false,
                 "showTotal" : false,
                 "showLatest" : false
-              }
+              },
+              "customLegendEnabled" : false
             },
             "title" : "All Sites Energy Consumption Cost",
             "dropShadow" : true,
@@ -4217,19 +4217,19 @@
                 "a5361db5-d679-9d22-201e-65c06017d98b" : {
                   "sizeX" : -7,
                   "sizeY" : 16,
-                  "row" : 48,
+                  "row" : 25,
                   "col" : 0
                 },
                 "c0319f51-a1e1-fb7d-ce95-bbe05a1c57ff" : {
                   "sizeX" : -28,
                   "sizeY" : 16,
-                  "row" : 25,
-                  "col" : 0
+                  "row" : 0,
+                  "col" : 54
                 },
                 "ef1d9b79-5bb4-fefd-1079-426ecefa2f8a" : {
                   "sizeX" : -4,
                   "sizeY" : 7,
-                  "row" : 2,
+                  "row" : 41,
                   "col" : 0
                 },
                 "5de57e99-12e1-3d54-bd28-dbaba85f9d12" : {
@@ -4319,7 +4319,7 @@
                 "99f5a270-ff64-a650-dfce-ec6527e55e04" : {
                   "sizeX" : 0,
                   "sizeY" : 7,
-                  "row" : 41,
+                  "row" : 2,
                   "col" : 0
                 },
                 "f0d57a6b-7205-431c-3d63-870ca990bbf0" : {
@@ -4533,7 +4533,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "36637db0-86d5-11ee-8a8d-41373c7ca422"
+              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
             }
           }
         },
@@ -4575,7 +4575,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "36637db0-86d5-11ee-8a8d-41373c7ca422"
+              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
             }
           }
         },
@@ -4601,7 +4601,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "36637db0-86d5-11ee-8a8d-41373c7ca422"
+              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
             }
           }
         },
@@ -4616,7 +4616,7 @@
             "defaultStateGroupType" : null,
             "defaultStateEntityGroup" : null,
             "groupType" : "DEVICE",
-            "entityGroup" : "36637db0-86d5-11ee-8a8d-41373c7ca422"
+            "entityGroup" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
           }
         },
         "ed6224e9-eb70-c80f-6615-c742e5e866f7" : {
@@ -4636,7 +4636,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "36637db0-86d5-11ee-8a8d-41373c7ca422"
+              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
             }
           }
         },

@@ -196,7 +196,8 @@
       },
       "configuration" : {
         "scope" : "CLIENT_SCOPE",
-        "notifyDevice" : "false",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
         "updateAttributesOnlyOnValueChange" : false
       },
       "configurationVersion" : 1,

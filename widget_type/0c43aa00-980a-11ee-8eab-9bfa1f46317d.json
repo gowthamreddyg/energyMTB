@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "pie_echart",
+    "name" : "Pie Echart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"
+      } ],
+      "templateHtml" : "<div id='main'></div>",
+      "templateCss" : "#container {\n    overflow: auto;\n}\n\n.tbDatasource-container {\n    margin: 5px;\n    padding: 8px;\n}\n\n.tbDatasource-title {\n    font-size: 1.200rem;\n    font-weight: 500;\n    padding-bottom: 10px;\n}\n\n.tbDatasource-table {\n    width: 100%;\n    box-shadow: 0 0 10px #ccc;\n    border-collapse: collapse;\n    white-space: nowrap;\n    font-size: 1.000rem;\n    color: #757575;\n}\n\n.tbDatasource-table td {\n    position: relative;\n    border-top: 1px solid rgba(0, 0, 0, 0.12);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n    padding: 0px 18px;\n    box-sizing: border-box;\n}",
+      "controllerScript" : "var myChart;\r\nvar option;\r\nvar clearTimeOut;\r\nself.onInit = function() {\r\n    var chartDom = document.getElementById('main');\r\n    myChart = echarts.init(chartDom);\r\noption = {\r\n  tooltip: {\r\n    trigger: 'item'\r\n  },\r\n  legend: {\r\n    top: '5%',\r\n    left: 'center'\r\n  },\r\n  series: [\r\n    {\r\n      name: 'Access From',\r\n      type: 'pie',\r\n      radius: ['40%', '70%'],\r\n      avoidLabelOverlap: false,\r\n      label: {\r\n        show: false,\r\n        position: 'center'\r\n      },\r\n      emphasis: {\r\n        label: {\r\n          show: true,\r\n          fontSize: 40,\r\n          fontWeight: 'bold'\r\n        }\r\n      },\r\n      labelLine: {\r\n        show: false\r\n      },\r\n      data: [],\r\n    }\r\n  ]\r\n};\r\n    setTimeout(function() {\r\n        myChart.setOption(option);\r\n    }, 100);\r\n    // self.onResize();\r\n}\r\n\r\nself.onDataUpdated = function() {\r\nvar data = [];\r\nvar selfdData =  self.ctx.data;\r\n// selfdData.then((item) =>{\r\n//     data.concat(item[0]);\r\n// });\r\nconst length = selfdData.length;\r\nselfdData.forEach(function(item, index) {\r\n    data = data.concat(item.data[0]);\r\n    // console.log(item.data[0]);\r\n    if((index+1) == length){\r\n     option.series[0].data = data;\r\n      console.log(data);\r\n     myChart.setOption(option);   \r\n    };\r\n});\r\n//  for (var i=0; i < self.ctx.data.length; i++) {\r\n        // var cellData = self.ctx.data[i];\r\n        // data.concat(cellData.data);\r\n        // console.log(data);\r\n    // }\r\n    // clearTimeOut = setTimeout(function() {\r\n    //     console.log(data);\r\n    //     // myChart.setOption(option);\r\n    //     // console.log(myChart.getOption());\r\n    // }, 100);\r\n}\r\n\r\nself.onResize = function() {    \r\n}\r\n\r\nself.onDestroy = function() {\r\n\r\n}\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"return 123;\",\"aggregationType\":null,\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\",\"useDashboardTimewindow\":true,\"displayTimewindow\":true}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "0c43aa00-980a-11ee-8eab-9bfa1f46317d"
+    },
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

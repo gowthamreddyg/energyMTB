@@ -31,6 +31,18 @@
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
+      "entityType" : "USER",
+      "id" : "17177650-88f6-11ee-9774-a38683104857"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
       "entityType" : "ASSET",
       "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
     },
@@ -49,18 +61,6 @@
     "to" : {
       "entityType" : "DEVICE",
       "id" : "b0f9a8e0-4b2c-11ee-b1f8-37cb77e3b6b4"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "USER",
-      "id" : "36bbec00-86d7-11ee-ae8d-f5e128fb4fc7"
-    },
-    "to" : {
-      "entityType" : "ASSET",
-      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
     },
     "type" : "Contains",
     "typeGroup" : "COMMON"

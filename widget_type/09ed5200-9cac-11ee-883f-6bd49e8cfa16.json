@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "custom_debug_vertical_chart",
+    "name" : "Custom debug vertical chart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 7.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"
+      } ],
+      "templateHtml" : "<div id=\"echarts-vertical-bar-container\" style=\"height:inherit; width:inherit\"></div>",
+      "templateCss" : "",
+      "controllerScript" : "var chartDom;\nvar myChart;\nvar option;\nlet colors = ['#7870BE', '#7CD9FE', '#A760BD', '#F871AA', '#A9A4D5'];\nself.onInit = function() {\n     chartDom = document.getElementById('echarts-vertical-bar-container');\n     myChart = echarts.init(chartDom);\n    const isLegend = self.ctx.defaultSubscription && self.ctx.defaultSubscription.displayLegend;\n    option = {\n      tooltip: {\n        trigger: 'axis',\n      },\n      color:colors,\n      xAxis: [\n        {\n          type: 'category',\n          data: [],\n        }\n      ],\n      yAxis: [\n        {\n          type: 'value'\n        }\n      ],\n      series: [\n        {\n          type: 'bar',\n          barWidth: '15%',\n          data: []\n        }\n      ]\n};\n  for (var i = 0; i < self.ctx.datasources.length; i++) {\n        var datasource = self.ctx.datasources[i];\n        for (var d = 0; d < datasource.dataKeys.length; d++) {\n            var dataKey = datasource.dataKeys[d];\n            var units = dataKey.units && dataKey.units.length ? dataKey.units : self.ctx.units;\n            units = units ? (' (' + units + ')') : '';\n            option.xAxis[0].data.push(dataKey.label + units);\n        }\n    }\n    \n        setTimeout(function() {\n            myChart.setOption(option);\n        }, 100);\n}\n\nself.onDataUpdated = function() {\n         option.series[0].data=[];\n    for (var i = 0; i < self.ctx.data.length; i++) {\n        var cellData = self.ctx.data[i];\n        if (cellData.data.length > 0) {\n            var decimals;\n            if (typeof cellData.dataKey.decimals !== 'undefined' \n                && cellData.dataKey.decimals !== null ) {\n                decimals = cellData.dataKey.decimals; \n            } else {\n                decimals = self.ctx.decimals;\n            }\n            var tvPair = cellData.data[cellData.data.length - 1];\n            var value = self.ctx.utils.formatValue(tvPair[1], decimals);\n            option.series[0].data.push({ name: cellData.dataKey.label, value });\n        }\n    }\n    myChart.setOption(option);\n}\n\nself.onResize = function() {    \n    myChart.resize();\n}\n\nself.onDestroy = function() {\n}\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "09ed5200-9cac-11ee-883f-6bd49e8cfa16"
+    },
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

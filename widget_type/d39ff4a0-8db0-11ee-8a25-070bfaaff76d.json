@@ -1,0 +1,40 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "custom_chart_js_line_chart",
+    "name" : "Custom chart js line chart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "timeseries",
+      "sizeX" : 8,
+      "sizeY" : 5,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      } ],
+      "templateHtml" : "<canvas id=\"myChart\"></canvas>\r\n",
+      "templateCss" : ".legend {\n    font-size: 13px;\n    line-height: 10px;\n}\n\n.legend table { \n    border-spacing: 0px;\n    border-collapse: separate;\n}\n\n.mouse-events .flot-overlay {\n    cursor: crosshair; \n}\n\n",
+      "controllerScript" : "var myChart;\r\n\r\nself.onInit = function() {\r\n    \r\n    var chartData = {\r\n        datasets: []\r\n    };\r\n\r\n    for (var i=0; i < self.ctx.data.length; i++) {\r\n        var dataKey = self.ctx.data[i].dataKey;\r\n        var dataset = {\r\n            label: dataKey.label,\r\n            data: [],\r\n            borderColor: i== 0? 'red': 'blue',\r\n            fill: false\r\n        };\r\n        chartData.datasets.push(dataset);\r\n    }\r\n    \r\n    var options = {\r\n        maintainAspectRatio: false,\r\n        legend: {\r\n            display: false\r\n        },\r\n        scales: {\r\n        xAxes: [{\r\n            type: 'time',\r\n            ticks: {\r\n                maxRotation: 0,\r\n                autoSkipPadding: 30\r\n            }\r\n        }]\r\n    }\r\n    };\r\n    \r\n    var canvasElement = $('#myChart', self.ctx.$container)[0];\r\n    var canvasCtx = canvasElement.getContext('2d');\r\n    myChart = new Chart(canvasCtx, {\r\n        type: 'line',\r\n        data: chartData,\r\n        options: options\r\n    });\r\n    self.onResize();\r\n}\r\n\r\nself.onResize = function() {\r\n    myChart.resize();\r\n}\r\n\r\nself.onDataUpdated = function() {\r\n    for (var i = 0; i < self.ctx.data.length; i++) {\r\n        var datasourceData = self.ctx.data[i];\r\n        var dataSet = datasourceData.data;\r\n        myChart.data.datasets[i].data.length = 0;\r\n        var data = myChart.data.datasets[i].data;\r\n        for (var d = 0; d < dataSet.length; d++) {\r\n            var tsValuePair = dataSet[d];\r\n            var ts = tsValuePair[0];\r\n            var value = tsValuePair[1];\r\n            data.push({t: ts, y: value});\r\n        }\r\n    }\r\n    myChart.options.scales.xAxes[0].ticks.min = self.ctx.timeWindow.minTime;\r\n    myChart.options.scales.xAxes[0].ticks.max = self.ctx.timeWindow.maxTime;\r\n    myChart.update();\r\n}\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}",
+      "latestDataKeySettingsSchema" : "{}",
+      "settingsDirective" : "tb-flot-line-widget-settings",
+      "dataKeySettingsDirective" : "tb-flot-line-key-settings",
+      "latestDataKeySettingsDirective" : "tb-flot-latest-key-settings",
+      "hasBasicMode" : true,
+      "basicModeDirective" : "tb-flot-basic-config",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"First\",\"color\":\"#2196f3\",\"settings\":{\"showLines\":true,\"fillLines\":true,\"showPoints\":false},\"_hash\":0.8587686344902596,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"},{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Second\",\"color\":\"#ffc107\",\"settings\":{\"showLines\":true,\"fillLines\":false,\"showPoints\":false},\"_hash\":0.12775350966079668,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"stack\":false,\"fontSize\":10,\"fontColor\":\"#545454\",\"showTooltip\":true,\"tooltipIndividual\":false,\"tooltipCumulative\":false,\"hideZeros\":false,\"grid\":{\"verticalLines\":true,\"horizontalLines\":true,\"outlineWidth\":1,\"color\":\"#545454\",\"backgroundColor\":null,\"tickColor\":\"#DDDDDD\"},\"xaxis\":{\"title\":null,\"showLabels\":true,\"color\":\"#545454\"},\"yaxis\":{\"min\":null,\"max\":null,\"title\":null,\"showLabels\":true,\"color\":\"#545454\",\"tickSize\":null,\"tickDecimals\":0,\"ticksFormatter\":\"\"},\"shadowSize\":4,\"smoothLines\":false,\"comparisonEnabled\":false,\"xaxisSecond\":{\"axisPosition\":\"top\",\"title\":null,\"showLabels\":true},\"showLegend\":true,\"legendConfig\":{\"direction\":\"column\",\"position\":\"bottom\",\"sortDataKeys\":false,\"showMin\":false,\"showMax\":false,\"showAvg\":true,\"showTotal\":false,\"showLatest\":false},\"customLegendEnabled\":false},\"title\":\"Custom chart js line chart\",\"dropShadow\":true,\"enableFullscreen\":true,\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400},\"mobileHeight\":null,\"configMode\":\"basic\",\"actions\":{},\"showTitleIcon\":false,\"titleIcon\":\"thermostat\",\"iconColor\":\"#1F6BDD\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "d39ff4a0-8db0-11ee-8a25-070bfaaff76d"
+    },
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
