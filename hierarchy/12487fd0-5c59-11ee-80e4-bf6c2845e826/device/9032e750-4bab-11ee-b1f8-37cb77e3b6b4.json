@@ -77,34 +77,34 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 376.4826,
+      "doubleValue" : 370.01445,
       "jsonValue" : null,
       "key" : "cost",
-      "lastUpdateTs" : 1703131703645,
+      "lastUpdateTs" : 1703584846739,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 16.865549999999985,
+      "doubleValue" : -13.359449999999981,
       "jsonValue" : null,
       "key" : "deltaCost",
-      "lastUpdateTs" : 1703131703645,
+      "lastUpdateTs" : 1703584846739,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 2.789999999999999,
+      "doubleValue" : -2.210000000000001,
       "jsonValue" : null,
       "key" : "deltaEnergyConsumption",
-      "lastUpdateTs" : 1703131703645,
+      "lastUpdateTs" : 1703584846739,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 62.28,
+      "doubleValue" : 61.21,
       "jsonValue" : null,
       "key" : "energyConsumption",
-      "lastUpdateTs" : 1703131703645,
+      "lastUpdateTs" : 1703584846739,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -141,10 +141,10 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 62.28,
+      "doubleValue" : 61.21,
       "jsonValue" : null,
       "key" : "peakConsumption",
-      "lastUpdateTs" : 1703131703645,
+      "lastUpdateTs" : 1703584846739,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -152,8 +152,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "ts",
-      "lastUpdateTs" : 1703131703645,
-      "longValue" : 1703131703424,
+      "lastUpdateTs" : 1703584846739,
+      "longValue" : 1703584846493,
       "strValue" : null
     }, {
       "booleanValue" : null,

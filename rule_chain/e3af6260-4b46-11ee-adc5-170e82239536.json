@@ -12,7 +12,7 @@
     },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "ff3c1df0-86d5-11ee-8a8d-41373c7ca422"
+      "id" : "329b0070-88f8-11ee-ace3-afcb18c2767c"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -50,6 +50,10 @@
     }, {
       "fromIndex" : 2,
       "toIndex" : 29,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 37,
       "type" : "Success"
     }, {
       "fromIndex" : 4,
@@ -167,6 +171,10 @@
       "fromIndex" : 36,
       "toIndex" : 20,
       "type" : "Success"
+    }, {
+      "fromIndex" : 37,
+      "toIndex" : 38,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
     "nodes" : [ {
@@ -198,7 +206,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3c1df0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329b0070-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "To Building Asset",
       "ruleChainId" : null,
@@ -207,8 +215,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 603,
-        "layoutY" : 85
+        "layoutX" : 577,
+        "layoutY" : 97
       },
       "configuration" : {
         "direction" : "FROM",
@@ -230,7 +238,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3c4500-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329b2780-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Energy Avgerage",
       "ruleChainId" : null,
@@ -239,8 +247,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 596,
-        "layoutY" : 9
+        "layoutX" : 328,
+        "layoutY" : 2
       },
       "configuration" : {
         "direction" : "FROM",
@@ -262,7 +270,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3c6c10-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329b4e90-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate Sum",
       "ruleChainId" : null,
@@ -285,7 +293,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3c9320-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329b75a0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -308,7 +316,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3c9321-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329b9cb0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -331,7 +339,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3cba30-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329bc3c0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "powerConsumptionCurrentMonthpersite",
       "ruleChainId" : null,
@@ -364,7 +372,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3ce140-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329bead0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset alaram",
       "ruleChainId" : null,
@@ -387,7 +395,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d0850-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329c11e0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Script asset alaram",
       "ruleChainId" : null,
@@ -419,7 +427,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d0851-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329c38f0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "aggreagate latest cost total",
       "ruleChainId" : null,
@@ -451,7 +459,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d2f60-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329c6000-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate lastest cost average",
       "ruleChainId" : null,
@@ -483,7 +491,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d2f61-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329c8710-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Transformation customer",
       "ruleChainId" : null,
@@ -515,7 +523,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d5670-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329c8711-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate customer consumption",
       "ruleChainId" : null,
@@ -547,7 +555,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d5671-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329cae20-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Tenant consumption",
       "ruleChainId" : null,
@@ -570,7 +578,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3d7d80-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329cd530-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "name time series name",
       "ruleChainId" : null,
@@ -593,7 +601,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3da490-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329cfc40-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "user tenant time series",
       "ruleChainId" : null,
@@ -616,7 +624,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3da491-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329d2350-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Save Avg aggregate cost",
       "ruleChainId" : null,
@@ -648,7 +656,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3dcba0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329d4a60-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Transformation cost customer",
       "ruleChainId" : null,
@@ -680,7 +688,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3dcba1-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329d9880-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate customer cost consumption",
       "ruleChainId" : null,
@@ -703,7 +711,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3df2b0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329d9881-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Save cost aggregate sum at user level",
       "ruleChainId" : null,
@@ -735,7 +743,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3df2b1-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329de6a0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Tenant cost consumption",
       "ruleChainId" : null,
@@ -758,7 +766,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e19c0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329e0db0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "save times series tenant level",
       "ruleChainId" : null,
@@ -790,7 +798,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e40d0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329e0db1-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Transformation customer",
       "ruleChainId" : null,
@@ -822,7 +830,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e40d1-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329e34c0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate user consumption",
       "ruleChainId" : null,
@@ -845,7 +853,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e67e0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329e5bd0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -877,7 +885,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e67e1-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329e82e0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate Tenant consumption",
       "ruleChainId" : null,
@@ -909,7 +917,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e8ef0-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329ea9f0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Transformation customer",
       "ruleChainId" : null,
@@ -941,7 +949,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3e8ef1-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329ed100-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate user consumption",
       "ruleChainId" : null,
@@ -964,7 +972,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3eb600-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329fbb60-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -996,7 +1004,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3edd10-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "329fe271-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Aggregate Tenant consumption",
       "ruleChainId" : null,
@@ -1005,8 +1013,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 825,
-        "layoutY" : 66
+        "layoutX" : 727,
+        "layoutY" : 49
       },
       "configuration" : {
         "inputValueKey" : "powerMonthlyConsumption",
@@ -1023,7 +1031,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3edd11-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a00980-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta Consumption",
       "ruleChainId" : null,
@@ -1050,7 +1058,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f0420-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a03090-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta cost Consumption",
       "ruleChainId" : null,
@@ -1077,7 +1085,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f0421-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a057a0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta Consumption",
       "ruleChainId" : null,
@@ -1104,7 +1112,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f2b30-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a07eb0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta Consumption",
       "ruleChainId" : null,
@@ -1131,7 +1139,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f2b31-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a0a5c0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta Consumption",
       "ruleChainId" : null,
@@ -1158,7 +1166,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f5240-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a0ccd0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta cost Consumption",
       "ruleChainId" : null,
@@ -1185,7 +1193,7 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f5241-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a0f3e0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta cost Consumption",
       "ruleChainId" : null,
@@ -1212,12 +1220,67 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "ff3f7950-86d5-11ee-8a8d-41373c7ca422"
+        "id" : "32a11af0-88f8-11ee-ace3-afcb18c2767c"
       },
       "name" : "Asset delta cost Consumption",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.CalculateDeltaNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 298,
+        "layoutY" : 331
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "${powerMonthlyConsumption}" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "LAST",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : false,
+        "startIntervalPattern" : "",
+        "endIntervalPattern" : "",
+        "startInterval" : 30,
+        "startIntervalTimeUnit" : "DAYS",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "SECONDS"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b902b260-a3d4-11ee-8a35-2d562209d378"
+      },
+      "name" : "current month reading",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 370,
+        "layoutY" : 435
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b9034ea0-a3d4-11ee-8a35-2d562209d378"
+      },
+      "name" : "test script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },
