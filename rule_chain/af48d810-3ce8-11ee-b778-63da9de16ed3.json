@@ -71,7 +71,7 @@
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 35,
+      "toIndex" : 34,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -138,6 +138,14 @@
       "toIndex" : 18,
       "type" : "Success"
     }, {
+      "fromIndex" : 15,
+      "toIndex" : 36,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 39,
+      "type" : "Success"
+    }, {
       "fromIndex" : 16,
       "toIndex" : 26,
       "type" : "Success"
@@ -187,7 +195,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 34,
+      "toIndex" : 33,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
@@ -195,15 +203,31 @@
       "type" : "Success"
     }, {
       "fromIndex" : 31,
-      "toIndex" : 33,
+      "toIndex" : 32,
       "type" : "Success"
     }, {
-      "fromIndex" : 33,
+      "fromIndex" : 32,
       "toIndex" : 28,
       "type" : "Success"
     }, {
-      "fromIndex" : 35,
-      "toIndex" : 36,
+      "fromIndex" : 34,
+      "toIndex" : 35,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 36,
+      "toIndex" : 37,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 37,
+      "toIndex" : 38,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 39,
+      "toIndex" : 40,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 40,
+      "toIndex" : 41,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 19,
@@ -875,8 +899,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2112,
-        "layoutY" : 106
+        "layoutX" : 2217,
+        "layoutY" : 161
       },
       "configuration" : {
         "latestTsKeyNames" : [ "energyConsumption", "maxConsumption" ],
@@ -1022,29 +1046,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2468,
-        "layoutY" : 356
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "91f105c0-8a9b-11ee-ace3-afcb18c2767c"
-      },
-      "name" : "failure",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 2200,
         "layoutY" : 391
       },
@@ -1155,6 +1156,162 @@
         "id" : "56ac1700-8cd7-11ee-ace3-afcb18c2767c"
       },
       "name" : "maxDailyVoltage Series",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2185,
+        "layoutY" : 529
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "cost" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "LAST",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : false,
+        "startIntervalPattern" : "",
+        "endIntervalPattern" : "",
+        "startInterval" : 30,
+        "startIntervalTimeUnit" : "DAYS",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "SECONDS"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96c9b1b0-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "current month reading",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2460,
+        "layoutY" : 518
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : " var newMsg = {};\r\n\r\n   let deltaMonthlyCost = parseFloat(Math.abs(msg.cost - JSON.parse(metadata.cost)).toFixed(2));\r\n   if(deltaMonthlyCost <= 0) { deltaMonthlyCost=0 }\r\n   newMsg.deltaMonthlyCost = deltaMonthlyCost;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96ca7500-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "test script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2786,
+        "layoutY" : 534
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96cb3850-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "Save time series",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2184,
+        "layoutY" : 600
+      },
+      "configuration" : {
+        "latestTsKeyNames" : [ "energyConsumption" ],
+        "aggregation" : "NONE",
+        "fetchMode" : "LAST",
+        "orderBy" : "ASC",
+        "limit" : 1000,
+        "useMetadataIntervalPatterns" : false,
+        "startIntervalPattern" : "",
+        "endIntervalPattern" : "",
+        "startInterval" : 30,
+        "startIntervalTimeUnit" : "DAYS",
+        "endInterval" : 1,
+        "endIntervalTimeUnit" : "SECONDS"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96cbd490-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "current month reading",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2463,
+        "layoutY" : 598
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : " var newMsg = {};\r\n\r\n   let deltaEnergyMonthlyConsumption = parseFloat(Math.abs(msg.energyConsumption - JSON.parse(metadata.energyConsumption)).toFixed(2));\r\n   if(deltaEnergyMonthlyConsumption <= 0) { deltaEnergyMonthlyConsumption=0 }\r\n   newMsg.deltaEnergyMonthlyConsumption = deltaEnergyMonthlyConsumption;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96cc97e0-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "test script",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2785,
+        "layoutY" : 605
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "96cd3420-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "Save time series",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
