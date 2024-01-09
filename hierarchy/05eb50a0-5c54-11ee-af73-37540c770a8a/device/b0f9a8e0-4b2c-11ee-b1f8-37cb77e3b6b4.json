@@ -77,34 +77,34 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 241.25594999999998,
+      "doubleValue" : 61937.61404999986,
       "jsonValue" : null,
       "key" : "cost",
-      "lastUpdateTs" : 1703608186694,
+      "lastUpdateTs" : 1704777547406,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 29.983199999999982,
+      "doubleValue" : 58.87829999999667,
       "jsonValue" : null,
       "key" : "deltaCost",
-      "lastUpdateTs" : 1703608186694,
+      "lastUpdateTs" : 1704777547406,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 4.959999999999994,
+      "doubleValue" : 9.739999999999782,
       "jsonValue" : null,
       "key" : "deltaEnergyConsumption",
-      "lastUpdateTs" : 1703608186694,
+      "lastUpdateTs" : 1704777547406,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 39.91,
+      "doubleValue" : 10246.089999999976,
       "jsonValue" : null,
       "key" : "energyConsumption",
-      "lastUpdateTs" : 1703608186694,
+      "lastUpdateTs" : 1704777547406,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -141,10 +141,18 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 39.91,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "monthStartDate",
+      "lastUpdateTs" : 1704269912029,
+      "longValue" : 1704067200000,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 10246.089999999976,
       "jsonValue" : null,
       "key" : "peakConsumption",
-      "lastUpdateTs" : 1703608186694,
+      "lastUpdateTs" : 1704777547406,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -152,15 +160,15 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "ts",
-      "lastUpdateTs" : 1703608186694,
-      "longValue" : 1703608186489,
+      "lastUpdateTs" : 1704777547406,
+      "longValue" : 1704777547281,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 261.73,
+      "doubleValue" : 250.38,
       "jsonValue" : null,
       "key" : "voltage",
-      "lastUpdateTs" : 1702297886315,
+      "lastUpdateTs" : 1703657024841,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -178,6 +186,14 @@
       "key" : "yPos",
       "lastUpdateTs" : 1694093558600,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "yearStartDate",
+      "lastUpdateTs" : 1704269912029,
+      "longValue" : 1704067200000,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ {

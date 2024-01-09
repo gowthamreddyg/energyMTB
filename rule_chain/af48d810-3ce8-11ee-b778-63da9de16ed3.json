@@ -31,7 +31,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 0,
-      "toIndex" : 31,
+      "toIndex" : 30,
       "type" : "Success"
     }, {
       "fromIndex" : 2,
@@ -67,11 +67,11 @@
       "type" : "Alarm Cleared"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 29,
+      "toIndex" : 28,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 34,
+      "toIndex" : 33,
       "type" : "Post telemetry"
     }, {
       "fromIndex" : 6,
@@ -139,11 +139,11 @@
       "type" : "Success"
     }, {
       "fromIndex" : 15,
-      "toIndex" : 36,
+      "toIndex" : 35,
       "type" : "Success"
     }, {
       "fromIndex" : 15,
-      "toIndex" : 39,
+      "toIndex" : 38,
       "type" : "Success"
     }, {
       "fromIndex" : 16,
@@ -191,43 +191,39 @@
       "type" : "Success"
     }, {
       "fromIndex" : 27,
-      "toIndex" : 28,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 28,
-      "toIndex" : 33,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 29,
-      "toIndex" : 30,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 31,
       "toIndex" : 32,
       "type" : "Success"
     }, {
-      "fromIndex" : 32,
-      "toIndex" : 28,
+      "fromIndex" : 28,
+      "toIndex" : 29,
       "type" : "Success"
     }, {
-      "fromIndex" : 34,
-      "toIndex" : 35,
+      "fromIndex" : 30,
+      "toIndex" : 31,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 31,
+      "toIndex" : 27,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 33,
+      "toIndex" : 34,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 35,
+      "toIndex" : 36,
       "type" : "Success"
     }, {
       "fromIndex" : 36,
       "toIndex" : 37,
       "type" : "Success"
     }, {
-      "fromIndex" : 37,
-      "toIndex" : 38,
+      "fromIndex" : 38,
+      "toIndex" : 39,
       "type" : "Success"
     }, {
       "fromIndex" : 39,
       "toIndex" : 40,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 40,
-      "toIndex" : 41,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 19,
@@ -584,9 +580,9 @@
         "layoutY" : 14
       },
       "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "msg.cost = msg.energyConsumption*6.045;\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
+        "scriptLang" : "JS",
+        "jsScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -899,38 +895,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2217,
-        "layoutY" : 161
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "energyConsumption", "maxConsumption" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "ALL",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : false,
-        "startIntervalPattern" : "",
-        "endIntervalPattern" : "",
-        "startInterval" : 1,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "96134c70-8920-11ee-ace3-afcb18c2767c"
-      },
-      "name" : "originator telementary",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 2484,
         "layoutY" : 246
       },
@@ -1168,12 +1132,12 @@
       "configuration" : {
         "latestTsKeyNames" : [ "cost" ],
         "aggregation" : "NONE",
-        "fetchMode" : "LAST",
+        "fetchMode" : "FIRST",
         "orderBy" : "ASC",
         "limit" : 1000,
-        "useMetadataIntervalPatterns" : false,
-        "startIntervalPattern" : "",
-        "endIntervalPattern" : "",
+        "useMetadataIntervalPatterns" : true,
+        "startIntervalPattern" : "${monthStartDate}",
+        "endIntervalPattern" : "${ts}",
         "startInterval" : 30,
         "startIntervalTimeUnit" : "DAYS",
         "endInterval" : 1,
@@ -1199,7 +1163,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n\r\n   let deltaMonthlyCost = parseFloat(Math.abs(msg.cost - JSON.parse(metadata.cost)).toFixed(2));\r\n   if(deltaMonthlyCost <= 0) { deltaMonthlyCost=0 }\r\n   newMsg.deltaMonthlyCost = deltaMonthlyCost;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "jsScript" : " var newMsg = {};\r\n  if(!metadata.cost) metadata.cost = 0;\r\n   let deltaMonthlyCost = parseFloat(Math.abs(msg.cost - JSON.parse(metadata.cost)).toFixed(2));\r\n   if(deltaMonthlyCost <= 0) { deltaMonthlyCost=0 }\r\n   newMsg.deltaMonthlyCost = deltaMonthlyCost;\r\n   newMsg.lastCost = JSON.parse(metadata.cost);\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -1246,12 +1210,12 @@
       "configuration" : {
         "latestTsKeyNames" : [ "energyConsumption" ],
         "aggregation" : "NONE",
-        "fetchMode" : "LAST",
+        "fetchMode" : "FIRST",
         "orderBy" : "ASC",
         "limit" : 1000,
-        "useMetadataIntervalPatterns" : false,
-        "startIntervalPattern" : "",
-        "endIntervalPattern" : "",
+        "useMetadataIntervalPatterns" : true,
+        "startIntervalPattern" : "${monthStartDate}",
+        "endIntervalPattern" : "${ts}",
         "startInterval" : 30,
         "startIntervalTimeUnit" : "DAYS",
         "endInterval" : 1,
@@ -1277,7 +1241,7 @@
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n\r\n   let deltaEnergyMonthlyConsumption = parseFloat(Math.abs(msg.energyConsumption - JSON.parse(metadata.energyConsumption)).toFixed(2));\r\n   if(deltaEnergyMonthlyConsumption <= 0) { deltaEnergyMonthlyConsumption=0 }\r\n   newMsg.deltaEnergyMonthlyConsumption = deltaEnergyMonthlyConsumption;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "jsScript" : " var newMsg = {};\r\nif(!metadata.energyConsumption) metadata.energyConsumption = 0;\r\n   let deltaEnergyMonthlyConsumption = parseFloat(Math.abs(msg.energyConsumption - JSON.parse(metadata.energyConsumption)).toFixed(2));\r\n   if(deltaEnergyMonthlyConsumption <= 0) { deltaEnergyMonthlyConsumption=0 }\r\n   newMsg.deltaEnergyMonthlyConsumption = deltaEnergyMonthlyConsumption;\r\n   newMsg.lastConsumption = JSON.parse(metadata.energyConsumption);\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
