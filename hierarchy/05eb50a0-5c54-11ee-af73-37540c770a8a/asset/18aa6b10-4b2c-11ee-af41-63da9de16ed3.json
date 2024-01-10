@@ -64,6 +64,18 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "624d0aa0-aed4-11ee-b767-61ae9d239871"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
@@ -116,18 +128,18 @@
       "strValue" : "https://l.icdbcdn.com/oh/eefe66c6-ee24-4f28-9599-705fd2bce633.png?w=960&mode=max&f=32"
     }, {
       "booleanValue" : null,
-      "doubleValue" : 40.767144,
+      "doubleValue" : 40.76662292626166,
       "jsonValue" : null,
       "key" : "latitude",
-      "lastUpdateTs" : 1694087847826,
+      "lastUpdateTs" : 1704778413093,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : -73.980197,
+      "doubleValue" : -73.9796385342592,
       "jsonValue" : null,
       "key" : "longitude",
-      "lastUpdateTs" : 1694087889752,
+      "lastUpdateTs" : 1704778413093,
       "longValue" : null,
       "strValue" : null
     } ]
