@@ -41,7 +41,7 @@
     "type" : "Energy sensor"
   },
   "credentials" : {
-    "credentialsId" : "4taVizQbRYr3S7izKf3m",
+    "credentialsId" : "rwmlrTM1FsJE2y6ytPH1",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -64,7 +64,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1700396429988,
+      "lastUpdateTs" : 1705044433384,
       "longValue" : null,
       "strValue" : null
     }, {

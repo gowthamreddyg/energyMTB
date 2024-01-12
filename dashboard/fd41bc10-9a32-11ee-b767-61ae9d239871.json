@@ -302,7 +302,10 @@
       }
     },
     "customerId" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "fd41bc10-9a32-11ee-b767-61ae9d239871"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "fd41bc10-9a32-11ee-b767-61ae9d239871"

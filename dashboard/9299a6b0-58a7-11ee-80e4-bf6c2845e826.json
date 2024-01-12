@@ -3289,7 +3289,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+              "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
             }
           }
         },
@@ -3331,7 +3331,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+              "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
             }
           }
         },
@@ -3357,7 +3357,7 @@
             "resolveMultiple" : false,
             "singleEntity" : {
               "entityType" : "TENANT",
-              "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+              "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
             }
           }
         },
@@ -3372,7 +3372,7 @@
             "defaultStateGroupType" : null,
             "defaultStateEntityGroup" : null,
             "groupType" : "DEVICE",
-            "entityGroup" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+            "entityGroup" : "774a05f0-b11a-11ee-8373-7de626819ae0"
           }
         },
         "2721c1f8-804e-3389-de37-61d22901cf03" : {
@@ -3420,7 +3420,7 @@
             "type" : "entityList",
             "resolveMultiple" : true,
             "entityType" : "TENANT",
-            "entityList" : [ "4cbd8d40-88f5-11ee-8a25-070bfaaff76d" ]
+            "entityList" : [ "774a05f0-b11a-11ee-8373-7de626819ae0" ]
           }
         },
         "b598f065-842d-ccdb-f033-b19408939f56" : {

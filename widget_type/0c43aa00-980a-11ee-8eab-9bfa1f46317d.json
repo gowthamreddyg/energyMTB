@@ -20,7 +20,10 @@
       "dataKeySettingsSchema" : "{}\n",
       "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"return 123;\",\"aggregationType\":null,\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\",\"useDashboardTimewindow\":true,\"displayTimewindow\":true}"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "0c43aa00-980a-11ee-8eab-9bfa1f46317d"
+    },
     "id" : {
       "entityType" : "WIDGET_TYPE",
       "id" : "0c43aa00-980a-11ee-8eab-9bfa1f46317d"

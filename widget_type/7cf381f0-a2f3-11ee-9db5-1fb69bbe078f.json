@@ -18,7 +18,10 @@
       "dataKeySettingsSchema" : "{}\n",
       "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"return 3000;\",\"aggregationType\":null,\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}},{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Sin\",\"color\":\"#4caf50\",\"settings\":{},\"_hash\":0.6471714699212263,\"funcBody\":\"return 1000;\",\"aggregationType\":null,\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\",\"useDashboardTimewindow\":true,\"displayTimewindow\":true,\"dropShadow\":true,\"enableFullscreen\":false,\"enableDataExport\":false,\"widgetStyle\":{},\"widgetCss\":\"\",\"pageSize\":1024,\"noDataDisplayMessage\":\"\"}"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "7cf381f0-a2f3-11ee-9db5-1fb69bbe078f"
+    },
     "id" : {
       "entityType" : "WIDGET_TYPE",
       "id" : "7cf381f0-a2f3-11ee-9db5-1fb69bbe078f"

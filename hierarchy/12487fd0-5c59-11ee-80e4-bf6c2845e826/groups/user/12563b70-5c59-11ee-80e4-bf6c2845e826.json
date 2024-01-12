@@ -56,16 +56,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "12563b70-5c59-11ee-80e4-bf6c2845e826"
     },
-    "createdTime" : 1700629951396,
+    "createdTime" : 1705044412838,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "bcfa7640-88f5-11ee-b11c-d71dd4ab013a"
+      "id" : "f50a2460-b11b-11ee-8373-7de626819ae0"
     },
     "name" : "GENERIC_[12563b70-5c59-11ee-80e4-bf6c2845e826]_[47574470-3feb-11ee-9b11-37540c770a8a]",
     "public" : false

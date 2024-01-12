@@ -56,16 +56,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
     },
-    "createdTime" : 1700629951426,
+    "createdTime" : 1705044412871,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "bcff0a20-88f5-11ee-b11c-d71dd4ab013a"
+      "id" : "f50f2d70-b11b-11ee-8373-7de626819ae0"
     },
     "name" : "GENERIC_[e7792f10-5c72-11ee-94fd-170e82239536]_[e77a6790-5c72-11ee-94fd-170e82239536]",
     "public" : false
@@ -81,16 +81,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
     },
-    "createdTime" : 1700629957957,
+    "createdTime" : 1705044422658,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "c0e39750-88f5-11ee-b11c-d71dd4ab013a"
+      "id" : "fae48e20-b11b-11ee-8373-7de626819ae0"
     },
     "name" : "GROUP_[e7792f10-5c72-11ee-94fd-170e82239536]_[e781e1a0-5c72-11ee-94fd-170e82239536]_[5593b8a0-4b2d-11ee-af41-63da9de16ed3]_[DEVICE]",
     "public" : true
@@ -106,16 +106,16 @@
     },
     "tenantId" : {
       "entityType" : "TENANT",
-      "id" : "4cbd8d40-88f5-11ee-8a25-070bfaaff76d"
+      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
     },
     "userGroupId" : {
       "entityType" : "ENTITY_GROUP",
       "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
     },
-    "createdTime" : 1700629957959,
+    "createdTime" : 1705044422663,
     "id" : {
       "entityType" : "GROUP_PERMISSION",
-      "id" : "c0e3e570-88f5-11ee-b11c-d71dd4ab013a"
+      "id" : "fae55170-b11b-11ee-8373-7de626819ae0"
     },
     "name" : "GROUP_[e7792f10-5c72-11ee-94fd-170e82239536]_[e781e1a0-5c72-11ee-94fd-170e82239536]_[a0d1f920-53b7-11ee-b4de-37540c770a8a]_[ASSET]",
     "public" : true

@@ -21,7 +21,10 @@
       "settingsDirective" : "",
       "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]},{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Sin\",\"color\":\"#4caf50\",\"settings\":{},\"_hash\":0.44000545813509984,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\",\"aggregationType\":null,\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null}],\"alarmFilterConfig\":{\"statusList\":[\"ACTIVE\"]}}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":false,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\",\"useDashboardTimewindow\":true,\"displayTimewindow\":true,\"showTitleIcon\":false,\"titleTooltip\":\"\",\"dropShadow\":true,\"enableFullscreen\":false,\"enableDataExport\":false,\"widgetStyle\":{},\"widgetCss\":\"\",\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400},\"pageSize\":1024,\"noDataDisplayMessage\":\"\"}"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "8907b060-9fba-11ee-883f-6bd49e8cfa16"
+    },
     "id" : {
       "entityType" : "WIDGET_TYPE",
       "id" : "8907b060-9fba-11ee-883f-6bd49e8cfa16"
