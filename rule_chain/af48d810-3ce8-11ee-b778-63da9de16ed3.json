@@ -8,10 +8,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "af48d810-3ce8-11ee-b778-63da9de16ed3"
     },
-    "firstRuleNodeId" : {
-      "entityType" : "RULE_NODE",
-      "id" : "356766e0-88f8-11ee-ace3-afcb18c2767c"
-    },
+    "firstRuleNodeId" : null,
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "af48d810-3ce8-11ee-b778-63da9de16ed3"
@@ -139,11 +136,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 15,
-      "toIndex" : 35,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 38,
+      "toIndex" : 41,
       "type" : "Success"
     }, {
       "fromIndex" : 16,
@@ -225,13 +218,21 @@
       "fromIndex" : 39,
       "toIndex" : 40,
       "type" : "Success"
+    }, {
+      "fromIndex" : 41,
+      "toIndex" : 35,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 41,
+      "toIndex" : 38,
+      "type" : "Success"
     } ],
-    "firstNodeIndex" : 19,
+    "firstNodeIndex" : null,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 1467,
-        "layoutY" : 137
+        "layoutX" : 1486,
+        "layoutY" : 145
       },
       "configuration" : {
         "defaultTTL" : 0
@@ -576,12 +577,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1469,
-        "layoutY" : 14
+        "layoutX" : 1497,
+        "layoutY" : 15
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nmsg.ts = date.getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -649,8 +650,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1831,
-        "layoutY" : 66
+        "layoutX" : 1926,
+        "layoutY" : 74
       },
       "configuration" : {
         "inputValueKey" : "cost",
@@ -1126,8 +1127,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2185,
-        "layoutY" : 529
+        "layoutX" : 2470,
+        "layoutY" : 450
       },
       "configuration" : {
         "latestTsKeyNames" : [ "cost" ],
@@ -1136,8 +1137,8 @@
         "orderBy" : "ASC",
         "limit" : 1000,
         "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "${monthStartDate}",
-        "endIntervalPattern" : "${ts}",
+        "startIntervalPattern" : "$[monthStartDate]",
+        "endIntervalPattern" : "$[ts]",
         "startInterval" : 30,
         "startIntervalTimeUnit" : "DAYS",
         "endInterval" : 1,
@@ -1158,8 +1159,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2460,
-        "layoutY" : 518
+        "layoutX" : 2701,
+        "layoutY" : 391
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1181,8 +1182,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2786,
-        "layoutY" : 534
+        "layoutX" : 2783,
+        "layoutY" : 505
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1214,8 +1215,8 @@
         "orderBy" : "ASC",
         "limit" : 1000,
         "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "${monthStartDate}",
-        "endIntervalPattern" : "${ts}",
+        "startIntervalPattern" : "$[monthStartDate]",
+        "endIntervalPattern" : "$[ts]",
         "startInterval" : 30,
         "startIntervalTimeUnit" : "DAYS",
         "endInterval" : 1,
@@ -1274,6 +1275,29 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "96cd3420-a3db-11ee-80a4-b9287a0d2939"
+      },
+      "name" : "Save time series",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2185,
+        "layoutY" : 217
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "298983c0-b059-11ee-b5ed-8f92c2930524"
       },
       "name" : "Save time series",
       "ruleChainId" : null,

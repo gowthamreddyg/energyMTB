@@ -64,18 +64,6 @@
     },
     "type" : "Contains",
     "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "18aa6b10-4b2c-11ee-af41-63da9de16ed3"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "624d0aa0-aed4-11ee-b767-61ae9d239871"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
