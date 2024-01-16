@@ -104,6 +104,14 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "deviceCount",
+      "lastUpdateTs" : 1705209816548,
+      "longValue" : 3,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
       "doubleValue" : 93.0,
       "jsonValue" : null,
       "key" : "energyConsumptionSum",

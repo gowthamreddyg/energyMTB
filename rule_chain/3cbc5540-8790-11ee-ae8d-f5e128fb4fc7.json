@@ -49,7 +49,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 67,
+      "toIndex" : 63,
       "type" : "Success"
     }, {
       "fromIndex" : 4,
@@ -61,7 +61,7 @@
       "type" : "True"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 68,
+      "toIndex" : 56,
       "type" : "Success"
     }, {
       "fromIndex" : 8,
@@ -89,7 +89,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 16,
-      "toIndex" : 72,
+      "toIndex" : 67,
       "type" : "Success"
     }, {
       "fromIndex" : 17,
@@ -105,7 +105,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 21,
-      "toIndex" : 69,
+      "toIndex" : 64,
       "type" : "Success"
     }, {
       "fromIndex" : 22,
@@ -113,7 +113,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 23,
-      "toIndex" : 73,
+      "toIndex" : 68,
       "type" : "Success"
     }, {
       "fromIndex" : 24,
@@ -121,7 +121,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 25,
-      "toIndex" : 70,
+      "toIndex" : 65,
       "type" : "Success"
     }, {
       "fromIndex" : 26,
@@ -129,15 +129,15 @@
       "type" : "Success"
     }, {
       "fromIndex" : 27,
-      "toIndex" : 74,
+      "toIndex" : 69,
       "type" : "Success"
     }, {
       "fromIndex" : 28,
-      "toIndex" : 36,
+      "toIndex" : 4,
       "type" : "Success"
     }, {
       "fromIndex" : 29,
-      "toIndex" : 38,
+      "toIndex" : 36,
       "type" : "Success"
     }, {
       "fromIndex" : 30,
@@ -165,139 +165,119 @@
       "type" : "Success"
     }, {
       "fromIndex" : 36,
-      "toIndex" : 37,
+      "toIndex" : 24,
       "type" : "Success"
     }, {
       "fromIndex" : 37,
-      "toIndex" : 4,
+      "toIndex" : 38,
       "type" : "Success"
     }, {
       "fromIndex" : 38,
       "toIndex" : 39,
       "type" : "Success"
     }, {
-      "fromIndex" : 39,
-      "toIndex" : 40,
-      "type" : "Success"
-    }, {
       "fromIndex" : 40,
-      "toIndex" : 24,
+      "toIndex" : 41,
       "type" : "Success"
     }, {
       "fromIndex" : 41,
       "toIndex" : 42,
       "type" : "Success"
     }, {
-      "fromIndex" : 42,
-      "toIndex" : 43,
+      "fromIndex" : 43,
+      "toIndex" : 44,
       "type" : "Success"
     }, {
       "fromIndex" : 44,
       "toIndex" : 45,
       "type" : "Success"
     }, {
-      "fromIndex" : 45,
-      "toIndex" : 46,
+      "fromIndex" : 46,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 47,
       "toIndex" : 48,
       "type" : "Success"
     }, {
-      "fromIndex" : 48,
-      "toIndex" : 49,
+      "fromIndex" : 49,
+      "toIndex" : 50,
       "type" : "Success"
     }, {
       "fromIndex" : 50,
       "toIndex" : 51,
       "type" : "Success"
     }, {
-      "fromIndex" : 51,
-      "toIndex" : 52,
+      "fromIndex" : 52,
+      "toIndex" : 53,
       "type" : "Success"
     }, {
       "fromIndex" : 53,
       "toIndex" : 54,
       "type" : "Success"
     }, {
-      "fromIndex" : 54,
-      "toIndex" : 55,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 56,
-      "toIndex" : 57,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 57,
-      "toIndex" : 58,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 59,
+      "fromIndex" : 55,
       "toIndex" : 28,
       "type" : "Success"
     }, {
-      "fromIndex" : 60,
+      "fromIndex" : 56,
       "toIndex" : 29,
       "type" : "Success"
     }, {
-      "fromIndex" : 61,
+      "fromIndex" : 57,
       "toIndex" : 30,
       "type" : "Success"
     }, {
-      "fromIndex" : 62,
+      "fromIndex" : 58,
       "toIndex" : 33,
       "type" : "Success"
     }, {
-      "fromIndex" : 63,
+      "fromIndex" : 59,
       "toIndex" : 31,
       "type" : "Success"
     }, {
-      "fromIndex" : 63,
-      "toIndex" : 47,
+      "fromIndex" : 59,
+      "toIndex" : 43,
       "type" : "Success"
     }, {
-      "fromIndex" : 64,
+      "fromIndex" : 60,
       "toIndex" : 34,
       "type" : "Success"
     }, {
-      "fromIndex" : 65,
+      "fromIndex" : 61,
       "toIndex" : 32,
       "type" : "Success"
     }, {
-      "fromIndex" : 66,
+      "fromIndex" : 62,
       "toIndex" : 35,
       "type" : "Success"
     }, {
-      "fromIndex" : 67,
+      "fromIndex" : 63,
+      "toIndex" : 55,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 64,
+      "toIndex" : 57,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 65,
+      "toIndex" : 58,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 66,
       "toIndex" : 59,
       "type" : "Success"
     }, {
-      "fromIndex" : 68,
+      "fromIndex" : 67,
       "toIndex" : 60,
       "type" : "Success"
     }, {
-      "fromIndex" : 69,
+      "fromIndex" : 68,
       "toIndex" : 61,
       "type" : "Success"
     }, {
-      "fromIndex" : 70,
+      "fromIndex" : 69,
       "toIndex" : 62,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 71,
-      "toIndex" : 63,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 72,
-      "toIndex" : 64,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 73,
-      "toIndex" : 65,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 74,
-      "toIndex" : 66,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
@@ -402,6 +382,12 @@
           "defaultValue" : 0,
           "aggFunction" : "MAX",
           "target" : "ts"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "monthlyDeviceConsumption",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "monthlyAssetConsumption"
         } ],
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
@@ -554,6 +540,12 @@
           "defaultValue" : 0,
           "aggFunction" : "MAX",
           "target" : "ts"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "monthlyDeviceCost",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "monthlyAssetCost"
         } ],
         "outMsgType" : "POST_TELEMETRY_REQUEST",
         "queueName" : null
@@ -1510,116 +1502,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1865,
-        "layoutY" : 379
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "powerMonthlyConsumption" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4ecf270-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 2120,
-        "layoutY" : 382
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "\r\n    if(!metadata.powerMonthlyConsumption) metadata.powerMonthlyConsumption = 0;\r\n   let monthlyAssetConsumption = parseFloat((msg.powerMonthlyConsumption - JSON.parse(metadata.powerMonthlyConsumption)).toFixed(2));\r\n   if(monthlyAssetConsumption <= 0) { monthlyAssetConsumption=0 }\r\n   msg.monthlyAssetConsumption = monthlyAssetConsumption;\r\n   return {msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4edb5c0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 2764,
-        "layoutY" : 271
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "costLatestSum" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4eeee40-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 3054,
-        "layoutY" : 270
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "if(!metadata.costLatestSum) metadata.costLatestSum = 0;\r\n   let monthlyAssetCost = parseFloat((msg.costLatestSum - JSON.parse(metadata.costLatestSum)).toFixed(2));\r\n   if(monthlyAssetCost <= 0) { monthlyAssetCost=0 }\r\n   msg.monthlyAssetCost = monthlyAssetCost;\r\n\r\n   return {msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4ef6370-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 3334,
         "layoutY" : 262
       },
@@ -2310,29 +2192,6 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "c4ff9010-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Time formatting",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1773,
-        "layoutY" : 221
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "msg.ts= new Date(msg.ts).getTime();\nmsg.monthStartDate= new Date(msg.monthStartDate).getTime();\nmsg.yearStartDate= new Date(msg.yearStartDate).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c5000540-b135-11ee-af88-13372bac1769"
       },
       "name" : "Time formatting",
       "ruleChainId" : null,

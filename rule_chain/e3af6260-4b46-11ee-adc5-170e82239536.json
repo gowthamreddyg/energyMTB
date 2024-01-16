@@ -336,8 +336,8 @@
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 200,
-        "layoutY" : 157
+        "layoutX" : 298,
+        "layoutY" : 127
       },
       "configuration" : {
         "originatorSource" : "RELATED",

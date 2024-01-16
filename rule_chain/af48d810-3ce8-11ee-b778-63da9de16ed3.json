@@ -22,52 +22,64 @@
   },
   "metaData" : {
     "connections" : [ {
-      "fromIndex" : 0,
-      "toIndex" : 10,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 2,
-      "toIndex" : 1,
+      "fromIndex" : 1,
+      "toIndex" : 0,
       "type" : "Post attributes"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 3,
+      "fromIndex" : 1,
+      "toIndex" : 2,
       "type" : "RPC Request from Device"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 4,
+      "fromIndex" : 1,
+      "toIndex" : 3,
       "type" : "Other"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 5,
+      "fromIndex" : 1,
+      "toIndex" : 4,
       "type" : "RPC Request to Device"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 9,
+      "fromIndex" : 1,
+      "toIndex" : 8,
       "type" : "Generate Report"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 11,
+      "fromIndex" : 1,
+      "toIndex" : 10,
       "type" : "Post telemetry"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 13,
+      "fromIndex" : 1,
+      "toIndex" : 12,
       "type" : "Alarm Acknowledged"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 13,
+      "fromIndex" : 1,
+      "toIndex" : 12,
       "type" : "Alarm Cleared"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 24,
+      "fromIndex" : 1,
+      "toIndex" : 23,
       "type" : "Post telemetry"
     }, {
-      "fromIndex" : 2,
-      "toIndex" : 26,
+      "fromIndex" : 1,
+      "toIndex" : 25,
       "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 32,
+      "type" : "Relation Added or Updated"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 32,
+      "type" : "Relation Deleted"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 1,
+      "type" : "False"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "True"
     }, {
       "fromIndex" : 6,
-      "toIndex" : 2,
+      "toIndex" : 1,
       "type" : "False"
     }, {
       "fromIndex" : 6,
@@ -75,115 +87,103 @@
       "type" : "True"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 2,
-      "type" : "False"
-    }, {
-      "fromIndex" : 7,
-      "toIndex" : 8,
-      "type" : "True"
-    }, {
-      "fromIndex" : 8,
-      "toIndex" : 2,
+      "toIndex" : 1,
       "type" : "Success"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 12,
+      "fromIndex" : 10,
+      "toIndex" : 11,
       "type" : "Failure"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 12,
+      "fromIndex" : 10,
+      "toIndex" : 11,
       "type" : "False"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 17,
+      "fromIndex" : 10,
+      "toIndex" : 16,
       "type" : "False"
     }, {
-      "fromIndex" : 11,
-      "toIndex" : 17,
+      "fromIndex" : 10,
+      "toIndex" : 16,
       "type" : "True"
     }, {
-      "fromIndex" : 12,
-      "toIndex" : 16,
+      "fromIndex" : 11,
+      "toIndex" : 15,
       "type" : "Created"
     }, {
-      "fromIndex" : 12,
-      "toIndex" : 16,
+      "fromIndex" : 11,
+      "toIndex" : 15,
       "type" : "Updated"
     }, {
-      "fromIndex" : 13,
-      "toIndex" : 14,
+      "fromIndex" : 12,
+      "toIndex" : 13,
       "type" : "Cleared"
     }, {
-      "fromIndex" : 13,
-      "toIndex" : 14,
+      "fromIndex" : 12,
+      "toIndex" : 13,
       "type" : "Failure"
     }, {
-      "fromIndex" : 13,
-      "toIndex" : 14,
+      "fromIndex" : 12,
+      "toIndex" : 13,
       "type" : "False"
     }, {
-      "fromIndex" : 14,
-      "toIndex" : 23,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 18,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 15,
-      "toIndex" : 34,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 16,
-      "toIndex" : 23,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 17,
-      "toIndex" : 15,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 18,
-      "toIndex" : 0,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 18,
-      "toIndex" : 28,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 6,
-      "type" : "Alarm Created"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 6,
-      "type" : "Alarm Severity Updated"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 6,
-      "type" : "Alarm Updated"
-    }, {
-      "fromIndex" : 19,
-      "toIndex" : 6,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 20,
+      "fromIndex" : 13,
       "toIndex" : 22,
       "type" : "Success"
     }, {
-      "fromIndex" : 22,
+      "fromIndex" : 14,
+      "toIndex" : 17,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 22,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 16,
+      "toIndex" : 14,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 17,
+      "toIndex" : 30,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 5,
+      "type" : "Alarm Created"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 5,
+      "type" : "Alarm Severity Updated"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 5,
+      "type" : "Alarm Updated"
+    }, {
+      "fromIndex" : 18,
+      "toIndex" : 5,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 19,
       "toIndex" : 21,
       "type" : "Success"
     }, {
-      "fromIndex" : 23,
+      "fromIndex" : 21,
       "toIndex" : 20,
       "type" : "Success"
     }, {
-      "fromIndex" : 24,
-      "toIndex" : 25,
+      "fromIndex" : 22,
+      "toIndex" : 19,
       "type" : "Success"
     }, {
-      "fromIndex" : 26,
-      "toIndex" : 27,
+      "fromIndex" : 23,
+      "toIndex" : 24,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 25,
+      "toIndex" : 26,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 27,
+      "toIndex" : 28,
       "type" : "Success"
     }, {
       "fromIndex" : 28,
@@ -191,48 +191,27 @@
       "type" : "Success"
     }, {
       "fromIndex" : 29,
-      "toIndex" : 30,
+      "toIndex" : 9,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 30,
+      "toIndex" : 27,
       "type" : "Success"
     }, {
       "fromIndex" : 31,
-      "toIndex" : 32,
+      "toIndex" : 34,
       "type" : "Success"
     }, {
       "fromIndex" : 32,
       "toIndex" : 33,
-      "type" : "Success"
+      "type" : "True"
     }, {
-      "fromIndex" : 34,
-      "toIndex" : 28,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 34,
+      "fromIndex" : 33,
       "toIndex" : 31,
       "type" : "Success"
     } ],
-    "firstNodeIndex" : 19,
+    "firstNodeIndex" : 18,
     "nodes" : [ {
-      "additionalInfo" : {
-        "description" : null,
-        "layoutX" : 2658,
-        "layoutY" : 39
-      },
-      "configuration" : {
-        "defaultTTL" : 0
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "fa654c00-b11b-11ee-8373-7de626819ae0"
-      },
-      "name" : "Save Timeseries",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
       "additionalInfo" : {
         "layoutX" : 1660,
         "layoutY" : 119
@@ -300,6 +279,7 @@
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 1636,
         "layoutY" : 273
       },
@@ -310,7 +290,7 @@
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -344,8 +324,8 @@
     }, {
       "additionalInfo" : {
         "description" : null,
-        "layoutX" : 277,
-        "layoutY" : 261
+        "layoutX" : 261,
+        "layoutY" : 373
       },
       "configuration" : {
         "originatorTypes" : [ "ENTITY_GROUP", "DEVICE" ]
@@ -923,11 +903,11 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2609,
-        "layoutY" : 107
+        "layoutX" : 2380,
+        "layoutY" : 137
       },
       "configuration" : {
-        "latestTsKeyNames" : [ "cost" ],
+        "latestTsKeyNames" : [ "cost", "energyConsumption" ],
         "aggregation" : "NONE",
         "fetchMode" : "FIRST",
         "orderBy" : "ASC",
@@ -955,12 +935,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2887,
-        "layoutY" : 107
+        "layoutX" : 2712,
+        "layoutY" : 223
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n  if(!metadata.cost) metadata.cost = 0;\r\n   let monthlyDeviceCost = parseFloat((msg.cost - JSON.parse(metadata.cost)).toFixed(2));\r\n   if(monthlyDeviceCost <= 0) { monthlyDeviceCost=0 }\r\n   newMsg.monthlyDeviceCost = monthlyDeviceCost;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "if(!metadata.cost) metadata.cost = 0;\r\n  if(!metadata.energyConsumption) metadata.energyConsumption = 0;\r\n   let monthlyDeviceCost = parseFloat((msg.cost - JSON.parse(metadata.cost)).toFixed(2));\r\n   let monthlyDeviceConsumption = parseFloat((msg.energyConsumption - JSON.parse(metadata.energyConsumption)).toFixed(2));\r\n   if(monthlyDeviceCost <= 0) { monthlyDeviceCost=0 }\r\n   if(monthlyDeviceConsumption <= 0) { monthlyDeviceConsumption=0 }\r\n   msg.monthlyDeviceCost = monthlyDeviceCost;\r\n   msg.monthlyDeviceConsumption = monthlyDeviceConsumption;\r\n\r\n   return {msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -970,84 +950,6 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "fa68ce71-b11b-11ee-8373-7de626819ae0"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 3132,
-        "layoutY" : 109
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "fa68f580-b11b-11ee-8373-7de626819ae0"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 2643,
-        "layoutY" : 237
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "energyConsumption" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "fa68f581-b11b-11ee-8373-7de626819ae0"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 2904,
-        "layoutY" : 243
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\nif(!metadata.energyConsumption) metadata.energyConsumption = 0;\r\n   let monthlyDeviceConsumption = parseFloat((msg.energyConsumption - JSON.parse(metadata.energyConsumption)).toFixed(2));\r\n   if(monthlyDeviceConsumption <= 0) { monthlyDeviceConsumption=0 }\r\n   newMsg.monthlyDeviceConsumption = monthlyDeviceConsumption;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "fa691c90-b11b-11ee-8373-7de626819ae0"
       },
       "name" : "test script",
       "ruleChainId" : null,
@@ -1079,8 +981,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2322,
-        "layoutY" : 177
+        "layoutX" : 2633,
+        "layoutY" : 52
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1099,6 +1001,101 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2196,
+        "layoutY" : 415
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "var deviceCount = 0;\nif(msgType == \"RELATION_ADD_OR_UPDATE\"){\n    deviceCount = Number(metadata.ss_deviceCount) + 1;\n}else{\n    deviceCount = Number(metadata.ss_deviceCount) - 1;  \n}\nreturn {msg: {deviceCount}, metadata: metadata, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "var deviceCount = 0;\nif(msgType == \"RELATION_ADD_OR_UPDATE\"){\n    deviceCount = metadata.ss_deviceCount + 1;\n}else{\n    deviceCount = metadata.ss_deviceCount - 1;  \n}\nreturn {msg: {deviceCount}, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "05574cf0-b296-11ee-b962-ddbc483e1eb0"
+      },
+      "name" : "Test node",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1546,
+        "layoutY" : 416
+      },
+      "configuration" : {
+        "originatorTypes" : [ "ASSET" ]
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ae9370b0-b29a-11ee-b5ed-8f92c2930524"
+      },
+      "name" : "Asset filter",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1816,
+        "layoutY" : 415
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "sharedAttributeNames" : null,
+        "serverAttributeNames" : [ "deviceCount" ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e7d9b170-b29c-11ee-af88-13372bac1769"
+      },
+      "name" : "Devices Count",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2561,
+        "layoutY" : 393
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "ce7bb7b0-b2a0-11ee-b962-ddbc483e1eb0"
+      },
+      "name" : "Asset attribute",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
     } ],
     "ruleChainConnections" : null
   },

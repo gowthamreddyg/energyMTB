@@ -79,9 +79,9 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "address",
-      "lastUpdateTs" : 1698242156029,
+      "lastUpdateTs" : 1705205558185,
       "longValue" : null,
-      "strValue" : "UB City, Canberra Block, 12th and 13th Floor, Vittal Mallya Road, Bangalore, Karnataka - 560001"
+      "strValue" : "UB City, Canberra Block , 12th and 13th Floor, Vittal Mallya Road, Bangalore, Karnataka - 560001"
     }, {
       "booleanValue" : false,
       "doubleValue" : null,
@@ -89,6 +89,14 @@
       "key" : "alarm",
       "lastUpdateTs" : 1700455498614,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "deviceCount",
+      "lastUpdateTs" : 1705214073902,
+      "longValue" : 2,
       "strValue" : null
     }, {
       "booleanValue" : null,
