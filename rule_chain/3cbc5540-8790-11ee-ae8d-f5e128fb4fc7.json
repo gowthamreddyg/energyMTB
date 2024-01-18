@@ -49,7 +49,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 2,
-      "toIndex" : 63,
+      "toIndex" : 47,
       "type" : "Success"
     }, {
       "fromIndex" : 4,
@@ -61,7 +61,7 @@
       "type" : "True"
     }, {
       "fromIndex" : 7,
-      "toIndex" : 56,
+      "toIndex" : 41,
       "type" : "Success"
     }, {
       "fromIndex" : 8,
@@ -89,7 +89,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 16,
-      "toIndex" : 67,
+      "toIndex" : 50,
       "type" : "Success"
     }, {
       "fromIndex" : 17,
@@ -105,7 +105,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 21,
-      "toIndex" : 64,
+      "toIndex" : 48,
       "type" : "Success"
     }, {
       "fromIndex" : 22,
@@ -113,7 +113,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 23,
-      "toIndex" : 68,
+      "toIndex" : 51,
       "type" : "Success"
     }, {
       "fromIndex" : 24,
@@ -121,7 +121,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 25,
-      "toIndex" : 65,
+      "toIndex" : 49,
       "type" : "Success"
     }, {
       "fromIndex" : 26,
@@ -129,7 +129,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 27,
-      "toIndex" : 69,
+      "toIndex" : 52,
       "type" : "Success"
     }, {
       "fromIndex" : 28,
@@ -177,107 +177,55 @@
       "type" : "Success"
     }, {
       "fromIndex" : 40,
-      "toIndex" : 41,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 41,
-      "toIndex" : 42,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 43,
-      "toIndex" : 44,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 44,
-      "toIndex" : 45,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 46,
-      "toIndex" : 47,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 47,
-      "toIndex" : 48,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 49,
-      "toIndex" : 50,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 50,
-      "toIndex" : 51,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 52,
-      "toIndex" : 53,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 53,
-      "toIndex" : 54,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 55,
       "toIndex" : 28,
       "type" : "Success"
     }, {
-      "fromIndex" : 56,
+      "fromIndex" : 41,
       "toIndex" : 29,
       "type" : "Success"
     }, {
-      "fromIndex" : 57,
+      "fromIndex" : 42,
       "toIndex" : 30,
       "type" : "Success"
     }, {
-      "fromIndex" : 58,
+      "fromIndex" : 43,
       "toIndex" : 33,
       "type" : "Success"
     }, {
-      "fromIndex" : 59,
-      "toIndex" : 31,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 59,
-      "toIndex" : 43,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 60,
+      "fromIndex" : 44,
       "toIndex" : 34,
       "type" : "Success"
     }, {
-      "fromIndex" : 61,
+      "fromIndex" : 45,
       "toIndex" : 32,
       "type" : "Success"
     }, {
-      "fromIndex" : 62,
+      "fromIndex" : 46,
       "toIndex" : 35,
       "type" : "Success"
     }, {
-      "fromIndex" : 63,
-      "toIndex" : 55,
+      "fromIndex" : 47,
+      "toIndex" : 40,
       "type" : "Success"
     }, {
-      "fromIndex" : 64,
-      "toIndex" : 57,
+      "fromIndex" : 48,
+      "toIndex" : 42,
       "type" : "Success"
     }, {
-      "fromIndex" : 65,
-      "toIndex" : 58,
+      "fromIndex" : 49,
+      "toIndex" : 43,
       "type" : "Success"
     }, {
-      "fromIndex" : 66,
-      "toIndex" : 59,
+      "fromIndex" : 50,
+      "toIndex" : 44,
       "type" : "Success"
     }, {
-      "fromIndex" : 67,
-      "toIndex" : 60,
+      "fromIndex" : 51,
+      "toIndex" : 45,
       "type" : "Success"
     }, {
-      "fromIndex" : 68,
-      "toIndex" : 61,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 69,
-      "toIndex" : 62,
+      "fromIndex" : 52,
+      "toIndex" : 46,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 0,
@@ -363,7 +311,7 @@
           "source" : "energyConsumption",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
-          "target" : "powerMonthlyConsumption"
+          "target" : "powerConsumption"
         }, {
           "sourceScope" : "LATEST_TELEMETRY",
           "source" : "monthStartDate",
@@ -638,10 +586,10 @@
         "deduplicationInSec" : 10,
         "aggMappings" : [ {
           "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "userLatestMonthlyPowerConsumption",
+          "source" : "userLatestPowerConsumption",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
-          "target" : "latestMonthlyPowerConsumption"
+          "target" : "latestPowerConsumption"
         }, {
           "sourceScope" : "LATEST_TELEMETRY",
           "source" : "yearStartDate",
@@ -993,10 +941,10 @@
         "deduplicationInSec" : 10,
         "aggMappings" : [ {
           "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "powerMonthlyConsumption",
+          "source" : "powerConsumption",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
-          "target" : "userLatestMonthlyPowerConsumption"
+          "target" : "userLatestPowerConsumption"
         }, {
           "sourceScope" : "LATEST_TELEMETRY",
           "source" : "yearStartDate",
@@ -1072,10 +1020,10 @@
         "deduplicationInSec" : 10,
         "aggMappings" : [ {
           "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "latestMonthlyPowerConsumption",
+          "source" : "latestPowerConsumption",
           "defaultValue" : 0,
           "aggFunction" : "SUM",
-          "target" : "latestmonthlyPowerConspTenant"
+          "target" : "latestPowerConspTenant"
         }, {
           "sourceScope" : "LATEST_TELEMETRY",
           "source" : "monthStartDate",
@@ -1290,8 +1238,8 @@
         "layoutY" : 382
       },
       "configuration" : {
-        "inputValueKey" : "powerMonthlyConsumption",
-        "outputValueKey" : "deltaPowerMonthlyConsumption",
+        "inputValueKey" : "powerConsumption",
+        "outputValueKey" : "deltaPowerConsumption",
         "useCache" : true,
         "addPeriodBetweenMsgs" : false,
         "periodValueKey" : "periodInMs",
@@ -1313,8 +1261,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2446,
-        "layoutY" : 241
+        "layoutX" : 2457,
+        "layoutY" : 263
       },
       "configuration" : {
         "inputValueKey" : "costLatestSum",
@@ -1344,8 +1292,8 @@
         "layoutY" : 22
       },
       "configuration" : {
-        "inputValueKey" : "userLatestMonthlyPowerConsumption",
-        "outputValueKey" : "deltaUserLatestMonthlyPowerConsumption",
+        "inputValueKey" : "userLatestPowerConsumption",
+        "outputValueKey" : "deltaUserLatestPowerConsumption",
         "useCache" : true,
         "addPeriodBetweenMsgs" : false,
         "periodValueKey" : "periodInMs",
@@ -1371,8 +1319,8 @@
         "layoutY" : 54
       },
       "configuration" : {
-        "inputValueKey" : "latestMonthlyPowerConsumption",
-        "outputValueKey" : "deltaLatestMonthlyPowerConsumption",
+        "inputValueKey" : "latestPowerConsumption",
+        "outputValueKey" : "deltaLatestPowerConsumption",
         "useCache" : true,
         "addPeriodBetweenMsgs" : false,
         "periodValueKey" : "periodInMs",
@@ -1395,11 +1343,11 @@
       "additionalInfo" : {
         "description" : "",
         "layoutX" : 6111,
-        "layoutY" : 0
+        "layoutY" : 43
       },
       "configuration" : {
-        "inputValueKey" : "LatestmonthlyPowerConspTenant",
-        "outputValueKey" : "deltaLatestMonthlyPowerConsumptionTenant",
+        "inputValueKey" : "latestPowerConspTenant",
+        "outputValueKey" : "deltaLatestPowerConsumptionTenant",
         "useCache" : true,
         "addPeriodBetweenMsgs" : false,
         "periodValueKey" : "periodInMs",
@@ -1603,396 +1551,6 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 4209,
-        "layoutY" : 306
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "userCostLatestSum" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f297c0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 4488,
-        "layoutY" : 304
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n    if(!metadata.userCostLatestSum) metadata.userCostLatestSum = 0;\r\n   let userMonthlyCost = parseFloat((msg.userCostLatestSum - JSON.parse(metadata.userCostLatestSum)).toFixed(2));\r\n   if(userMonthlyCost <= 0) { userMonthlyCost=0 }\r\n   newMsg.userMonthlyCost = userMonthlyCost;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f30cf0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 4810,
-        "layoutY" : 311
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f38220-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 4444,
-        "layoutY" : 0
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "latestMonthlyPowerConsumption" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f3f750-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 4844,
-        "layoutY" : 0
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n    if(!metadata.latestMonthlyPowerConsumption) metadata.latestMonthlyPowerConsumption = 0;\r\n   let customerMonthlyConsumption = parseFloat((msg.latestMonthlyPowerConsumption - JSON.parse(metadata.latestMonthlyPowerConsumption)).toFixed(2));\r\n   if(customerMonthlyConsumption <= 0) { customerMonthlyConsumption=0 }\r\n   newMsg.customerMonthlyConsumption = customerMonthlyConsumption;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f46c80-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 5122,
-        "layoutY" : 0
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f4e1b0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 6309,
-        "layoutY" : 335
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "customerCostLatestSum" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f57df0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 6588,
-        "layoutY" : 333
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n    if(!metadata.customerCostLatestSum) metadata.customerCostLatestSum = 0;\r\n   let customerMonthlyCost = parseFloat((msg.customerCostLatestSum - JSON.parse(metadata.customerCostLatestSum)).toFixed(2));\r\n   if(customerMonthlyCost <= 0) { customerMonthlyCost=0 }\r\n   newMsg.customerMonthlyCost = customerMonthlyCost;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f5f320-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 6910,
-        "layoutY" : 340
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f64140-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 6109,
-        "layoutY" : 74
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "latestmonthlyPowerConspTenant" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f6dd80-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 6370,
-        "layoutY" : 75
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n    if(!metadata.latestmonthlyPowerConspTenant) metadata.latestmonthlyPowerConspTenant = 0;\r\n   let tenantMonthlyConsumption\r\n = parseFloat((msg.latestmonthlyPowerConspTenant\r\n - JSON.parse(metadata.latestmonthlyPowerConspTenant)).toFixed(2));\r\n   if(tenantMonthlyConsumption <= 0) { tenantMonthlyConsumption=0 }\r\n   newMsg.tenantMonthlyConsumption = tenantMonthlyConsumption;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f779c0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 6595,
-        "layoutY" : 75
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f81600-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 7932,
-        "layoutY" : 198
-      },
-      "configuration" : {
-        "latestTsKeyNames" : [ "tenantLastCostSum" ],
-        "aggregation" : "NONE",
-        "fetchMode" : "FIRST",
-        "orderBy" : "ASC",
-        "limit" : 1000,
-        "useMetadataIntervalPatterns" : true,
-        "startIntervalPattern" : "$[monthStartDate]",
-        "endIntervalPattern" : "$[ts]",
-        "startInterval" : 30,
-        "startIntervalTimeUnit" : "DAYS",
-        "endInterval" : 1,
-        "endIntervalTimeUnit" : "SECONDS"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f88b30-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "current month reading",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 8198,
-        "layoutY" : 195
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : " var newMsg = {};\r\n     if(!metadata.tenantLastCostSum) metadata.tenantLastCostSum = 0;\r\n   let tenantMonthlyCost = parseFloat((msg.tenantLastCostSum - JSON.parse(metadata.tenantLastCostSum)).toFixed(2));\r\n   if(tenantMonthlyCost <= 0) { tenantMonthlyCost=0 }\r\n   newMsg.tenantMonthlyCost = tenantMonthlyCost;\r\n\r\n   return {msg: newMsg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f92770-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "test script",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 8518,
-        "layoutY" : 190
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4f99ca0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
         "layoutX" : 1278,
         "layoutY" : 383
       },
@@ -2077,29 +1635,6 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "c4fc82d0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Save time series",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 4046,
-        "layoutY" : 6
-      },
-      "configuration" : {
-        "defaultTTL" : 0,
-        "skipLatestPersistence" : false,
-        "useServerTs" : false
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c4fd6d30-b135-11ee-af88-13372bac1769"
       },
       "name" : "Save time series",
       "ruleChainId" : null,
@@ -2238,29 +1773,6 @@
       "id" : {
         "entityType" : "RULE_NODE",
         "id" : "c5018be0-b135-11ee-af88-13372bac1769"
-      },
-      "name" : "Time formatting",
-      "ruleChainId" : null,
-      "singletonMode" : false,
-      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 3605,
-        "layoutY" : 0
-      },
-      "configuration" : {
-        "scriptLang" : "JS",
-        "jsScript" : "msg.ts= new Date(msg.ts).getTime();\nmsg.monthStartDate= new Date(msg.monthStartDate).getTime();\nmsg.yearStartDate= new Date(msg.yearStartDate).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
-      },
-      "configurationVersion" : 0,
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "c5024f30-b135-11ee-af88-13372bac1769"
       },
       "name" : "Time formatting",
       "ruleChainId" : null,
