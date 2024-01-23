@@ -68,6 +68,14 @@
       "longValue" : null,
       "strValue" : null
     }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "activityStatus",
+      "lastUpdateTs" : 1705991136994,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
@@ -114,6 +122,14 @@
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1699421125726,
       "longValue" : 1699421125724,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1705983452521,
+      "longValue" : 300000,
       "strValue" : null
     }, {
       "booleanValue" : true,

@@ -79,11 +79,11 @@
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1703226992572,
+      "lastUpdateTs" : 1705993076615,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -107,7 +107,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "deviceCount",
-      "lastUpdateTs" : 1705209816548,
+      "lastUpdateTs" : 1705993072490,
       "longValue" : 3,
       "strValue" : null
     }, {
@@ -149,6 +149,14 @@
       "key" : "longitude",
       "lastUpdateTs" : 1694087988289,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "status",
+      "lastUpdateTs" : 1705993076615,
+      "longValue" : 0,
       "strValue" : null
     } ]
   }

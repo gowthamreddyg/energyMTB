@@ -71,7 +71,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1703227031164,
+      "lastUpdateTs" : 1705919244820,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -95,7 +95,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "deviceCount",
-      "lastUpdateTs" : 1705387212229,
+      "lastUpdateTs" : 1705919244820,
       "longValue" : 2,
       "strValue" : null
     }, {
@@ -137,6 +137,14 @@
       "key" : "longitude",
       "lastUpdateTs" : 1704778413093,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "status",
+      "lastUpdateTs" : 1705992272477,
+      "longValue" : 0,
       "strValue" : null
     } ]
   }

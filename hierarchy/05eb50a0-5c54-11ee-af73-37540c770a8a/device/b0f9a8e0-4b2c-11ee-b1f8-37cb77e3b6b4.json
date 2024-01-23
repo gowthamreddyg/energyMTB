@@ -60,12 +60,20 @@
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1705059324009,
+      "lastUpdateTs" : 1705919087795,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "activityStatus",
+      "lastUpdateTs" : 1705991153251,
+      "longValue" : 0,
       "strValue" : null
     }, {
       "booleanValue" : false,
@@ -116,6 +124,14 @@
       "longValue" : 1699421115749,
       "strValue" : null
     }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1705983464403,
+      "longValue" : 300000,
+      "strValue" : null
+    }, {
       "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
@@ -155,6 +171,14 @@
       "lastUpdateTs" : 1704980626174,
       "longValue" : null,
       "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "relatedEntityName",
+      "lastUpdateTs" : 1705909139870,
+      "longValue" : null,
+      "strValue" : "Site 1"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
