@@ -1,0 +1,34 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "custom_horizontal_bar_chart2",
+    "name" : "Custom horizontal bar chart",
+    "deprecated" : false,
+    "image" : null,
+    "description" : null,
+    "descriptor" : {
+      "type" : "latest",
+      "sizeX" : 4.5,
+      "sizeY" : 3,
+      "resources" : [ {
+        "url" : "https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"
+      } ],
+      "templateHtml" : "<div id=\"echarts-horizantal-bar-container\" style=\"height:inherit; width:inherit\"></div>",
+      "templateCss" : "",
+      "controllerScript" : "var chartDom;\r\nvar myChart;\r\nvar option;\r\nlet colors = ['#7870BE', '#5FB0E4', '#A760BD', '#F871AA', '#A9A4D5'];\r\nself.onInit = function() {\r\n     chartDom = document.getElementById('echarts-horizantal-bar-container');\r\n     myChart = echarts.init(chartDom);\r\n    const isLegend = self.ctx.defaultSubscription && self.ctx.defaultSubscription.displayLegend;\r\n    option = {\r\n      tooltip: {\r\n        trigger: 'axis',\r\n      },\r\n      color:colors,\r\n      grid: {\r\n        left: '3%',\r\n        right: '4%',\r\n        bottom: '3%',\r\n        containLabel: true\r\n      },\r\n      xAxis: [\r\n        {\r\n          type: 'value',\r\n        }\r\n      ],\r\n      yAxis: [\r\n        {\r\n          type: 'category',\r\n           data: [],\r\n        }\r\n      ],\r\n      series: [\r\n        {\r\n          type: 'bar',\r\n          barWidth: '10%',\r\n          data: []\r\n        }\r\n      ]\r\n};\r\n  for (var i = 0; i < self.ctx.datasources.length; i++) {\r\n        var datasource = self.ctx.datasources[i];\r\n        for (var d = 0; d < datasource.dataKeys.length; d++) {\r\n            var dataKey = datasource.dataKeys[d];\r\n            var units = dataKey.units && dataKey.units.length ? dataKey.units : self.ctx.units;\r\n            units = units ? (' (' + units + ')') : '';\r\n            option.yAxis[0].data.push(dataKey.label + units);\r\n        }\r\n    }\r\n    \r\n        setTimeout(function() {\r\n            myChart.setOption(option);\r\n        }, 100);\r\n}\r\n\r\nself.onDataUpdated = function() {\r\n         option.series[0].data=[];\r\n    for (var i = 0; i < self.ctx.data.length; i++) {\r\n        var cellData = self.ctx.data[i];\r\n        if (cellData.data.length > 0) {\r\n            var decimals;\r\n            if (typeof cellData.dataKey.decimals !== 'undefined' \r\n                && cellData.dataKey.decimals !== null ) {\r\n                decimals = cellData.dataKey.decimals; \r\n            } else {\r\n                decimals = self.ctx.decimals;\r\n            }\r\n            var tvPair = cellData.data[cellData.data.length - 1];\r\n            var value = self.ctx.utils.formatValue(tvPair[1], decimals);\r\n            option.series[0].data.push(value);\r\n        }\r\n    }\r\n    myChart.setOption(option);\r\n}\r\n\r\nself.onResize = function() {   \r\n    myChart.resize();\r\n}\r\n\r\nself.onDestroy = function() {\r\n}\r\n",
+      "settingsSchema" : "{}",
+      "dataKeySettingsSchema" : "{}\n",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Random\",\"color\":\"#2196f3\",\"settings\":{},\"_hash\":0.15479322438769105,\"funcBody\":\"var value = prevValue + Math.random() * 100 - 50;\\nvar multiplier = Math.pow(10, 2 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -1000) {\\n\\tvalue = -1000;\\n} else if (value > 1000) {\\n\\tvalue = 1000;\\n}\\nreturn value;\"}]}],\"timewindow\":{\"realtime\":{\"timewindowMs\":60000}},\"showTitle\":true,\"backgroundColor\":\"#fff\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{},\"title\":\"Attributes card\"}"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "f6de2110-b11b-11ee-8373-7de626819ae0"
+    },
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
