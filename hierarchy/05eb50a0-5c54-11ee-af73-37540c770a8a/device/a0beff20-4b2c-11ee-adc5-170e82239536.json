@@ -64,7 +64,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1705990694638,
+      "lastUpdateTs" : 1705993951434,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -72,8 +72,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "activityStatus",
-      "lastUpdateTs" : 1705991170072,
-      "longValue" : 0,
+      "lastUpdateTs" : 1705994143706,
+      "longValue" : 1,
       "strValue" : null
     }, {
       "booleanValue" : true,
@@ -120,8 +120,8 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1699421125727,
-      "longValue" : 1699421125724,
+      "lastUpdateTs" : 1705993951439,
+      "longValue" : 1705993951393,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -203,6 +203,14 @@
       "lastUpdateTs" : 1704980626415,
       "longValue" : null,
       "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "relatedEntityName",
+      "lastUpdateTs" : 1706002601762,
+      "longValue" : null,
+      "strValue" : "Site 1"
     }, {
       "booleanValue" : null,
       "doubleValue" : null,

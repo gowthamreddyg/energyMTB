@@ -40,7 +40,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_tb-ie-main-0",
-      "lastUpdateTs" : 1705044433441,
+      "lastUpdateTs" : 1705993969227,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -48,7 +48,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_tb-ie-main-1",
-      "lastUpdateTs" : 1705044433435,
+      "lastUpdateTs" : 1705993974774,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -56,7 +56,7 @@
       "doubleValue" : null,
       "jsonValue" : "{\"success\":true}",
       "key" : "integration_status_tb-ie-main-2",
-      "lastUpdateTs" : 1705044433433,
+      "lastUpdateTs" : 1705993969066,
       "longValue" : null,
       "strValue" : null
     } ]

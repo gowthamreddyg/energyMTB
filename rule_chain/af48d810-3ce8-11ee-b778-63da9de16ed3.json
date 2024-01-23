@@ -191,7 +191,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 29,
-      "toIndex" : 34,
+      "toIndex" : 41,
       "type" : "Success"
     }, {
       "fromIndex" : 30,
@@ -229,6 +229,14 @@
       "fromIndex" : 40,
       "toIndex" : 36,
       "type" : "Success"
+    }, {
+      "fromIndex" : 41,
+      "toIndex" : 42,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 42,
+      "toIndex" : 43,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
     "nodes" : [ {
@@ -242,7 +250,7 @@
         "sendAttributesUpdatedNotification" : false,
         "updateAttributesOnlyOnValueChange" : false
       },
-      "configurationVersion" : 1,
+      "configurationVersion" : 2,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
@@ -390,17 +398,13 @@
         "layoutY" : 63
       },
       "configuration" : {
-        "entityGroupIsMessageOriginator" : false,
         "entityGroupId" : {
-          "entityType" : "ENTITY_GROUP",
-          "id" : "5593b8a0-4b2d-11ee-af41-63da9de16ed3"
+          "id" : "5593b8a0-4b2d-11ee-af41-63da9de16ed3",
+          "entityType" : "ENTITY_GROUP"
         },
-        "groupOwnerId" : {
-          "entityType" : "TENANT",
-          "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
-        }
+        "entityGroupIsMessageOriginator" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
@@ -978,8 +982,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2679,
-        "layoutY" : 220
+        "layoutX" : 2707,
+        "layoutY" : 231
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -1079,7 +1083,7 @@
         "sendAttributesUpdatedNotification" : false,
         "updateAttributesOnlyOnValueChange" : true
       },
-      "configurationVersion" : 1,
+      "configurationVersion" : 2,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
@@ -1216,7 +1220,7 @@
         "sendAttributesUpdatedNotification" : false,
         "updateAttributesOnlyOnValueChange" : true
       },
-      "configurationVersion" : 1,
+      "configurationVersion" : 2,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
@@ -1263,7 +1267,7 @@
         "sendAttributesUpdatedNotification" : false,
         "updateAttributesOnlyOnValueChange" : true
       },
-      "configurationVersion" : 1,
+      "configurationVersion" : 2,
       "createdTime" : 0,
       "debugMode" : true,
       "externalId" : null,
@@ -1272,6 +1276,87 @@
         "id" : "ccbc6b60-b9ba-11ee-b5ed-8f92c2930524"
       },
       "name" : "Attributes save",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2522,
+        "layoutY" : 430
+      },
+      "configuration" : {
+        "relationsQuery" : {
+          "fetchLastLevelOnly" : false,
+          "direction" : "TO",
+          "maxLevel" : 1,
+          "filters" : [ {
+            "relationType" : "Contains",
+            "entityTypes" : [ "ASSET" ]
+          } ]
+        },
+        "dataToFetch" : "FIELDS",
+        "fetchTo" : "METADATA",
+        "dataMapping" : {
+          "name" : "relatedEntityName"
+        }
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cb4e3ef0-b9c6-11ee-a441-01b9c6b9277c"
+      },
+      "name" : "Asset originator",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 2793,
+        "layoutY" : 434
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "\nreturn {msg: { relatedEntityName: metadata.relatedEntityName}, metadata: {}, msgType: 'POST_ATTRIBUTES_REQUEST'};",
+        "tbelScript" : "let newMsg = {\n    \"active\": true,\n    \"lastConnectTime\": 0,\n    \"lastActivityTime\": new Date().getTime(),\n    \"lastDisconnectTime\": 0,\n    \"lastInactivityAlarmTime\": 1699421100327,\n    \"inactivityTimeout\": 60000\n}\nreturn {msg: { active: true }, metadata: {}, msgType: 'POST_ATTRIBUTES_REQUEST'};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cb4f5060-b9c6-11ee-a441-01b9c6b9277c"
+      },
+      "name" : "Device status",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 3077,
+        "layoutY" : 441
+      },
+      "configuration" : {
+        "scope" : "SERVER_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false,
+        "updateAttributesOnlyOnValueChange" : true
+      },
+      "configurationVersion" : 2,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "9b28d800-b9d2-11ee-a1be-053f95f9b401"
+      },
+      "name" : "Save Attributes status",
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
