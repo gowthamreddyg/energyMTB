@@ -48,6 +48,31 @@
   },
   "groupEntities" : true,
   "permissions" : [ {
+    "entityGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "195fae00-47ce-11ee-88ef-8344ff70f275"
+    },
+    "entityGroupType" : "DASHBOARD",
+    "roleId" : {
+      "entityType" : "ROLE",
+      "id" : "e781e1a0-5c72-11ee-94fd-170e82239536"
+    },
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
+    },
+    "userGroupId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "e7792f10-5c72-11ee-94fd-170e82239536"
+    },
+    "createdTime" : 1706585511532,
+    "id" : {
+      "entityType" : "GROUP_PERMISSION",
+      "id" : "1b711ac0-bf20-11ee-b668-aba54510403b"
+    },
+    "name" : "GROUP_[e7792f10-5c72-11ee-94fd-170e82239536]_[e781e1a0-5c72-11ee-94fd-170e82239536]_[195fae00-47ce-11ee-88ef-8344ff70f275]_[DASHBOARD]",
+    "public" : true
+  }, {
     "entityGroupId" : null,
     "entityGroupType" : null,
     "roleId" : {

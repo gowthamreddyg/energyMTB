@@ -2,7 +2,9 @@
   "entityType" : "ENTITY_GROUP",
   "entity" : {
     "additionalInfo" : {
-      "description" : ""
+      "description" : "",
+      "isPublic" : true,
+      "publicCustomerId" : "f50b0ec0-b11b-11ee-8373-7de626819ae0"
     },
     "configuration" : {
       "columns" : [ {

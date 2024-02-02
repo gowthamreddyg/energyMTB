@@ -1,0 +1,78 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "641201d0-4b2c-11ee-adc5-170e82239536"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "776f3530-c044-11ee-862d-c1e0a53112a0"
+    },
+    "label" : "",
+    "name" : "Test asset",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
+    },
+    "softwareId" : null,
+    "type" : "Energy sensor"
+  },
+  "credentials" : {
+    "credentialsId" : "QqI69bVTJGNqa0XDTbaC",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1706711712084,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "activityStatus",
+      "lastUpdateTs" : 1706711712137,
+      "longValue" : 0,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1706711712085,
+      "longValue" : 1706711712081,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1706711712137,
+      "longValue" : 300000,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

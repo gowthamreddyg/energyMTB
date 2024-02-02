@@ -49,10 +49,10 @@
         "layoutY" : 98
       },
       "configuration" : {
-        "msgCount" : 1,
+        "msgCount" : 50,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "\nvar msg = {};\nconst demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (90 - 30 + 1)).toFixed(2));\n// var now = new Date();\n// var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0, 0, 0) - now;\n// var millisTill1030 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 13, 0, 0, 0) - now;\n// if (millisTill10 < 0 && millisTill1030 < 0) {\n    // msg = { energyConsumption: demoValue, powerOff :  false, powerOffTime : null };\n// }else{\n//      msg.powerOff = true;\n//      msg.powerOffTime = new Date().getTime(); \n// }\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nmsg = { energyConsumption: demoValue };\nlet metadata = {\n    \"deviceName\": \"Smart Meter A\",\n    \"deviceType\": \"Energy sensor\",\n    \"ts\": new Date().getTime(),\n};\nif(prevMsgType == 'POST_TELEMETRY_REQUEST'){\n    msg={\n    \"active\": true,\n    \"lastConnectTime\": 0,\n    \"lastActivityTime\": new Date().getTime(),\n    \"lastDisconnectTime\": 0,\n    \"lastInactivityAlarmTime\": 1705987856050,\n    \"inactivityTimeout\": 60000\n    };\n    metadata = {\n    ...metadata, \n    \"deviceLabel\": \"\",\n    \"scope\": \"SERVER_SCOPE\"\n    };\n    return { msg: msg, metadata: metadata,msgType: 'ACTIVITY_EVENT' };\n}\nreturn { msg: msg, metadata: metadata,msgType: msgType };",
+        "jsScript" : "\nvar msg = {};\nconst demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (95 - 30 + 1)).toFixed(2));\n// var now = new Date();\n// var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0, 0, 0) - now;\n// var millisTill1030 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 13, 0, 0, 0) - now;\n// if (millisTill10 < 0 && millisTill1030 < 0) {\n    // msg = { energyConsumption: demoValue, powerOff :  false, powerOffTime : null };\n// }else{\n//      msg.powerOff = true;\n//      msg.powerOffTime = new Date().getTime(); \n// }\nvar msgType = \"POST_TELEMETRY_REQUEST\";\nmsg = { energyConsumption: demoValue };\nlet metadata = {\n    \"deviceName\": \"Smart Meter A\",\n    \"deviceType\": \"Energy sensor\",\n    \"ts\": new Date().getTime(),\n};\nif(prevMsgType == 'POST_TELEMETRY_REQUEST'){\n    msg={\n    \"active\": true,\n    \"lastConnectTime\": 0,\n    \"lastActivityTime\": new Date().getTime(),\n    \"lastDisconnectTime\": 0,\n    \"lastInactivityAlarmTime\": 1705987856050,\n    \"inactivityTimeout\": 60000\n    };\n    metadata = {\n    ...metadata, \n    \"deviceLabel\": \"\",\n    \"scope\": \"SERVER_SCOPE\"\n    };\n    return { msg: msg, metadata: metadata,msgType: 'ACTIVITY_EVENT' };\n}\nreturn { msg: msg, metadata: metadata,msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "a0beff20-4b2c-11ee-adc5-170e82239536",
@@ -98,10 +98,10 @@
         "layoutY" : 211
       },
       "configuration" : {
-        "msgCount" : 1,
+        "msgCount" : 50,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (57 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue+600};\n\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (95 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue+600};\n\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b0f9a8e0-4b2c-11ee-b1f8-37cb77e3b6b4",
@@ -126,10 +126,10 @@
         "layoutY" : 301
       },
       "configuration" : {
-        "msgCount" : 1,
+        "msgCount" : 50,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (64 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (66 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { temp: 42, humidity: 77 };\nvar metadata = { data: 40 };\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "9032e750-4bab-11ee-b1f8-37cb77e3b6b4",
@@ -154,10 +154,10 @@
         "layoutY" : 360
       },
       "configuration" : {
-        "msgCount" : 1,
+        "msgCount" : 10,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (65 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (66 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { energyConsumption: 100 + Number((Math.random() * (100 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b9face10-4b2c-11ee-b4de-37540c770a8a",
@@ -182,10 +182,10 @@
         "layoutY" : 427
       },
       "configuration" : {
-        "msgCount" : 1,
+        "msgCount" : 50,
         "periodInSeconds" : 60,
         "scriptLang" : "JS",
-        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (66 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
+        "jsScript" : "const demoValue  = (prevMsg.energyConsumption? prevMsg.energyConsumption:0) + Number((Math.random() * (75 - 30 + 1)).toFixed(2));\nvar msg = { energyConsumption: demoValue};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "tbelScript" : "var msg = { energyConsumption: 30 + Number((Math.random() * (40 - 30 + 1)).toFixed(2))};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, msgType: msgType };",
         "queueName" : null,
         "originatorId" : "b68eb280-4bab-11ee-ab62-bf6c2845e826",

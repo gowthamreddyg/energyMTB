@@ -11,40 +11,33 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "title",
+        "key" : "name",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "email",
+        "key" : "device_profile",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "country",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "city",
+        "key" : "label",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
       "actions" : { }
     },
     "edgeGroupAll" : false,
-    "externalId" : {
-      "entityType" : "ENTITY_GROUP",
-      "id" : "730e6940-53be-11ee-b4de-37540c770a8a"
-    },
+    "externalId" : null,
     "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "730e6940-53be-11ee-b4de-37540c770a8a"
+      "id" : "4e444f00-c045-11ee-a441-01b9c6b9277c"
     },
-    "name" : "Customers",
+    "name" : "Termostat A-1",
     "ownerId" : {
-      "entityType" : "TENANT",
-      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
+      "entityType" : "CUSTOMER",
+      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
     },
-    "type" : "CUSTOMER"
+    "type" : "DEVICE"
   },
   "relations" : [ ],
   "attributes" : {

@@ -1,0 +1,41 @@
+{
+  "entityType" : "TB_RESOURCE",
+  "entity" : {
+    "customerId" : null,
+    "data" : "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFa0lEQVR4nO1bXYgcRRAec2cU/ElQiT5Ibrv2ovFEEYIiQT01EUVEAiIqgoj4BxqQaIxBYY1K2K2eyxn84xCCL/pwKNEkgiHBKHkQIXJ5OJUT5DSZqrlDSQRjVPQcqZ6ezeZ2b/9ub2Z3mYJiYWem6utvuqure6odZz4yGvRkkJ8D5AlA+g80B7Go+EKeUJqfdXLBIicpAU2vCSCl6R/QNKmQfoxDjS/j0/h+JZHG92//4SyF/BcgH88OHemP2z8Ujq4ATb+B5j8HcuOL4/bvZPP+lbY77mnowdGgJ+t6qxV6a2drtuDfMvDm9Ln1mhLfgkGwOHFLH3rXmC6IvLOR5xTyhmrjWyHvaMDWTnlGsDgdRMB+29j3FfJIpIB8OLRHW7qWgIHc+GLQ/IeMXRkKpdeUps/DoMbXdi0B4NINYdzgT0r/79/+6/lK898KabqRaa3zCND8kn1mQ+n/Cv17Gx3/nUrAPhO1XV5V+r9Ces/auqdrCVg1EpwJSCfKxn8uWARIU9bWByYouvRg1xGQdb3VlfIGyB9bEmV1p1Jdnug6ApSmzXK/rB3KbOX5igzSY6BpRvJ8VfDv6joCQPNe+3bfBU2bwKUHirZyk2cr5EP2+tZ6McROQD9OZ0F792ddflwhvdogAT/Pzvrkzcs1hfSOTYIODOaC3kYJECyCSbAJRqflEgRnKOTXKy156x4Cef86AWmAIn0ZPuutlYAX2iK/D6cvaQRWRED5Upm2Oa0UQP9h64BA05BCzsuc3UwqbIBrLtil7MsK6XdA+jer/ZsbtlPsAbxDMAk2QGIz1SI/5LRKQNNu02WHpq6f71rA2ttk3/qMJWJzM7gqxYBTsw3vasZmRQHNY8bR8OTSVhAQRvxil90jQ8xpEQGC0doec9qVgKxL62zjf7p06MgFzeLqWAIu1v45Cgn7NQ/MB1eiBFzm0kV2HH+XyMbkaNADyN9L1F+51bswdgJEZN6O5m+F/GIY3BZera8vbA/c75RIrARkNPcpzd/Eth1enoMcgjwtT4yAaJUn06MqeI9Eic5Cq/gSn5WyxtgJaDdJCRiOsQeA660BpOfjCn5lanz7tybSA0Dzk0kFv9kqcSF+ApAPho78jVUDll02i416g1zkL1rmzn2fv9Hm/QfjJ0DXFxibyRjr3eio1NiUgOG0ByxNh4BOY0CQBkGdzgJjTqsE0mmQ0zwA0kyQT8v6bMqa+DrAZJkuPRp7JigiVV1S02M/lCSgtEUwOCWS7gcML0wP2GuMDk1d5bS5KDx6tV0hftYyo4D0jBlrmsaVpqfj2vtrWJHWK6RvzR4B0vqWETCYC3oV0kdJB7v6lT6cXYbXEskUeBCQXoiKHeU3uQBY1CIWwZbRfJOz0AJ2SMjvgjtrRyyQEkBzsn554ZfzpPKjnu+F8nG0z6WVNRnPBYvEpthui5cBVZwCcs5mZ7fVtGMOWbBX7R5pdLbg3WentjdA+8vqxbJgAlWcKs3D4VY1ratth4+LznVdagdMCc3pEX4m43p314Ol4wkYzAW9UlYfldJLpZnS/PFy7at6sLQtARmXbjclsVIhbqrEeQQKfGetihKx3QiWtiUAkHdVSF52dzwBoP1lUfkcID9RKWpHY1u+K8r4NmPc9dZUOyvUEQRkke+Iyt6KinSiWvFjrRjQUQSs2DYFStOnxZJY5MPSG6qVvnYVAZFIva5UawohTg2RGkFZZNW6T+p/5TiNnCxpewLilkSwKPSfmqv2P26JPpELpticZmRZHLL+1VyRPg6R02ag6WtDQIFujM9zzpzzMSXvgHwyrkPTZYeokU+Gb58OxF6sCfljS0DT22EJfWK7PwRIb0lPaLYh/wOyT67YvXeywgAAAABJRU5ErkJggg==",
+    "descriptor" : {
+      "mediaType" : "image/png",
+      "width" : 64,
+      "height" : 64,
+      "size" : 1465,
+      "etag" : "0854a20fdb7d80d46bcb897b5da745f112cb7f8b4b7b8e067d2b581bf7b7c4da",
+      "previewDescriptor" : {
+        "mediaType" : "image/png",
+        "width" : 64,
+        "height" : 64,
+        "size" : 1465,
+        "etag" : "0854a20fdb7d80d46bcb897b5da745f112cb7f8b4b7b8e067d2b581bf7b7c4da"
+      }
+    },
+    "etag" : "0854a20fdb7d80d46bcb897b5da745f112cb7f8b4b7b8e067d2b581bf7b7c4da",
+    "externalId" : null,
+    "fileName" : "smart_energy_management_dashboard_widget_site_plan_marker_image_1.png",
+    "id" : {
+      "entityType" : "TB_RESOURCE",
+      "id" : "ef59d230-b9be-11ee-a321-6ba57b5fd35d"
+    },
+    "link" : "/api/images/tenant/smart_energy_management_dashboard_widget_site_plan_marker_image_1.png",
+    "name" : "\"Smart Energy Management\" dashboard widget \"Site Plan\" marker image 1",
+    "preview" : null,
+    "public" : true,
+    "publicLink" : "/api/images/public/k51yiNLV7VRY0KvVinx0C3fw8wwTKZUn",
+    "publicResourceKey" : "k51yiNLV7VRY0KvVinx0C3fw8wwTKZUn",
+    "resourceKey" : "smart_energy_management_dashboard_widget_site_plan_marker_image_1.png",
+    "resourceType" : "IMAGE",
+    "title" : "\"Smart Energy Management\" dashboard widget \"Site Plan\" marker image 1"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -127,6 +127,14 @@
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
+      "key" : "image",
+      "lastUpdateTs" : 1706104512057,
+      "longValue" : null,
+      "strValue" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFa0lEQVR4nO1bXYgcRRAec2cU/ElQiT5Ibrv2ovFEEYIiQT01EUVEAiIqgoj4BxqQaIxBYY1K2K2eyxn84xCCL/pwKNEkgiHBKHkQIXJ5OJUT5DSZqrlDSQRjVPQcqZ6ezeZ2b/9ub2Z3mYJiYWem6utvuqure6odZz4yGvRkkJ8D5AlA+g80B7Go+EKeUJqfdXLBIicpAU2vCSCl6R/QNKmQfoxDjS/j0/h+JZHG92//4SyF/BcgH88OHemP2z8Ujq4ATb+B5j8HcuOL4/bvZPP+lbY77mnowdGgJ+t6qxV6a2drtuDfMvDm9Ln1mhLfgkGwOHFLH3rXmC6IvLOR5xTyhmrjWyHvaMDWTnlGsDgdRMB+29j3FfJIpIB8OLRHW7qWgIHc+GLQ/IeMXRkKpdeUps/DoMbXdi0B4NINYdzgT0r/79/+6/lK898KabqRaa3zCND8kn1mQ+n/Cv17Gx3/nUrAPhO1XV5V+r9Ces/auqdrCVg1EpwJSCfKxn8uWARIU9bWByYouvRg1xGQdb3VlfIGyB9bEmV1p1Jdnug6ApSmzXK/rB3KbOX5igzSY6BpRvJ8VfDv6joCQPNe+3bfBU2bwKUHirZyk2cr5EP2+tZ6McROQD9OZ0F792ddflwhvdogAT/Pzvrkzcs1hfSOTYIODOaC3kYJECyCSbAJRqflEgRnKOTXKy156x4Cef86AWmAIn0ZPuutlYAX2iK/D6cvaQRWRED5Upm2Oa0UQP9h64BA05BCzsuc3UwqbIBrLtil7MsK6XdA+jer/ZsbtlPsAbxDMAk2QGIz1SI/5LRKQNNu02WHpq6f71rA2ttk3/qMJWJzM7gqxYBTsw3vasZmRQHNY8bR8OTSVhAQRvxil90jQ8xpEQGC0doec9qVgKxL62zjf7p06MgFzeLqWAIu1v45Cgn7NQ/MB1eiBFzm0kV2HH+XyMbkaNADyN9L1F+51bswdgJEZN6O5m+F/GIY3BZera8vbA/c75RIrARkNPcpzd/Eth1enoMcgjwtT4yAaJUn06MqeI9Eic5Cq/gSn5WyxtgJaDdJCRiOsQeA660BpOfjCn5lanz7tybSA0Dzk0kFv9kqcSF+ApAPho78jVUDll02i416g1zkL1rmzn2fv9Hm/QfjJ0DXFxibyRjr3eio1NiUgOG0ByxNh4BOY0CQBkGdzgJjTqsE0mmQ0zwA0kyQT8v6bMqa+DrAZJkuPRp7JigiVV1S02M/lCSgtEUwOCWS7gcML0wP2GuMDk1d5bS5KDx6tV0hftYyo4D0jBlrmsaVpqfj2vtrWJHWK6RvzR4B0vqWETCYC3oV0kdJB7v6lT6cXYbXEskUeBCQXoiKHeU3uQBY1CIWwZbRfJOz0AJ2SMjvgjtrRyyQEkBzsn554ZfzpPKjnu+F8nG0z6WVNRnPBYvEpthui5cBVZwCcs5mZ7fVtGMOWbBX7R5pdLbg3WentjdA+8vqxbJgAlWcKs3D4VY1ratth4+LznVdagdMCc3pEX4m43p314Ol4wkYzAW9UlYfldJLpZnS/PFy7at6sLQtARmXbjclsVIhbqrEeQQKfGetihKx3QiWtiUAkHdVSF52dzwBoP1lUfkcID9RKWpHY1u+K8r4NmPc9dZUOyvUEQRkke+Iyt6KinSiWvFjrRjQUQSs2DYFStOnxZJY5MPSG6qVvnYVAZFIva5UawohTg2RGkFZZNW6T+p/5TiNnCxpewLilkSwKPSfmqv2P26JPpELpticZmRZHLL+1VyRPg6R02ag6WtDQIFujM9zzpzzMSXvgHwyrkPTZYeokU+Gb58OxF6sCfljS0DT22EJfWK7PwRIb0lPaLYh/wOyT67YvXeywgAAAABJRU5ErkJggg=="
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
       "key" : "inactivityAlarmTime",
       "lastUpdateTs" : 1705997985016,
       "longValue" : 1705997985014,
@@ -229,18 +237,18 @@
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.34,
+      "doubleValue" : 0.2452984174582417,
       "jsonValue" : null,
       "key" : "xPos",
-      "lastUpdateTs" : 1694093515762,
+      "lastUpdateTs" : 1706673685657,
       "longValue" : null,
       "strValue" : null
     }, {
       "booleanValue" : null,
-      "doubleValue" : 0.54,
+      "doubleValue" : 0.6990579456500986,
       "jsonValue" : null,
       "key" : "yPos",
-      "lastUpdateTs" : 1694093530068,
+      "lastUpdateTs" : 1706673685657,
       "longValue" : null,
       "strValue" : null
     }, {

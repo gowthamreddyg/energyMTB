@@ -199,7 +199,7 @@
       "type" : "Success"
     }, {
       "fromIndex" : 31,
-      "toIndex" : 10,
+      "toIndex" : 44,
       "type" : "False"
     }, {
       "fromIndex" : 32,
@@ -236,6 +236,18 @@
     }, {
       "fromIndex" : 42,
       "toIndex" : 43,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 44,
+      "toIndex" : 10,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 44,
+      "toIndex" : 45,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 45,
+      "toIndex" : 10,
       "type" : "Success"
     } ],
     "firstNodeIndex" : 6,
@@ -423,7 +435,7 @@
         "layoutY" : 228
       },
       "configuration" : {
-        "ruleChainId" : "af16cb90-3ce8-11ee-b778-63da9de16ed3"
+        "ruleChainId" : "776ecc00-b11a-11ee-8373-7de626819ae0"
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -461,12 +473,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1466,
-        "layoutY" : 51
+        "layoutX" : 1503,
+        "layoutY" : 35
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "return msg.energyConsumption < 200;",
+        "jsScript" : "return msg.energyConsumption < ( metadata.maxConsumptionThreshold || 200 );",
         "tbelScript" : "return msg.energyConsumption > 50;"
       },
       "configurationVersion" : 0,
@@ -564,12 +576,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 2070,
-        "layoutY" : 35
+        "layoutX" : 2116,
+        "layoutY" : 38
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nmsg.ts = date.getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nmsg.ts = date.getTime();\ndelete metadata.maxConsumptionThreshold;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "msg.cost = msg.energyConsumption*6.045;\nvar date = new Date(), y = date.getFullYear(), m = date.getMonth();\nvar firstDay = new Date(y, m, 1);\nmsg.monthStartDate = firstDay.getTime();\nmsg.yearStartDate = new Date(new Date().getFullYear(), 0, 1).getTime();\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -610,8 +622,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1761,
-        "layoutY" : 46
+        "layoutX" : 1835,
+        "layoutY" : 29
       },
       "configuration" : {
         "inputValueKey" : "energyConsumption",
@@ -1028,8 +1040,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1120,
-        "layoutY" : 93
+        "layoutX" : 986,
+        "layoutY" : 44
       },
       "configuration" : {
         "scriptLang" : "JS",
@@ -1360,6 +1372,56 @@
       "ruleChainId" : null,
       "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1209,
+        "layoutY" : 3
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchTo" : "METADATA",
+        "clientAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "serverAttributeNames" : [ "maxConsumptionThreshold" ],
+        "sharedAttributeNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "configurationVersion" : 1,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "200f2b20-bac6-11ee-a124-0d00bef77fcc"
+      },
+      "name" : "Device Max Attribute",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1215,
+        "layoutY" : 96
+      },
+      "configuration" : {
+        "scriptLang" : "JS",
+        "jsScript" : "metadata.maxConsumptionThreshold = 90;\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "return {msg: msg, metadata: metadata, msgType: msgType};"
+      },
+      "configurationVersion" : 0,
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "20108ab0-bac6-11ee-a124-0d00bef77fcc"
+      },
+      "name" : "Max Consumption failure",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     } ],
     "ruleChainConnections" : null
   },

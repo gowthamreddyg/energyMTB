@@ -1,5 +1,20 @@
 [ {
   "entityType" : "DEVICE",
+  "id" : "6169f8d0-c047-11ee-a1be-053f95f9b401"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "776f3530-c044-11ee-862d-c1e0a53112a0"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "96aa9730-c046-11ee-862d-c1e0a53112a0"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "ab56b6c0-c044-11ee-862d-c1e0a53112a0"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "dbe56900-c047-11ee-a1be-053f95f9b401"
+}, {
+  "entityType" : "DEVICE",
   "id" : "a0beff20-4b2c-11ee-adc5-170e82239536"
 }, {
   "entityType" : "DEVICE",

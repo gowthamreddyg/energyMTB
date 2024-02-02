@@ -1,0 +1,2316 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "71155a7a-b22f-2c9c-6742-d1a7ac5b0377" : {
+          "typeFullFqn" : "system.entity_admin_widgets.asset_admin_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1705995463392,
+                  "endTimeMs" : 1706081863392
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "entitiesTitle" : "Sites",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : false,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "showCellActionsMenu" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "entityNameColumnTitle" : "",
+              "displayEntityLabel" : false,
+              "entityLabelColumnTitle" : "",
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "useRowStyleFunction" : false,
+              "rowStyleFunction" : ""
+            },
+            "title" : "Sites",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "2718794c-0d24-7e2b-6a64-7c91255c443d",
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9589226902810772
+              }, {
+                "name" : "type",
+                "type" : "entityField",
+                "label" : "Category",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.8288911526911233,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "Address",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.06793818018751363,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "more_horiz",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)"
+            },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Add asset",
+                "icon" : "add",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form *ngIf=\"userType\" #addAssetForm=\"ngForm\" [formGroup]=\"addAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Add asset</h2>\n    <span fxFlex></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Asset name</mat-label>\n                <input matInput formControlName=\"assetName\" required>\n                <mat-error *ngIf=\"addAssetFormGroup.get('assetName').hasError('required')\">\n                    Asset name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"assetType\"\n                    [required]=\"true\"\n                    [entityType]=\"'ASSET'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"assetLabel\">\n                </mat-form-field>\n            </div>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n    \t\t\t\t<mat-form-field fxFlex=\"100\" class=\"mat-block\">\n    \t\t\t\t\t<mat-label>Asset Description</mat-label>\n    \t\t\t\t\t<input matInput formControlName=\"description\">\n    \t\t\t\t</mat-form-field>\n                </div>\n            <div formGroupName=\"attributes\" fxLayout=\"column\">\n                <div  fxLayout=\"row\" fxLayoutGap=\"8px\">\n    \t\t\t\t<mat-form-field fxFlex=\"100\" class=\"mat-block\">\n    \t\t\t\t\t<mat-label>Asset Address</mat-label>\n    \t\t\t\t\t<input matInput formControlName=\"address\">\n    \t\t\t\t</mat-form-field>\n                </div>\n            </div>\n            <tb-entity-group-list\n                *ngIf=\"userType!='TENANT_ADMIN'\"\n                class=\"mat-block\"\n                [showLabel]=\"true\"\n                labelText=\"Add associated group for this User\"\n                formControlName=\"custGroups\"\n                [required]=\"true\"\n                [ownerId] = \"ownerId\"\n                [groupType] = \"'ASSET'\"\n                >\n                </tb-entity-group-list>\n                <tb-owner-and-groups\n                *ngIf=\"userType=='TENANT_ADMIN'\"\n                [entityType]=\"'ASSET'\"\n                formControlName=\"ownersGroups\"\n                [required]=\"true\"\n                registerOnChange=\"onOnwerChange\"\n                (change)=\"onOnwerChange\"\n                >\n                </tb-owner-and-groups>\n                <tb-entity-autocomplete\n                    class=\"mat-block\"\n                    [showLabel]=\"true\"\n                    labelText=\"Add associated user for this site\"\n                    formControlName=\"assetRelations\"\n                    [required]=\"true\"\n                    [ownerId]=\"dub\"\n                    [entityType]=\"'USER'\"\n                ></tb-entity-autocomplete>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || addAssetForm.invalid || !addAssetForm.dirty\">\n      Create\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet customerService = $injector.get(widgetContext.servicesMap.get('customerService'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\n\nopenAddAssetDialog();\n\nfunction openAddAssetDialog() {\n    customDialog.customDialog(htmlTemplate, AddAssetDialogController).subscribe();\n}\n\nfunction AddAssetDialogController(instance) {\n    let vm = instance;\n    vm.onOwnerChange = onOwnerChange;\n    userService.getUser(widgetContext.currentUser.userId).subscribe(function(user){\n        vm.ownerId = user.ownerId;\n        vm.userType = user.authority;\n            vm.addAssetFormGroup = vm.fb.group({\n              assetName: ['', [vm.validators.required]],\n              assetType: ['', [vm.validators.required]],\n              assetLabel: [''], \n              description:[''],\n              attributes:{\n                  address: [''],\n              },\n              assetRelations:['', [vm.validators.required]],\n              ...(user.authority != 'TENANT_ADMIN' && {\n                    custGroups: ['', [vm.validators.required]], \n                  }),\n              ...(user.authority == 'TENANT_ADMIN' && {\n                       ownersGroups: ['', [vm.validators.required]], \n                }),  \n            });\n        });\n\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.addAssetFormGroup.markAsPristine();\n        const formValues = vm.addAssetFormGroup.value;\n        var customerId= { id: widgetContext.currentUser.customerId, entityType: 'CUSTOMER'};\n        let assetGroups;\n        if(vm.userType == 'TENANT_ADMIN'){\n            customerId = formValues.ownersGroups&& formValues.ownersGroups.owner && formValues.ownersGroups.owner.id; \n            assetGroups = formValues.ownersGroups && formValues.ownersGroups.owner && formValues.ownersGroups.groups;\n        }else{\n            assetGroups = formValues.custGroups && formValues.custGroups;\n        };\n        let asset = {\n            name: formValues.assetName,\n            type: formValues.assetType,\n            label: formValues.assetLabel,\n            customerId,\n            tenantId : {entityType: \"TENANT\", id: widgetContext.currentUser.tenantId},\n            additionalInfo:{\n                description:formValues.description,\n            }\n        };\n              let groupIds = [];\n          assetGroups.forEach((group, index) =>{\n              groupIds.push(group.id.id);\n          });\n        assetService.saveAsset(asset, groupIds).subscribe(\n            function (asset) {\n                saveAttributes(asset.id).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n                saveRelation(asset).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    function saveAttributes(entityId) {\n        let attributes = vm.addAssetFormGroup.get('attributes')&& vm.addAssetFormGroup.get('attributes').value || {};\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    };\n    \n        function saveRelation(asset) {\n        const relations = vm.addAssetFormGroup.get('assetRelations') && vm.addAssetFormGroup.get('assetRelations').value;\n            if(relations){\n                const relationData = {\n                    'from':  {entityType:\"USER\", id:relations},\n                    'to': asset.id,\n                    'type': 'Contains',\n                    'typeGroup' : 'COMMON'\n                }\n                entityRelationService.saveRelation(relationData).subscribe();        \n            }\n        return widgetContext.rxjs.of([]);\n    }\n    \n    function onOwnerChange(event){\n        console.log(event);\n    }\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "70837a9d-c3de-a9a7-03c5-dccd14998758"
+              } ],
+              "actionCellButton" : [ {
+                "name" : "Edit asset",
+                "icon" : "edit",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form *ngIf='userType' #editAssetForm=\"ngForm\" [formGroup]=\"editAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Edit asset</h2>\n    <span fxFlex></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Asset name</mat-label>\n                <input matInput formControlName=\"assetName\" required>\n                <mat-error *ngIf=\"editAssetFormGroup.get('assetName').hasError('required')\">\n                    Asset name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"assetType\"\n                    [required]=\"true\"\n                    [entityType]=\"'ASSET'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"assetLabel\">\n                </mat-form-field>\n            </div>\n            <div formGroupName=\"attributes\" fxLayout=\"column\">\n                <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n    \t\t\t\t<mat-form-field fxFlex=\"100\" class=\"mat-block\">\n    \t\t\t\t\t<mat-label>Asset Description</mat-label>\n    \t\t\t\t\t<input matInput formControlName=\"description\">\n    \t\t\t\t</mat-form-field>\n                </div>\n                <div  fxLayout=\"row\" fxLayoutGap=\"8px\">\n    \t\t\t\t<mat-form-field fxFlex=\"100\" class=\"mat-block\">\n    \t\t\t\t\t<mat-label>Asset Address</mat-label>\n    \t\t\t\t\t<input matInput formControlName=\"address\">\n    \t\t\t\t</mat-form-field>\n                </div>\n            </div>\n <tb-entity-group-list\n                *ngIf=\"userType!='TENANT_ADMIN'\"\n                class=\"mat-block\"\n                [showLabel]=\"true\"\n                labelText=\"Add associated group for this User\"\n                formControlName=\"custGroups\"\n                [required]=\"true\"\n                [ownerId] = \"ownerId\"\n                [groupType] = \"'ASSET'\"\n                >\n                </tb-entity-group-list>\n                <tb-owner-and-groups\n                *ngIf=\"userType=='TENANT_ADMIN'\"\n                [entityType]=\"'ASSET'\"\n                formControlName=\"ownersGroups\"\n                [required]=\"true\"\n                >\n                </tb-owner-and-groups>\n                <tb-entity-autocomplete\n                    class=\"mat-block\"\n                    [showLabel]=\"true\"\n                    labelText=\"Add associated user for this site\"\n                    formControlName=\"assetRelations\"\n                    [required]=\"true\"\n                    [ownerId]=\"dub\"\n                    [entityType]=\"'USER'\"\n                ></tb-entity-autocomplete>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            type=\"submit\"\n            style=\"margin-right: 20px;\"\n            [disabled]=\"(isLoading$ | async) || editAssetForm.invalid || !editAssetForm.dirty\">\n      Update\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet customerService = $injector.get(widgetContext.servicesMap.get('customerService'));\nlet entityGroupService = $injector.get(widgetContext.servicesMap.get('entityGroupService'));\n\nopenEditAssetDialog();\n\nfunction openEditAssetDialog() {\n    customDialog.customDialog(htmlTemplate, EditAssetDialogController).subscribe();\n}\n\nfunction EditAssetDialogController(instance) {\n    let vm = instance;\n    vm.asset = null;\n    vm.attributes = {};\n\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function(){\n        const formValues = vm.editAssetFormGroup.value;\n        var customerId= { id: widgetContext.currentUser.customerId, entityType: 'CUSTOMER'};\n        let assetGroups;\n        if(vm.userType == 'TENANT_ADMIN'){\n            customerId = formValues.ownersGroups&& formValues.ownersGroups.owner && (formValues.ownersGroups.owner.name ? formValues.ownersGroups.owner.id : formValues.ownersGroups.owner);  \n            assetGroups = formValues.ownersGroups && formValues.ownersGroups.groups;\n        }else{\n            assetGroups = formValues.custGroups;\n        };\n        getGroupsIdDiff(vm.oldGroupsIds, assetGroups).then((entityGroupsdata) =>{\n            var oldAssetDetails = vm.oldAssetDetails;\n            let asset = {\n                id:oldAssetDetails.id,\n                name: formValues.assetName,\n                type: formValues.assetType,\n                label: formValues.assetLabel,\n                customerId,\n                tenantId : {entityType: \"TENANT\", id: widgetContext.currentUser.tenantId},\n               additionalInfo:{\n                    description:formValues.description,\n                }\n        };\n        saveAssetObserver(assetGroups, asset, oldAssetDetails, entityGroupsdata).subscribe(\n            function(data){\n                saveAsset(assetGroups,asset, entityGroupsdata, data);\n            }\n        )\n        });\n    };\n    \n    getEntityInfo();\n    \n        function getEntityInfo() {\n            userService.getUser(widgetContext.currentUser.userId).subscribe(function(user){\n\t\t widgetContext.rxjs.forkJoin([\n\t\t\tassetService.getAsset(entityId.id),\n\t\t\tattributeService.getEntityAttributes(entityId, 'SERVER_SCOPE', ['address']),\n            entityRelationService.findInfoByFrom(entityId),\n            entityRelationService.findInfoByTo(entityId),\n\t\t]).subscribe(function (data) {\n\n\t\t\t\tentityGroupService.getEntityGroupIdsForEntityId(entityId.entityType,entityId.id).subscribe(\n\t\t\t\tfunction(groupIds){\n\t\t\t\t    let entityGroupIds = groupIds.map(function(groupId){\n                            return groupId.id; \n                    });\n                    let oldGroupsIds = [];\n                    \n                entityGroupService.getEntityGroupsByIds(entityGroupIds).subscribe(function(oldEntityGroups){\n                    oldEntityGroups = oldEntityGroups.filter(group =>{\n                        if(group.name.search(/all/i) < 0){\n                            oldGroupsIds.push(group.id.id);\n                            return true;\n                        }\n                        return false;\n                    });\n                vm.ownerId = user.ownerId;\n                vm.userType = user.authority;\n                vm.editAssetFormGroup = vm.fb.group({\n                      assetName: ['', [vm.validators.required]],\n                      assetType: ['', [vm.validators.required]],\n                      assetLabel: [''],\n                      assetRelations: ['',[vm.validators.required]],\n                      description:[''],\n                      attributes: {\n                        address: [''],\n                      },\n                      ...(user.authority != 'TENANT_ADMIN' && {\n                        custGroups: ['', [vm.validators.required]], \n                        }),\n                      ...(user.authority == 'TENANT_ADMIN' && {\n                        ownersGroups: ['', [vm.validators.required]], \n                      }), \n                    });\n\t\t\t\t    vm.oldAssetDetails = data[0];\n                    vm.oldGroupsIds = oldGroupsIds;\n                    vm.oldEntityGroups = oldEntityGroups;\n                    vm.oldRelations = data[3][0];\n    \t\t\t\tvm.editAssetFormGroup.patchValue(\n    \t\t\t\t{\n    \t\t\t\t\tassetName: vm.oldAssetDetails.name,\n    \t\t\t\t\tassetType: vm.oldAssetDetails.type,\n    \t\t\t\t\tassetLabel: vm.oldAssetDetails.label,\n    \t\t\t\t\tattributes: getEntityAttributes(data[1]),\n    \t\t\t\t\tdescription:vm.oldAssetDetails.additionalInfo.description,\n    \t\t\t\t\tassetRelations : data[3] && data[3][0]&& data[3][0].from,\n    \t\t\t\t\t...(vm.userType != 'TENANT_ADMIN' && {\n                            custGroups: oldEntityGroups,\n                        }),\n                        ...(vm.userType == 'TENANT_ADMIN' && {\n                                ownersGroups: {\n                                    owner:vm.oldAssetDetails.ownerId,\n                                    groups:oldEntityGroups,\n                                },\n                        }),\n    \t\t\t\t}, {emitEvent: false}\n\t\t\t);\t\n                });\n\t\t\t\t});\n        });\n            });\n    }\n    \n    function getEntityAttributes(attributes) {\n        for (var i = 0; i < attributes.length; i++) {\n            vm.attributes[attributes[i].key] = attributes[i].value;\n        }\n    }\n    \n    function saveAttributes() {\n        let attributes = vm.editAssetFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, 'SERVER_SCOPE', attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n        function saveRelation() {\n        let oldAssetDetails = vm.oldAssetDetails;\n        let oldRelations = vm.oldRelations;\n        const relations = vm.editAssetFormGroup.get('assetRelations').value;\n        const relationData = {\n            'from': {entityType:\"USER\", id: typeof relations!= 'string' ? relations.id:relations},\n            'to': entityId,\n            'type': 'Contains',\n            'typeGroup' : 'COMMON'\n        };\n        if(oldRelations.from.id != relationData.from.id){\n            entityRelationService.deleteRelation( oldRelations.from,'Contains',entityId).subscribe(function(){\n                entityRelationService.saveRelation(relationData).subscribe();   \n            });\n        }\n        return widgetContext.rxjs.of([]);\n    };\n    \n      function getGroupsIdDiff(oldsIds, newGroups){\n      return new Promise((resolve, reject) =>{\n          var deleteGroupIds = oldsIds.filter(id => newGroups.filter(group => group.id.id == id).length<=0);\n          var addGroups = newGroups.filter(group => oldsIds.filter(id => id == group.id.id).length<=0);\n          resolve({deleteGroupIds, addGroups});\n      });\n  };\n  \n  function saveAssetObserver(assetGroup, asset, oldAssetDetails, entityGroupsdata){\n      let oldAssetDetailsOwnerId = oldAssetDetails.ownerId;\n      let newAssetDetailOnwerId = asset.customerId;\n      if(newAssetDetailOnwerId.id != oldAssetDetailsOwnerId.id){\n        let addGroupIds = assetGroup.map(group => group.id.id);\n        return entityGroupService.changeEntityOwner(newAssetDetailOnwerId, asset.id, addGroupIds);\n      }else{\n        return widgetContext.rxjs.of({ updateEntityGroups: true });\n      }\n  };\n  \n  function saveAsset(assetGroups, asset, entityGroupsdata, data){\n      let groupIds = [];\n      assetGroups.forEach((group, index) =>{\n          groupIds.push(group.id.id);\n      });\n      assetService.saveAsset(asset, groupIds).subscribe(function(updatedAsset){\n       updateEntityGroups(entityGroupsdata, updatedAsset, data);\n        saveAttributes(updatedAsset).subscribe(\n            function () {\n                widgetContext.updateAliases();\n                vm.dialogRef.close(null);\n                }\n                );\n                saveRelation(updatedAsset).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n   });\n  };\n  \n    function updateEntityGroups(entityGroupsdata, asset, data){\n      if(data&&data.updateEntityGroups){\n          const {deleteGroupIds, addGroups} = entityGroupsdata;\n          var task = [];\n          deleteGroupIds.forEach(id =>{\n              task.push(entityGroupService.removeEntitiesFromEntityGroup(id, [asset.id.id]));\n          });\n          addGroups.forEach(id =>{\n              task.push(entityGroupService.addEntitiesToEntityGroup(id.id.id, [asset.id.id]));\n          });\n          if(task.length>0){\n            widgetContext.rxjs.forkJoin(task).subscribe(\n                  function(){\n                         closeDialog();                \n                  });    \n          }else{\n              closeDialog();\n          }\n      }else{\n          closeDialog();                \n      }\n  };\n  \n    function closeDialog(){\n          widgetContext.updateAliases();\n          vm.dialogRef.close(null); \n  };\n  \n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
+              }, {
+                "name" : "Delete asset",
+                "icon" : "delete",
+                "type" : "custom",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\n\nopenDeleteAssetDialog();\n\nfunction openDeleteAssetDialog() {\n    let title = \"Are you sure you want to delete the asset \" + entityName +  \"?\";\n    let content = \"Be careful, after the confirmation, the asset and all related data will become unrecoverable!\";\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function (result) {\n            if (result) {\n                deleteAsset();\n            }\n        }\n    );\n}\n\nfunction deleteAsset() {\n    assetService.deleteAsset(entityId.id).subscribe(\n        function () {\n            widgetContext.updateAliases();\n        }\n    );\n}\n",
+                "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
+              } ],
+              "rowClick" : [ {
+                "name" : "Devices",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "site_state",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "3625756d-cf27-0f08-7cf6-ecf3bcf95352"
+              } ]
+            },
+            "configMode" : "advanced",
+            "titleFont" : null,
+            "titleColor" : null,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "71155a7a-b22f-2c9c-6742-d1a7ac5b0377"
+        },
+        "69c15450-2ed2-ad36-727e-f7cf83b3bfde" : {
+          "typeFullFqn" : "system.entity_admin_widgets.device_admin_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1705996535867,
+                  "endTimeMs" : 1706082935867
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "entitiesTitle" : "Devices",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : false,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "showCellActionsMenu" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "entityNameColumnTitle" : "",
+              "displayEntityLabel" : false,
+              "entityLabelColumnTitle" : "",
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "useRowStyleFunction" : false,
+              "rowStyleFunction" : ""
+            },
+            "title" : "Devices",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "087680be-8b5d-087a-16ef-bb78dbf1e644",
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9082541230553838
+              }, {
+                "name" : "type",
+                "type" : "entityField",
+                "label" : "Category",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.10826713445158109,
+                "decimals" : 0
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "more_horiz",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)"
+            },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Add device",
+                "icon" : "add",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form *ngIf='userType' #addDeviceForm=\"ngForm\" [formGroup]=\"addDeviceFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Add device</h2>\n    <span fxFlex></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Device name</mat-label>\n                <input matInput formControlName=\"deviceName\" required>\n                <mat-error *ngIf=\"addDeviceFormGroup.get('deviceName').hasError('required')\">\n                    Device name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"deviceType\"\n                    [required]=\"true\"\n                    [entityType]=\"'DEVICE'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"deviceLabel\">\n                </mat-form-field>\n            </div>\n            <tb-entity-group-list\n                *ngIf=\"userType!='TENANT_ADMIN'\"\n                class=\"mat-block\"\n                [showLabel]=\"true\"\n                labelText=\"Add associated group for this User\"\n                formControlName=\"custGroups\"\n                [required]=\"true\"\n                [ownerId] = \"ownerId\"\n                [groupType] = \"'ASSET'\"\n                >\n                </tb-entity-group-list>\n                <tb-owner-and-groups\n                *ngIf=\"userType=='TENANT_ADMIN'\"\n                [entityType]=\"'DEVICE'\"\n                formControlName=\"ownersGroups\"\n                [required]=\"true\"\n                registerOnChange=\"onOnwerChange\"\n                (change)=\"onOnwerChange\"\n                >\n                </tb-owner-and-groups>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || addDeviceForm.invalid || !addDeviceForm.dirty\">\n      Create\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet customerService = $injector.get(widgetContext.servicesMap.get('customerService'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\n\nopenAddDeviceDialog();\n\nfunction openAddDeviceDialog() {\n    customDialog.customDialog(htmlTemplate, AddDeviceDialogController).subscribe();\n}\n\nfunction AddDeviceDialogController(instance) {\n    console.log(widgetContext.stateController.getStateParams());  \n    let vm = instance;\n    userService.getUser(widgetContext.currentUser.userId).subscribe(function(user){\n        vm.ownerId = user.ownerId;\n        vm.userType = user.authority;\n      vm.addDeviceFormGroup = vm.fb.group({\n          deviceName: ['', [vm.validators.required]],\n          deviceType: ['', [vm.validators.required]],\n          deviceLabel: [''],\n          ...(user.authority != 'TENANT_ADMIN' && {\n                    custGroups: ['', [vm.validators.required]], \n                  }),\n          ...(user.authority == 'TENANT_ADMIN' && {\n                       ownersGroups: ['', [vm.validators.required]], \n                }),\n        });\n    });\n\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.addDeviceFormGroup.markAsPristine();\n        const formValues = vm.addDeviceFormGroup.value;\n        var customerId= { id: widgetContext.currentUser.customerId, entityType: 'CUSTOMER'};\n        let deviceGroups;\n        if(vm.userType == 'TENANT_ADMIN'){\n            customerId = formValues.ownersGroups&& formValues.ownersGroups.owner && formValues.ownersGroups.owner.id; \n            deviceGroups = formValues.ownersGroups && formValues.ownersGroups.owner && formValues.ownersGroups.groups;\n        }else{\n            deviceGroups = formValues.custGroups && formValues.custGroups;\n        };\n        let device = {\n            name: formValues.deviceName,\n            type: formValues.deviceType,\n            label: formValues.deviceLabel,\n            tenantId : {entityType: \"TENANT\", id: widgetContext.currentUser.tenantId},\n            customerId,\n        };\n        let groupIds = '';\n          deviceGroups.forEach((group, index) =>{\n              groupIds+=group.id.id;\n              if(index+1 != deviceGroups.length){\n                  groupIds+= ',';\n              }\n          });\n        deviceService.saveDevice(device,groupIds).subscribe(\n            function (device) {\n                saveRelation(device).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    function saveRelation(device) {\n                const relationData = {\n                    'from':  widgetContext.stateController.getStateParams().entityId,\n                    'to': device.id,\n                    'type': 'Contains',\n                    'typeGroup' : 'COMMON'\n                }\n                entityRelationService.saveRelation(relationData).subscribe();\n        return widgetContext.rxjs.of([]);\n    }\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "70837a9d-c3de-a9a7-03c5-dccd14998758"
+              } ],
+              "actionCellButton" : [ {
+                "name" : "Edit device",
+                "icon" : "edit",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form *ngIf='userType' #editDeviceForm=\"ngForm\" [formGroup]=\"editDeviceFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Edit device</h2>\n    <span fxFlex></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Device name</mat-label>\n                <input matInput formControlName=\"deviceName\" required>\n                <mat-error *ngIf=\"editDeviceFormGroup.get('deviceName').hasError('required')\">\n                    Device name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"deviceType\"\n                    [required]=\"true\"\n                    [entityType]=\"'DEVICE'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"deviceLabel\">\n                </mat-form-field>\n            </div>\n         <tb-entity-group-list\n                *ngIf=\"userType!='TENANT_ADMIN'\"\n                class=\"mat-block\"\n                [showLabel]=\"true\"\n                labelText=\"Add associated group for this User\"\n                formControlName=\"custGroups\"\n                [required]=\"true\"\n                [ownerId] = \"ownerId\"\n                [groupType] = \"'DEVICE'\"\n                >\n                </tb-entity-group-list>\n                <tb-owner-and-groups\n                *ngIf=\"userType=='TENANT_ADMIN'\"\n                [entityType]=\"'DEVICE'\"\n                formControlName=\"ownersGroups\"\n                [required]=\"true\"\n                >\n                </tb-owner-and-groups>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || editDeviceForm.invalid || !editDeviceForm.dirty\">\n      Update\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet customerService = $injector.get(widgetContext.servicesMap.get('customerService'));\nlet entityGroupService = $injector.get(widgetContext.servicesMap.get('entityGroupService'));\n\nopenEditDeviceDialog();\n\nfunction openEditDeviceDialog() {\n    customDialog.customDialog(htmlTemplate, EditDeviceDialogController).subscribe();\n}\n\nfunction EditDeviceDialogController(instance) {\n    let vm = instance;\n    vm.device = null;\n    vm.attributes = {};\n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.editDeviceFormGroup.markAsPristine();\n        var customerId= { id: widgetContext.currentUser.customerId, entityType: 'CUSTOMER'};\n        const formValues = vm.editDeviceFormGroup.value;\n        let deviceGroups;\n        if(vm.userType == 'TENANT_ADMIN'){\n            customerId = formValues.ownersGroups&& formValues.ownersGroups.owner && (formValues.ownersGroups.owner.name ? formValues.ownersGroups.owner.id : formValues.ownersGroups.owner);  \n            deviceGroups = formValues.ownersGroups && formValues.ownersGroups.groups;\n        }else{\n            deviceGroups = formValues.custGroups;\n        };\n        if (vm.editDeviceFormGroup.get('deviceType').value !== vm.oldDeviceDetails.type) {\n            delete vm.device.deviceProfileId;\n        };\n        getGroupsIdDiff(vm.oldGroupsIds, deviceGroups).then((entityGroupsdata) =>{\n            let device = {\n                ...vm.oldDeviceDetails,\n                name:formValues.deviceName,\n                type:formValues.type,\n                label:formValues.label,\n                customerId,\n        };\n        saveDeviceObserver(deviceGroups, device, vm.oldDeviceDetails, entityGroupsdata).subscribe(\n            function(data){\n                saveDevice(deviceGroups,device, entityGroupsdata, data);\n            }\n        );        \n        });\n\n    };\n    getEntityInfo();\n    function getEntityInfo() {\n        userService.getUser(widgetContext.currentUser.userId).subscribe(function(user){\n        \n    \n        deviceService.getDevice(entityId.id).subscribe(\n            function (device) {\n                    vm.oldDeviceDetails = device;\n                        entityGroupService.getEntityGroupIdsForEntityId(entityId.entityType,entityId.id).subscribe(\n\t\t\t\t        function(groupIds){\n\t\t\t\t        \tlet entityGroupIds = groupIds.map(function(groupId){\n                                return groupId.id; \n                            });\n                    let oldGroupsIds = [];\n                     entityGroupService.getEntityGroupsByIds(entityGroupIds).subscribe(function(oldEntityGroups){\n                            oldEntityGroups = oldEntityGroups.filter(group =>{\n                                if(group.name.search(/all/i) < 0){\n                                    oldGroupsIds.push(group.id.id);\n                                    return true;\n                                }\n                                return false;\n                            });\n                            vm.oldGroupsIds = oldGroupsIds;\n                            vm.oldEntityGroups = oldEntityGroups;\n                            vm.ownerId = user.ownerId;\n                            vm.userType = user.authority;\n                            vm.editDeviceFormGroup = vm.fb.group({\n                              deviceName: ['', [vm.validators.required]],\n                              deviceType: ['', [vm.validators.required]],\n                              deviceLabel: [''],\n                              ...(user.authority != 'TENANT_ADMIN' && {\n                                        custGroups: ['', [vm.validators.required]], \n                                      }),\n                              ...(user.authority == 'TENANT_ADMIN' && {\n                                           ownersGroups: ['', [vm.validators.required]], \n                                    }), \n                            });        \n                            vm.editDeviceFormGroup.patchValue(\n                                {\n                                    deviceName: vm.oldDeviceDetails.name,\n                                    deviceType: vm.oldDeviceDetails.type,\n                                    deviceLabel: vm.oldDeviceDetails.label,\n                                    ...(vm.userType != 'TENANT_ADMIN' && {\n                                        custGroups: oldEntityGroups,\n                                    }),\n                                    ...(vm.userType == 'TENANT_ADMIN' && {\n                                        ownersGroups: {\n                                            owner:vm.oldDeviceDetails.ownerId,\n                                            groups:oldEntityGroups,\n                                        },\n                                    }),\n                                }, {emitEvent: false}\n                            );                         \n                     });\n\t\t\t\t});\n            }\n        );   \n        });\n    };\n    \n    function getGroupsIdDiff(oldsIds, newGroups){\n\t\t  return new Promise((resolve, reject) =>{\n\t\t\t  var deleteGroupIds = oldsIds.filter(id => newGroups.filter(group => group.id.id == id).length<=0);\n\t\t\t  var addGroups = newGroups.filter(group => oldsIds.filter(id => id == group.id.id).length<=0);\n\t\t\t  resolve({deleteGroupIds, addGroups});\n\t\t  });\n\t  };\n\t  \n\t    function saveDeviceObserver(deviceGroup, device, oldDeviceDetails, entityGroupsdata){\n          let oldDeviceDetailsOwnerId = oldDeviceDetails.ownerId;\n          let newDeviceDetailOnwerId = device.customerId;\n          if(newDeviceDetailOnwerId.id != oldDeviceDetailsOwnerId.id){\n            let addGroupIds = deviceGroup.map(group => group.id.id);\n            return entityGroupService.changeEntityOwner(newDeviceDetailOnwerId, device.id, addGroupIds);\n          }else{\n            return widgetContext.rxjs.of({ updateEntityGroups: true });\n          }\n  };\n  \n    function saveDevice(deviceGroup, device, entityGroupsdata, data){\n      let groupIds = '';\n      deviceGroup.forEach((group, index) =>{\n          groupIds+=group.id.id;\n          if(index+1 != deviceGroup.length){\n              groupIds+=',';\n          }\n      });\n      deviceService.saveDevice(device, groupIds).subscribe(function(updatedDevice){\n       updateEntityGroups(entityGroupsdata, updatedDevice, data);\n   });\n  };\n  \n    function updateEntityGroups(entityGroupsdata, device, data){\n      if(data&&data.updateEntityGroups){\n          const {deleteGroupIds, addGroups} = entityGroupsdata;\n          var task = [];\n          deleteGroupIds.forEach(id =>{\n              task.push(entityGroupService.removeEntitiesFromEntityGroup(id, [device.id.id]));\n          });\n          addGroups.forEach(id =>{\n              task.push(entityGroupService.addEntitiesToEntityGroup(id.id.id, [device.id.id]));\n          });\n          if(task.length>0){\n            widgetContext.rxjs.forkJoin(task).subscribe(\n                  function(){\n                         closeDialog();                \n                  });    \n          }else{\n              closeDialog();\n          }\n      }else{\n          closeDialog();                \n      }\n  };\n  \n    function closeDialog(){\n          widgetContext.updateAliases();\n          vm.dialogRef.close(null); \n  };\n\n\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
+              }, {
+                "name" : "Delete device",
+                "icon" : "delete",
+                "type" : "custom",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));\n\nopenDeleteDeviceDialog();\n\nfunction openDeleteDeviceDialog() {\n    let title = \"Are you sure you want to delete the device \" + entityName +  \"?\";\n    let content = \"Be careful, after the confirmation, the device and all related data will become unrecoverable!\";\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function (result) {\n            if (result) {\n                deleteDevice();\n            }\n        }\n    );\n}\n\nfunction deleteDevice() {\n    deviceService.deleteDevice(entityId.id).subscribe(\n        function () {\n            widgetContext.updateAliases();\n        }\n    );\n}\n",
+                "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
+              } ],
+              "rowClick" : [ {
+                "name" : "Device",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "device_state",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "2f4da00b-d998-86d5-e95a-b0adcb3c530c"
+              } ]
+            },
+            "configMode" : "advanced",
+            "titleFont" : null,
+            "titleColor" : null,
+            "enableDataExport" : false,
+            "borderRadius" : "6",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "69c15450-2ed2-ad36-727e-f7cf83b3bfde"
+        },
+        "452425b2-82ce-145b-f408-0639992324f6" : {
+          "type" : "latest",
+          "sizeX" : 8.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "entityAliasId" : "902f8f82-1653-b659-8a65-778b22dafc68",
+              "dataKeys" : [ {
+                "name" : "imageUrl",
+                "type" : "attribute",
+                "label" : "imageUrl",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.2658090134388582
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "087680be-8b5d-087a-16ef-bb78dbf1e644",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "xPos",
+                "type" : "attribute",
+                "label" : "xPos",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9739393599717503,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "yPos",
+                "type" : "attribute",
+                "label" : "yPos",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.060000696199778325,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "energyConsumption",
+                "type" : "timeseries",
+                "label" : "energyConsumption",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.4852522180945005
+              }, {
+                "name" : "alarm",
+                "type" : "timeseries",
+                "label" : "alarm",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.32300803348689344
+              }, {
+                "name" : "relatedEntityName",
+                "type" : "attribute",
+                "label" : "relatedEntityName",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.20949836193384375
+              }, {
+                "name" : "image",
+                "type" : "attribute",
+                "label" : "image",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.7151380582729685
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694006888230,
+                  "endTimeMs" : 1694093288230
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "2px",
+            "settings" : {
+              "provider" : "image-map",
+              "gmApiKey" : "AIzaSyDoEx2kaGz3PxwbI9T7ccTSg5xjdw8Nw8Q",
+              "gmDefaultMapType" : "roadmap",
+              "mapProvider" : "OpenStreetMap.Mapnik",
+              "useCustomProvider" : false,
+              "customProviderTileUrl" : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              "mapProviderHere" : "HERE.normalDay",
+              "credentials" : {
+                "useV3" : true,
+                "app_id" : "AhM6TzD9ThyK78CT3ptx",
+                "app_code" : "p6NPiITB3Vv0GMUFnkLOOg",
+                "apiKey" : "kVXykxAfZ6LS4EbCTO02soFVfjA7HoBzNVVH9u7nzoE"
+              },
+              "mapImageUrl" : null,
+              "imageEntityAlias" : "Current state entities",
+              "imageUrlAttribute" : "imageUrl",
+              "tmApiKey" : "84d6d83e0e51e481e50454ccbe8986b",
+              "tmDefaultMapType" : "roadmap",
+              "latKeyName" : "latitude",
+              "lngKeyName" : "longitude",
+              "xPosKeyName" : "xPos",
+              "yPosKeyName" : "yPos",
+              "defaultZoomLevel" : null,
+              "defaultCenterPosition" : "0,0",
+              "disableScrollZooming" : true,
+              "disableDoubleClickZooming" : true,
+              "disableZoomControl" : true,
+              "fitMapBounds" : true,
+              "useDefaultCenterPosition" : false,
+              "mapPageSize" : 16384,
+              "markerOffsetX" : 0,
+              "markerOffsetY" : 0,
+              "posFunction" : "return {x: origXPos, y: origYPos};",
+              "draggableMarker" : true,
+              "showLabel" : true,
+              "useLabelFunction" : false,
+              "label" : "${entityName}",
+              "labelFunction" : null,
+              "showTooltip" : true,
+              "showTooltipAction" : "click",
+              "autocloseTooltip" : true,
+              "useTooltipFunction" : true,
+              "tooltipPattern" : "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}",
+              "tooltipFunction" : "const site = data.relatedEntityName;\r\n\r\nreturn '<div style=\"display:flex;flex-direction:column;margin-bottom:8px;font-family:\\'Roboto\\';font-weight:500;font-size:16px;line-height:24px;letter-spacing:0.25px;color:#29313C\">' +\r\n            '<div>${entityLabel}</div>' +\r\n            '<div style=\"width: 100%;border-bottom:1px solid rgba(0, 0, 0, 0.12);margin:12px 0;\"></div>' +\r\n            '<div style=\"display:flex;flex-direction:row;align-items:baseline;margin-bottom:9px;\">' +\r\n                '<div style=\"font-size:13px;line-height:16px;font-weight:500;color:rgba(0, 0, 0, 0.38);width:100px\">Site</div>' +\r\n                '<div style=\"font-size:14px;width:fit-content;padding:4px 8px;line-height:20px;font-weight:500;letter-spacing:0.25px\">'+ site +'</div>' +\r\n            '</div>' +\r\n       '</div>' +\r\n       '<div style=\"text-align: center\">' +\r\n            '<link-act name=\"tooltip-click\">Details ></link-act>' +\r\n       '</div>';\t",
+              "tooltipOffsetX" : 0,
+              "tooltipOffsetY" : -1,
+              "color" : "#fe7569",
+              "useColorFunction" : false,
+              "colorFunction" : null,
+              "useMarkerImageFunction" : true,
+              "markerImage" : null,
+              "markerImageSize" : 34,
+              "markerImageFunction" : "var res = {\n\t    url: data.image,\n\t    size: 20\n\t};\nreturn res;",
+              "markerImages" : [ "tb-image:c21hcnRfZW5lcmd5X21hbmFnZW1lbnRfZGFzaGJvYXJkX3dpZGdldF9zaXRlX3BsYW5fbWFya2VyX2ltYWdlXzEucG5n:IlNtYXJ0IEVuZXJneSBNYW5hZ2VtZW50IiBkYXNoYm9hcmQgd2lkZ2V0ICJTaXRlIFBsYW4iIG1hcmtlciBpbWFnZSAx;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFa0lEQVR4nO1bXYgcRRAec2cU/ElQiT5Ibrv2ovFEEYIiQT01EUVEAiIqgoj4BxqQaIxBYY1K2K2eyxn84xCCL/pwKNEkgiHBKHkQIXJ5OJUT5DSZqrlDSQRjVPQcqZ6ezeZ2b/9ub2Z3mYJiYWem6utvuqure6odZz4yGvRkkJ8D5AlA+g80B7Go+EKeUJqfdXLBIicpAU2vCSCl6R/QNKmQfoxDjS/j0/h+JZHG92//4SyF/BcgH88OHemP2z8Ujq4ATb+B5j8HcuOL4/bvZPP+lbY77mnowdGgJ+t6qxV6a2drtuDfMvDm9Ln1mhLfgkGwOHFLH3rXmC6IvLOR5xTyhmrjWyHvaMDWTnlGsDgdRMB+29j3FfJIpIB8OLRHW7qWgIHc+GLQ/IeMXRkKpdeUps/DoMbXdi0B4NINYdzgT0r/79/+6/lK898KabqRaa3zCND8kn1mQ+n/Cv17Gx3/nUrAPhO1XV5V+r9Ces/auqdrCVg1EpwJSCfKxn8uWARIU9bWByYouvRg1xGQdb3VlfIGyB9bEmV1p1Jdnug6ApSmzXK/rB3KbOX5igzSY6BpRvJ8VfDv6joCQPNe+3bfBU2bwKUHirZyk2cr5EP2+tZ6McROQD9OZ0F792ddflwhvdogAT/Pzvrkzcs1hfSOTYIODOaC3kYJECyCSbAJRqflEgRnKOTXKy156x4Cef86AWmAIn0ZPuutlYAX2iK/D6cvaQRWRED5Upm2Oa0UQP9h64BA05BCzsuc3UwqbIBrLtil7MsK6XdA+jer/ZsbtlPsAbxDMAk2QGIz1SI/5LRKQNNu02WHpq6f71rA2ttk3/qMJWJzM7gqxYBTsw3vasZmRQHNY8bR8OTSVhAQRvxil90jQ8xpEQGC0doec9qVgKxL62zjf7p06MgFzeLqWAIu1v45Cgn7NQ/MB1eiBFzm0kV2HH+XyMbkaNADyN9L1F+51bswdgJEZN6O5m+F/GIY3BZera8vbA/c75RIrARkNPcpzd/Eth1enoMcgjwtT4yAaJUn06MqeI9Eic5Cq/gSn5WyxtgJaDdJCRiOsQeA660BpOfjCn5lanz7tybSA0Dzk0kFv9kqcSF+ApAPho78jVUDll02i416g1zkL1rmzn2fv9Hm/QfjJ0DXFxibyRjr3eio1NiUgOG0ByxNh4BOY0CQBkGdzgJjTqsE0mmQ0zwA0kyQT8v6bMqa+DrAZJkuPRp7JigiVV1S02M/lCSgtEUwOCWS7gcML0wP2GuMDk1d5bS5KDx6tV0hftYyo4D0jBlrmsaVpqfj2vtrWJHWK6RvzR4B0vqWETCYC3oV0kdJB7v6lT6cXYbXEskUeBCQXoiKHeU3uQBY1CIWwZbRfJOz0AJ2SMjvgjtrRyyQEkBzsn554ZfzpPKjnu+F8nG0z6WVNRnPBYvEpthui5cBVZwCcs5mZ7fVtGMOWbBX7R5pdLbg3WentjdA+8vqxbJgAlWcKs3D4VY1ratth4+LznVdagdMCc3pEX4m43p314Ol4wkYzAW9UlYfldJLpZnS/PFy7at6sLQtARmXbjclsVIhbqrEeQQKfGetihKx3QiWtiUAkHdVSF52dzwBoP1lUfkcID9RKWpHY1u+K8r4NmPc9dZUOyvUEQRkke+Iyt6KinSiWvFjrRjQUQSs2DYFStOnxZJY5MPSG6qVvnYVAZFIva5UawohTg2RGkFZZNW6T+p/5TiNnCxpewLilkSwKPSfmqv2P26JPpELpticZmRZHLL+1VyRPg6R02ag6WtDQIFujM9zzpzzMSXvgHwyrkPTZYeokU+Gb58OxF6sCfljS0DT22EJfWK7PwRIb0lPaLYh/wOyT67YvXeywgAAAABJRU5ErkJggg==" ],
+              "showPolygon" : false,
+              "polygonKeyName" : "perimeter",
+              "editablePolygon" : false,
+              "showPolygonLabel" : false,
+              "usePolygonLabelFunction" : false,
+              "polygonLabel" : "${entityName}",
+              "polygonLabelFunction" : null,
+              "showPolygonTooltip" : false,
+              "showPolygonTooltipAction" : "click",
+              "autoClosePolygonTooltip" : true,
+              "usePolygonTooltipFunction" : false,
+              "polygonTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "polygonTooltipFunction" : null,
+              "polygonColor" : "#3388ff",
+              "polygonOpacity" : 0.2,
+              "usePolygonColorFunction" : false,
+              "polygonColorFunction" : null,
+              "polygonStrokeColor" : "#3388ff",
+              "polygonStrokeOpacity" : 1,
+              "polygonStrokeWeight" : 3,
+              "usePolygonStrokeColorFunction" : false,
+              "polygonStrokeColorFunction" : null,
+              "showCircle" : false,
+              "circleKeyName" : "perimeter",
+              "editableCircle" : false,
+              "showCircleLabel" : false,
+              "useCircleLabelFunction" : false,
+              "circleLabel" : "${entityName}",
+              "circleLabelFunction" : null,
+              "showCircleTooltip" : false,
+              "showCircleTooltipAction" : "click",
+              "autoCloseCircleTooltip" : true,
+              "useCircleTooltipFunction" : false,
+              "circleTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "circleTooltipFunction" : null,
+              "circleFillColor" : "#3388ff",
+              "circleFillColorOpacity" : 0.2,
+              "useCircleFillColorFunction" : false,
+              "circleFillColorFunction" : null,
+              "circleStrokeColor" : "#3388ff",
+              "circleStrokeOpacity" : 1,
+              "circleStrokeWeight" : 3,
+              "useCircleStrokeColorFunction" : false,
+              "circleStrokeColorFunction" : null,
+              "snappable" : true,
+              "initDragMode" : true,
+              "hideAllControlButton" : false,
+              "hideDrawControlButton" : true,
+              "hideEditControlButton" : false,
+              "hideRemoveControlButton" : true,
+              "useClusterMarkers" : false,
+              "zoomOnClick" : true,
+              "maxZoom" : null,
+              "maxClusterRadius" : 80,
+              "animate" : true,
+              "spiderfyOnMaxZoom" : false,
+              "showCoverageOnHover" : true,
+              "chunkedLoading" : false,
+              "removeOutsideVisibleBounds" : true,
+              "useIconCreateFunction" : false,
+              "clusterMarkerFunction" : null
+            },
+            "title" : "Site Plan",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)",
+              "padding" : "6px"
+            },
+            "actions" : {
+              "tooltipAction" : [ {
+                "name" : "tooltip-click",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "device_state",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "2c5953ec-8845-0822-a025-56a220145123"
+              } ],
+              "headerButton" : [ {
+                "name" : "Add Floor Plan",
+                "icon" : "mdi:floor-plan",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form #editAssetForm=\"ngForm\" [formGroup]=\"editAssetFormGroup\"\r\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\r\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\r\n    <h2>Add Floor Plan</h2>\r\n    <span fxFlex></span>\r\n    <button mat-icon-button\r\n            (click)=\"cancel()\"\r\n            type=\"button\">\r\n      <mat-icon class=\"material-icons\">close</mat-icon>\r\n    </button>\r\n  </mat-toolbar>\r\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\r\n  </mat-progress-bar>\r\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\r\n  <div mat-dialog-content>\r\n        <tb-image-input fxFlex\r\n        \tformControlName=\"sitemap\"\r\n        \t[showPreview]=true\r\n        \t[showClearButton]=true\r\n        \t>\r\n        </tb-image-input>\r\n  </div>\r\n  <div mat-dialog-actions fxLayout=\"row\">\r\n    <span fxFlex></span>\r\n    <button mat-button color=\"primary\"\r\n            type=\"button\"\r\n            [disabled]=\"(isLoading$ | async)\"\r\n            (click)=\"cancel()\" cdkFocusInitial>\r\n      Cancel\r\n    </button>\r\n    <button mat-button mat-raised-button color=\"primary\"\r\n            type=\"submit\"\r\n            style=\"margin-right: 20px;\"\r\n            [disabled]=\"(isLoading$ | async) || editAssetForm.invalid || !editAssetForm.dirty\">\r\n      Update\r\n    </button>\r\n  </div>\r\n</form>\r\n",
+                "customCss" : "/*=======================================================================*/\n/*==========  There are two examples: for edit and add entity  ==========*/\n/*=======================================================================*/\n/*========================  Edit entity example  ========================*/\n/*=======================================================================*/\n/*\n.edit-entity-form .boolean-value-input {\n    padding-left: 5px;\n}\n\n.edit-entity-form .boolean-value-input .checkbox-label {\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n}\n\n.relations-list .header {\n    padding-right: 5px;\n    padding-bottom: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .header .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n    font-size: 12px;\n    font-weight: 700;\n    color: rgba(0, 0, 0, .54);\n    white-space: nowrap;\n}\n\n.relations-list .mat-form-field-infix {\n    width: auto !important;\n}\n\n.relations-list .body {\n    padding-right: 5px;\n    padding-bottom: 15px;\n    padding-left: 5px;\n}\n\n.relations-list .body .row {\n    padding-top: 5px;\n}\n\n.relations-list .body .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .body .md-button {\n    margin: 0;\n}\n*/\n/*========================================================================*/\n/*=========================  Add entity example  =========================*/\n/*========================================================================*/\n/*\n.add-entity-form .boolean-value-input {\n    padding-left: 5px;\n}\n\n.add-entity-form .boolean-value-input .checkbox-label {\n    color: rgba(0,0,0,0.54);\n    font-size: 12px;\n}\n\n.relations-list .header {\n    padding-right: 5px;\n    padding-bottom: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .header .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n    font-size: 12px;\n    font-weight: 700;\n    color: rgba(0, 0, 0, .54);\n    white-space: nowrap;\n}\n\n.relations-list .mat-form-field-infix {\n    width: auto !important;\n}\n\n.relations-list .body {\n    padding-right: 5px;\n    padding-bottom: 15px;\n    padding-left: 5px;\n}\n\n.relations-list .body .row {\n    padding-top: 5px;\n}\n\n.relations-list .body .cell {\n    padding-right: 5px;\n    padding-left: 5px;\n}\n\n.relations-list .body .md-button {\n    margin: 0;\n}\n*/\n",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\r\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\r\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\r\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\r\n\r\nopenEditAssetDialog();\r\n\r\nfunction openEditAssetDialog() {\r\n    customDialog.customDialog(htmlTemplate, EditAssetDialogController).subscribe();\r\n}\r\n\r\nfunction EditAssetDialogController(instance) {\r\n    let vm = instance;\r\n    \r\n    vm.asset = null;\r\n    vm.attributes = {};\r\n    vm.editAssetFormGroup = vm.fb.group({\r\n      sitemap: ['', [vm.validators.required]],\r\n    });\r\n    \r\n    vm.cancel = function() {\r\n        vm.dialogRef.close(null);\r\n    };\r\n    \r\n    vm.save = function() {\r\n        console.log(entityId);\r\n         let sitemap = vm.editAssetFormGroup.get('sitemap').value;\r\n         let attributeArray = [{ key:'imageUrl', value:sitemap}];\r\n         attributeService.saveEntityAttributes(entityId,'SERVER_SCOPE', attributeArray).subscribe(\r\n          function () {\r\n            widgetContext.updateAliases();\r\n            vm.dialogRef.close(null);\r\n          }\r\n        );\r\n    };\r\n    getEntityInfo(instance);\r\n}\r\n\r\n    \r\n    \r\n    function getEntityInfo(instance) {\r\n        let vm = instance;\r\n\t\t widgetContext.rxjs.forkJoin([\r\n            attributeService.getEntityAttributes(entityId, 'SERVER_SCOPE', ['imageUrl']),\r\n\t\t]).subscribe(function (data) {\r\n\t\t\t\tvm.asset = data[0];\r\n\t\t\t\tvm.editAssetFormGroup.patchValue({\r\n\t\t\t\t\tsitemap: { value: vm.asset.value },\r\n\t\t\t\t}, {emitEvent: false}\r\n\t\t\t);\t\r\n\t\t});\r\n    }",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "39755ea7-6147-a0b1-dc10-bf5d9e38fae0"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true,
+            "titleTooltip" : "",
+            "borderRadius" : "6"
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "452425b2-82ce-145b-f408-0639992324f6",
+          "typeFullFqn" : "system.maps_v2.image_map"
+        },
+        "ce0fccee-3eca-dbae-d1b4-027000f86be4" : {
+          "type" : "latest",
+          "sizeX" : 8.5,
+          "sizeY" : 6,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "2718794c-0d24-7e2b-6a64-7c91255c443d",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "latitude",
+                "type" : "attribute",
+                "label" : "latitude",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8092204431627796
+              }, {
+                "name" : "longitude",
+                "type" : "attribute",
+                "label" : "longitude",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.1375317511371077
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "address",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.35910370533656844
+              }, {
+                "name" : "alarmCount",
+                "type" : "timeseries",
+                "label" : "alarmCount",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.6506042357144655
+              }, {
+                "name" : "active",
+                "type" : "attribute",
+                "label" : "active",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.9130183549649049
+              }, {
+                "name" : "indicator",
+                "type" : "attribute",
+                "label" : "indicator",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.1851615815692249
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694003319217,
+                  "endTimeMs" : 1694089719217
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(16, 16, 17, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "provider" : "openstreet-map",
+              "gmApiKey" : "AIzaSyDoEx2kaGz3PxwbI9T7ccTSg5xjdw8Nw8Q",
+              "gmDefaultMapType" : "roadmap",
+              "mapProvider" : "CartoDB.Positron",
+              "useCustomProvider" : false,
+              "customProviderTileUrl" : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              "mapProviderHere" : "HERE.normalDay",
+              "credentials" : {
+                "useV3" : true,
+                "app_id" : "AhM6TzD9ThyK78CT3ptx",
+                "app_code" : "p6NPiITB3Vv0GMUFnkLOOg",
+                "apiKey" : "kVXykxAfZ6LS4EbCTO02soFVfjA7HoBzNVVH9u7nzoE"
+              },
+              "mapImageUrl" : "tb-image:aGVyZV9tYXBfc3lzdGVtX3dpZGdldF9tYXBfaW1hZ2Uuc3Zn:IkhFUkUgTWFwIiBzeXN0ZW0gd2lkZ2V0IG1hcCBpbWFnZQ==;data:image/svg+xml;base64,PHN2ZyBpZD0ic3ZnMiIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwIiB3aWR0aD0iMTAwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgdmlld0JveD0iMCAwIDEwMCAxMDAiPgogPGcgaWQ9ImxheWVyMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtOTUyLjM2KSI+CiAgPHJlY3QgaWQ9InJlY3Q0Njg0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBoZWlnaHQ9Ijk5LjAxIiB3aWR0aD0iOTkuMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiB5PSI5NTIuODYiIHg9Ii40OTUwNSIgc3Ryb2tlLXdpZHRoPSIuOTkwMTAiIGZpbGw9IiNlZWUiLz4KICA8dGV4dCBpZD0idGV4dDQ2ODYiIHN0eWxlPSJ3b3JkLXNwYWNpbmc6MHB4O2xldHRlci1zcGFjaW5nOjBweDt0ZXh0LWFuY2hvcjptaWRkbGU7dGV4dC1hbGlnbjpjZW50ZXIiIGZvbnQtd2VpZ2h0PSJib2xkIiB4bWw6c3BhY2U9InByZXNlcnZlIiBmb250LXNpemU9IjEwcHgiIGxpbmUtaGVpZ2h0PSIxMjUlIiB5PSI5NzAuNzI4MDkiIHg9IjQ5LjM5NjQ3NyIgZm9udC1mYW1pbHk9IlJvYm90byIgZmlsbD0iIzY2NjY2NiI+PHRzcGFuIGlkPSJ0c3BhbjQ2OTAiIHg9IjUwLjY0NjQ3NyIgeT0iOTcwLjcyODA5Ij5JbWFnZSBiYWNrZ3JvdW5kIDwvdHNwYW4+PHRzcGFuIGlkPSJ0c3BhbjQ2OTIiIHg9IjQ5LjM5NjQ3NyIgeT0iOTgzLjIyODA5Ij5pcyBub3QgY29uZmlndXJlZDwvdHNwYW4+PC90ZXh0PgogIDxyZWN0IGlkPSJyZWN0NDY5NCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgaGVpZ2h0PSIxOS4zNiIgd2lkdGg9IjY5LjM2IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgeT0iOTkyLjY4IiB4PSIxNS4zMiIgc3Ryb2tlLXdpZHRoPSIuNjM5ODYiIGZpbGw9Im5vbmUiLz4KIDwvZz4KPC9zdmc+Cg==",
+              "imageEntityAlias" : "",
+              "imageUrlAttribute" : "",
+              "tmApiKey" : "84d6d83e0e51e481e50454ccbe8986b",
+              "tmDefaultMapType" : "roadmap",
+              "latKeyName" : "latitude",
+              "lngKeyName" : "longitude",
+              "xPosKeyName" : "xPos",
+              "yPosKeyName" : "yPos",
+              "defaultZoomLevel" : null,
+              "defaultCenterPosition" : "0,0",
+              "disableScrollZooming" : false,
+              "disableDoubleClickZooming" : false,
+              "disableZoomControl" : false,
+              "fitMapBounds" : false,
+              "useDefaultCenterPosition" : false,
+              "mapPageSize" : 16384,
+              "markerOffsetX" : 0.5,
+              "markerOffsetY" : 1,
+              "posFunction" : "return {x: origXPos, y: origYPos};",
+              "draggableMarker" : false,
+              "showLabel" : true,
+              "useLabelFunction" : false,
+              "label" : "${entityName}",
+              "labelFunction" : null,
+              "showTooltip" : true,
+              "showTooltipAction" : "click",
+              "autocloseTooltip" : true,
+              "useTooltipFunction" : true,
+              "tooltipPattern" : "<b>${entityName}</b><br/><br/><b>Latitude:</b> ${latitude:7}<br/><b>Longitude:</b> ${longitude:7}",
+              "tooltipFunction" : "const address = data.address;\r\n                            \r\nreturn '<div style=\"display:flex;flex-direction:column;margin-bottom:8px;font-family:\\'Roboto\\';font-weight:500;font-size:16px;line-height:24px;letter-spacing:0.25px;color:#29313C\">' +\r\n            '<div>${entityLabel}</div>' +\r\n            '<div style=\"width: 100%;border-bottom:1px solid rgba(0, 0, 0, 0.12);margin:12px 0;\"></div>' +\r\n            '<div style=\"display:flex;flex-direction:row;align-items:baseline;margin-bottom:9px;\">' +\r\n                '<div style=\"font-size:13px;line-height:16px;font-weight:500;color:rgba(0, 0, 0, 0.38);width:100px\">Address</div>' +\r\n                '<div style=\"font-size:14px;width:fit-content;padding:4px 8px;line-height:20px;font-weight:500;letter-spacing:0.25px\">'+ address +'</div>' +\r\n            '</div>' +\r\n       '</div>' +\r\n       '<div style=\"text-align: center\">' +\r\n            '<link-act name=\"tooltip-click\">Details ></link-act>' +\r\n       '</div>';",
+              "tooltipOffsetX" : 0,
+              "tooltipOffsetY" : -1,
+              "color" : "#69AEFE",
+              "useColorFunction" : true,
+              "colorFunction" : "return 'blue';\n",
+              "useMarkerImageFunction" : true,
+              "markerImage" : null,
+              "markerImageSize" : 34,
+              "markerImageFunction" : "var res = {\n\t    url: data.indicator,\n\t    size: 20\n\t}\nreturn res;",
+              "markerImages" : [ "tb-image:c21hcnRfZW5lcmd5X21hbmFnZW1lbnRfZGFzaGJvYXJkX3dpZGdldF9zaXRlX2xvY2F0aW9uc19tYXJrZXJfaW1hZ2VfMS5zdmc=:IlNtYXJ0IEVuZXJneSBNYW5hZ2VtZW50IiBkYXNoYm9hcmQgd2lkZ2V0ICJTaXRlIExvY2F0aW9ucyIgbWFya2VyIGltYWdlIDE=;data:image/svg+xml;base64,PHN2ZyBpZD0ic3ZnNDQwOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTUwIDE1MCI+CiAgPHN0eWxlPgogICAgLnN0MHtvcGFjaXR5OjAuODkyO2VuYWJsZS1iYWNrZ3JvdW5kOm5ldyA7fSAuc3Qxe2ZpbGw6dXJsKCNTVkdJRF8xXyk7fSAuc3Qye2ZpbGw6IzJhN2RlYzt9IC5zdDN7ZmlsbDojRkZGRkZGO30KICA8L3N0eWxlPgogIDxnIGlkPSJsYXllcjEiPgogICAgPGcgaWQ9InBhdGg2ODgxLTMtNS01LTEtOC00LTQtNy04IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTQ2LjQzOCAtMjc2LjAyOCkiIGNsYXNzPSJzdDAiPgogICAgICA8cmFkaWFsR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBjeD0iMTI5Ni41MTMiIGN5PSIxNzQ0LjQwNiIgcj0iNDkuOTAxIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KC42NzkzIC4wMDc2IC0uNTA5IC41NjEyIDI1Mi41MDMgLTU5My4zNCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjE4OCIvPgogICAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgICA8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjg1LjYgMzg4LjVjMTAuMy0xMi40IDQuNC0yMi40LTE0LjQtMjIuNC0xOC45IDAtNDIuNCAxMC01My45IDIyLjQtMTYuOCAxOCAuNCAyMy41LS4yIDM1LS4xIDEuOCAzLjkgMS44IDcgMCAxOS44LTExLjUgNDYuNS0xNyA2MS41LTM1Ii8+CiAgICA8L2c+CiAgICA8cGF0aCBpZD0icGF0aDY4ODEtMy01LTUtMS04LTQtNCIgY2xhc3M9InN0MiIgZD0iTTEyNC43IDY5LjFjLS45LTI3LjUtMjIuMy00OS44LTQ5LjgtNDkuOHMtNDkgMjIuMy00OS44IDQ5LjhjLTEuMyA0MC4xIDMwLjcgNTIuMiA0NC43IDc4IDIuMiA0IDggNCAxMC4xIDAgMTQuMS0yNS44IDQ2LjEtMzcuOSA0NC44LTc4Ii8+CiAgPC9nPgogIDxnIGlkPSJnNDkyOCI+CiAgICA8Y2lyY2xlIGlkPSJwYXRoNDk3OCIgY2xhc3M9InN0MiIgY3g9Ijc0LjkiIGN5PSI2OS4xIiByPSI0OS45Ii8+CiAgICA8ZyBpZD0iZzQ5MTUiPgogICAgICA8cGF0aCBpZD0icGF0aDY4ODMtMi0zLTUtMi00LTktNC05IiBjbGFzcz0ic3QzIiBkPSJNNzQuOCAxMDYuNGMtMjAuNiAwLTM3LjQtMTYuNy0zNy40LTM3LjQgMC0yMC42IDE2LjctMzcuNCAzNy40LTM3LjQgMjAuNiAwIDM3LjQgMTYuNyAzNy40IDM3LjRzLTE2LjcgMzcuNC0zNy40IDM3LjQiLz4KICAgIDwvZz4KICA8L2c+CiAgPHBhdGggY2xhc3M9InN0MiIgZD0iTTk3LjQgODguOGMxLjEtLjIgMS45LTEuNSAxLjktMi45di0xLjhjMC0xLjYtMS0yLjktMi40LTIuOS0xLjMgMC0yLjQgMS4zLTIuNCAyLjl2MS44YzAgMS40LjggMi42IDEuOSAyLjl2My43aC0zLjNWNzIuNmwtNS0xLjl2MjEuN2gtLjZWNjIuMWwtNS0xLjl2MzIuM2gtLjZWNDguMWgtMS41di0xLjdoLTEuOHYtMS42aC0yLjN2LS41YzAtLjMtLjItLjYtLjUtLjZoLS4ybC0uMy03LjFjMC0uMS0uMS0uMi0uMi0uMnMtLjIuMS0uMi4ybC0uMyA3LjFoLS4yYy0uMiAwLS41LjItLjUuNnYuNWgtMi4zdjEuNmgtMS44djEuN2gtMS41djQ0LjNoLS42VjUzLjJsLTEwLjYgMS45djM3LjJoLTMuNHYtMy43YzEuMS0uMiAxLjktMS41IDEuOS0yLjl2LTEuOGMwLTEuNi0xLTIuOS0yLjQtMi45cy0yLjQgMS4zLTIuNCAyLjl2MS44YzAgMS40LjggMi42IDEuOSAyLjl2My43aC0xLjl2MS41aDQ4Ljh2LTEuNWgtMS45di0zLjdoLS4zem0tNy43LTE0LjFoMS44djIuNmgtMS44di0yLjZ6bTAgNC40aDEuOHYyLjZoLTEuOHYtMi42em0wIDQuNGgxLjhWODZoLTEuOHYtMi41em0wIDQuM2gxLjh2Mi42aC0xLjh2LTIuNnptLTUuNi0yMy42aDEuOHY1aC0xLjh2LTV6bTAgN2gxLjh2NWgtMS44di01em0wIDcuMWgxLjh2NWgtMS44di01em0wIDdoMS44djVoLTEuOHYtNXpNNjMuMiA1Ny40SDY1VjYwaC0xLjh2LTIuNnptMCA0LjNINjV2Mi42aC0xLjh2LTIuNnptMCA0LjRINjV2Mi42aC0xLjh2LTIuNnptMCA0LjNINjVWNzNoLTEuOHYtMi42em0wIDQuM0g2NXYyLjZoLTEuOHYtMi42em0wIDQuNEg2NXYyLjZoLTEuOHYtMi42em0wIDQuNEg2NVY4NmgtMS44di0yLjV6bTAgNC4zSDY1djIuNmgtMS44di0yLjZ6bS00LTMwLjRINjFWNjBoLTEuOHYtMi42em0wIDQuM0g2MXYyLjZoLTEuOHYtMi42em0wIDQuNEg2MXYyLjZoLTEuOHYtMi42em0wIDQuM0g2MVY3M2gtMS44di0yLjZ6bTAgNC4zSDYxdjIuNmgtMS44di0yLjZ6bTAgNC40SDYxdjIuNmgtMS44di0yLjZ6bTAgNC40SDYxVjg2aC0xLjh2LTIuNXptMCA0LjNINjF2Mi42aC0xLjh2LTIuNnptMTguNy0zNy41aDEuOHYyLjZoLTEuOHYtMi42em0wIDQuM2gxLjh2Mi42aC0xLjh2LTIuNnptMCA0LjRoMS44djIuNmgtMS44VjU5em0wIDQuM2gxLjh2Mi42aC0xLjh2LTIuNnptMCA0LjRoMS44djIuNmgtMS44di0yLjZ6bTAgNC4zaDEuOHYyLjZoLTEuOFY3MnptMCA0LjNoMS44djIuNmgtMS44di0yLjZ6bTAgNC40aDEuOHYyLjZoLTEuOHYtMi42em0uOCA0LjV2Ny4zaC0zLjR2LTcuM2gzLjR6TTc0IDUwLjNoMS44djIuNkg3NHYtMi42em0wIDQuM2gxLjh2Mi42SDc0di0yLjZ6bTAgNC40aDEuOHYyLjZINzRWNTl6bTAgNC4zaDEuOHYyLjZINzR2LTIuNnptMCA0LjRoMS44djIuNkg3NHYtMi42em0wIDQuM2gxLjh2Mi42SDc0Vjcyem0wIDQuM2gxLjh2Mi42SDc0di0yLjZ6bTAgNC40aDEuOHYyLjZINzR2LTIuNnptLTQtMzAuNGgxLjh2Mi42SDcwdi0yLjZ6bTAgNC4zaDEuOHYyLjZINzB2LTIuNnptMCA0LjRoMS44djIuNkg3MFY1OXptMCA0LjNoMS44djIuNkg3MHYtMi42em0wIDQuNGgxLjh2Mi42SDcwdi0yLjZ6bTAgNC4zaDEuOHYyLjZINzBWNzJ6bTAgNC4zaDEuOHYyLjZINzB2LTIuNnptMCA0LjRoMS44djIuNkg3MHYtMi42em0xLjIgNC41aDMuNHY3LjNoLTMuNHYtNy4zeiIvPgo8L3N2Zz4K" ],
+              "showPolygon" : false,
+              "polygonKeyName" : "perimeter",
+              "editablePolygon" : false,
+              "showPolygonLabel" : false,
+              "usePolygonLabelFunction" : false,
+              "polygonLabel" : "${entityName}",
+              "polygonLabelFunction" : null,
+              "showPolygonTooltip" : false,
+              "showPolygonTooltipAction" : "click",
+              "autoClosePolygonTooltip" : true,
+              "usePolygonTooltipFunction" : false,
+              "polygonTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "polygonTooltipFunction" : null,
+              "polygonColor" : "#3388ff",
+              "polygonOpacity" : 0.2,
+              "usePolygonColorFunction" : false,
+              "polygonColorFunction" : null,
+              "polygonStrokeColor" : "#3388ff",
+              "polygonStrokeOpacity" : 1,
+              "polygonStrokeWeight" : 3,
+              "usePolygonStrokeColorFunction" : false,
+              "polygonStrokeColorFunction" : null,
+              "showCircle" : false,
+              "circleKeyName" : "perimeter",
+              "editableCircle" : false,
+              "showCircleLabel" : false,
+              "useCircleLabelFunction" : false,
+              "circleLabel" : "${entityName}",
+              "circleLabelFunction" : null,
+              "showCircleTooltip" : false,
+              "showCircleTooltipAction" : "click",
+              "autoCloseCircleTooltip" : true,
+              "useCircleTooltipFunction" : false,
+              "circleTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "circleTooltipFunction" : null,
+              "circleFillColor" : "#3388ff",
+              "circleFillColorOpacity" : 0.2,
+              "useCircleFillColorFunction" : false,
+              "circleFillColorFunction" : null,
+              "circleStrokeColor" : "#3388ff",
+              "circleStrokeOpacity" : 1,
+              "circleStrokeWeight" : 3,
+              "useCircleStrokeColorFunction" : false,
+              "circleStrokeColorFunction" : null,
+              "useClusterMarkers" : false,
+              "zoomOnClick" : true,
+              "maxZoom" : null,
+              "maxClusterRadius" : 80,
+              "animate" : true,
+              "spiderfyOnMaxZoom" : false,
+              "showCoverageOnHover" : true,
+              "chunkedLoading" : false,
+              "removeOutsideVisibleBounds" : true,
+              "useIconCreateFunction" : false,
+              "clusterMarkerFunction" : null
+            },
+            "title" : "Site Locations",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)",
+              "padding" : "5px",
+              "paddingTop" : "0px"
+            },
+            "actions" : {
+              "tooltipAction" : [ {
+                "name" : "tooltip-click",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "site_state",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "b5cf5537-7320-04fc-c761-afdcaaed45cd"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "ce0fccee-3eca-dbae-d1b4-027000f86be4",
+          "typeFullFqn" : "system.maps_v2.openstreetmap"
+        },
+        "fd0a402b-e9ea-0079-0d8c-ee0cc83020f3" : {
+          "typeFullFqn" : "system.entity_admin_widgets.asset_admin_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 86400000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1706013769894,
+                  "endTimeMs" : 1706100169894
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "entitiesTitle" : "Users List",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : false,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "showCellActionsMenu" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "entityNameColumnTitle" : "",
+              "displayEntityLabel" : false,
+              "entityLabelColumnTitle" : "",
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "useRowStyleFunction" : false,
+              "rowStyleFunction" : ""
+            },
+            "title" : "Users List",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "c2a3fd38-69c7-ed05-a29f-7a5d3e74e263",
+              "dataKeys" : [ {
+                "name" : "firstName",
+                "type" : "entityField",
+                "label" : "First name",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.9771552008008486
+              }, {
+                "name" : "lastName",
+                "type" : "entityField",
+                "label" : "Last name",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.6539743351538436
+              }, {
+                "name" : "email",
+                "type" : "entityField",
+                "label" : "Email",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.5821946599872974
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "more_horiz",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)"
+            },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Add New User",
+                "icon" : "add",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form *ngIf=\"userType\" #addAssetForm=\"ngForm\" [formGroup]=\"addAssetFormGroup\"\r\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\r\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\r\n    <h2>Add New User</h2>\r\n    <span fxFlex></span>\r\n    <button mat-icon-button\r\n            (click)=\"cancel()\"\r\n            type=\"button\">\r\n      <mat-icon class=\"material-icons\">close</mat-icon>\r\n    </button>\r\n  </mat-toolbar>\r\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\r\n  </mat-progress-bar>\r\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\r\n  <div mat-dialog-content>\r\n      <div class=\"mat-padding\" fxLayout=\"column\">\r\n            <mat-form-field class=\"mat-block\">\r\n                <mat-label>First Name</mat-label>\r\n                <input matInput formControlName=\"firstName\" required>\r\n                <mat-error *ngIf=\"addAssetFormGroup.get('firstName').hasError('required')\">\r\n                    First name is required.\r\n                </mat-error>\r\n            </mat-form-field>\r\n\t\t\t\r\n\t\t\t<mat-form-field class=\"mat-block\">\r\n                <mat-label>Last Name</mat-label>\r\n                <input matInput formControlName=\"lastName\" required>\r\n                <mat-error *ngIf=\"addAssetFormGroup.get('lastName').hasError('required')\">\r\n                    Last name is required.\r\n                </mat-error>\r\n            </mat-form-field>\r\n\t\t\t<mat-form-field class=\"mat-block\">\r\n                <mat-label>Email</mat-label>\r\n                <input matInput formControlName=\"email\" required>\r\n                <mat-error *ngIf=\"addAssetFormGroup.get('email').hasError('required')\">\r\n                    Email name is required.\r\n                </mat-error>\r\n            </mat-form-field>\r\n            <tb-entity-group-list\r\n                *ngIf=\"userType!='TENANT_ADMIN'\"\r\n                class=\"mat-block\"\r\n                [showLabel]=\"true\"\r\n                labelText=\"Add associated group for this User\"\r\n                formControlName=\"custGroups\"\r\n                [required]=\"true\"\r\n                [ownerId] = \"ownerId\"\r\n                [groupType] = \"'USER'\"\r\n                >\r\n                </tb-entity-group-list>\r\n                <tb-owner-and-groups\r\n                *ngIf=\"userType=='TENANT_ADMIN'\"\r\n                [entityType]=\"'USER'\"\r\n                formControlName=\"ownersGroups\"\r\n                [required]=\"true\"\r\n                >\r\n                </tb-owner-and-groups>\r\n    <mat-form-field fxFlex class=\"mat-block\">\r\n        <mat-label>Activation method</mat-label>\r\n        <mat-select formControlName=\"userActivationMethod\">\r\n            <mat-option *ngFor=\"let method of activationMethods\" [value]=\"method.value\">\r\n                {{ method.name }}\r\n            </mat-option>\r\n        </mat-select>\r\n    </mat-form-field>\r\n      </div>\r\n  </div>\r\n  <div mat-dialog-actions fxLayout=\"row\">\r\n    <span fxFlex></span>\r\n    <button mat-button color=\"primary\"\r\n            type=\"button\"\r\n            [disabled]=\"(isLoading$ | async)\"\r\n            (click)=\"cancel()\" cdkFocusInitial>\r\n      Cancel\r\n    </button>\r\n    <button mat-button mat-raised-button color=\"primary\"\r\n            style=\"margin-right: 20px;\"\r\n            type=\"submit\"\r\n            [disabled]=\"(isLoading$ | async) || addAssetForm.invalid || !addAssetForm.dirty\">\r\n      Create\r\n    </button>\r\n  </div>\r\n</form>\r\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\r\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\r\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\r\nlet entityGroupService  = $injector.get(widgetContext.servicesMap.get('entityGroupService'));\r\nlet dashboardService  = $injector.get(widgetContext.servicesMap.get('dashboardService'));\r\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\r\n\r\nopenAddUserDialog();\r\n\r\n    function getEntityInfo(vm) {\r\n        userService.getUser(widgetContext.currentUser.userId).subscribe(function(user){\r\n            vm.ownerId = user.ownerId;\r\n            vm.userType = user.authority;\r\n                vm.addAssetFormGroup = vm.fb.group({\r\n                  firstName: ['', [vm.validators.required]],\r\n                  lastName: ['', [vm.validators.required]],\r\n                  email: ['',[vm.validators.email]],\r\n                  userActivationMethod: ['displayActivationLink'],\r\n                  ...(user.authority != 'TENANT_ADMIN' && {\r\n                    custGroups: ['', [vm.validators.required]], \r\n                  }),\r\n                   ...(user.authority == 'TENANT_ADMIN' && {\r\n                       ownersGroups: ['', [vm.validators.required]], \r\n                   }),  \r\n                });\r\n            }\r\n        );    \r\n    }\r\n    \r\nfunction openAddUserDialog() {\r\n    customDialog.customDialog(htmlTemplate, AddUserDialogController).subscribe();\r\n}\r\n\r\nfunction AddUserDialogController(instance) {\r\n    let vm = instance;\r\n    getEntityInfo(instance);\r\n    vm.cancel = function() {\r\n        vm.dialogRef.close(null);\r\n    };\r\n      vm.activationMethods = [\r\n        {\r\n            value: 'displayActivationLink',\r\n            name: 'Display activation link'\r\n        },\r\n        {\r\n            value: 'sendActivationMail',\r\n            name: 'Send activation email'\r\n        }\r\n  ];\r\n    vm.save = function() {\r\n        vm.addAssetFormGroup.markAsPristine();\r\n        const formValues = vm.addAssetFormGroup.value;\r\n        var customerId= { id: widgetContext.currentUser.customerId, entityType: 'CUSTOMER'};\r\n        let userGroups;\r\n        if(vm.userType == 'TENANT_ADMIN'){\r\n            customerId = formValues.ownersGroups&& formValues.ownersGroups.owner && formValues.ownersGroups.owner.id;  \r\n            userGroups = formValues.ownersGroups && formValues.ownersGroups.owner && formValues.ownersGroups.groups;\r\n        }else{\r\n            userGroups = formValues.custGroups && formValues.custGroups;\r\n        };\r\n        let isUserGroup = false;\r\n        let adminGroupAdded = userGroups.filter(function(group){\r\n            if(group.name.search(/user/i) > 0){\r\n                isUserGroup = true;\r\n            }\r\n            return group.name.search(/admin/i) > 0;\r\n        });\r\n        const sendActivationMail = (formValues.userActivationMethod === 'sendActivationMail');\r\n        let user = {\r\n          email: formValues.email,\r\n          firstName: formValues.firstName,\r\n          lastName: formValues.lastName,\r\n          authority: 'CUSTOMER_USER',\r\n          customerId: customerId,\r\n          tenantId : {entityType: \"TENANT\", id: widgetContext.currentUser.tenantId},\r\n        };\r\n        widgetContext.rxjs.forkJoin([\r\n            getDashboardByName('Smart Energy Management'),\r\n            getDashboardByName('Admin Dashboard'),\r\n        ]).pipe(\r\n            widgetContext.rxjs.switchMap((data) => {\r\n            var defaultDashboard = adminGroupAdded.length>0 ? data[1]: isUserGroup ? data[0]:undefined;\r\n            if (defaultDashboard) {\r\n                user.additionalInfo = {\r\n                    defaultDashboardId: defaultDashboard.id.id,\r\n                    defaultDashboardFullscreen: true\r\n                };\r\n            }\r\n            return saveUserObservable(userGroups, user, sendActivationMail);\r\n            })).subscribe((user) => {\r\n                saveRelation(user);\r\n                        widgetContext.updateAliases();\r\n                        if (formValues.userActivationMethod === 'displayActivationLink') {\r\n                            userService.getActivationLink(user.id.id).subscribe(\r\n                                (activationLink) => {\r\n                                    displayActivationLink(activationLink).subscribe(\r\n                                        () => {\r\n                                            vm.dialogRef.close(null);\r\n                                        }\r\n                                    );\r\n                                }\r\n                            );\r\n                        } else {\r\n                            vm.dialogRef.close(null);\r\n                        }          \r\n            });\r\n    };\r\n  \r\n    function getDashboardByName(dashboardName) {\r\n      var dashboardsPageLink = widgetContext.pageLink(10, 0, dashboardName);\r\n      return dashboardService.getUserDashboards(null, null, dashboardsPageLink, {ignoreLoading: true}).pipe(\r\n          widgetContext.rxjs.map((data) => {\r\n            if (data.data.length) {\r\n                return data.data.find((dashboard) => dashboard.name === dashboardName);\r\n            } else {\r\n                return null;\r\n            }\r\n          })\r\n      );\r\n  };\r\n  \r\nfunction saveUserObservable(userGroup, user, sendActivationMail) {\r\n      let groupIds = '';\r\n      userGroup.forEach((group, index) =>{\r\n          groupIds+= group.id.id;\r\n          if(index+1 != userGroup.length){\r\n              groupIds+=',';\r\n          }\r\n      })\r\n      return userService.saveUser(user, true, groupIds);\r\n  };\r\n  \r\n      function displayActivationLink(activationLink) {\r\n        const template = `<form style=\"min-width: 400px; position: relative;\">\r\n                              <mat-toolbar color=\"primary\">\r\n                                <h2 translate>user.activation-link</h2>\r\n                                <span fxFlex></span>\r\n                                <button mat-icon-button\r\n                                        (click)=\"close()\"\r\n                                        type=\"button\">\r\n                                  <mat-icon class=\"material-icons\">close</mat-icon>\r\n                                </button>\r\n                              </mat-toolbar>\r\n                              <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\r\n                              </mat-progress-bar>\r\n                              <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\r\n                              <div mat-dialog-content tb-toast toastTarget=\"activationLinkDialogContent\">\r\n                                <div class=\"mat-content\" fxLayout=\"column\">\r\n                                  <span [innerHTML]=\"'user.activation-link-text' | translate: {activationLink: activationLink}\"></span>\r\n                                  <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n                                    <pre class=\"tb-highlight\" fxFlex><code>{{ activationLink }}</code></pre>\r\n                                    <button mat-icon-button\r\n                                            color=\"primary\"\r\n                                            ngxClipboard\r\n                                            cbContent=\"{{ activationLink }}\"\r\n                                            (cbOnSuccess)=\"onActivationLinkCopied()\"\r\n                                            matTooltip=\"{{ 'user.copy-activation-link' | translate }}\"\r\n                                            matTooltipPosition=\"above\">\r\n                                      <mat-icon svgIcon=\"mdi:clipboard-arrow-left\"></mat-icon>\r\n                                    </button>\r\n                                  </div>\r\n                                </div>\r\n                              </div>\r\n                              <div mat-dialog-actions fxLayoutAlign=\"end center\">\r\n                                <button mat-button color=\"primary\"\r\n                                        type=\"button\"\r\n                                        cdkFocusInitial\r\n                                        [disabled]=\"(isLoading$ | async)\"\r\n                                        (click)=\"close()\">\r\n                                  {{ 'action.ok' | translate }}\r\n                                </button>\r\n                              </div>\r\n                            </form>`;\r\nreturn customDialog.customDialog(template, ActivationLinkDialogController, {activationLink: activationLink});\r\n    }\r\n\r\n    function ActivationLinkDialogController(instance) {\r\n        var vm = instance;\r\n\r\n        vm.activationLink = instance.data.activationLink;\r\n\r\n        vm.onActivationLinkCopied = onActivationLinkCopied;\r\n        vm.close = close;\r\n\r\n        function onActivationLinkCopied(){\r\n            widgetContext.showSuccessToast(translate.instant('user.activation-link-copied-message'), 1000, 'bottom', 'left', 'activationLinkDialogContent');\r\n        }\r\n\r\n        function close() {\r\n            vm.dialogRef.close(null);\r\n        }\r\n    }\r\n    \r\n      \r\n    function saveRelation(user) {\r\n                const relationData = {\r\n                    'from':  user.ownerId,\r\n                    'to': user.id,\r\n                    'type': 'Contains',\r\n                    'typeGroup' : 'COMMON'\r\n                }\r\n                entityRelationService.saveRelation(relationData).subscribe();\r\n        return widgetContext.rxjs.of([]);\r\n    }\r\n  \r\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "70837a9d-c3de-a9a7-03c5-dccd14998758"
+              } ],
+              "actionCellButton" : [ {
+                "name" : "Edit User",
+                "icon" : "edit",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "customPretty",
+                "customHtml" : "<form *ngIf=\"loggedInUserType\" #editAssetForm=\"ngForm\" [formGroup]=\"editAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Edit asset</h2>\n    <span fxFlex></span>\n    <button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>First Name</mat-label>\n                <input matInput formControlName=\"firstName\" required>\n                <mat-error *ngIf=\"editAssetFormGroup.get('firstName').hasError('required')\">\n                    First name is required.\n                </mat-error>\n            </mat-form-field>\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Last Name</mat-label>\n                <input matInput formControlName=\"lastName\" required>\n                <mat-error *ngIf=\"editAssetFormGroup.get('lastName').hasError('required')\">\n                    Last name is required.\n                </mat-error>\n            </mat-form-field>\n                        <mat-form-field class=\"mat-block\">\n                <mat-label>Email</mat-label>\n                <input matInput formControlName=\"email\" required>\n                <mat-error *ngIf=\"editAssetFormGroup.get('email').hasError('required')\">\n                    Email is required.\n                </mat-error>\n            </mat-form-field>\n                        <tb-entity-group-list\n                *ngIf=\"loggedInUserType!='TENANT_ADMIN'\"\n                class=\"mat-block\"\n                [showLabel]=\"true\"\n                labelText=\"Add associated group for this User\"\n                formControlName=\"custGroups\"\n                [required]=\"true\"\n                [ownerId] = \"loggedInUserOwnerId\"\n                [groupType] = \"'USER'\"\n                >\n                </tb-entity-group-list>\n                <tb-owner-and-groups\n                *ngIf=\"loggedInUserType=='TENANT_ADMIN'\"\n                [entityType]=\"'USER'\"\n                formControlName=\"ownersGroups\"\n                [required]=\"true\"\n                >\n                </tb-owner-and-groups>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            type=\"submit\"\n            style=\"margin-right: 20px;\"\n            [disabled]=\"(isLoading$ | async) || editAssetForm.invalid || !editAssetForm.dirty\">\n      Update\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\nlet entityGroupService = $injector.get(widgetContext.servicesMap.get('entityGroupService'));\nlet dashboardService  = $injector.get(widgetContext.servicesMap.get('dashboardService'));\nlet entityRelationService = $injector.get(widgetContext.servicesMap.get('entityRelationService'));\n\nopenEditAssetDialog();\n\nfunction openEditAssetDialog() {\n    customDialog.customDialog(htmlTemplate, EditAssetDialogController).subscribe();\n}\n\nfunction EditAssetDialogController(instance) {\n    let vm = instance;\n    vm.asset = null;\n    vm.attributes = {};\n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    vm.save = function() {\n         vm.editAssetFormGroup.markAsPristine();\n        const formValues = vm.editAssetFormGroup.value;\n        var customerId= { id: widgetContext.currentUser.customerId, entityType: 'CUSTOMER'};\n        let userGroups;\n        if(vm.loggedInUserType == 'TENANT_ADMIN'){\n            customerId = formValues.ownersGroups&& formValues.ownersGroups.owner && (formValues.ownersGroups.owner.name ? formValues.ownersGroups.owner.id : formValues.ownersGroups.owner);  \n            userGroups = formValues.ownersGroups && formValues.ownersGroups.groups;\n        }else{\n            userGroups = formValues.custGroups;\n        };\n        getGroupsIdDiff(vm.oldGroupsIds, userGroups).then((entityGroupsdata) =>{\n        var oldUserDetails = vm.oldUserDetails;\n        let isUserGroup = false;\n        let adminGroupAdded = userGroups.filter(function(group){\n            if(group.name.search(/admin/i) > 0){\n                isUserGroup=true;\n            }\n            return group.name.search(/admin/i) > 0;\n        });\n        let user = {\n          id:oldUserDetails.id,\n          email: formValues.email,\n          firstName: formValues.firstName,\n          lastName: formValues.lastName,\n          authority: 'CUSTOMER_USER',\n          customerId: customerId,\n          tenantId : {entityType: \"TENANT\", id: widgetContext.currentUser.tenantId},\n        };\n        widgetContext.rxjs.forkJoin([\n            getDashboardByName('Smart Energy Management'),\n            getDashboardByName('Admin Dashboard'),\n        ]).pipe(\n            widgetContext.rxjs.switchMap((data) => {\n            var defaultDashboard = adminGroupAdded.length>0 ? data[1]: data[0];\n            if (defaultDashboard) {\n                user.additionalInfo = {\n                    defaultDashboardId: defaultDashboard.id.id,\n                    defaultDashboardFullscreen: true\n                };\n            };\n                return saveUserObservable(userGroups, user, oldUserDetails, entityGroupsdata);\n            })).subscribe((data) => {\n                saveUser(userGroups,user, entityGroupsdata, data);\n            });\n        })\n    };\n    getEntityInfo();\n    function getEntityInfo() {\n        userService.getUser(widgetContext.currentUser.userId).subscribe(\n            function(loggedInUser){\n                userService.getUser(entityId.id).subscribe(\n                    function(user){\n                      entityGroupService.getEntityGroupIdsForEntityId(entityId.entityType,entityId.id).subscribe(\n                          function(groupIds){\n                              let entityGroupIds = groupIds.map(function(groupId){\n                                    return groupId.id; \n                              });\n                              var oldGroupsIds = [];\n                              entityGroupService.getEntityGroupsByIds(entityGroupIds).subscribe(function(oldEntityGroups){\n                                vm.loggedInUserOwnerId = loggedInUser.ownerId;\n                                vm.loggedInUserType = loggedInUser.authority;\n                                oldEntityGroups = oldEntityGroups.filter(group =>{\n                                    if(group.name.search(/all/i) < 0){\n                                        oldGroupsIds.push(group.id.id);\n                                        return true;\n                                    }\n                                    return false;\n                                });\n                                vm.oldGroupsIds = oldGroupsIds;\n                                vm.oldEntityGroups = oldEntityGroups;\n                                vm.editAssetFormGroup = vm.fb.group({\n                                firstName: ['', [vm.validators.required]],\n                                lastName: ['', [vm.validators.required]],\n                                email: ['',[vm.validators.email]],\n                                        ...(loggedInUser.authority != 'TENANT_ADMIN' && {\n                                            custGroups: ['', [vm.validators.required]],\n                                          }),\n                                        ...(loggedInUser.authority == 'TENANT_ADMIN' && {\n                                              ownersGroups: ['', [vm.validators.required]], \n                                          }),\n                                        });\n                                        vm.ownerId = user.ownerId;\n                                        vm.userType = user.authority;\n                                        vm.oldUserDetails = user;\n                                        vm.editAssetFormGroup.patchValue(\n                                                    {\n                                                            firstName: user.firstName,\n                                                            lastName: user.lastName,\n                                                            email: user.email,\n                                                            ...(loggedInUser.authority != 'TENANT_ADMIN' && {\n                                                                custGroups: oldEntityGroups,\n                                                              }),\n                                                          ...(loggedInUser.authority == 'TENANT_ADMIN' && {\n                                                              ownersGroups: {\n                                                                  owner:user.ownerId,\n                                                                  groups:oldEntityGroups,\n                                                              },\n                                                          }),\n                                                        }, {emitEvent: false}\n                                                    );\n                                          }) \n                                      }) \n                    })\n            })\n    };\nfunction getDashboardByName(dashboardName) {\n      var dashboardsPageLink = widgetContext.pageLink(10, 0, dashboardName);\n      return dashboardService.getUserDashboards(null, null, dashboardsPageLink, {ignoreLoading: true}).pipe(\n          widgetContext.rxjs.map((data) => {\n            if (data.data.length) {\n                return data.data.find((dashboard) => dashboard.name === dashboardName);\n            } else {\n                return null;\n            }\n          })\n      );\n  };\n  \n  function getGroupsIdDiff(oldsIds, newGroups){\n      return new Promise((resolve, reject) =>{\n          var deleteGroupIds = oldsIds.filter(id => newGroups.filter(group => group.id.id == id).length<=0);\n          var addGroups = newGroups.filter(group => oldsIds.filter(id => id == group.id.id).length<=0);\n          resolve({deleteGroupIds, addGroups});\n      });\n  };\n  \n  function saveUserObservable(userGroup, user, oldUserDetail, entityGroupsdata) {\n            let oldUserDetailsOwnerId = oldUserDetail.ownerId;\n            let newUserDetailOnwerId = user.customerId;\n            if(newUserDetailOnwerId.id != oldUserDetailsOwnerId.id){\n                let addGroupIds = userGroup.map(group => group.id.id);\n                return entityGroupService.changeEntityOwner(newUserDetailOnwerId, user.id, addGroupIds);\n            }else{\n                return widgetContext.rxjs.of({ updateEntityGroups: true });\n            }\n  };\n  \n  function updateEntityGroups(entityGroupsdata, user, data){\n      if(data&&data.updateEntityGroups){\n          const {deleteGroupIds, addGroups} = entityGroupsdata;\n          var task = [];\n          deleteGroupIds.forEach(id =>{\n              task.push(entityGroupService.removeEntitiesFromEntityGroup(id, [user.id.id]));\n          });\n          addGroups.forEach(id =>{\n              task.push(entityGroupService.addEntitiesToEntityGroup(id.id.id, [user.id.id]));\n          });\n          if(task.length>0){\n            widgetContext.rxjs.forkJoin(task).subscribe(\n                  function(){\n                         closeDialog();                \n                  });    \n          }else{\n              closeDialog();\n          }\n      }else{\n          closeDialog();                \n      }\n  };\n  \n  function saveUser(userGroups, user, entityGroupsdata, data){\n    let groupIds = '';\n      userGroups.forEach((group, index) =>{\n          groupIds+= group.id.id;\n          if(index+1 != userGroups.length){\n              groupIds+=',';\n          }\n      });\n      userService.saveUser(user, false, groupIds).subscribe(function(updatedUser){\n       saveRelation(updatedUser);\n       updateEntityGroups(entityGroupsdata, updatedUser, data);\n   });\n  };\n  \n    function saveRelation(user) {\n        let oldUserDetails = vm.oldUserDetails;\n            const relationData = {\n                    'from':  user.ownerId,\n                    'to': user.id,\n                    'type': 'Contains',\n                    'typeGroup' : 'COMMON'\n                };\n        if(oldUserDetails.ownerId.id!= user.ownerId.id){\n            entityRelationService.deleteRelation( oldUserDetails.ownerId,'Contains',user.id).subscribe(function(){\n            entityRelationService.saveRelation(relationData).subscribe();   \n            });\n        }\n        return widgetContext.rxjs.of([]);\n    }\n  \n  function closeDialog(){\n          widgetContext.updateAliases();\n          vm.dialogRef.close(null); \n  };\n}",
+                "customResources" : [ ],
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
+              }, {
+                "name" : "Delete asset",
+                "icon" : "delete",
+                "useShowWidgetActionFunction" : true,
+                "showWidgetActionFunction" : "const currentUserId = widgetContext.currentUser.userId;\n\n\nif(currentUserId == data.id.id){\n    return false;\n}\n\nreturn true;",
+                "type" : "custom",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet userService = $injector.get(widgetContext.servicesMap.get('userService'));\n\nopenDeleteAssetDialog();\n\nfunction openDeleteAssetDialog(instance) {\n    let title = \"Are you sure you want to delete the the user : \" + entityName +  \"?\";\n    let content = \"Be careful, after the confirmation, the user and all related data will become unrecoverable!\";\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function (result) {\n            if (result) {\n                deleteAsset();\n                \n            }\n        }\n    );\n}\n\nfunction deleteAsset() {\n    userService.deleteUser(entityId.id).subscribe(\n        function () {\n            widgetContext.updateAliases();\n            \n        }\n    );\n}\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
+              } ]
+            },
+            "configMode" : "advanced",
+            "titleFont" : null,
+            "titleColor" : null,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "fd0a402b-e9ea-0079-0d8c-ee0cc83020f3"
+        },
+        "35d458b7-8ad0-d83b-7bce-1057f339a413" : {
+          "typeFullFqn" : "system.cards.markdown_card",
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "0244d976-ad8f-3afc-7ef5-cd9940da37f3",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "title",
+                "type" : "entityField",
+                "label" : "Title",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.736055634211163
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1705983290073,
+                  "endTimeMs" : 1706069690073
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(238, 238, 238, 0)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : true,
+              "markdownTextPattern" : "<button class=\"view-button\" id='asset-route' type=\"button\">Asset Tracking Dashboard</button>",
+              "markdownTextFunction" : "if(data && data.length >0 ) {\n    return '<button class=\"view-button\" id=\"asset-route\" type=\"button\">View Asset Tracking '+ 'Dashboard</button>';\n}else{\n return '';   \n}",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".view-button{\r\n    padding: 0.25rem 0.875rem;\r\n    display: -webkit-inline-box;\r\n    display: -webkit-inline-flex;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n    -webkit-align-items: center;\r\n    -webkit-box-align: center;\r\n    -ms-flex-align: center;\r\n    align-items: center;\r\n    -webkit-box-pack: center;\r\n    -ms-flex-pack: center;\r\n    -webkit-justify-content: center;\r\n    justify-content: center;\r\n    position: relative;\r\n    box-sizing: border-box;\r\n    -webkit-tap-highlight-color: transparent;\r\n    background-color: transparent;\r\n    outline: 0;\r\n    border: 0;\r\n    margin: 0;\r\n    border-radius: 0;\r\n    padding: 0;\r\n    cursor: pointer;\r\n    -webkit-user-select: none;\r\n    -moz-user-select: none;\r\n    -ms-user-select: none;\r\n    user-select: none;\r\n    vertical-align: middle;\r\n    -moz-appearance: none;\r\n    -webkit-appearance: none;\r\n    -webkit-text-decoration: none;\r\n    text-decoration: none;\r\n    color: inherit;\r\n    font-family: Inter,sans-serif,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";\r\n    font-weight: 500;\r\n    font-size: 0.8125rem;\r\n    line-height: 1.75;\r\n    text-transform: uppercase;\r\n    letter-spacing: 0.3px;\r\n    color: #FFF;\r\n    min-width: 64px;\r\n    padding: 4px 10px;\r\n    border-radius: 6px;\r\n    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;\r\n    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;\r\n    background-color: #9155FD;\r\n    box-shadow: 0px 3px 1px -2px rgba(58, 53, 65, 0.2), 0px 2px 2px 0px rgba(58, 53, 65, 0.14), 0px 1px 5px 0px rgba(58, 53, 65, 0.12);\r\n    font-weight: 500;\r\n    border-radius: 5px;\r\n    line-height: 1.71;\r\n    letter-spacing: 0.3px;\r\n    padding: 0.46875rem 0.75rem;\r\n    box-shadow: 0px 4px 8px -4px rgba(58, 53, 65, 0.42);\r\n    padding: 0.46875rem 1.375rem;\r\n    padding: 0.25rem 0.5625rem;\r\n}"
+            },
+            "title" : "Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "asset-route",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : false,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "2247bd90-aeb3-11ee-be5a-2d562209d378",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "8f3fedae-8918-2f53-0711-531c372e82f1"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "35d458b7-8ad0-d83b-7bce-1057f339a413"
+        },
+        "0954a91c-0ea2-c14e-93c9-f87ce8b21357" : {
+          "typeFullFqn" : "system.input_widgets.update_multiple_attributes",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "902f8f82-1653-b659-8a65-778b22dafc68",
+              "dataKeys" : [ {
+                "name" : "maxConsumptionThreshold",
+                "type" : "attribute",
+                "label" : "Max Consumption Threshold",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.32415952142758675,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1706018790142,
+                  "endTimeMs" : 1706105190142
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "widgetTitle" : "",
+              "showResultMessage" : true,
+              "showActionButtons" : true,
+              "updateAllValues" : false,
+              "saveButtonLabel" : "Update",
+              "resetButtonLabel" : "UNDO",
+              "showGroupTitle" : false,
+              "groupTitle" : "${entityName}",
+              "fieldsAlignment" : "row",
+              "fieldsInRow" : 2,
+              "rowGap" : 5,
+              "columnGap" : 10
+            },
+            "title" : "Device Max Consumption Threshold",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "0954a91c-0ea2-c14e-93c9-f87ce8b21357"
+        },
+        "fefe44fc-6e68-760b-6251-8b088fed0798" : {
+          "type" : "latest",
+          "sizeX" : 8.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "902f8f82-1653-b659-8a65-778b22dafc68",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "xPos",
+                "type" : "attribute",
+                "label" : "xPos",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.9739393599717503,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "yPos",
+                "type" : "attribute",
+                "label" : "yPos",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.060000696199778325,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              }, {
+                "name" : "energyConsumption",
+                "type" : "timeseries",
+                "label" : "energyConsumption",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.4852522180945005
+              }, {
+                "name" : "alarm",
+                "type" : "timeseries",
+                "label" : "alarm",
+                "color" : "#ffc107",
+                "settings" : { },
+                "_hash" : 0.32300803348689344
+              }, {
+                "name" : "relatedEntityName",
+                "type" : "attribute",
+                "label" : "relatedEntityName",
+                "color" : "#607d8b",
+                "settings" : { },
+                "_hash" : 0.20949836193384375
+              }, {
+                "name" : "image",
+                "type" : "attribute",
+                "label" : "image",
+                "color" : "#9c27b0",
+                "settings" : { },
+                "_hash" : 0.7151380582729685
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "entityAliasId" : "a96ec721-a4a1-f0ac-53a4-1f417afcef4d",
+              "dataKeys" : [ {
+                "name" : "imageUrl",
+                "type" : "attribute",
+                "label" : "imageUrl",
+                "color" : "#8bc34a",
+                "settings" : { },
+                "_hash" : 0.8610666808621805
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1694006888230,
+                  "endTimeMs" : 1694093288230
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "2px",
+            "settings" : {
+              "provider" : "image-map",
+              "gmApiKey" : "AIzaSyDoEx2kaGz3PxwbI9T7ccTSg5xjdw8Nw8Q",
+              "gmDefaultMapType" : "roadmap",
+              "mapProvider" : "OpenStreetMap.Mapnik",
+              "useCustomProvider" : false,
+              "customProviderTileUrl" : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+              "mapProviderHere" : "HERE.normalDay",
+              "credentials" : {
+                "useV3" : true,
+                "app_id" : "AhM6TzD9ThyK78CT3ptx",
+                "app_code" : "p6NPiITB3Vv0GMUFnkLOOg",
+                "apiKey" : "kVXykxAfZ6LS4EbCTO02soFVfjA7HoBzNVVH9u7nzoE"
+              },
+              "mapImageUrl" : null,
+              "imageEntityAlias" : "Devices Wise Assets",
+              "imageUrlAttribute" : "imageUrl",
+              "tmApiKey" : "84d6d83e0e51e481e50454ccbe8986b",
+              "tmDefaultMapType" : "roadmap",
+              "latKeyName" : "latitude",
+              "lngKeyName" : "longitude",
+              "xPosKeyName" : "xPos",
+              "yPosKeyName" : "yPos",
+              "defaultZoomLevel" : null,
+              "defaultCenterPosition" : "0,0",
+              "disableScrollZooming" : true,
+              "disableDoubleClickZooming" : true,
+              "disableZoomControl" : true,
+              "fitMapBounds" : true,
+              "useDefaultCenterPosition" : false,
+              "mapPageSize" : 16384,
+              "markerOffsetX" : 0,
+              "markerOffsetY" : 0,
+              "posFunction" : "return {x: origXPos, y: origYPos};",
+              "draggableMarker" : true,
+              "showLabel" : true,
+              "useLabelFunction" : false,
+              "label" : "${entityName}",
+              "labelFunction" : null,
+              "showTooltip" : true,
+              "showTooltipAction" : "click",
+              "autocloseTooltip" : true,
+              "useTooltipFunction" : false,
+              "tooltipPattern" : "<b>${entityName}</b>",
+              "tooltipFunction" : null,
+              "tooltipOffsetX" : 0,
+              "tooltipOffsetY" : -1,
+              "color" : "#fe7569",
+              "useColorFunction" : false,
+              "colorFunction" : null,
+              "useMarkerImageFunction" : true,
+              "markerImage" : null,
+              "markerImageSize" : 34,
+              "markerImageFunction" : "var res = {\n\t    url: data.image,\n\t    size: 20\n\t};\nreturn res;",
+              "markerImages" : [ "tb-image:c21hcnRfZW5lcmd5X21hbmFnZW1lbnRfZGFzaGJvYXJkX3dpZGdldF9zaXRlX3BsYW5fbWFya2VyX2ltYWdlXzEucG5n:IlNtYXJ0IEVuZXJneSBNYW5hZ2VtZW50IiBkYXNoYm9hcmQgd2lkZ2V0ICJTaXRlIFBsYW4iIG1hcmtlciBpbWFnZSAx;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFa0lEQVR4nO1bXYgcRRAec2cU/ElQiT5Ibrv2ovFEEYIiQT01EUVEAiIqgoj4BxqQaIxBYY1K2K2eyxn84xCCL/pwKNEkgiHBKHkQIXJ5OJUT5DSZqrlDSQRjVPQcqZ6ezeZ2b/9ub2Z3mYJiYWem6utvuqure6odZz4yGvRkkJ8D5AlA+g80B7Go+EKeUJqfdXLBIicpAU2vCSCl6R/QNKmQfoxDjS/j0/h+JZHG92//4SyF/BcgH88OHemP2z8Ujq4ATb+B5j8HcuOL4/bvZPP+lbY77mnowdGgJ+t6qxV6a2drtuDfMvDm9Ln1mhLfgkGwOHFLH3rXmC6IvLOR5xTyhmrjWyHvaMDWTnlGsDgdRMB+29j3FfJIpIB8OLRHW7qWgIHc+GLQ/IeMXRkKpdeUps/DoMbXdi0B4NINYdzgT0r/79/+6/lK898KabqRaa3zCND8kn1mQ+n/Cv17Gx3/nUrAPhO1XV5V+r9Ces/auqdrCVg1EpwJSCfKxn8uWARIU9bWByYouvRg1xGQdb3VlfIGyB9bEmV1p1Jdnug6ApSmzXK/rB3KbOX5igzSY6BpRvJ8VfDv6joCQPNe+3bfBU2bwKUHirZyk2cr5EP2+tZ6McROQD9OZ0F792ddflwhvdogAT/Pzvrkzcs1hfSOTYIODOaC3kYJECyCSbAJRqflEgRnKOTXKy156x4Cef86AWmAIn0ZPuutlYAX2iK/D6cvaQRWRED5Upm2Oa0UQP9h64BA05BCzsuc3UwqbIBrLtil7MsK6XdA+jer/ZsbtlPsAbxDMAk2QGIz1SI/5LRKQNNu02WHpq6f71rA2ttk3/qMJWJzM7gqxYBTsw3vasZmRQHNY8bR8OTSVhAQRvxil90jQ8xpEQGC0doec9qVgKxL62zjf7p06MgFzeLqWAIu1v45Cgn7NQ/MB1eiBFzm0kV2HH+XyMbkaNADyN9L1F+51bswdgJEZN6O5m+F/GIY3BZera8vbA/c75RIrARkNPcpzd/Eth1enoMcgjwtT4yAaJUn06MqeI9Eic5Cq/gSn5WyxtgJaDdJCRiOsQeA660BpOfjCn5lanz7tybSA0Dzk0kFv9kqcSF+ApAPho78jVUDll02i416g1zkL1rmzn2fv9Hm/QfjJ0DXFxibyRjr3eio1NiUgOG0ByxNh4BOY0CQBkGdzgJjTqsE0mmQ0zwA0kyQT8v6bMqa+DrAZJkuPRp7JigiVV1S02M/lCSgtEUwOCWS7gcML0wP2GuMDk1d5bS5KDx6tV0hftYyo4D0jBlrmsaVpqfj2vtrWJHWK6RvzR4B0vqWETCYC3oV0kdJB7v6lT6cXYbXEskUeBCQXoiKHeU3uQBY1CIWwZbRfJOz0AJ2SMjvgjtrRyyQEkBzsn554ZfzpPKjnu+F8nG0z6WVNRnPBYvEpthui5cBVZwCcs5mZ7fVtGMOWbBX7R5pdLbg3WentjdA+8vqxbJgAlWcKs3D4VY1ratth4+LznVdagdMCc3pEX4m43p314Ol4wkYzAW9UlYfldJLpZnS/PFy7at6sLQtARmXbjclsVIhbqrEeQQKfGetihKx3QiWtiUAkHdVSF52dzwBoP1lUfkcID9RKWpHY1u+K8r4NmPc9dZUOyvUEQRkke+Iyt6KinSiWvFjrRjQUQSs2DYFStOnxZJY5MPSG6qVvnYVAZFIva5UawohTg2RGkFZZNW6T+p/5TiNnCxpewLilkSwKPSfmqv2P26JPpELpticZmRZHLL+1VyRPg6R02ag6WtDQIFujM9zzpzzMSXvgHwyrkPTZYeokU+Gb58OxF6sCfljS0DT22EJfWK7PwRIb0lPaLYh/wOyT67YvXeywgAAAABJRU5ErkJggg==" ],
+              "showPolygon" : false,
+              "polygonKeyName" : "perimeter",
+              "editablePolygon" : false,
+              "showPolygonLabel" : false,
+              "usePolygonLabelFunction" : false,
+              "polygonLabel" : "${entityName}",
+              "polygonLabelFunction" : null,
+              "showPolygonTooltip" : false,
+              "showPolygonTooltipAction" : "click",
+              "autoClosePolygonTooltip" : true,
+              "usePolygonTooltipFunction" : false,
+              "polygonTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "polygonTooltipFunction" : null,
+              "polygonColor" : "#3388ff",
+              "polygonOpacity" : 0.2,
+              "usePolygonColorFunction" : false,
+              "polygonColorFunction" : null,
+              "polygonStrokeColor" : "#3388ff",
+              "polygonStrokeOpacity" : 1,
+              "polygonStrokeWeight" : 3,
+              "usePolygonStrokeColorFunction" : false,
+              "polygonStrokeColorFunction" : null,
+              "showCircle" : false,
+              "circleKeyName" : "perimeter",
+              "editableCircle" : false,
+              "showCircleLabel" : false,
+              "useCircleLabelFunction" : false,
+              "circleLabel" : "${entityName}",
+              "circleLabelFunction" : null,
+              "showCircleTooltip" : false,
+              "showCircleTooltipAction" : "click",
+              "autoCloseCircleTooltip" : true,
+              "useCircleTooltipFunction" : false,
+              "circleTooltipPattern" : "<b>${entityName}</b><br/><br/><b>TimeStamp:</b> ${ts:7}",
+              "circleTooltipFunction" : null,
+              "circleFillColor" : "#3388ff",
+              "circleFillColorOpacity" : 0.2,
+              "useCircleFillColorFunction" : false,
+              "circleFillColorFunction" : null,
+              "circleStrokeColor" : "#3388ff",
+              "circleStrokeOpacity" : 1,
+              "circleStrokeWeight" : 3,
+              "useCircleStrokeColorFunction" : false,
+              "circleStrokeColorFunction" : null,
+              "snappable" : true,
+              "initDragMode" : true,
+              "hideAllControlButton" : false,
+              "hideDrawControlButton" : true,
+              "hideEditControlButton" : false,
+              "hideRemoveControlButton" : true,
+              "useClusterMarkers" : false,
+              "zoomOnClick" : true,
+              "maxZoom" : null,
+              "maxClusterRadius" : 80,
+              "animate" : true,
+              "spiderfyOnMaxZoom" : false,
+              "showCoverageOnHover" : true,
+              "chunkedLoading" : false,
+              "removeOutsideVisibleBounds" : true,
+              "useIconCreateFunction" : false,
+              "clusterMarkerFunction" : null
+            },
+            "title" : "Site Plan",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)",
+              "padding" : "6px"
+            },
+            "actions" : {
+              "tooltipAction" : [ {
+                "name" : "tooltip-click",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "device_state",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "2c5953ec-8845-0822-a025-56a220145123"
+              } ]
+            },
+            "showTitleIcon" : false,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true,
+            "titleTooltip" : "",
+            "borderRadius" : "6"
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "fefe44fc-6e68-760b-6251-8b088fed0798",
+          "typeFullFqn" : "system.maps_v2.image_map"
+        },
+        "07f3bedc-7bfb-21aa-3952-9d7bb4a9e52f" : {
+          "typeFullFqn" : "system.input_widgets.update_multiple_attributes",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "902f8f82-1653-b659-8a65-778b22dafc68",
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.965424851156345
+              }, {
+                "name" : "address",
+                "type" : "attribute",
+                "label" : "Address",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.7384077340857464,
+                "aggregationType" : null,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1706075428640,
+                  "endTimeMs" : 1706161828640
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "groupTitle" : "${entityName}",
+              "showActionButtons" : true,
+              "fieldsAlignment" : "row",
+              "fieldsInRow" : 2,
+              "columnGap" : 10,
+              "rowGap" : 5
+            },
+            "title" : "Site Details",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : {
+              "borderRadius" : "6px",
+              "overflow" : "hidden",
+              "boxShadow" : "0px 2px 10px 0px rgba(58, 53, 65, 0.1)"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "color" : "#0f161dcc",
+              "lineHeight" : "1.5rem"
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "borderRadius" : "6",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "07f3bedc-7bfb-21aa-3952-9d7bb4a9e52f"
+        },
+        "3217d8ff-e82d-8d3f-deea-caee5f4e6565" : {
+          "typeFullFqn" : "system.input_widgets.update_multiple_attributes",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : "",
+              "entityAliasId" : "902f8f82-1653-b659-8a65-778b22dafc68",
+              "dataKeys" : [ {
+                "name" : "name",
+                "type" : "entityField",
+                "label" : "Name",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.0699954073969904
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1706076748536,
+                  "endTimeMs" : 1706163148536
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "groupTitle" : "${entityName}",
+              "showActionButtons" : true,
+              "fieldsAlignment" : "row",
+              "fieldsInRow" : 2,
+              "columnGap" : 10,
+              "rowGap" : 5
+            },
+            "title" : "Device Details",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "enableDataExport" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "3217d8ff-e82d-8d3f-deea-caee5f4e6565"
+        },
+        "3d595cd9-160a-0629-36fd-d25e3a02b0a3" : {
+          "type" : "latest",
+          "sizeX" : 5,
+          "sizeY" : 3.5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "2e4eef59-a999-77d9-1b1a-aac336484ae9",
+              "filterId" : "e2367c2f-056e-fd97-29b0-90887ecc5060",
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "e0761b3f-ca65-3638-8dc4-f08f032056df",
+              "filterId" : null,
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695873784597,
+                  "endTimeMs" : 1695960184597
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgb(238, 238, 238)",
+            "color" : "rgba(238, 238, 238, 0)",
+            "padding" : "0px",
+            "settings" : {
+              "useMarkdownTextFunction" : false,
+              "markdownTextPattern" : "<div class='card'>\r\n    <div class='content'>\r\n        <div class='column'>\r\n            <h1>Admin Management</h1>\r\n        </div>\r\n    </div>\r\n</div>",
+              "markdownTextFunction" : "return '# Some title\\\\n - Entity name: ' + data[0]['entityName'];",
+              "applyDefaultMarkdownStyle" : true,
+              "markdownCss" : ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n   background-color: #eee;\n   padding:0px;\n   overflow: hidden;\n}\n\n.card .content {\n   padding: 20px 20px 20px 0px;\n   display: flex;\n   flex-direction: row;\n   align-items: flex-start;\n   justify-content: flex-start;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content .column {\n   display: flex;\n   flex-direction: column;    \n   justify-content: space-around;\n   height: 100%;\n}\n\n.card h1 {\n    text-transform: capitalize;\n    color: #0f161dcc;\n    font-size: 20px;\n    font-weight: bold;\n    margin: 0;\n    padding:0px;\n    padding-bottom: 10px;\n    line-height: 1.5rem;\n    white-space: nowrap;\n}"
+            },
+            "title" : "New Markdown/HTML Card",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "overflow" : "hidden"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "useDashboardTimewindow" : true,
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "3d595cd9-160a-0629-36fd-d25e3a02b0a3",
+          "typeFullFqn" : "system.cards.markdown_card"
+        },
+        "fbe0228e-e466-3bdc-b3fd-43ca4e060f45" : {
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d28af198-2f25-5021-c7f6-31a0cb18c6e8",
+              "filterId" : null,
+              "dataKeys" : [ ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695033283231,
+                  "endTimeMs" : 1695119683231
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(238, 238, 238, 0)",
+            "color" : "rgba(0, 0, 0, 0.94)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n    <div class='content'>\n        <div class='column'>\n            <h1 id=\"home-route\"> Home </h1>\n        </div>\n        <div class='column'>\n        <div class= \"icon-container\" ><div class=\"material-icons icon\">chevron_right</div></div></div>\n        <div class='column'>\n            <h1>${entityName}</h1>\n        </div>\n    </div>\n</div>",
+              "cardCss" : ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n   background-color: #eee;\n   padding:0px;\n}\n\n.card .content {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n   justify-content: flex-start;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content .column {\n   display: flex;\n   flex-direction: column;    \n   justify-content: space-between;\n   height: 100%;\n}\n\n.card h1 {\n    text-transform: capitalize;\n    color: #0f161dcc;\n    font-size: 20px;\n    font-weight: bold;\n    margin: 0;\n    padding-bottom: 10px;\n    line-height: 1.5rem;\n}\n\nh1:hover{\n    cursor: pointer;\n}\n\n.icon-container {\n    height: 40px;\n    width: 40px;\n    border-radius: 50%;\n    text-align: center;\n}\n\n.icon {\n    line-height: 1.5rem;\n    color: #0f161dcc;\n    font-size:30px;\n}\n"
+            },
+            "title" : "New HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border" : "unset"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "home-route",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "let stateIndex = widgetContext.stateController.getStateIndex();\r\nif (stateIndex > 0) {\r\n    stateIndex -= 1;\r\n    backToPrevState(stateIndex);\r\n}\r\n\r\nfunction backToPrevState(stateIndex) {\r\n    widgetContext.stateController.navigatePrevState(stateIndex);\r\n}\r\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "7e2f8739-eb11-c0b5-06b9-a661a4747aa3"
+              } ]
+            },
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : ""
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "fbe0228e-e466-3bdc-b3fd-43ca4e060f45",
+          "typeFullFqn" : "system.cards.html_value_card"
+        },
+        "db1de5f5-3341-dd94-3b23-e2a8494a40b6" : {
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d28af198-2f25-5021-c7f6-31a0cb18c6e8",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "relatedEntityName",
+                "type" : "attribute",
+                "label" : "relatedEntityName",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.8412692235576169
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1695033283231,
+                  "endTimeMs" : 1695119683231
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : false,
+            "backgroundColor" : "rgba(238, 238, 238, 0)",
+            "color" : "rgba(0, 0, 0, 0.94)",
+            "padding" : "0px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>\n    <div class='content'>\n        <div class='column'>\n            <h1 id=\"home-route\"> Home </h1>\n        </div>\n        <div class='column'>\n        <div class= \"icon-container\" ><div class=\"material-icons icon\">chevron_right</div></div></div>\n        <div class='column'>\n            <h1 id=\"site-route\">${relatedEntityName}</h1>\n        </div>\n        <div class='column'>\n        <div class= \"icon-container\" ><div class=\"material-icons icon\">chevron_right</div></div></div>\n        <div class='column'>\n            <h1>${entityName}</h1>\n        </div>\n    </div>\n</div>",
+              "cardCss" : ".card {\n   width: 100%;\n   height: 100%;\n   box-sizing: border-box;\n   background-color: #eee;\n   padding:0px;\n}\n\n.card .content {\n   display: flex;\n   flex-direction: row;\n   align-items: center;\n   justify-content: flex-start;\n   height: 100%;\n   box-sizing: border-box;\n}\n\n.card .content .column {\n   display: flex;\n   flex-direction: column;    \n   justify-content: space-between;\n   height: 100%;\n}\n\n.card h1 {\n    text-transform: capitalize;\n    color: #0f161dcc;\n    font-size: 20px;\n    font-weight: bold;\n    margin: 0;\n    padding-bottom: 10px;\n    line-height: 1.5rem;\n}\n\nh1:hover{\n    cursor: pointer;\n}\n\n.icon-container {\n    height: 40px;\n    width: 40px;\n    border-radius: 50%;\n    text-align: center;\n}\n\n.icon {\n    line-height: 1.5rem;\n    color: #0f161dcc;\n    font-size:30px;\n}\n"
+            },
+            "title" : "New HTML Value Card",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : {
+              "border" : "unset"
+            },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : {
+              "elementClick" : [ {
+                "name" : "home-route",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "let stateIndex = widgetContext.stateController.getStateIndex();\r\n    stateIndex = 0;\r\n    backToPrevState(stateIndex);\r\n\r\nfunction backToPrevState(stateIndex) {\r\n    widgetContext.stateController.navigatePrevState(stateIndex);\r\n}\r\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "7e2f8739-eb11-c0b5-06b9-a661a4747aa3"
+              }, {
+                "name" : "site-route",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "let stateIndex = widgetContext.stateController.getStateIndex();\r\nif (stateIndex > 0) {\r\n    stateIndex -= 1;\r\n    backToPrevState(stateIndex);\r\n}\r\n\r\nfunction backToPrevState(stateIndex) {\r\n    widgetContext.stateController.navigatePrevState(stateIndex);\r\n}\r\n",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "5ecd5c75-5926-613a-ada4-4277ee4958f1"
+              } ]
+            },
+            "enableDataExport" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "displayTimewindow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "db1de5f5-3341-dd94-3b23-e2a8494a40b6",
+          "typeFullFqn" : "system.cards.html_value_card"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Admin Dashboard",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "71155a7a-b22f-2c9c-6742-d1a7ac5b0377" : {
+                  "sizeX" : 36,
+                  "sizeY" : 26,
+                  "row" : 23,
+                  "col" : 0
+                },
+                "ce0fccee-3eca-dbae-d1b4-027000f86be4" : {
+                  "sizeX" : 34,
+                  "sizeY" : 26,
+                  "row" : 23,
+                  "col" : 36
+                },
+                "fd0a402b-e9ea-0079-0d8c-ee0cc83020f3" : {
+                  "sizeX" : 36,
+                  "sizeY" : 21,
+                  "row" : 2,
+                  "col" : 0
+                },
+                "35d458b7-8ad0-d83b-7bce-1057f339a413" : {
+                  "sizeX" : 20,
+                  "sizeY" : 3,
+                  "row" : 0,
+                  "col" : 50
+                },
+                "3d595cd9-160a-0629-36fd-d25e3a02b0a3" : {
+                  "sizeX" : 17,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 54,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "site_state" : {
+          "name" : "Site",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "69c15450-2ed2-ad36-727e-f7cf83b3bfde" : {
+                  "sizeX" : 20,
+                  "sizeY" : 16,
+                  "row" : 2,
+                  "col" : 37
+                },
+                "452425b2-82ce-145b-f408-0639992324f6" : {
+                  "sizeX" : 21,
+                  "sizeY" : 16,
+                  "row" : 2,
+                  "col" : 16
+                },
+                "07f3bedc-7bfb-21aa-3952-9d7bb4a9e52f" : {
+                  "sizeX" : 16,
+                  "sizeY" : 16,
+                  "row" : 2,
+                  "col" : 0
+                },
+                "fbe0228e-e466-3bdc-b3fd-43ca4e060f45" : {
+                  "sizeX" : 16,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 54,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        },
+        "device_state" : {
+          "name" : "Device",
+          "root" : false,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "0954a91c-0ea2-c14e-93c9-f87ce8b21357" : {
+                  "sizeX" : 16,
+                  "sizeY" : 14,
+                  "row" : 2,
+                  "col" : 0
+                },
+                "fefe44fc-6e68-760b-6251-8b088fed0798" : {
+                  "sizeX" : 22,
+                  "sizeY" : 14,
+                  "row" : 2,
+                  "col" : 16
+                },
+                "3217d8ff-e82d-8d3f-deea-caee5f4e6565" : {
+                  "sizeX" : 16,
+                  "sizeY" : 14,
+                  "row" : 2,
+                  "col" : 38
+                },
+                "db1de5f5-3341-dd94-3b23-e2a8494a40b6" : {
+                  "sizeX" : 16,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 54,
+                "margin" : 10,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "087680be-8b5d-087a-16ef-bb78dbf1e644" : {
+          "id" : "087680be-8b5d-087a-16ef-bb78dbf1e644",
+          "alias" : "Devices by relation",
+          "filter" : {
+            "type" : "deviceSearchQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "deviceTypes" : [ "Energy sensor" ]
+          }
+        },
+        "2718794c-0d24-7e2b-6a64-7c91255c443d" : {
+          "id" : "2718794c-0d24-7e2b-6a64-7c91255c443d",
+          "alias" : "Buildings summary",
+          "filter" : {
+            "type" : "assetType",
+            "resolveMultiple" : true,
+            "assetTypes" : [ "Site" ],
+            "assetNameFilter" : ""
+          }
+        },
+        "902f8f82-1653-b659-8a65-778b22dafc68" : {
+          "id" : "902f8f82-1653-b659-8a65-778b22dafc68",
+          "alias" : "Current state entities",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null
+          }
+        },
+        "2e4eef59-a999-77d9-1b1a-aac336484ae9" : {
+          "id" : "2e4eef59-a999-77d9-1b1a-aac336484ae9",
+          "alias" : "Tenant",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "TENANT",
+              "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
+            }
+          }
+        },
+        "52c33fac-2e79-a1fa-7a94-334a48482924" : {
+          "id" : "52c33fac-2e79-a1fa-7a94-334a48482924",
+          "alias" : "Customers",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "CUSTOMER"
+          }
+        },
+        "9f26b664-ed2d-9469-644e-0632ee4f9627" : {
+          "id" : "9f26b664-ed2d-9469-644e-0632ee4f9627",
+          "alias" : "Customers Admin",
+          "filter" : {
+            "type" : "entityGroupList",
+            "resolveMultiple" : true,
+            "groupType" : "CUSTOMER",
+            "entityGroupList" : [ "f82212c0-b11b-11ee-8373-7de626819ae0" ]
+          }
+        },
+        "c2a3fd38-69c7-ed05-a29f-7a5d3e74e263" : {
+          "id" : "c2a3fd38-69c7-ed05-a29f-7a5d3e74e263",
+          "alias" : "Customer user List",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "USER"
+          }
+        },
+        "a96ec721-a4a1-f0ac-53a4-1f417afcef4d" : {
+          "id" : "a96ec721-a4a1-f0ac-53a4-1f417afcef4d",
+          "alias" : "Devices Wise Assets",
+          "filter" : {
+            "type" : "relationsQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "TO",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ "ASSET" ]
+            } ]
+          }
+        },
+        "e0761b3f-ca65-3638-8dc4-f08f032056df" : {
+          "id" : "e0761b3f-ca65-3638-8dc4-f08f032056df",
+          "alias" : "customers",
+          "filter" : {
+            "type" : "entityType",
+            "resolveMultiple" : true,
+            "entityType" : "CUSTOMER"
+          }
+        },
+        "d28af198-2f25-5021-c7f6-31a0cb18c6e8" : {
+          "id" : "d28af198-2f25-5021-c7f6-31a0cb18c6e8",
+          "alias" : "Selected Building based on dashboard state",
+          "filter" : {
+            "type" : "stateEntity",
+            "resolveMultiple" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null
+          }
+        },
+        "0244d976-ad8f-3afc-7ef5-cd9940da37f3" : {
+          "id" : "0244d976-ad8f-3afc-7ef5-cd9940da37f3",
+          "alias" : "customers admin",
+          "filter" : {
+            "type" : "entityGroupList",
+            "resolveMultiple" : true,
+            "groupType" : "USER",
+            "entityGroupList" : [ "aef75cb0-3ce8-11ee-b778-63da9de16ed3", "aef3b330-3ce8-11ee-b778-63da9de16ed3", "05fb0810-5c54-11ee-af73-37540c770a8a" ]
+          }
+        }
+      },
+      "filters" : {
+        "e2367c2f-056e-fd97-29b0-90887ecc5060" : {
+          "id" : "e2367c2f-056e-fd97-29b0-90887ecc5060",
+          "filter" : "Tenant Consumption",
+          "keyFilters" : [ {
+            "key" : {
+              "type" : "ENTITY_FIELD",
+              "key" : "latestMonthlyPowerConsumptionTenant"
+            },
+            "valueType" : "NUMERIC",
+            "predicates" : [ {
+              "keyFilterPredicate" : {
+                "operation" : "GREATER",
+                "value" : {
+                  "defaultValue" : -1,
+                  "dynamicValue" : null
+                },
+                "type" : "NUMERIC"
+              },
+              "userInfo" : {
+                "editable" : true,
+                "label" : "",
+                "autogeneratedLabel" : true,
+                "order" : 0
+              }
+            } ]
+          } ],
+          "editable" : true
+        }
+      },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideLastInterval" : false,
+        "hideQuickInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1705994798878,
+            "endTimeMs" : 1706081198878
+          },
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "e8d9fc70-ba89-11ee-b668-aba54510403b"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Admin Dashboard",
+    "ownerId" : null,
+    "title" : "Admin Dashboard"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

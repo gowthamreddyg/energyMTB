@@ -37,6 +37,18 @@
     },
     "to" : {
       "entityType" : "USER",
+      "id" : "d7158770-c0b5-11ee-862d-c1e0a53112a0"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "12487fd0-5c59-11ee-80e4-bf6c2845e826"
+    },
+    "to" : {
+      "entityType" : "USER",
       "id" : "361795a0-b11c-11ee-b5ed-8f92c2930524"
     },
     "type" : "Contains",

@@ -11,41 +11,29 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "first_name",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "last_name",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "email",
+        "key" : "title",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
       "actions" : { }
     },
     "edgeGroupAll" : false,
-    "externalId" : {
-      "entityType" : "ENTITY_GROUP",
-      "id" : "74e39cf0-6d71-11ee-b316-e98779654669"
-    },
+    "externalId" : null,
     "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "74e39cf0-6d71-11ee-b316-e98779654669"
+      "id" : "f44c8150-bf1f-11ee-a124-0d00bef77fcc"
     },
-    "name" : "Customer user",
+    "name" : "Admin Management",
     "ownerId" : {
-      "entityType" : "CUSTOMER",
-      "id" : "05eb50a0-5c54-11ee-af73-37540c770a8a"
+      "entityType" : "TENANT",
+      "id" : "774a05f0-b11a-11ee-8373-7de626819ae0"
     },
-    "type" : "USER"
+    "type" : "DASHBOARD"
   },
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   },
-  "groupEntities" : true,
-  "permissions" : [ ]
+  "groupEntities" : true
 }
